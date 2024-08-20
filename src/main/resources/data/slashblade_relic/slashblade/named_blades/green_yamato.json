@@ -1,0 +1,18 @@
+{
+   "special_effects":[
+     "srelic:very_green"
+   ],
+  "name": "slashblade_relic:green_yamato",
+  "properties": {
+    "attack_base": 10.0,
+    "max_damage": 40,
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "slashblade_relic:model/relicofpaseone/dahe.obj",
+    "texture": "slashblade_relic:model/relicofpaseone/yamato.png",
+    "summon_sword_color": 3729097
+  }
+}

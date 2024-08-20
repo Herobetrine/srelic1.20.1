@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+[[mods]] #mandatory
+modId="srelic"
+version="1.0.0"
+displayName="Slash blade relic"
+authors="dinzeer"
+description='''Added some swords and knives'''
+[[dependencies.srelic]] #optional
+   # the modid of the dependency
+   modId="forge"
+   mandatory=true #mandatory
+   versionRange="${forge_version_range}" #mandatory
+   ordering="NONE"
+   side="BOTH"# Here's another dependency
+[[dependencies.srelic]]
+   modId="minecraft"
+   mandatory=true
+   versionRange="${minecraft_version_range}"
+   ordering="NONE"
+   side="BOTH"
+[[dependencies.srelic]]
+modId="slashblade"
+mandatory=true
+versionRange="0.7.3"
+ordering="NONE"
+side="BOTH"

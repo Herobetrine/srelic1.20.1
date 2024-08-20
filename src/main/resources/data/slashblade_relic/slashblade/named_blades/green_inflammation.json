@@ -1,0 +1,31 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl":5
+    },    {
+      "id": "minecraft:sharpness",
+      "lvl":5
+    }
+    ,    {
+      "id": "minecraft:looting",
+      "lvl":10
+    }
+  ],
+   "special_effects":[
+     "srelic:very_green"
+   ],
+  "name": "slashblade_relic:green_inflammation",
+  "properties": {
+    "attack_base": 18.0,
+    "max_damage": 150,
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "slashblade_relic:model/relicofpaseone/green_inflammation.obj",
+    "texture": "slashblade_relic:model/relicofpaseone/green_inflammation.png",
+    "summon_sword_color": 652800
+  }
+}

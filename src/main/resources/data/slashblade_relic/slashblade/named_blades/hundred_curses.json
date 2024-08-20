@@ -1,0 +1,43 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl":10
+    },    {
+      "id": "minecraft:smite",
+      "lvl":6
+    },    {
+      "id": "minecraft:fire_aspect",
+      "lvl":6
+    },    {
+      "id": "minecraft:sharpness",
+      "lvl":6
+    },    {
+      "id": "minecraft:bane_of_arthropods",
+      "lvl":6
+    },    {
+      "id": "minecraft:knockback",
+      "lvl":6
+    }
+
+  ],
+  "name": "slashblade_relic:hundred_curses",
+  "properties": {
+    "slash_art": "slashblade:wave_edge",
+    "attack_base": 13.0,
+    "max_damage": 45,
+    "sword_type": [
+      "bewitched"
+    ],
+    "special_effects": [
+      "slashblade:wither_edge"
+    ]
+  },
+
+
+  "render": {
+    "model": "slashblade_relic:model/relicofpaseone/hundred_curses.obj",
+    "texture": "slashblade_relic:model/relicofpaseone/hundred_curses.png",
+    "summon_sword_color": 6226175
+  }
+}

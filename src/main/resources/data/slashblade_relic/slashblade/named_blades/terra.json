@@ -1,0 +1,23 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl":5
+    }
+
+  ],
+  "name": "slashblade_relic:terra",
+  "properties": {
+    "attack_base": 11.0,
+    "max_damage": 90,
+    "slash_art": "slashblade_addon:rapid_blistering_swords",
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "slashblade_relic:model/relicofpaseone/terra.obj",
+    "texture": "slashblade_relic:model/relicofpaseone/terra.png",
+    "summon_sword_color": 1425255
+  }
+}
