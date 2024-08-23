@@ -1,5 +1,6 @@
 package com.dinzeer.srelic;
 
+import com.dinzeer.srelic.registry.ItemRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,7 +31,7 @@ public class Srelic {
 
         //注册
 //       RelicSpecialEffectsRegistry.SPECIAL_EFFECT.register(modEventBus);
-
+        ItemRegistry.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 

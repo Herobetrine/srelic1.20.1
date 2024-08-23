@@ -24,8 +24,8 @@
   "name": "slashblade_relic:hundred_curses",
   "properties": {
     "slash_art": "slashblade:wave_edge",
-    "attack_base": 13.0,
-    "max_damage": 45,
+    "attack_base": 20.0,
+    "max_damage": 19990,
     "sword_type": [
       "bewitched"
     ],

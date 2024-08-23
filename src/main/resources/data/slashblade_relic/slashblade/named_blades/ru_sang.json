@@ -15,7 +15,7 @@
   "name": "slashblade_relic:ru_sang",
   "properties": {
     "attack_base": 13.0,
-    "max_damage": 45,
+    "max_damage": 4500,
     "sword_type": [
       "bewitched"
     ]
