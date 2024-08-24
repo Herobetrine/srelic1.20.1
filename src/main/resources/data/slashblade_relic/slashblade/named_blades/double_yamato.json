@@ -1,0 +1,31 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl":3
+    },    {
+      "id": "minecraft:sharpness",
+      "lvl":3
+    }
+    ,    {
+      "id": "minecraft:looting",
+      "lvl":1
+    }
+  ],
+   "special_effects":[
+     "srelic:very_green"
+   ],
+  "name": "slashblade_relic:double_yamato",
+  "properties": {
+    "attack_base": 11.0,
+    "max_damage": 3000,
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "slashblade_relic:model/relicofpaseone/double.obj",
+    "texture": "slashblade_relic:model/relicofpaseone/yamato_s.png",
+    "summon_sword_color": 6837748
+  }
+}
