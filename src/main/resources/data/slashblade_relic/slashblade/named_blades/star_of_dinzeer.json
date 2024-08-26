@@ -1,0 +1,23 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl":15
+    }
+
+  ],
+  "name": "slashblade_relic:star_of_dinzeer",
+  "properties": {
+    "attack_base": 30.0,
+    "max_damage": 90000,
+    "slash_art": "slashblade_addon:rapid_blistering_swords",
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "slashblade_relic:model/maker_sword/dark_raven.obj",
+    "texture": "slashblade_relic:model/maker_sword/star_of_dinzeer.png",
+    "summon_sword_color": 6837744
+  }
+}

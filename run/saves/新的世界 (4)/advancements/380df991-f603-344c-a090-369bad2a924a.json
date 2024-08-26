@@ -448,5 +448,23 @@
     },
     "done": true
   },
+  "slashblade:tips/bladestand": {
+    "criteria": {
+      "getitem1": "2024-08-25 16:28:32 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/bone_meal": {
+    "criteria": {
+      "has_bone": "2024-08-25 16:35:30 +0800"
+    },
+    "done": true
+  },
+  "slashblade:abilities/kick_jump": {
+    "criteria": {
+      "customtrigger": "2024-08-26 01:51:34 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

@@ -25,7 +25,7 @@
   },
   "render": {
     "model": "slashblade_relic:model/relicofpaseone/double.obj",
-    "texture": "slashblade_relic:model/relicofpaseone/yamato_s.png",
-    "summon_sword_color": 6837748
+    "texture": "slashblade_relic:model/relicofpaseone/yamato.png",
+    "summon_sword_color": 3729097
   }
 }

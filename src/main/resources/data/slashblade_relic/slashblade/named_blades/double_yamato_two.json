@@ -8,7 +8,7 @@
    "special_effects":[
      "srelic:very_green"
    ],
-  "name": "slashblade_relic:double_yamato",
+  "name": "slashblade_relic:double_yamato_two",
   "properties": {
     "attack_base": 20.0,
     "max_damage": 3000,
@@ -19,7 +19,7 @@
   },
   "render": {
     "model": "slashblade_relic:model/relicofpaseone/double.obj",
-    "texture": "slashblade_relic:model/relicofpaseone/yamato.png",
-    "summon_sword_color": 3729097
+    "texture": "slashblade_relic:model/relicofpaseone/yamato_s.png",
+    "summon_sword_color": 853963
   }
 }

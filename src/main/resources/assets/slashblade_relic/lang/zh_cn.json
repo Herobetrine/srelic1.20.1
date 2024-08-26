@@ -1,10 +1,13 @@
 {
-  "item.slashblade_relic.green_inflammation": "魔剑「绿染大和」",
-  "item.slashblade_relic.ru_sang": "炼焰「如丧」",
-  "item.slashblade_relic.spirit_terra": "精灵刃「大地」",
-  "item.slashblade_relic.hundred_curses": "魔刀「泪之华」",
-  "item.slashblade_relic.terra": "「大地之刃」伪物",
-  "item.slashblade_relic.green_yamato": "无铭刀「大和」",
+  "item.slashblade_relic.green_inflammation": "§5魔剑§2「绿染大和」",
+  "item.slashblade_relic.ru_sang": "§4炼焰§c「如丧」",
+  "item.slashblade_relic.spirit_terra": "§c精灵刃§2「大地」",
+  "item.slashblade_relic.hundred_curses": "§5魔刀§0「泪之华」",
+  "item.slashblade_relic.terra": "§2「大地之刃」伪物",
+  "item.slashblade_relic.green_yamato": "§2无铭刀「大和」",
+  "item.slashblade_relic.double_yamato": "§2双重刀「大和」",
+  "item.slashblade_relic.double_yamato_two": "§3双重刀§2「三色§4威光」",
+  "item.slashblade_relic.star_of_dinzeer": "§3§l星辰刀§1「丁泽尔星辰」",
   "se.srelic.very_green": "绿光闪闪",
   "item.srelic.umle": "升级证明·下界"
 }
