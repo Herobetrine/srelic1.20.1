@@ -3,6 +3,7 @@ package com.dinzeer.srelic;
 import com.dinzeer.srelic.registry.ItemRegistry;
 import com.dinzeer.srelic.registry.SpecialEffectsRegistry;
 import com.mojang.logging.LogUtils;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -17,6 +18,10 @@ import org.slf4j.Logger;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Srelic.MODID)
 public class Srelic {
+    public static ResourceLocation prefix(String path) {
+        return new ResourceLocation("srelic", path);
+    }
+
 
     // Define mod id in a common place for everything to reference
     public static final String MODID = "srelic";
