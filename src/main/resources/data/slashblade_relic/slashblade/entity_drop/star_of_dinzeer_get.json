@@ -1,0 +1,6 @@
+{
+  "blade": "slashblade_relic:star_of_dinzeer",
+  "drop_rate": 0.0001,
+  "entity_type": "minecraft:enderman",
+  "request_slashblade": true
+}

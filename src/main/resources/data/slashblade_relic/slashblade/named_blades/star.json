@@ -8,18 +8,18 @@
    "special_effects":[
      "srelic:very_green"
    ],
-  "name": "slashblade_relic:double_yamato_two",
+  "name": "slashblade_relic:star",
   "properties": {
     "attack_base": 20.0,
     "max_damage": 3000,
-    "slash_art": "slashblade:wave_edge",
+    "slash_art": "slashblade:none",
     "sword_type": [
       "bewitched"
     ]
   },
   "render": {
-    "model": "slashblade_relic:model/relicofpaseone/double.obj",
-    "texture": "slashblade_relic:model/relicofpaseone/yamato_s.png",
-    "summon_sword_color": 853963
+    "model": "slashblade_relic:model/relicofpaseone/dahe.obj",
+    "texture": "slashblade_relic:model/other/color_c.png",
+    "summon_sword_color": 10492369
   }
 }
