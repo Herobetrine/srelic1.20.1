@@ -1,6 +1,7 @@
 package com.dinzeer.srelic;
 
 import com.dinzeer.srelic.registry.ItemRegistry;
+import com.dinzeer.srelic.registry.SpecialEffectsRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -35,7 +36,7 @@ public class Srelic {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-
+        SpecialEffectsRegistry.SPECIAL_EFFECT.register(modEventBus);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
 //        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
