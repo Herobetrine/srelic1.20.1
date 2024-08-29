@@ -1,0 +1,21 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl":3
+    }
+  ],
+  "name": "slashblade_relic:ornament",
+  "properties": {
+    "attack_base": 1.0,
+    "max_damage": 3000,
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "slashblade_relic:model/ornament/mdl.obj",
+    "texture": "slashblade_relic:model/ornament/tex.png",
+    "summon_sword_color": 25855
+  }
+}
