@@ -146,7 +146,7 @@ dependencies {
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     //拔刀剑重锋依赖
-    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:5550255")
+    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:5659397")
     //开发环境jei
     implementation fg.deobf("curse.maven:jei-238222:5576551")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'

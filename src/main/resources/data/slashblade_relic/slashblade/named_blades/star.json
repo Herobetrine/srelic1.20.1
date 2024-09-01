@@ -10,9 +10,8 @@
    ],
   "name": "slashblade_relic:star",
   "properties": {
-    "attack_base": 20.0,
+    "attack_base": 10.0,
     "max_damage": 3000,
-    "slash_art": "slashblade:none",
     "sword_type": [
       "bewitched"
     ]

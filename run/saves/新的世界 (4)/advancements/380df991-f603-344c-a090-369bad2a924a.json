@@ -510,5 +510,71 @@
     },
     "done": true
   },
+  "slashblade:arts/upperslash_jump": {
+    "criteria": {
+      "customtrigger": "2024-08-29 17:53:53 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/bow": {
+    "criteria": {
+      "has_string": "2024-08-29 23:27:19 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/fishing_rod": {
+    "criteria": {
+      "has_string": "2024-08-29 23:27:19 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/white_wool_from_string": {
+    "criteria": {
+      "has_string": "2024-08-29 23:27:19 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/tripwire_hook": {
+    "criteria": {
+      "has_string": "2024-08-29 23:27:19 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/candle": {
+    "criteria": {
+      "has_string": "2024-08-29 23:27:19 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/loom": {
+    "criteria": {
+      "has_string": "2024-08-29 23:27:19 +0800"
+    },
+    "done": true
+  },
+  "slashblade:material/proudsoul": {
+    "criteria": {
+      "BrokenBlade": "2024-08-29 23:33:16 +0800"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2024-08-29 23:33:16 +0800"
+    },
+    "done": true
+  },
+  "slashblade:arts/combo_a_ex": {
+    "criteria": {
+      "customtrigger": "2024-08-29 23:33:22 +0800"
+    },
+    "done": true
+  },
+  "slashblade:arts/shooting/spiral_swords": {
+    "criteria": {
+      "customtrigger": "2024-08-29 23:36:53 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }
