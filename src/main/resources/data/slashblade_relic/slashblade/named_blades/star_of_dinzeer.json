@@ -15,6 +15,10 @@
       "bewitched"
     ]
   },
+  "special_effects": [
+    "slashblade:wither_edge",
+    "slashblade_addon:burst_drive"
+  ],
   "render": {
     "model": "slashblade_relic:model/maker_sword/dark_raven.obj",
     "texture": "slashblade_relic:model/maker_sword/star_of_dinzeer.png",
