@@ -40,8 +40,8 @@ public class Srelic {
         ItemRegistry.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-
         SpecialEffectsRegistry.SPECIAL_EFFECT.register(modEventBus);
+//        SpecialEffectsRegistry.SPECIAL_EFFECT.register(modEventBus);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
 //        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);

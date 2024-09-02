@@ -12,15 +12,15 @@
       "lvl":10
     }
   ],
-   "special_effects":[
-     "srelic:very_green"
-   ],
+
   "name": "slashblade_relic:green_inflammation",
   "properties": {
     "attack_base": 22.0,
     "max_damage": 3000,
     "sword_type": [
       "bewitched"
+    ],"special_effects":[
+      "srelic:very_green"
     ]
   },
   "render": {
