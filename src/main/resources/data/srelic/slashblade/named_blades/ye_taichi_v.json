@@ -1,0 +1,31 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl":10
+    },
+    {
+      "id": "minecraft:sharpness",
+      "lvl":5
+    },
+    {
+      "id": "minecraft:looting",
+      "lvl":10
+    }
+
+
+  ],
+  "name": "srelic:ye_tachi_v",
+  "properties": {
+    "attack_base": 20.0,
+    "max_damage": 500,
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/ornament/ye_tachi_v.obj",
+    "texture": "srelic:model/ornament/ye_tachi_v.jpg",
+    "summon_sword_color": 13504014
+  }
+}

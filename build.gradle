@@ -145,10 +145,23 @@ dependencies {
     // If the group id is "net.minecraft" and the artifact id is one of ["client", "server", "joined"],
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    //拔刀剑重锋依赖
-    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:5659397")
     //开发环境jei
     implementation fg.deobf("curse.maven:jei-238222:5576551")
+    //拔刀剑重锋依赖
+    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:5659397")
+    //日系附属包依赖
+    implementation fg.deobf("curse.maven:slashblade-japanese-addon-pack-310187:5709686")
+    //暮色森林
+    implementation fg.deobf("curse.maven:the-twilight-forest-227639:5468648")
+    //exmodifier addon
+    runtimeOnly fg.deobf("curse.maven:exmodifiernormal-1104539:5732068")
+    //curios
+    runtimeOnly fg.deobf("curse.maven:curios-309927:5680164")
+    //placebo
+    implementation fg.deobf("curse.maven:placebo-283644:5414631")
+    //小地图
+    implementation fg.deobf("curse.maven:xaeros-minimap-263420:5685657")
+
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 

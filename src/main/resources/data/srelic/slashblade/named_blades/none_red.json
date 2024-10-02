@@ -1,0 +1,36 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl":10
+    },
+    {
+      "id": "minecraft:sharpness",
+      "lvl":5
+    },
+    {
+      "id": "minecraft:smite",
+      "lvl":5
+    },
+    {
+      "id": "minecraft:bane_of_arthropods",
+      "lvl":5
+    }
+
+
+  ],
+  "name": "srelic:none_red",
+  "properties": {
+    "attack_base": 20.0,
+    "slash_art": "slashblade:void_slash",
+    "max_damage": 200,
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/stairail/none.obj",
+    "texture": "srelic:model/stairail/none_red.jpg",
+    "summon_sword_color": 13504014
+  }
+}

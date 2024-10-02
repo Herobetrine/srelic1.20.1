@@ -1,7 +1,5 @@
 package com.dinzeer.srelic;
 
-import com.dinzeer.srelic.registry.ItemRegistry;
-import com.dinzeer.srelic.registry.SpecialEffectsRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -36,15 +34,8 @@ public class Srelic {
         modEventBus.addListener(this::commonSetup);
 
         //注册
-//       RelicSpecialEffectsRegistry.SPECIAL_EFFECT.register(modEventBus);
-        ItemRegistry.register(modEventBus);
-        // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
-        SpecialEffectsRegistry.SPECIAL_EFFECT.register(modEventBus);
-//        SpecialEffectsRegistry.SPECIAL_EFFECT.register(modEventBus);
 
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-//        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -56,7 +47,6 @@ public class Srelic {
     public class simpleEvent{
         @SubscribeEvent
         public static void fmlload(FMLCommonSetupEvent event){
-          //  LOGGER.debug();
         }
     }
 
