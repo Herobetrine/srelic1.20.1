@@ -17,7 +17,8 @@ import org.slf4j.Logger;
 @Mod(Srelic.MODID)
 public class Srelic {
     public static ResourceLocation prefix(String path) {
-        return new ResourceLocation("srelic", path);
+
+        return new ResourceLocation(MODID, path);
     }
 
 

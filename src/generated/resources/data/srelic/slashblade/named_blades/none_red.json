@@ -1,0 +1,19 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl": 3
+    }
+  ],
+  "name": "srelic:none_red",
+  "properties": {
+    "attack_base": 21.0,
+    "max_damage": 80,
+    "slash_art": "slashblade:void_slash"
+  },
+  "render": {
+    "model": "srelic:model/stairail/none.obj",
+    "summon_sword_color": 13504014,
+    "texture": "srelic:model/stairail/none_red.jpg"
+  }
+}

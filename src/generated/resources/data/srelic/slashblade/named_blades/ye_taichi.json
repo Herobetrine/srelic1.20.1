@@ -1,0 +1,19 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl": 3
+    }
+  ],
+  "name": "srelic:ye_taichi",
+  "properties": {
+    "attack_base": 17.0,
+    "max_damage": 80,
+    "slash_art": "slashblade:wave_edge"
+  },
+  "render": {
+    "model": "srelic:model/ornament/ye_taichi.obj",
+    "summon_sword_color": 13504014,
+    "texture": "srelic:model/ornament/ye_taichi.png"
+  }
+}

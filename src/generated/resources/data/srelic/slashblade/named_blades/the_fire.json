@@ -1,0 +1,19 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl": 3
+    }
+  ],
+  "name": "srelic:the_fire",
+  "properties": {
+    "attack_base": 21.0,
+    "max_damage": 80,
+    "slash_art": "slashblade:wave_edge"
+  },
+  "render": {
+    "model": "srelic:model/honkai/the_fire.obj",
+    "summon_sword_color": 16760832,
+    "texture": "srelic:model/honkai/the_fire.jpg"
+  }
+}

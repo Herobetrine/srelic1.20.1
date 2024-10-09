@@ -1,0 +1,188 @@
+package com.dinzeer.srelic.data;
+
+import com.dinzeer.srelic.Srelic;
+import mods.flammpfeil.slashblade.registry.SlashArtsRegistry;
+import mods.flammpfeil.slashblade.registry.slashblade.EnchantmentDefinition;
+import mods.flammpfeil.slashblade.registry.slashblade.PropertiesDefinition;
+import mods.flammpfeil.slashblade.registry.slashblade.RenderDefinition;
+import mods.flammpfeil.slashblade.registry.slashblade.SlashBladeDefinition;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.List;
+
+public class SRelicBuiltInRegsitry {
+    //始
+    public static final ResourceKey<SlashBladeDefinition> START=register("none_blue");
+    //无
+    public static final ResourceKey<SlashBladeDefinition> NONE=register("none_red");
+    //夜煌皮肤
+    public static final ResourceKey<SlashBladeDefinition> YE_TACHI_FIRE=register("ye_taichi");
+    //夜煌原皮
+    public static final ResourceKey<SlashBladeDefinition> YE_TACHI=register("ye_tachi");
+    //狼的末路
+    public static final ResourceKey<SlashBladeDefinition> WOLF=register("the_wolf");
+    //天火圣裁
+    public static final ResourceKey<SlashBladeDefinition> FIRE=register("the_fire");
+    //劫灭
+    public static final ResourceKey<SlashBladeDefinition> ARK_FIRE=register("ark_fire");
+    //终焉劫灭
+    public static final ResourceKey<SlashBladeDefinition> END_FIRE=register("end_fire");
+    //水仙十字之剑
+    public static final ResourceKey<SlashBladeDefinition> WATER=register("the_water");
+    //霜之哀伤
+    public static final ResourceKey<SlashBladeDefinition> ICECRY=register("ice_cry");
+    public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
+        bootstrap.register(START,
+                new SlashBladeDefinition(Srelic.prefix("none_blue"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/none_blue.png"))
+                                .modelName(Srelic.prefix("model/stairail/none.obj"))
+                                .effectColor(2003199)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .baseAttackModifier(17)
+                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+        bootstrap.register(NONE,
+                new SlashBladeDefinition(Srelic.prefix("none_red"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/none_red.jpg"))
+                                .modelName(Srelic.prefix("model/stairail/none.obj"))
+                                .effectColor(13504014)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .baseAttackModifier(21)
+                                .slashArtsType(SlashArtsRegistry.VOID_SLASH.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+        bootstrap.register(YE_TACHI_FIRE,
+                new SlashBladeDefinition(Srelic.prefix("ye_taichi"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/ornament/ye_taichi.png"))
+                                .modelName(Srelic.prefix("model/ornament/ye_taichi.obj"))
+                                .effectColor(13504014)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .baseAttackModifier(17)
+                                .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+        bootstrap.register(YE_TACHI,
+                new SlashBladeDefinition(Srelic.prefix("ye_tachi"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/ornament/ye_tachi_v.jpg"))
+                                .modelName(Srelic.prefix("model/ornament/ye_tachi_v.obj"))
+                                .effectColor(13504014)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .baseAttackModifier(21)
+                                .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+        bootstrap.register(FIRE,
+                new SlashBladeDefinition(Srelic.prefix("the_fire"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/the_fire.jpg"))
+                                .modelName(Srelic.prefix("model/honkai/the_fire.obj"))
+                                .effectColor(16760832)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .baseAttackModifier(21)
+                                .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+        bootstrap.register(WOLF,
+                new SlashBladeDefinition(Srelic.prefix("the_wolf"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/genshine/the_wolf.png"))
+                                .modelName(Srelic.prefix("model/genshine/the_wolf.obj"))
+                                .effectColor(12779520)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .baseAttackModifier(21)
+                                .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+
+
+        bootstrap.register(ARK_FIRE,
+                new SlashBladeDefinition(Srelic.prefix("ark_fire"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/ark_fire.png"))
+                                .modelName(Srelic.prefix("model/honkai/ark_fire.obj"))
+                                .effectColor(16760832)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .baseAttackModifier(21)
+                                .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+
+        bootstrap.register(END_FIRE,
+                new SlashBladeDefinition(Srelic.prefix("end_fire"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/end_fire.png"))
+                                .modelName(Srelic.prefix("model/honkai/end_fire.obj"))
+                                .effectColor(16760832)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .baseAttackModifier(21)
+                                .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+
+        bootstrap.register(WATER,
+                new SlashBladeDefinition(Srelic.prefix("the_water"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/genshine/sword_of_narzissenkreuz.png"))
+                                .modelName(Srelic.prefix("model/genshine/the_water.obj"))
+                                .effectColor(2003199)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .baseAttackModifier(21)
+                                .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+
+        bootstrap.register(ICECRY,
+                new SlashBladeDefinition(Srelic.prefix("ice_cry"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/ow/ice_cry.png"))
+                                .modelName(Srelic.prefix("model/ow/frostmourne.obj"))
+                                .effectColor(2003199)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .baseAttackModifier(21)
+                                .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+
+    }
+
+
+
+
+    private static ResourceKey<SlashBladeDefinition> register(String id) {
+        return ResourceKey.create(SlashBladeDefinition.REGISTRY_KEY, Srelic.prefix(id));
+    }
+    private static ResourceLocation getEnchantmentID(Enchantment enchantment) {
+        return ForgeRegistries.ENCHANTMENTS.getKey(enchantment);
+    }
+
+}
