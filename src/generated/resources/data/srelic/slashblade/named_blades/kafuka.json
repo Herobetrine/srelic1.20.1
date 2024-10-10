@@ -1,0 +1,19 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl": 3
+    }
+  ],
+  "name": "srelic:kafuka",
+  "properties": {
+    "attack_base": 21.0,
+    "max_damage": 80,
+    "slash_art": "slashblade:void_slash"
+  },
+  "render": {
+    "model": "srelic:model/stairail/kafuka.obj",
+    "summon_sword_color": 14947317,
+    "texture": "srelic:model/stairail/kafuka.png"
+  }
+}

@@ -1,5 +1,7 @@
 package com.dinzeer.srelic;
 
+import com.dinzeer.srelic.registry.SRComboRegsitry;
+import com.dinzeer.srelic.registry.SRslashArtRegsitry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -11,6 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.RegisterEvent;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -33,9 +36,13 @@ public class Srelic {
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-
+        modEventBus.addListener(this::register);
         //注册
+        SRComboRegsitry.COMBO_STATES.register(modEventBus);
+        SRslashArtRegsitry.SLASH_ARTS.register(modEventBus);
 
+    }
+    public void register(RegisterEvent event) {
 
     }
 

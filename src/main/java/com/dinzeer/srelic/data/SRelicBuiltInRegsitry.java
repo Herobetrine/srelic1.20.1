@@ -36,6 +36,10 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> WATER=register("the_water");
     //霜之哀伤
     public static final ResourceKey<SlashBladeDefinition> ICECRY=register("ice_cry");
+    //卡夫卡的刀
+    public static final ResourceKey<SlashBladeDefinition> KAFUKA=register("kafuka");
+    //星辰王牌
+    public static final ResourceKey<SlashBladeDefinition> STAR=register("star");
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(START,
                 new SlashBladeDefinition(Srelic.prefix("none_blue"),
@@ -172,6 +176,36 @@ public class SRelicBuiltInRegsitry {
                                 .maxDamage(80)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+
+        bootstrap.register(KAFUKA,
+                new SlashBladeDefinition(Srelic.prefix("kafuka"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/kafuka.png"))
+                                .modelName(Srelic.prefix("model/stairail/kafuka.obj"))
+                                .effectColor(14947317)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .baseAttackModifier(21)
+                                .slashArtsType(SlashArtsRegistry.VOID_SLASH.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+
+
+        bootstrap.register(STAR,
+                new SlashBladeDefinition(Srelic.prefix("star"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/star.png"))
+                                .modelName(Srelic.prefix("model/stairail/star.obj"))
+                                .effectColor(2003199)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .baseAttackModifier(17)
+                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+
 
     }
 
