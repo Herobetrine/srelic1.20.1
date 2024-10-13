@@ -161,7 +161,8 @@ dependencies {
     implementation fg.deobf("curse.maven:placebo-283644:5414631")
     //小地图
     implementation fg.deobf("curse.maven:xaeros-minimap-263420:5685657")
-
+    //nbt编辑器
+    implementation fg.deobf("curse.maven:nbtedit-reborn-678133:4612033")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
