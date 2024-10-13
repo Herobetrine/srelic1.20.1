@@ -1,6 +1,7 @@
 package com.dinzeer.srelic.data;
 
 import com.dinzeer.srelic.Srelic;
+import mods.flammpfeil.slashblade.item.SwordType;
 import mods.flammpfeil.slashblade.registry.SlashArtsRegistry;
 import mods.flammpfeil.slashblade.registry.slashblade.EnchantmentDefinition;
 import mods.flammpfeil.slashblade.registry.slashblade.PropertiesDefinition;
@@ -40,6 +41,12 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> KAFUKA=register("kafuka");
     //星辰王牌
     public static final ResourceKey<SlashBladeDefinition> STAR=register("star");
+    //炎枪
+    public static final ResourceKey<SlashBladeDefinition> FIRE_KNIGHT=register("fire_knight");
+    //千古伏流
+    public static final ResourceKey<SlashBladeDefinition> ETERNAL_VOWS=register("eternal_vows");
+    //夜煌皮肤·灼魍
+    public static final ResourceKey<SlashBladeDefinition> YE_FIRE=register("ye_fire");
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(START,
                 new SlashBladeDefinition(Srelic.prefix("none_blue"),
@@ -50,6 +57,7 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .baseAttackModifier(17)
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
                                 .maxDamage(80)
                                 .build(),
@@ -63,6 +71,7 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .baseAttackModifier(21)
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .slashArtsType(SlashArtsRegistry.VOID_SLASH.getId())
                                 .maxDamage(80)
                                 .build(),
@@ -75,6 +84,7 @@ public class SRelicBuiltInRegsitry {
                                 .effectColor(13504014)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(17)
                                 .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
                                 .maxDamage(80)
@@ -88,6 +98,7 @@ public class SRelicBuiltInRegsitry {
                                 .effectColor(13504014)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(21)
                                 .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
                                 .maxDamage(80)
@@ -102,6 +113,7 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .baseAttackModifier(21)
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
                                 .maxDamage(80)
                                 .build(),
@@ -114,6 +126,7 @@ public class SRelicBuiltInRegsitry {
                                 .effectColor(12779520)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(21)
                                 .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
                                 .maxDamage(80)
@@ -129,6 +142,7 @@ public class SRelicBuiltInRegsitry {
                                 .effectColor(16760832)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(21)
                                 .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
                                 .maxDamage(80)
@@ -143,6 +157,7 @@ public class SRelicBuiltInRegsitry {
                                 .effectColor(16760832)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(21)
                                 .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
                                 .maxDamage(80)
@@ -157,6 +172,7 @@ public class SRelicBuiltInRegsitry {
                                 .effectColor(2003199)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(21)
                                 .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
                                 .maxDamage(80)
@@ -171,6 +187,7 @@ public class SRelicBuiltInRegsitry {
                                 .effectColor(2003199)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(21)
                                 .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
                                 .maxDamage(80)
@@ -185,6 +202,7 @@ public class SRelicBuiltInRegsitry {
                                 .effectColor(14947317)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(21)
                                 .slashArtsType(SlashArtsRegistry.VOID_SLASH.getId())
                                 .maxDamage(80)
@@ -200,12 +218,56 @@ public class SRelicBuiltInRegsitry {
                                 .effectColor(2003199)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(17)
+                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+        bootstrap.register(FIRE_KNIGHT,
+                new SlashBladeDefinition(Srelic.prefix("fire_knight"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/fire_knight.png"))
+                                .modelName(Srelic.prefix("model/stairail/fire_knight.obj"))
+                                .effectColor(2003199)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(17)
                                 .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
                                 .maxDamage(80)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
 
+        bootstrap.register(ETERNAL_VOWS,
+                new SlashBladeDefinition(Srelic.prefix("eternal_vows"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/wuwa/eternal_vows.png"))
+                                .modelName(Srelic.prefix("model/wuwa/older.obj"))
+                                .effectColor(2003199)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(17)
+                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+
+        bootstrap.register(YE_FIRE,
+                new SlashBladeDefinition(Srelic.prefix("ye_fire"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/ornament/ye_fire.png"))
+                                .modelName(Srelic.prefix("model/ornament/ye_fire.obj"))
+                                .effectColor(2003199)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(17)
+                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
 
     }
 
