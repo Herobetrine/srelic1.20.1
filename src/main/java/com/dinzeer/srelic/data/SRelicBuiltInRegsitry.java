@@ -1,6 +1,7 @@
 package com.dinzeer.srelic.data;
 
 import com.dinzeer.srelic.Srelic;
+import com.dinzeer.srelic.registry.SRslashArtRegsitry;
 import mods.flammpfeil.slashblade.item.SwordType;
 import mods.flammpfeil.slashblade.registry.SlashArtsRegistry;
 import mods.flammpfeil.slashblade.registry.slashblade.EnchantmentDefinition;
@@ -47,6 +48,12 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> ETERNAL_VOWS=register("eternal_vows");
     //夜煌皮肤·灼魍
     public static final ResourceKey<SlashBladeDefinition> YE_FIRE=register("ye_fire");
+    //夜煌皮肤·星霆
+    public static final ResourceKey<SlashBladeDefinition> YE_STAR=register("ye_star");
+    //绯红女皇
+    public static final ResourceKey<SlashBladeDefinition> RED_QUEEN=register("red_queen");
+    //梦想一心
+    public static final ResourceKey<SlashBladeDefinition> RAIDIAN=register("raiden");
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(START,
                 new SlashBladeDefinition(Srelic.prefix("none_blue"),
@@ -259,6 +266,53 @@ public class SRelicBuiltInRegsitry {
                         RenderDefinition.Builder.newInstance()
                                 .textureName(Srelic.prefix("model/ornament/ye_fire.png"))
                                 .modelName(Srelic.prefix("model/ornament/ye_fire.obj"))
+                                .effectColor(2003199)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(17)
+                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+        bootstrap.register(YE_STAR,
+                new SlashBladeDefinition(Srelic.prefix("ye_star"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/ornament/ye_star.png"))
+                                .modelName(Srelic.prefix("model/ornament/ye_star.obj"))
+                                .effectColor(2003199)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(17)
+                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+        bootstrap.register(RED_QUEEN,
+                new SlashBladeDefinition(Srelic.prefix("red_queen"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/dmc/red_queen.png"))
+                                .modelName(Srelic.prefix("model/dmc/red_queen.obj"))
+                                .effectColor(16711697)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(20)
+                                .slashArtsType(SRslashArtRegsitry.XDRIVE.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.MOB_LOOTING), 3)
+
+                        )));
+        bootstrap.register(RAIDIAN,
+                new SlashBladeDefinition(Srelic.prefix("raiden"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/genshine/raiden.png"))
+                                .modelName(Srelic.prefix("model/genshine/raiden.obj"))
                                 .effectColor(2003199)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()

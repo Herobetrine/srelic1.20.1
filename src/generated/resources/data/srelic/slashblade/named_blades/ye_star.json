@@ -1,0 +1,22 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl": 3
+    }
+  ],
+  "name": "srelic:ye_star",
+  "properties": {
+    "attack_base": 17.0,
+    "max_damage": 80,
+    "slash_art": "slashblade:sakura_end",
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/ornament/ye_star.obj",
+    "summon_sword_color": 2003199,
+    "texture": "srelic:model/ornament/ye_star.png"
+  }
+}

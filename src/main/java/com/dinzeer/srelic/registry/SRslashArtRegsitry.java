@@ -2,6 +2,7 @@ package com.dinzeer.srelic.registry;
 
 import mods.flammpfeil.slashblade.slasharts.SlashArts;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 
 import static com.dinzeer.srelic.Srelic.MODID;
 
@@ -9,7 +10,10 @@ public class SRslashArtRegsitry {
     public static final DeferredRegister<SlashArts> SLASH_ARTS =
             DeferredRegister.create(SlashArts.REGISTRY_KEY, MODID);
 
+    public static final RegistryObject<SlashArts> XDRIVE;
 
-
-
+static {
+    XDRIVE= SLASH_ARTS.register("xdrive", () -> new SlashArts((e) ->
+            SRComboRegsitry.EXdrive.getId()));
+}
 }

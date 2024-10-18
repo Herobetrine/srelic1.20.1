@@ -163,6 +163,9 @@ dependencies {
     implementation fg.deobf("curse.maven:xaeros-minimap-263420:5685657")
     //nbt编辑器
     implementation fg.deobf("curse.maven:nbtedit-reborn-678133:4612033")
+    //物品缩放
+    implementation fg.deobf("curse.maven:itemzoom-261725:5043628")
+
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
