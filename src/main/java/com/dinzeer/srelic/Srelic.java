@@ -1,6 +1,7 @@
 package com.dinzeer.srelic;
 
 import com.dinzeer.srelic.registry.SRComboRegsitry;
+import com.dinzeer.srelic.registry.SREntiteRegristrys;
 import com.dinzeer.srelic.registry.SRslashArtRegsitry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.resources.ResourceLocation;
@@ -43,7 +44,7 @@ public class Srelic {
 
     }
     public void register(RegisterEvent event) {
-
+        SREntiteRegristrys.register(event);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

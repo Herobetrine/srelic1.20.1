@@ -3,7 +3,6 @@ package com.dinzeer.srelic.specialattacks;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.capability.concentrationrank.ConcentrationRankCapabilityProvider;
 import mods.flammpfeil.slashblade.entity.EntityDrive;
-import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.util.KnockBacks;
 import mods.flammpfeil.slashblade.util.VectorHelper;
 import net.minecraft.util.Mth;
@@ -18,9 +17,7 @@ public class DriveSumon {
 
     public static void doSlash(LivingEntity playerIn, float roll, int lifetime, Vec3 centerOffset,
                                boolean critical, double damage, KnockBacks knockback, float minSpeed, float maxSpeed, int count,int cc) {
-
         int colorCode = cc;
-
         doSlash(playerIn, roll, lifetime, colorCode, centerOffset, critical, damage, knockback, minSpeed, maxSpeed, count);
     }
 

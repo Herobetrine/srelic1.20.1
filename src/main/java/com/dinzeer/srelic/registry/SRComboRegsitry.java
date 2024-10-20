@@ -2,11 +2,15 @@ package com.dinzeer.srelic.registry;
 
 import com.dinzeer.srelic.Srelic;
 import com.dinzeer.srelic.specialattacks.DriveSumon;
+import com.dinzeer.srelic.specialattacks.WitherBreaker;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.ability.StunManager;
+import mods.flammpfeil.slashblade.event.client.UserPoseOverrider;
 import mods.flammpfeil.slashblade.init.DefaultResources;
 import mods.flammpfeil.slashblade.registry.combo.ComboState;
+import mods.flammpfeil.slashblade.slasharts.Drive;
 import mods.flammpfeil.slashblade.slasharts.JudgementCut;
+import mods.flammpfeil.slashblade.slasharts.WaveEdge;
 import mods.flammpfeil.slashblade.util.AttackManager;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.registries.DeferredRegister;
@@ -40,13 +44,55 @@ public class SRComboRegsitry {
                                     (
                                             ComboState.TimeLineTickAction.getBuilder()
                                     .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 6F))
-                                    .put(3, (entityIn) -> DriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 7, 0.2f, 5f, 2,2003199))
+                                    .put(3, (entityIn) -> DriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 7, 1f, 5f, 2,2003199))
                                     .put(4, (entityIn) -> AttackManager.doSlash(entityIn, 45F, Vec3.ZERO, false, false, 6F))
-                                    .put(5,(entityIn) ->  DriveSumon.doSlash(entityIn, -45F, 20, Vec3.ZERO, false, 7, 0.4f, 5f, 2,2003199))
+                                    .put(5,(entityIn) ->  DriveSumon.doSlash(entityIn, -45F, 20, Vec3.ZERO, false, 7, 1f, 5f, 2,2003199))
                                     .build()
                                     )
                             .addHitEffect(StunManager::setStun)
                             ::build
             );
-
+    public static final RegistryObject<ComboState> WITHER_BREAKER = COMBO_STATES.register("wither_breaker",
+            ComboState.Builder.newInstance().startAndEnd(400, 459).priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -30F, Vec3.ZERO, false, false, 0.1F))
+                            .put(3, (entityIn) -> WitherBreaker.doSlash(entityIn, false, 7, 2f)).build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build);
+    public static final RegistryObject<ComboState> Explosion_driven = COMBO_STATES.register
+            (
+                    "explosion_driven",
+                    ComboState.Builder.newInstance().startAndEnd(400, 459).priority(50)
+                            .motionLoc(DefaultResources.ExMotionLocation)
+                            .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                            .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                            .addTickAction
+                                    (
+                                            ComboState.TimeLineTickAction.getBuilder()
+                                                    .put(0, JudgementCut::doJudgementCut)
+                                                    .put(1, (entityIn) -> WaveEdge.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 0.7, 0.2f, 1f, 4))
+                                                    .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 0.6F))
+                                                    .put(3, (entityIn) -> DriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 0.7, 1f, 5f, 2,2003199))
+                                                    .put(5, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 0.6F))
+                                                    .put(6, (entityIn) -> DriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 0.7, 1f, 5f, 2,2003199))
+                                                    .put(7, (entityIn) -> AttackManager.doSlash(entityIn, 45F, Vec3.ZERO, false, false, 0.6F))
+                                                    .put(8,(entityIn) ->  DriveSumon.doSlash(entityIn, -45F, 20, Vec3.ZERO, false, 0.7, 1f, 5f, 2,2003199))
+                                                    .put(9, (entityIn) -> Drive.doSlash(entityIn, -10F, 10, Vec3.ZERO, false, 0.7, 2f))
+                                                    .put(10, JudgementCut::doJudgementCut)
+                                                    .put(11, (entityIn) -> WaveEdge.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 0.7, 0.2f, 1f, 4))
+                                                    .put(12, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 0.6F))
+                                                    .put(13, (entityIn) -> DriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 0.7, 1f, 5f, 2,2003199))
+                                                    .put(14, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 0.6F))
+                                                    .put(15, (entityIn) -> DriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 0.7, 1f, 5f, 2,2003199))
+                                                    .put(16, (entityIn) -> AttackManager.doSlash(entityIn, 45F, Vec3.ZERO, false, false, 0.6F))
+                                                    .put(17,(entityIn) ->  DriveSumon.doSlash(entityIn, -45F, 20, Vec3.ZERO, false, 0.7, 1f, 5f, 2,2003199))
+                                                    .put(18, (entityIn) -> Drive.doSlash(entityIn, -10F, 10, Vec3.ZERO, false, 10, 2f))
+                                                    .build()
+                                    )
+                            .addHitEffect(StunManager::setStun)
+                            ::build
+            );
 }

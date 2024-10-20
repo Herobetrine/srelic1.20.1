@@ -4,6 +4,7 @@ import com.dinzeer.srelic.Srelic;
 import com.dinzeer.srelic.registry.SRslashArtRegsitry;
 import mods.flammpfeil.slashblade.item.SwordType;
 import mods.flammpfeil.slashblade.registry.SlashArtsRegistry;
+import mods.flammpfeil.slashblade.registry.SpecialEffectsRegistry;
 import mods.flammpfeil.slashblade.registry.slashblade.EnchantmentDefinition;
 import mods.flammpfeil.slashblade.registry.slashblade.PropertiesDefinition;
 import mods.flammpfeil.slashblade.registry.slashblade.RenderDefinition;
@@ -195,11 +196,16 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(21)
-                                .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                                .baseAttackModifier(17)
+                                .addSpecialEffect(SpecialEffectsRegistry.WITHER_EDGE.getId())
+                                .slashArtsType(SRslashArtRegsitry.WitherBreaker.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3)
+
+                        )));
 
         bootstrap.register(KAFUKA,
                 new SlashBladeDefinition(Srelic.prefix("kafuka"),
