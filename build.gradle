@@ -165,7 +165,8 @@ dependencies {
     implementation fg.deobf("curse.maven:nbtedit-reborn-678133:4612033")
     //物品缩放
     implementation fg.deobf("curse.maven:itemzoom-261725:5043628")
-
+    //伤害数值显示
+    implementation fg.deobf("curse.maven:damage-number-998849:5538112")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 

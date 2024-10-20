@@ -262,10 +262,14 @@ public class SRelicBuiltInRegsitry {
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(17)
-                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .slashArtsType(SRslashArtRegsitry.EXPLASHON.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3)
+                        )));
 
         bootstrap.register(YE_FIRE,
                 new SlashBladeDefinition(Srelic.prefix("ye_fire"),
@@ -319,15 +323,22 @@ public class SRelicBuiltInRegsitry {
                         RenderDefinition.Builder.newInstance()
                                 .textureName(Srelic.prefix("model/genshine/raiden.png"))
                                 .modelName(Srelic.prefix("model/genshine/raiden.obj"))
-                                .effectColor(2003199)
+                                .effectColor(8454388)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(17)
-                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .slashArtsType(SRslashArtRegsitry.THO.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
+                           new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 3),
+                        new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3),
+                         new EnchantmentDefinition(getEnchantmentID(Enchantments.MOB_LOOTING), 3)
+
+
+
+                        )));
 
     }
 

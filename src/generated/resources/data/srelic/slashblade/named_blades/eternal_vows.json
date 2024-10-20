@@ -3,13 +3,25 @@
     {
       "id": "minecraft:power",
       "lvl": 3
+    },
+    {
+      "id": "minecraft:smite",
+      "lvl": 3
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 3
+    },
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 3
     }
   ],
   "name": "srelic:eternal_vows",
   "properties": {
     "attack_base": 17.0,
     "max_damage": 80,
-    "slash_art": "slashblade:sakura_end",
+    "slash_art": "srelic:explashon",
     "sword_type": [
       "bewitched"
     ]

@@ -3,20 +3,32 @@
     {
       "id": "minecraft:power",
       "lvl": 3
+    },
+    {
+      "id": "minecraft:smite",
+      "lvl": 3
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 3
+    },
+    {
+      "id": "minecraft:looting",
+      "lvl": 3
     }
   ],
   "name": "srelic:raiden",
   "properties": {
     "attack_base": 17.0,
     "max_damage": 80,
-    "slash_art": "slashblade:sakura_end",
+    "slash_art": "srelic:tho",
     "sword_type": [
       "bewitched"
     ]
   },
   "render": {
     "model": "srelic:model/genshine/raiden.obj",
-    "summon_sword_color": 2003199,
+    "summon_sword_color": 8454388,
     "texture": "srelic:model/genshine/raiden.png"
   }
 }

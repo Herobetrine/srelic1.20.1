@@ -1,15 +1,17 @@
 package com.dinzeer.srelic.registry;
 
+import com.dinzeer.srelic.Config;
 import com.dinzeer.srelic.Srelic;
+import com.dinzeer.srelic.Utils.AddDamgeUtil;
 import com.dinzeer.srelic.specialattacks.DriveSumon;
 import com.dinzeer.srelic.specialattacks.WitherBreaker;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.ability.StunManager;
-import mods.flammpfeil.slashblade.event.client.UserPoseOverrider;
 import mods.flammpfeil.slashblade.init.DefaultResources;
 import mods.flammpfeil.slashblade.registry.combo.ComboState;
 import mods.flammpfeil.slashblade.slasharts.Drive;
 import mods.flammpfeil.slashblade.slasharts.JudgementCut;
+import mods.flammpfeil.slashblade.slasharts.SakuraEnd;
 import mods.flammpfeil.slashblade.slasharts.WaveEdge;
 import mods.flammpfeil.slashblade.util.AttackManager;
 import net.minecraft.world.phys.Vec3;
@@ -82,17 +84,28 @@ public class SRComboRegsitry {
                                                     .put(8,(entityIn) ->  DriveSumon.doSlash(entityIn, -45F, 20, Vec3.ZERO, false, 0.7, 1f, 5f, 2,2003199))
                                                     .put(9, (entityIn) -> Drive.doSlash(entityIn, -10F, 10, Vec3.ZERO, false, 0.7, 2f))
                                                     .put(10, JudgementCut::doJudgementCut)
-                                                    .put(11, (entityIn) -> WaveEdge.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 0.7, 0.2f, 1f, 4))
-                                                    .put(12, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 0.6F))
-                                                    .put(13, (entityIn) -> DriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 0.7, 1f, 5f, 2,2003199))
-                                                    .put(14, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 0.6F))
-                                                    .put(15, (entityIn) -> DriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 0.7, 1f, 5f, 2,2003199))
-                                                    .put(16, (entityIn) -> AttackManager.doSlash(entityIn, 45F, Vec3.ZERO, false, false, 0.6F))
-                                                    .put(17,(entityIn) ->  DriveSumon.doSlash(entityIn, -45F, 20, Vec3.ZERO, false, 0.7, 1f, 5f, 2,2003199))
+                                                    .put(11, (entityIn) -> WaveEdge.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 7, 0.2f, 1f, 4))
+                                                    .put(12, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 6F))
+                                                    .put(13, (entityIn) -> DriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 7, 1f, 5f, 2,2003199))
+                                                    .put(14, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 6F))
+                                                    .put(15, (entityIn) -> DriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 7, 1f, 5f, 2,2003199))
+                                                    .put(16, (entityIn) -> AttackManager.doSlash(entityIn, 45F, Vec3.ZERO, false, false, 6F))
+                                                    .put(17,(entityIn) ->  DriveSumon.doSlash(entityIn, -45F, 20, Vec3.ZERO, false, 7, 1f, 5f, 2,2003199))
                                                     .put(18, (entityIn) -> Drive.doSlash(entityIn, -10F, 10, Vec3.ZERO, false, 10, 2f))
                                                     .build()
                                     )
                             .addHitEffect(StunManager::setStun)
                             ::build
             );
+    public static final RegistryObject<ComboState> THO =COMBO_STATES.register("tho",
+            ComboState.Builder.newInstance().startAndEnd(200, 218)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .priority(100)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -61))
+                            .put(6, (entityIn) -> SakuraEnd.doSlash(entityIn, 180 - 42, Vec3.ZERO, false, false, AddDamgeUtil.execute(entityIn)*10))
+                                    .build())
+                    .addHitEffect(StunManager::setStun)::build);
 }

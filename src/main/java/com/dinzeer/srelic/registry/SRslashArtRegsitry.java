@@ -13,12 +13,13 @@ public class SRslashArtRegsitry {
     public static final RegistryObject<SlashArts> XDRIVE;
     public static final RegistryObject<SlashArts> WitherBreaker;
     public static final RegistryObject<SlashArts> EXPLASHON;
-
+    public static final RegistryObject<SlashArts> THO;
 static {
     XDRIVE= SLASH_ARTS.register("xdrive", () -> new SlashArts((e) ->
             SRComboRegsitry.EXdrive.getId()));
     WitherBreaker=SLASH_ARTS.register("wither_breaker",()->new SlashArts((e) ->
             SRComboRegsitry.WITHER_BREAKER.getId()));
     EXPLASHON=SLASH_ARTS.register("explashon",()->new SlashArts((e)->SRComboRegsitry.Explosion_driven.getId()));
+    THO=SLASH_ARTS.register("tho",()->new SlashArts((e)->SRComboRegsitry.THO.getId()));
 }
 }
