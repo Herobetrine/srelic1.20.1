@@ -3,6 +3,7 @@ package com.dinzeer.srelic.registry;
 import com.dinzeer.srelic.Config;
 import com.dinzeer.srelic.Srelic;
 import com.dinzeer.srelic.Utils.AddDamgeUtil;
+import com.dinzeer.srelic.specialattacks.BigDriveSummon;
 import com.dinzeer.srelic.specialattacks.DriveSumon;
 import com.dinzeer.srelic.specialattacks.WitherBreaker;
 import mods.flammpfeil.slashblade.SlashBlade;
@@ -108,4 +109,19 @@ public class SRComboRegsitry {
                             .put(6, (entityIn) -> SakuraEnd.doSlash(entityIn, 180 - 42, Vec3.ZERO, false, false, AddDamgeUtil.execute(entityIn)*10))
                                     .build())
                     .addHitEffect(StunManager::setStun)::build);
+
+
+    public static final RegistryObject<ComboState> BIGDRIVE_VERTICAL = COMBO_STATES.register("big_drive",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(3, (entityIn) -> BigDriveSummon.doSlash(entityIn, -90F, 10, Vec3.ZERO, false, 30, 2f)).build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
 }

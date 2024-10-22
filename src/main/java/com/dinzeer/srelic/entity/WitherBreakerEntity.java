@@ -134,7 +134,7 @@ public class WitherBreakerEntity extends EntityAbstractSummonedSword {
 
                                         boolean isMatch = true;
                                         if (target instanceof LivingEntity)
-                                            isMatch = TargetSelector.lockon_focus.test(sender, (LivingEntity) target);
+                                            isMatch = TargetSelector.lockon.test(sender, (LivingEntity) target);
 
                                         if (target instanceof IShootable)
                                             isMatch = ((IShootable) target).getShooter() != sender;
