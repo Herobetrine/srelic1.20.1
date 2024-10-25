@@ -1,13 +1,10 @@
 package com.dinzeer.srelic.entity;
 
-import com.dinzeer.srelic.Srelic;
 import com.dinzeer.srelic.registry.SREntiteRegristrys;
 import com.google.common.collect.Lists;
-import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.ability.StunManager;
 import mods.flammpfeil.slashblade.capability.concentrationrank.IConcentrationRank;
 import mods.flammpfeil.slashblade.entity.EntityAbstractSummonedSword;
-
 import mods.flammpfeil.slashblade.entity.Projectile;
 import mods.flammpfeil.slashblade.util.AttackManager;
 import mods.flammpfeil.slashblade.util.EnumSetConverter;
@@ -46,7 +43,7 @@ import net.minecraftforge.network.PlayMessages;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class BigDriveEnity extends EntityAbstractSummonedSword {
+public class RappaEnity extends EntityAbstractSummonedSword {
     private static final EntityDataAccessor<Integer> COLOR;
     private static final EntityDataAccessor<Integer> FLAGS;
     private static final EntityDataAccessor<Float> RANK;
@@ -76,7 +73,7 @@ public class BigDriveEnity extends EntityAbstractSummonedSword {
 
     }
 
-    public BigDriveEnity(EntityType<? extends Projectile> entityTypeIn, Level worldIn) {
+    public RappaEnity(EntityType<? extends Projectile> entityTypeIn, Level worldIn) {
         super(entityTypeIn, worldIn);
         this.action = KnockBacks.cancel;
         this.damage = 7.0;
@@ -84,8 +81,8 @@ public class BigDriveEnity extends EntityAbstractSummonedSword {
         this.setNoGravity(true);
     }
 
-    public static BigDriveEnity createInstance(PlayMessages.SpawnEntity packet, Level worldIn) {
-        return new BigDriveEnity(SREntiteRegristrys.BIGDrive, worldIn);
+    public static RappaEnity createInstance(PlayMessages.SpawnEntity packet, Level worldIn) {
+        return new RappaEnity(SREntiteRegristrys.Rappa, worldIn);
     }
 
     protected void defineSynchedData() {
@@ -332,13 +329,13 @@ public class BigDriveEnity extends EntityAbstractSummonedSword {
     }
 
     static {
-        COLOR = SynchedEntityData.defineId(BigDriveEnity.class, EntityDataSerializers.INT);
-        FLAGS = SynchedEntityData.defineId(BigDriveEnity.class, EntityDataSerializers.INT);
-        RANK = SynchedEntityData.defineId(BigDriveEnity.class, EntityDataSerializers.FLOAT);
-        ROTATION_OFFSET = SynchedEntityData.defineId(BigDriveEnity.class, EntityDataSerializers.FLOAT);
-        ROTATION_ROLL = SynchedEntityData.defineId(BigDriveEnity.class, EntityDataSerializers.FLOAT);
-        BASESIZE = SynchedEntityData.defineId(BigDriveEnity.class, EntityDataSerializers.FLOAT);
-        SPEED = SynchedEntityData.defineId(BigDriveEnity.class, EntityDataSerializers.FLOAT);
-        LIFETIME = SynchedEntityData.defineId(BigDriveEnity.class, EntityDataSerializers.FLOAT);
+        COLOR = SynchedEntityData.defineId(RappaEnity.class, EntityDataSerializers.INT);
+        FLAGS = SynchedEntityData.defineId(RappaEnity.class, EntityDataSerializers.INT);
+        RANK = SynchedEntityData.defineId(RappaEnity.class, EntityDataSerializers.FLOAT);
+        ROTATION_OFFSET = SynchedEntityData.defineId(RappaEnity.class, EntityDataSerializers.FLOAT);
+        ROTATION_ROLL = SynchedEntityData.defineId(RappaEnity.class, EntityDataSerializers.FLOAT);
+        BASESIZE = SynchedEntityData.defineId(RappaEnity.class, EntityDataSerializers.FLOAT);
+        SPEED = SynchedEntityData.defineId(RappaEnity.class, EntityDataSerializers.FLOAT);
+        LIFETIME = SynchedEntityData.defineId(RappaEnity.class, EntityDataSerializers.FLOAT);
     }
 }

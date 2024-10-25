@@ -1,7 +1,8 @@
 package com.dinzeer.srelic.cilent.render;
 
 import com.dinzeer.srelic.Srelic;
-import com.dinzeer.srelic.entity.BigDriveEnity;
+
+import com.dinzeer.srelic.entity.RappaEnity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import mods.flammpfeil.slashblade.client.renderer.model.BladeModelManager;
@@ -21,9 +22,9 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 
 @OnlyIn(Dist.CLIENT)
-public class BigDriveRenderer<T extends BigDriveEnity> extends EntityRenderer<T> {
-    private static final ResourceLocation TEXTURE = Srelic.prefix("model/util/big_drive.png");
-    private static final ResourceLocation MODEL = Srelic.prefix("model/util/big_drive.obj");
+public class RappaRenderer<T extends RappaEnity> extends EntityRenderer<T> {
+    private static final ResourceLocation TEXTURE = Srelic.prefix("model/util/rappa.png");
+    private static final ResourceLocation MODEL = Srelic.prefix("model/util/rappa.obj");
 
     @Nullable
     @Override
@@ -31,7 +32,7 @@ public class BigDriveRenderer<T extends BigDriveEnity> extends EntityRenderer<T>
         return entity.getTextureLoc();
     }
 
-    public BigDriveRenderer(EntityRendererProvider.Context context) {
+    public RappaRenderer(EntityRendererProvider.Context context) {
         super(context);
     }
 

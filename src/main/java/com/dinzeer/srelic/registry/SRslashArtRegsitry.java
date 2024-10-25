@@ -15,6 +15,7 @@ public class SRslashArtRegsitry {
     public static final RegistryObject<SlashArts> EXPLANATION;
     public static final RegistryObject<SlashArts> THO;
     public static final RegistryObject<SlashArts> BIG_DRIVE;
+    public static final RegistryObject<SlashArts> Rappa;
 static {
     XDRIVE= SLASH_ARTS.register("xdrive", () -> new SlashArts((e) ->
             SRComboRegsitry.EXdrive.getId()));
@@ -23,5 +24,6 @@ static {
     EXPLANATION =SLASH_ARTS.register("explashon",()->new SlashArts((e)->SRComboRegsitry.Explosion_driven.getId()));
     THO=SLASH_ARTS.register("tho",()->new SlashArts((e)->SRComboRegsitry.THO.getId()));
     BIG_DRIVE=SLASH_ARTS.register("big_drive",()->new SlashArts((e)->SRComboRegsitry.BIGDRIVE_VERTICAL.getId()));
+    Rappa=SLASH_ARTS.register("rappa",()->new SlashArts((e)->SRComboRegsitry.Rappa.getId()));
 }
 }

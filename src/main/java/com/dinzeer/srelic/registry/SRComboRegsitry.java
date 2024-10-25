@@ -5,6 +5,7 @@ import com.dinzeer.srelic.Srelic;
 import com.dinzeer.srelic.Utils.AddDamgeUtil;
 import com.dinzeer.srelic.specialattacks.BigDriveSummon;
 import com.dinzeer.srelic.specialattacks.DriveSumon;
+import com.dinzeer.srelic.specialattacks.RappaSummon;
 import com.dinzeer.srelic.specialattacks.WitherBreaker;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.ability.StunManager;
@@ -106,7 +107,7 @@ public class SRComboRegsitry {
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
                             .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -61))
-                            .put(6, (entityIn) -> SakuraEnd.doSlash(entityIn, 180 - 42, Vec3.ZERO, false, false, AddDamgeUtil.execute(entityIn)*10))
+                            .put(6, (entityIn) -> SakuraEnd.doSlash(entityIn, 180 - 42, Vec3.ZERO, false, false, AddDamgeUtil.getdamage(entityIn)*10))
                                     .build())
                     .addHitEffect(StunManager::setStun)::build);
 
@@ -120,7 +121,20 @@ public class SRComboRegsitry {
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
                             .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
-                            .put(3, (entityIn) -> BigDriveSummon.doSlash(entityIn, -90F, 10, Vec3.ZERO, false, 30, 2f)).build())
+                            .put(3, (entityIn) -> BigDriveSummon.doSlash(entityIn, -90F, 10, Vec3.ZERO, false, 30, 0.5f)).build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+    public static final RegistryObject<ComboState> Rappa = COMBO_STATES.register("rappa_slash",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(3, (entityIn) -> RappaSummon.doSlash(entityIn, 0F, 20, Vec3.ZERO, false, 7, 0.5f, 1f, 2,2003199)).build())
                     .addHitEffect(StunManager::setStun)
                     ::build
     );

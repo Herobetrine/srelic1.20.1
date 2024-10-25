@@ -2,6 +2,7 @@ package com.dinzeer.srelic.registry;
 
 import com.dinzeer.srelic.Srelic;
 import com.dinzeer.srelic.entity.BigDriveEnity;
+import com.dinzeer.srelic.entity.RappaEnity;
 import com.dinzeer.srelic.entity.WitherBreakerEntity;
 import com.google.common.base.CaseFormat;
 import net.minecraft.resources.ResourceLocation;
@@ -20,6 +21,9 @@ public class SREntiteRegristrys {
     public static final ResourceLocation BIGDriveLoc = new ResourceLocation(Srelic.MODID,
             classToString(BigDriveEnity.class));
     public static EntityType<BigDriveEnity> BIGDrive;
+    public static final ResourceLocation RappaLoc = new ResourceLocation(Srelic.MODID,
+            classToString(RappaEnity.class));
+    public static EntityType<RappaEnity> Rappa;
     public static void register(RegisterEvent event){
         event.register(ForgeRegistries.Keys.ENTITY_TYPES, helper ->{
             {
@@ -38,6 +42,14 @@ public class SREntiteRegristrys {
                         .sized(3.0F, 3.0F).setTrackingRange(4).setUpdateInterval(20)
                         .setCustomClientFactory(BigDriveEnity::createInstance).build(BIGDriveLoc.toString());
                 helper.register(BIGDriveLoc, entity);
+            }
+        });
+        event.register(ForgeRegistries.Keys.ENTITY_TYPES, helper -> {
+            {
+                EntityType<RappaEnity> entity = Rappa = EntityType.Builder.of(RappaEnity::new, MobCategory.MISC)
+                        .sized(3.0F, 3.0F).setTrackingRange(4).setUpdateInterval(20)
+                        .setCustomClientFactory(RappaEnity::createInstance).build(RappaLoc.toString());
+                helper.register(RappaLoc, entity);
             }
         });
     }
