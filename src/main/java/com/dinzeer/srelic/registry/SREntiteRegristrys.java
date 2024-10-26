@@ -2,6 +2,7 @@ package com.dinzeer.srelic.registry;
 
 import com.dinzeer.srelic.Srelic;
 import com.dinzeer.srelic.entity.BigDriveEnity;
+import com.dinzeer.srelic.entity.BlackHole;
 import com.dinzeer.srelic.entity.RappaEnity;
 import com.dinzeer.srelic.entity.WitherBreakerEntity;
 import com.google.common.base.CaseFormat;
@@ -9,12 +10,20 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
+import net.minecraftforge.registries.RegistryObject;
 
 import static com.dinzeer.srelic.Srelic.MODID;
 
+
 public class SREntiteRegristrys {
+    private static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MODID);
+    public static void register(IEventBus eventBus) {
+        ENTITIES.register(eventBus);
+    }
 
     public static final ResourceLocation WitherBreakerLOC = new ResourceLocation(MODID, classToString(WitherBreakerEntity.class));
     public static EntityType<WitherBreakerEntity> WitherBreaker;
@@ -24,6 +33,11 @@ public class SREntiteRegristrys {
     public static final ResourceLocation RappaLoc = new ResourceLocation(Srelic.MODID,
             classToString(RappaEnity.class));
     public static EntityType<RappaEnity> Rappa;
+    public static final RegistryObject<EntityType<BlackHole>> BLACK_HOLE =
+            ENTITIES.register("black_hole", () -> EntityType.Builder.<BlackHole>of(BlackHole::new, MobCategory.MISC)
+                    .sized(11, 11)
+                    .clientTrackingRange(64)
+                    .build(new ResourceLocation(MODID, "black_hole").toString()));
     public static void register(RegisterEvent event){
         event.register(ForgeRegistries.Keys.ENTITY_TYPES, helper ->{
             {

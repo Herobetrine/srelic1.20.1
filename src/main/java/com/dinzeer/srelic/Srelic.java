@@ -1,5 +1,6 @@
 package com.dinzeer.srelic;
 
+import com.dinzeer.srelic.registry.ParticleRegistry;
 import com.dinzeer.srelic.registry.SRComboRegsitry;
 import com.dinzeer.srelic.registry.SREntiteRegristrys;
 import com.dinzeer.srelic.registry.SRslashArtRegsitry;
@@ -15,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegisterEvent;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -24,7 +26,9 @@ public class Srelic {
 
         return new ResourceLocation(MODID, path);
     }
-
+    public static ResourceLocation id(@NotNull String path) {
+        return new ResourceLocation(MODID, path);
+    }
 
     // Define mod id in a common place for everything to reference
     public static final String MODID = "srelic";
@@ -38,6 +42,8 @@ public class Srelic {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::register);
+        SREntiteRegristrys.register(modEventBus);
+        ParticleRegistry.register(modEventBus);
         //注册
         SRComboRegsitry.COMBO_STATES.register(modEventBus);
         SRslashArtRegsitry.SLASH_ARTS.register(modEventBus);
