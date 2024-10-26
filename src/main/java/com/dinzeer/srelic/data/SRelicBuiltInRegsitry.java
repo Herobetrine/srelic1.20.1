@@ -55,6 +55,8 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> RED_QUEEN=register("red_queen");
     //梦想一心
     public static final ResourceKey<SlashBladeDefinition> RAIDIAN=register("raiden");
+    //乱破武器
+    public static final ResourceKey<SlashBladeDefinition> RAPPA=register("rappa");
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(START,
                 new SlashBladeDefinition(Srelic.prefix("none_blue"),
@@ -136,7 +138,7 @@ public class SRelicBuiltInRegsitry {
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(21)
-                                .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                                .slashArtsType(SRslashArtRegsitry.BIG_DRIVE.getId())
                                 .maxDamage(80)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
@@ -339,6 +341,20 @@ public class SRelicBuiltInRegsitry {
 
 
                         )));
+        bootstrap.register(RAPPA,
+                new SlashBladeDefinition(Srelic.prefix("rappa"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/util/rappa.png"))
+                                .modelName(Srelic.prefix("model/stairail/rappa.obj"))
+                                .effectColor(16711697)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(17)
+                                .slashArtsType(SRslashArtRegsitry.Rappa.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5))));
 
     }
 

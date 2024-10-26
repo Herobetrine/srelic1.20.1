@@ -1,4 +1,4 @@
-// 1.20.1	2024-10-20T23:51:03.2055138	Registries
+// 1.20.1	2024-10-25T22:08:29.7016979	Registries
 3a770c82bf39bc9e9def99307c1e460f4147fc99 data/srelic/slashblade/named_blades/ark_fire.json
 1d8b78869bf48fc206ef1b33b6059961915a28ec data/srelic/slashblade/named_blades/end_fire.json
 0a2e7e4f4c88e30cae4962657b5440e79ef863f2 data/srelic/slashblade/named_blades/eternal_vows.json
@@ -8,11 +8,12 @@ d838526ad6f5ef2f1a9e723aac1d8ef136b4c0c4 data/srelic/slashblade/named_blades/kaf
 67a8c6608334f3625108c8c72e75cef77e8946dd data/srelic/slashblade/named_blades/none_blue.json
 6d7bc703402573783cbebc271af5223761fdb174 data/srelic/slashblade/named_blades/none_red.json
 612c3eef1aa15cd80decdc0dfd27fe8f28596eba data/srelic/slashblade/named_blades/raiden.json
+52a4b6f0d0822d4b3138b07a319a647043dc2f19 data/srelic/slashblade/named_blades/rappa.json
 a759080727239e84680409620c2fad480ff8f455 data/srelic/slashblade/named_blades/red_queen.json
 55fade80c74d095948ee39294224482f97d515fb data/srelic/slashblade/named_blades/star.json
 7eb640faa8222c2bef9d096fb572ffa2a24b866f data/srelic/slashblade/named_blades/the_fire.json
 0547ae4703bbce459331c73b103e82d547b2913e data/srelic/slashblade/named_blades/the_water.json
-dc6f8a70cfd99ad6c51b5c00b2f6d2c746b57264 data/srelic/slashblade/named_blades/the_wolf.json
+7345f4716bed4b0939a5bc676b40ec72801bb649 data/srelic/slashblade/named_blades/the_wolf.json
 673efa0da86d4cb3f477f7834250730f9699e0b9 data/srelic/slashblade/named_blades/ye_fire.json
 b4401d1c4f914b0187d39e0ae2316b2568623117 data/srelic/slashblade/named_blades/ye_star.json
 97575f5927bc5cf51d2a8b7d151bd516a01548aa data/srelic/slashblade/named_blades/ye_tachi.json

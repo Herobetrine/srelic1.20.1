@@ -9,7 +9,7 @@
   "properties": {
     "attack_base": 21.0,
     "max_damage": 80,
-    "slash_art": "slashblade:wave_edge",
+    "slash_art": "srelic:big_drive",
     "sword_type": [
       "bewitched"
     ]

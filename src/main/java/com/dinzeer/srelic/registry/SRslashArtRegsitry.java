@@ -16,6 +16,8 @@ public class SRslashArtRegsitry {
     public static final RegistryObject<SlashArts> THO;
     public static final RegistryObject<SlashArts> BIG_DRIVE;
     public static final RegistryObject<SlashArts> Rappa;
+    public static final RegistryObject<SlashArts> HQUAN;
+    public static final RegistryObject<SlashArts> FORDEADCRY;
 static {
     XDRIVE= SLASH_ARTS.register("xdrive", () -> new SlashArts((e) ->
             SRComboRegsitry.EXdrive.getId()));
@@ -25,5 +27,7 @@ static {
     THO=SLASH_ARTS.register("tho",()->new SlashArts((e)->SRComboRegsitry.THO.getId()));
     BIG_DRIVE=SLASH_ARTS.register("big_drive",()->new SlashArts((e)->SRComboRegsitry.BIGDRIVE_VERTICAL.getId()));
     Rappa=SLASH_ARTS.register("rappa",()->new SlashArts((e)->SRComboRegsitry.Rappa.getId()));
+    HQUAN=SLASH_ARTS.register("black_hole",()->new SlashArts((e)->SRComboRegsitry.HQUAN.getId()));
+    FORDEADCRY=SLASH_ARTS.register("four_slash",()->new SlashArts((e)->SRComboRegsitry.Four_Slash.getId()));
 }
 }

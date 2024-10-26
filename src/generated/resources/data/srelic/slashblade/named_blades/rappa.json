@@ -1,0 +1,22 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl": 5
+    }
+  ],
+  "name": "srelic:rappa",
+  "properties": {
+    "attack_base": 17.0,
+    "max_damage": 80,
+    "slash_art": "srelic:rappa",
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/stairail/rappa.obj",
+    "summon_sword_color": 16711697,
+    "texture": "srelic:model/util/rappa.png"
+  }
+}

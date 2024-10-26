@@ -1,12 +1,8 @@
 package com.dinzeer.srelic.registry;
 
-import com.dinzeer.srelic.Config;
 import com.dinzeer.srelic.Srelic;
 import com.dinzeer.srelic.Utils.AddDamgeUtil;
-import com.dinzeer.srelic.specialattacks.BigDriveSummon;
-import com.dinzeer.srelic.specialattacks.DriveSumon;
-import com.dinzeer.srelic.specialattacks.RappaSummon;
-import com.dinzeer.srelic.specialattacks.WitherBreaker;
+import com.dinzeer.srelic.specialattacks.*;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.ability.StunManager;
 import mods.flammpfeil.slashblade.init.DefaultResources;
@@ -134,7 +130,37 @@ public class SRComboRegsitry {
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
                             .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
-                            .put(3, (entityIn) -> RappaSummon.doSlash(entityIn, 0F, 20, Vec3.ZERO, false, 7, 0.5f, 1f, 2,2003199)).build())
+                            .put(3, (entityIn) -> RappaSummon.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 7, 0.5f, 1f, 2,16711697)).build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+    public static final RegistryObject<ComboState> HQUAN = COMBO_STATES.register("huang_quan",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(3, (entityIn) -> BlackHolePro.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 7, 0.5f, 1f, 2,16711697)).build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+    public static final RegistryObject<ComboState> Four_Slash = COMBO_STATES.register("four_slash",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(3, (entityIn) -> fourslash.doSlash(entityIn, 180 - 42, Vec3.ZERO, false, false, 10))
+                            .put(4, (entityIn) -> fourslash.doSlash(entityIn, 180 - 92, Vec3.ZERO, false, false, 10))
+                            .put(5, (entityIn) -> fourslash.doSlash(entityIn, 180 - 102, Vec3.ZERO, false, false, 10))
+                            .put(6, (entityIn) -> BlackHolePro.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 7, 0.5f, 1f, 2,16711697))
+                            .build())
                     .addHitEffect(StunManager::setStun)
                     ::build
     );
