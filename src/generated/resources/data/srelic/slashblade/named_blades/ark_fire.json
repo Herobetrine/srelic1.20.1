@@ -2,14 +2,32 @@
   "enchantments": [
     {
       "id": "minecraft:power",
-      "lvl": 3
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:fire_aspect"
+    },
+    {
+      "id": "minecraft:smite",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:looting",
+      "lvl": 2
     }
   ],
   "name": "srelic:ark_fire",
   "properties": {
-    "attack_base": 21.0,
+    "attack_base": 20.0,
     "max_damage": 80,
-    "slash_art": "slashblade:wave_edge",
+    "slash_art": "srelic:xdrive",
+    "special_effects": [
+      "srelic:flamerosion"
+    ],
     "sword_type": [
       "bewitched"
     ]

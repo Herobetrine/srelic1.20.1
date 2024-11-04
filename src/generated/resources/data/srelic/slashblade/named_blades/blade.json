@@ -1,0 +1,14 @@
+{
+  "name": "srelic:blade",
+  "properties": {
+    "attack_base": 5.0,
+    "max_damage": 80,
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/blade/blade.obj",
+    "texture": "srelic:model/blade/blade.png"
+  }
+}

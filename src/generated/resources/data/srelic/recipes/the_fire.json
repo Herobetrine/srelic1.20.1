@@ -1,0 +1,34 @@
+{
+  "type": "slashblade:shaped_blade",
+  "blade": "srelic:the_fire",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "type": "slashblade:blade",
+      "item": "slashblade:slashblade",
+      "request": {
+        "kill": 3000,
+        "name": "srelic:blade",
+        "refine": 20
+      }
+    },
+    "N": {
+      "item": "minecraft:blaze_rod"
+    },
+    "X": {
+      "item": "slashblade:slashblade_white"
+    },
+    "Z": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "NZN",
+    "ZBZ",
+    "NXN"
+  ],
+  "result": {
+    "item": "slashblade:slashblade"
+  },
+  "show_notification": true
+}

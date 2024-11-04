@@ -1,0 +1,54 @@
+{
+  "type": "slashblade:shaped_blade",
+  "blade": "srelic:none_red",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "type": "slashblade:blade",
+      "item": "slashblade:slashblade",
+      "request": {
+        "enchantments": [
+          {
+            "id": "minecraft:looting",
+            "lvl": 2
+          }
+        ],
+        "name": "slashblade_addon:nihilbx",
+        "refine": 25
+      }
+    },
+    "B": {
+      "type": "slashblade:blade",
+      "item": "slashblade:slashblade",
+      "request": {
+        "enchantments": [
+          {
+            "id": "minecraft:sharpness",
+            "lvl": 5
+          }
+        ],
+        "kill": 9000,
+        "name": "srelic:none_blue",
+        "refine": 25
+      }
+    },
+    "N": {
+      "item": "minecraft:ender_eye"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    },
+    "Z": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "NZN",
+    "ZBZ",
+    "SAS"
+  ],
+  "result": {
+    "item": "slashblade:slashblade"
+  },
+  "show_notification": true
+}

@@ -2,14 +2,29 @@
   "enchantments": [
     {
       "id": "minecraft:power",
-      "lvl": 3
+      "lvl": 9
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:smite",
+      "lvl": 7
+    },
+    {
+      "id": "minecraft:sweeping",
+      "lvl": 4
+    },
+    {
+      "id": "minecraft:mending"
     }
   ],
   "name": "srelic:none_red",
   "properties": {
     "attack_base": 21.0,
     "max_damage": 80,
-    "slash_art": "slashblade:void_slash",
+    "slash_art": "srelic:dead_cry",
     "sword_type": [
       "bewitched"
     ]

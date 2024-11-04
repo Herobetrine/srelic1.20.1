@@ -2,12 +2,24 @@
   "enchantments": [
     {
       "id": "minecraft:power",
+      "lvl": 4
+    },
+    {
+      "id": "minecraft:fire_aspect",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:unbreaking",
       "lvl": 3
     }
   ],
   "name": "srelic:ye_taichi",
   "properties": {
-    "attack_base": 17.0,
+    "attack_base": 12.0,
     "max_damage": 80,
     "slash_art": "slashblade:wave_edge",
     "sword_type": [

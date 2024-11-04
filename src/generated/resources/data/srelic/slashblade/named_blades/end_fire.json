@@ -2,14 +2,42 @@
   "enchantments": [
     {
       "id": "minecraft:power",
-      "lvl": 3
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fire_aspect",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:feather_falling",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fire_protection",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:smite",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:looting",
+      "lvl": 5
     }
   ],
   "name": "srelic:end_fire",
   "properties": {
-    "attack_base": 21.0,
+    "attack_base": 32.0,
     "max_damage": 80,
-    "slash_art": "slashblade:wave_edge",
+    "slash_art": "srelic:neo_drive",
+    "special_effects": [
+      "srelic:flamerosion",
+      "srelic:maxbreak"
+    ],
     "sword_type": [
       "bewitched"
     ]

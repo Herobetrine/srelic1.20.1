@@ -3,13 +3,23 @@
     {
       "id": "minecraft:power",
       "lvl": 3
+    },
+    {
+      "id": "minecraft:fire_aspect"
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 3
     }
   ],
   "name": "srelic:the_fire",
   "properties": {
-    "attack_base": 21.0,
+    "attack_base": 10.0,
     "max_damage": 80,
     "slash_art": "slashblade:wave_edge",
+    "special_effects": [
+      "srelic:flamerosion"
+    ],
     "sword_type": [
       "bewitched"
     ]

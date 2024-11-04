@@ -1,0 +1,25 @@
+{
+  "type": "slashblade:shaped_blade",
+  "blade": "srelic:blade",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "slashblade:slashblade"
+    },
+    "N": {
+      "item": "minecraft:paper"
+    },
+    "Z": {
+      "item": "slashblade:proudsoul_tiny"
+    }
+  },
+  "pattern": [
+    "NZN",
+    "ZBZ",
+    "NZN"
+  ],
+  "result": {
+    "item": "slashblade:slashblade"
+  },
+  "show_notification": true
+}

@@ -3,6 +3,22 @@
     {
       "id": "minecraft:power",
       "lvl": 3
+    },
+    {
+      "id": "minecraft:fire_aspect",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:smite",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 3
+    },
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 5
     }
   ],
   "name": "srelic:ye_fire",

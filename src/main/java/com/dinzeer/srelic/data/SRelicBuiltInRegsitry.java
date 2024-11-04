@@ -1,6 +1,7 @@
 package com.dinzeer.srelic.data;
 
 import com.dinzeer.srelic.Srelic;
+import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.registry.SRslashArtRegsitry;
 import mods.flammpfeil.slashblade.item.SwordType;
 import mods.flammpfeil.slashblade.registry.SlashArtsRegistry;
@@ -57,6 +58,12 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> RAIDIAN=register("raiden");
     //乱破武器
     public static final ResourceKey<SlashBladeDefinition> RAPPA=register("rappa");
+    //可塑性白模
+    public static final ResourceKey<SlashBladeDefinition> BLADE=register("blade");
+    //老铁
+    public static final ResourceKey<SlashBladeDefinition> LAOTIE=register("yunli");
+    //景元
+        public static final ResourceKey<SlashBladeDefinition> JINYUAN=register("jinyuan");
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(START,
                 new SlashBladeDefinition(Srelic.prefix("none_blue"),
@@ -66,12 +73,18 @@ public class SRelicBuiltInRegsitry {
                                 .effectColor(2003199)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
-                                .baseAttackModifier(17)
+                                .baseAttackModifier(15)
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .slashArtsType(SlashArtsRegistry.VOID_SLASH.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3)
+
+
+
+                        )));
         bootstrap.register(NONE,
                 new SlashBladeDefinition(Srelic.prefix("none_red"),
                         RenderDefinition.Builder.newInstance()
@@ -82,10 +95,14 @@ public class SRelicBuiltInRegsitry {
                         PropertiesDefinition.Builder.newInstance()
                                 .baseAttackModifier(21)
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .slashArtsType(SlashArtsRegistry.VOID_SLASH.getId())
+                                .slashArtsType(SRslashArtRegsitry.FORDEADCRY.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 9),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 7),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SWEEPING_EDGE), 4),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.MENDING), 1))));
         bootstrap.register(YE_TACHI_FIRE,
                 new SlashBladeDefinition(Srelic.prefix("ye_taichi"),
                         RenderDefinition.Builder.newInstance()
@@ -95,11 +112,16 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(17)
+                                .baseAttackModifier(12)
                                 .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 4),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING),3)
+
+                        )));
         bootstrap.register(YE_TACHI,
                 new SlashBladeDefinition(Srelic.prefix("ye_tachi"),
                         RenderDefinition.Builder.newInstance()
@@ -113,7 +135,10 @@ public class SRelicBuiltInRegsitry {
                                 .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING),1)
+                        )));
         bootstrap.register(FIRE,
                 new SlashBladeDefinition(Srelic.prefix("the_fire"),
                         RenderDefinition.Builder.newInstance()
@@ -122,12 +147,16 @@ public class SRelicBuiltInRegsitry {
                                 .effectColor(16760832)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
-                                .baseAttackModifier(21)
+                                .baseAttackModifier(10)
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
                                 .maxDamage(80)
+                                .addSpecialEffect(SRSpecialEffectsRegistry.FLAMEROSION.getId())
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 1),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3)
+                        )));
         bootstrap.register(WOLF,
                 new SlashBladeDefinition(Srelic.prefix("the_wolf"),
                         RenderDefinition.Builder.newInstance()
@@ -141,7 +170,11 @@ public class SRelicBuiltInRegsitry {
                                 .slashArtsType(SRslashArtRegsitry.BIG_DRIVE.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 1)
+
+                        )));
 
 
         bootstrap.register(ARK_FIRE,
@@ -153,11 +186,19 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(21)
-                                .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                                .baseAttackModifier(20)
+                                .slashArtsType(SRslashArtRegsitry.XDRIVE.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.FLAMEROSION.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 1),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.MOB_LOOTING), 2)
+
+
+                        )));
 
         bootstrap.register(END_FIRE,
                 new SlashBladeDefinition(Srelic.prefix("end_fire"),
@@ -168,11 +209,19 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(21)
-                                .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                                .baseAttackModifier(32)
+                                .slashArtsType(SRslashArtRegsitry.NEODRIVE.getId())
                                 .maxDamage(80)
+                                .addSpecialEffect(SRSpecialEffectsRegistry.FLAMEROSION.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.MAXBREAK.getId())
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FALL_PROTECTION), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_PROTECTION), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.MOB_LOOTING), 5))));
 
         bootstrap.register(WATER,
                 new SlashBladeDefinition(Srelic.prefix("the_water"),
@@ -183,11 +232,16 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(21)
+                                .baseAttackModifier(14)
                                 .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FALL_PROTECTION), 5)
+
+
+                        )));
 
         bootstrap.register(ICECRY,
                 new SlashBladeDefinition(Srelic.prefix("ice_cry"),
@@ -198,12 +252,12 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(17)
+                                .baseAttackModifier(22)
                                 .addSpecialEffect(SpecialEffectsRegistry.WITHER_EDGE.getId())
                                 .slashArtsType(SRslashArtRegsitry.WitherBreaker.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 10),
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 5),
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3)
 
@@ -218,11 +272,14 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(21)
-                                .slashArtsType(SlashArtsRegistry.VOID_SLASH.getId())
+                                .baseAttackModifier(15)
+                                .slashArtsType(SRslashArtRegsitry.BIG_DRIVEF.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3)
+                        )));
 
 
         bootstrap.register(STAR,
@@ -234,25 +291,33 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(17)
-                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .baseAttackModifier(14)
+                                .slashArtsType(SRslashArtRegsitry.HOMERUN.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 5)
+
+                        )));
         bootstrap.register(FIRE_KNIGHT,
                 new SlashBladeDefinition(Srelic.prefix("fire_knight"),
                         RenderDefinition.Builder.newInstance()
                                 .textureName(Srelic.prefix("model/stairail/fire_knight.png"))
                                 .modelName(Srelic.prefix("model/stairail/fire_knight.obj"))
-                                .effectColor(2003199)
+                                .effectColor(16760832)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(17)
-                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .baseAttackModifier(15)
+                                .slashArtsType(SRslashArtRegsitry.XDRIVE.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 5)
+                        )));
 
         bootstrap.register(ETERNAL_VOWS,
                 new SlashBladeDefinition(Srelic.prefix("eternal_vows"),
@@ -286,7 +351,13 @@ public class SRelicBuiltInRegsitry {
                                 .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 5)
+
+                        )));
         bootstrap.register(YE_STAR,
                 new SlashBladeDefinition(Srelic.prefix("ye_star"),
                         RenderDefinition.Builder.newInstance()
@@ -300,7 +371,11 @@ public class SRelicBuiltInRegsitry {
                                 .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10))));
         bootstrap.register(RED_QUEEN,
                 new SlashBladeDefinition(Srelic.prefix("red_queen"),
                         RenderDefinition.Builder.newInstance()
@@ -329,7 +404,7 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(17)
+                                .baseAttackModifier(25)
                                 .slashArtsType(SRslashArtRegsitry.THO.getId())
                                 .maxDamage(80)
                                 .build(),
@@ -350,12 +425,62 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(17)
+                                .baseAttackModifier(18)
                                 .slashArtsType(SRslashArtRegsitry.Rappa.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5))));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 1)
 
+
+                        )));
+        bootstrap.register(
+                    BLADE, new SlashBladeDefinition(Srelic.prefix("blade"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/blade/blade.png"))
+                                .modelName(Srelic.prefix("model/blade/blade.obj"))
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(5)
+                                .maxDamage(80)
+                                .build(),
+                        List.of()
+                        ));
+        bootstrap.register(
+                LAOTIE, new SlashBladeDefinition(Srelic.prefix("laotie"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/yunli.png"))
+                                .modelName(Srelic.prefix("model/stairail/yunli.obj"))
+                                .effectColor(16711697)
+
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(14)
+                                .maxDamage(80)
+                                .slashArtsType(SRslashArtRegsitry.YUNLI.getId())
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
+                          new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3)
+                        )
+                ));
+        bootstrap.register(
+                JINYUAN, new SlashBladeDefinition(Srelic.prefix("jinyuan"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/jinyuan.png"))
+                                .modelName(Srelic.prefix("model/stairail/jinyuan.obj"))
+                                .effectColor(14665221)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(22)
+                                .maxDamage(80)
+                                .build(),
+                        List.of()
+                ));
     }
 
 
@@ -364,7 +489,7 @@ public class SRelicBuiltInRegsitry {
     private static ResourceKey<SlashBladeDefinition> register(String id) {
         return ResourceKey.create(SlashBladeDefinition.REGISTRY_KEY, Srelic.prefix(id));
     }
-    private static ResourceLocation getEnchantmentID(Enchantment enchantment) {
+    static ResourceLocation getEnchantmentID(Enchantment enchantment) {
         return ForgeRegistries.ENCHANTMENTS.getKey(enchantment);
     }
 

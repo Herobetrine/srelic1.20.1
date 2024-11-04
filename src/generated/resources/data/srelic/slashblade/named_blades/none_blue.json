@@ -3,13 +3,21 @@
     {
       "id": "minecraft:power",
       "lvl": 3
+    },
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 3
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 3
     }
   ],
   "name": "srelic:none_blue",
   "properties": {
-    "attack_base": 17.0,
+    "attack_base": 15.0,
     "max_damage": 80,
-    "slash_art": "slashblade:sakura_end",
+    "slash_art": "slashblade:void_slash",
     "sword_type": [
       "bewitched"
     ]

@@ -2,12 +2,20 @@
   "enchantments": [
     {
       "id": "minecraft:power",
-      "lvl": 3
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:feather_falling",
+      "lvl": 5
     }
   ],
   "name": "srelic:the_water",
   "properties": {
-    "attack_base": 21.0,
+    "attack_base": 14.0,
     "max_damage": 80,
     "slash_art": "slashblade:wave_edge",
     "sword_type": [

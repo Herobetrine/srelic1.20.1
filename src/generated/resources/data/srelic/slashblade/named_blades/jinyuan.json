@@ -1,0 +1,15 @@
+{
+  "name": "srelic:jinyuan",
+  "properties": {
+    "attack_base": 22.0,
+    "max_damage": 80,
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/stairail/jinyuan.obj",
+    "summon_sword_color": 14665221,
+    "texture": "srelic:model/stairail/jinyuan.png"
+  }
+}

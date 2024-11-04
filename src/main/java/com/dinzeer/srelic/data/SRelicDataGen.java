@@ -23,6 +23,7 @@ public class SRelicDataGen {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         PackOutput packOutput = dataGenerator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+        dataGenerator.addProvider(event.includeServer(), new SrelicBladeRecipeProvioder(packOutput));
         final RegistrySetBuilder bladeBuilder = new RegistrySetBuilder().add(SlashBladeDefinition.REGISTRY_KEY,
                 SRelicBuiltInRegsitry::registerAll);
         dataGenerator.addProvider(event.includeServer(),

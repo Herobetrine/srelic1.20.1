@@ -3,13 +3,21 @@
     {
       "id": "minecraft:power",
       "lvl": 3
+    },
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:smite",
+      "lvl": 5
     }
   ],
   "name": "srelic:star",
   "properties": {
-    "attack_base": 17.0,
+    "attack_base": 14.0,
     "max_damage": 80,
-    "slash_art": "slashblade:sakura_end",
+    "slash_art": "srelic:home_run",
     "sword_type": [
       "bewitched"
     ]

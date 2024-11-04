@@ -1,0 +1,48 @@
+{
+  "type": "slashblade:shaped_blade",
+  "blade": "srelic:rappa",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:gold_block"
+    },
+    "B": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "C": {
+      "item": "minecraft:diamond_block"
+    },
+    "D": {
+      "item": "minecraft:redstone_block"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "slashblade:slashblade",
+      "request": {
+        "enchantments": [
+          {
+            "id": "minecraft:smite",
+            "lvl": 3
+          }
+        ],
+        "name": "srelic:blade",
+        "refine": 25
+      }
+    },
+    "F": {
+      "item": "minecraft:iron_block"
+    },
+    "G": {
+      "item": "minecraft:lapis_block"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DED",
+    "FBG"
+  ],
+  "result": {
+    "item": "slashblade:slashblade"
+  },
+  "show_notification": true
+}

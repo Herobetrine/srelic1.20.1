@@ -1,7 +1,8 @@
 package com.dinzeer.srelic.registry;
 
+import com.dinzeer.srelic.Config;
 import com.dinzeer.srelic.Srelic;
-import com.dinzeer.srelic.Utils.AddDamgeUtil;
+import com.dinzeer.srelic.Utils.GetNumUtil;
 import com.dinzeer.srelic.specialattacks.*;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.ability.StunManager;
@@ -103,7 +104,7 @@ public class SRComboRegsitry {
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
                             .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -61))
-                            .put(6, (entityIn) -> SakuraEnd.doSlash(entityIn, 180 - 42, Vec3.ZERO, false, false, AddDamgeUtil.getdamage(entityIn)*10))
+                            .put(6, (entityIn) -> SakuraEnd.doSlash(entityIn, 180 - 42, Vec3.ZERO, false, false, GetNumUtil.getdamage(entityIn)* Config.THE_DREAM_NUM))
                                     .build())
                     .addHitEffect(StunManager::setStun)::build);
 
@@ -117,7 +118,7 @@ public class SRComboRegsitry {
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
                             .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
-                            .put(3, (entityIn) -> BigDriveSummon.doSlash(entityIn, -90F, 10, Vec3.ZERO, false, 30, 0.5f)).build())
+                            .put(3, (entityIn) -> BigDriveSummon.doSlash(entityIn, -90F, 10, Vec3.ZERO, false, 30, 1f)).build())
                     .addHitEffect(StunManager::setStun)
                     ::build
     );
@@ -161,6 +162,66 @@ public class SRComboRegsitry {
                             .put(5, (entityIn) -> fourslash.doSlash(entityIn, 180 - 102, Vec3.ZERO, false, false, 10))
                             .put(6, (entityIn) -> BlackHolePro.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 7, 0.5f, 1f, 2,16711697))
                             .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+
+    public static final RegistryObject<ComboState> NEODRIVE = COMBO_STATES.register
+            (
+                    "neo_drive",
+                    ComboState.Builder.newInstance().startAndEnd(400, 459).priority(50)
+                            .motionLoc(DefaultResources.ExMotionLocation)
+                            .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                            .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                            .addTickAction
+                                    (
+                                            ComboState.TimeLineTickAction.getBuilder()
+                                                    .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 12))
+                                                    .put(3, (entityIn) -> NeoDriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 20+(GetNumUtil.getdamage(entityIn)/2)*Config.neo_drive_NUM, 1f, 5f, 2, GetNumUtil.getcolor(entityIn)))
+                                                    .put(4, (entityIn) -> AttackManager.doSlash(entityIn, 45F, Vec3.ZERO, false, false, 12))
+                                                    .put(5,(entityIn) ->  NeoDriveSumon.doSlash(entityIn, -45F, 20, Vec3.ZERO, false, 20+(GetNumUtil.getdamage(entityIn)/2)*Config.neo_drive_NUM, 1f, 5f, 2, GetNumUtil.getcolor(entityIn)))
+                                                    .build()
+                                    )
+                            .addHitEffect(StunManager::setStun)
+                            ::build
+            );
+    public static final RegistryObject<ComboState> HOMERUN = COMBO_STATES.register("home_run",
+            ComboState.Builder.newInstance().startAndEnd(400, 459).priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(1, (entityIn) -> AttackManager.doSlash(entityIn, 0F, Vec3.ZERO, false, false, 0.1F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -90F, Vec3.ZERO, false, false, 0.1F))
+                            .put(3,(entityIn) ->  DriveSumon.doSlash(entityIn, 0F, 20, Vec3.ZERO, false, 7, 1f, 5f, 2,2003199))
+                            .put(4,(entityIn) ->  DriveSumon.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 7, 1f, 5f, 2,2003199))
+                            .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build);
+
+    public static final RegistryObject<ComboState> BIGDRIVED = COMBO_STATES.register("big_drived",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(3, (entityIn) -> BigDriveSummon.doSlash(entityIn, 0F, 10, Vec3.ZERO, false, 30, 1f)).build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+    public static final RegistryObject<ComboState> YUNLI = COMBO_STATES.register("yun_li",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(3, (entityIn) -> YunLi.doSlash( entityIn, false, 7, 2f)).build())
                     .addHitEffect(StunManager::setStun)
                     ::build
     );

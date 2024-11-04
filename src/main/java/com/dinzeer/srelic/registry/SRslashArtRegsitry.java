@@ -18,6 +18,10 @@ public class SRslashArtRegsitry {
     public static final RegistryObject<SlashArts> Rappa;
     public static final RegistryObject<SlashArts> HQUAN;
     public static final RegistryObject<SlashArts> FORDEADCRY;
+    public static final RegistryObject<SlashArts> NEODRIVE;
+    public static final RegistryObject<SlashArts> HOMERUN;
+    public static final RegistryObject<SlashArts> BIG_DRIVEF;
+    public static final RegistryObject<SlashArts> YUNLI;
 static {
     XDRIVE= SLASH_ARTS.register("xdrive", () -> new SlashArts((e) ->
             SRComboRegsitry.EXdrive.getId()));
@@ -28,6 +32,10 @@ static {
     BIG_DRIVE=SLASH_ARTS.register("big_drive",()->new SlashArts((e)->SRComboRegsitry.BIGDRIVE_VERTICAL.getId()));
     Rappa=SLASH_ARTS.register("rappa",()->new SlashArts((e)->SRComboRegsitry.Rappa.getId()));
     HQUAN=SLASH_ARTS.register("black_hole",()->new SlashArts((e)->SRComboRegsitry.HQUAN.getId()));
-    FORDEADCRY=SLASH_ARTS.register("four_slash",()->new SlashArts((e)->SRComboRegsitry.Four_Slash.getId()));
+    FORDEADCRY=SLASH_ARTS.register("dead_cry",()->new SlashArts((e)->SRComboRegsitry.Four_Slash.getId()));
+    NEODRIVE=SLASH_ARTS.register("neo_drive",()->new SlashArts((e)->SRComboRegsitry.NEODRIVE.getId()));
+    HOMERUN=SLASH_ARTS.register("home_run",()->new SlashArts((e)->SRComboRegsitry.HOMERUN.getId()));
+    BIG_DRIVEF=SLASH_ARTS.register("big_drived",()->new SlashArts((e)->SRComboRegsitry.BIGDRIVED.getId()));
+    YUNLI=SLASH_ARTS.register("yunli",()->new SlashArts((e)->SRComboRegsitry.YUNLI.getId()));
 }
 }

@@ -2,6 +2,7 @@ package com.dinzeer.srelic.cilent;
 
 import com.dinzeer.srelic.cilent.render.BigDriveRenderer;
 import com.dinzeer.srelic.cilent.render.BlackHoleRenderer;
+import com.dinzeer.srelic.cilent.render.NeoRenderer;
 import com.dinzeer.srelic.cilent.render.RappaRenderer;
 import com.dinzeer.srelic.entity.RappaEnity;
 import com.dinzeer.srelic.registry.SREntiteRegristrys;
@@ -21,5 +22,7 @@ public class SrelicClient {
         event.registerEntityRenderer(SREntiteRegristrys.BIGDrive, BigDriveRenderer::new);
         event.registerEntityRenderer(SREntiteRegristrys.BLACK_HOLE.get(), BlackHoleRenderer::new);
         event.registerEntityRenderer(SREntiteRegristrys.Rappa, RappaRenderer::new);
+        event.registerEntityRenderer(SREntiteRegristrys.NeoDrive, NeoRenderer::new);
+        event.registerEntityRenderer(SREntiteRegristrys.YunLi, SummonedSwordRenderer::new);
     }
 }

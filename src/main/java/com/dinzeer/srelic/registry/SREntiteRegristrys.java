@@ -1,10 +1,7 @@
 package com.dinzeer.srelic.registry;
 
 import com.dinzeer.srelic.Srelic;
-import com.dinzeer.srelic.entity.BigDriveEnity;
-import com.dinzeer.srelic.entity.BlackHole;
-import com.dinzeer.srelic.entity.RappaEnity;
-import com.dinzeer.srelic.entity.WitherBreakerEntity;
+import com.dinzeer.srelic.entity.*;
 import com.google.common.base.CaseFormat;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
@@ -64,6 +61,22 @@ public class SREntiteRegristrys {
                         .sized(3.0F, 3.0F).setTrackingRange(4).setUpdateInterval(20)
                         .setCustomClientFactory(RappaEnity::createInstance).build(RappaLoc.toString());
                 helper.register(RappaLoc, entity);
+            }
+        });
+        event.register(ForgeRegistries.Keys.ENTITY_TYPES, helper -> {
+            {
+                EntityType<NeoDriveEnity> entity = NeoDrive = EntityType.Builder.of(NeoDriveEnity::new, MobCategory.MISC)
+                        .sized(3.0F, 3.0F).setTrackingRange(4).setUpdateInterval(20)
+                        .setCustomClientFactory(NeoDriveEnity::createInstance).build(NeoDriveLoc.toString());
+                helper.register(NeoDriveLoc, entity);
+            }
+        });
+        event.register(ForgeRegistries.Keys.ENTITY_TYPES, helper -> {
+            {
+                EntityType<YunLiEntity> entity = YunLi = EntityType.Builder.of(YunLiEntity::new, MobCategory.MISC)
+                        .sized(3.0F, 3.0F).setTrackingRange(4).setUpdateInterval(20)
+                        .setCustomClientFactory(YunLiEntity::createInstance).build(YunLiLOC.toString());
+                helper.register(YunLiLOC, entity);
             }
         });
     }
