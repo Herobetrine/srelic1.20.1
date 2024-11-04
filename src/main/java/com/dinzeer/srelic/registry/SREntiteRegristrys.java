@@ -30,6 +30,13 @@ public class SREntiteRegristrys {
     public static final ResourceLocation RappaLoc = new ResourceLocation(Srelic.MODID,
             classToString(RappaEnity.class));
     public static EntityType<RappaEnity> Rappa;
+    public static final ResourceLocation NeoDriveLoc = new ResourceLocation(Srelic.MODID,
+            classToString(NeoDriveEnity.class));
+    public static EntityType<NeoDriveEnity> NeoDrive;
+
+    public static final ResourceLocation YunLiLOC = new ResourceLocation(MODID, classToString(YunLiEntity.class));
+    public static EntityType<YunLiEntity> YunLi;
+
     public static final RegistryObject<EntityType<BlackHole>> BLACK_HOLE =
             ENTITIES.register("black_hole", () -> EntityType.Builder.<BlackHole>of(BlackHole::new, MobCategory.MISC)
                     .sized(11, 11)
