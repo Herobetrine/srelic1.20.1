@@ -22,6 +22,7 @@ public class SRslashArtRegsitry {
     public static final RegistryObject<SlashArts> HOMERUN;
     public static final RegistryObject<SlashArts> BIG_DRIVEF;
     public static final RegistryObject<SlashArts> YUNLI;
+    public static final RegistryObject<SlashArts> BIGSLASH;
 static {
     XDRIVE= SLASH_ARTS.register("xdrive", () -> new SlashArts((e) ->
             SRComboRegsitry.EXdrive.getId()));
@@ -37,5 +38,6 @@ static {
     HOMERUN=SLASH_ARTS.register("home_run",()->new SlashArts((e)->SRComboRegsitry.HOMERUN.getId()));
     BIG_DRIVEF=SLASH_ARTS.register("big_drived",()->new SlashArts((e)->SRComboRegsitry.BIGDRIVED.getId()));
     YUNLI=SLASH_ARTS.register("yunli",()->new SlashArts((e)->SRComboRegsitry.YUNLI.getId()));
+    BIGSLASH=SLASH_ARTS.register("bigslash",()->new SlashArts((e)->SRComboRegsitry.BIGSLASH.getId()));
 }
 }

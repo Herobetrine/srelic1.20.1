@@ -1,6 +1,7 @@
 package com.dinzeer.srelic.entity;
 
 import com.dinzeer.srelic.registry.SREntiteRegristrys;
+import com.dinzeer.srelic.specialattacks.RappaSummon;
 import com.google.common.collect.Lists;
 import mods.flammpfeil.slashblade.ability.StunManager;
 import mods.flammpfeil.slashblade.capability.concentrationrank.IConcentrationRank;
@@ -10,6 +11,7 @@ import mods.flammpfeil.slashblade.util.AttackManager;
 import mods.flammpfeil.slashblade.util.EnumSetConverter;
 import mods.flammpfeil.slashblade.util.KnockBacks;
 import mods.flammpfeil.slashblade.util.NBTHelper;
+import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
@@ -42,6 +44,7 @@ import net.minecraftforge.network.PlayMessages;
 
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Random;
 
 public class RappaEnity extends EntityAbstractSummonedSword {
     private static final EntityDataAccessor<Integer> COLOR;
@@ -260,15 +263,32 @@ public class RappaEnity extends EntityAbstractSummonedSword {
     public double getDamage() {
         return this.damage;
     }
-
+        public static Random random = new Random();
     protected void onHitEntity(EntityHitResult p_213868_1_) {
         Entity targetEntity = p_213868_1_.getEntity();
-        int i = Mth.ceil(this.getDamage());
-        if (this.getIsCritical()) {
-            i += this.random.nextInt(i / 2 + 2);
+        LivingEntity shooter1 = (LivingEntity) getShooter();
+        if (!this.getPersistentData().getBoolean("IsSmall")) {
+            targetEntity.getPersistentData().putInt("rappahit", 20);
+        }
+        int rappahit = targetEntity.getPersistentData().getInt("rappahit");
+        if (rappahit >0){
+            if (shooter1 != null) {
+                shooter1.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 3, 0));
+                shooter1.teleportTo(targetEntity.getX() + random.nextDouble(-2, 2), targetEntity.getY() + random.nextInt(-1, 1)+1, targetEntity.getZ() + random.nextDouble(-2, 2));
+                shooter1.lookAt(EntityAnchorArgument.Anchor.EYES, targetEntity.position().add(0,0.5,0));
+                RappaSummon.RappaSummon1((Player) shooter1);
+            }
+            targetEntity.getPersistentData().putInt("rappahit", rappahit-1);
         }
 
-        Entity shooter = this.getShooter();
+
+
+        int i = Mth.ceil(this.getDamage());
+        if (this.getIsCritical()) {
+            i += random.nextInt(i / 2 + 2);
+        }
+
+        Entity shooter = shooter1;
         DamageSource damagesource;
         if (shooter == null) {
             damagesource = this.damageSources().indirectMagic(this, this);

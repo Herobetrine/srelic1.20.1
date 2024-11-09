@@ -39,7 +39,6 @@ public class BigDriveSummon {
                 .add(VectorHelper.getVectorForRotation(0, playerIn.getViewYRot(0) + 90).scale(centerOffset.z))
                 .add(lookAngle.scale(centerOffset.z));
         BigDriveEnity drive = new BigDriveEnity(SREntiteRegristrys.BIGDrive, playerIn.level());
-
         drive.setPos(pos.x, pos.y, pos.z);
         drive.setDamage(damage);
         drive.setSpeed(speed);

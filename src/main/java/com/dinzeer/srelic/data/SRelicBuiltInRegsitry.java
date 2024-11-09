@@ -477,10 +477,13 @@ public class SRelicBuiltInRegsitry {
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(22)
+                                .slashArtsType(SRslashArtRegsitry.BIGSLASH.getId())
                                 .maxDamage(80)
                                 .build(),
-                        List.of()
-                ));
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3)
+                )));
     }
 
 

@@ -147,8 +147,7 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     //开发环境jei
     implementation fg.deobf("curse.maven:jei-238222:5576551")
-    //拔刀剑重锋依赖
-    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:5808359")
+
     //日系附属包依赖
     implementation fg.deobf("curse.maven:slashblade-japanese-addon-pack-310187:5808363")
     //暮色森林
@@ -168,8 +167,31 @@ dependencies {
     //伤害数值显示
     implementation fg.deobf("curse.maven:damage-number-998849:5538112")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.2.0")) {
+        jarJar.ranged(it, "[0.2.0,)")
+    }
 }
+dependencies {
+    //拔刀剑重锋依赖
+    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:5876531")
+}
+minecraft {
+    runs {
+        client {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+        }
 
+        server {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+        }
+        data {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+        }
+    }
+}
 // This block of code expands all declared replace properties in the specified resource targets.
 // A missing property will result in an error. Properties are expanded using ${} Groovy notation.
 // When "copyIdeResources" is enabled, this will also run before the game launches in IDE environments.

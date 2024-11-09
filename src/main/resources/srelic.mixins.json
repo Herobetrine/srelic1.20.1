@@ -3,9 +3,9 @@
   "minVersion": "0.8",
   "package": "com.dinzeer.srelic.mixin",
   "compatibilityLevel": "JAVA_17",
-  "refmap": "SRelic.refmap.json",
+  "refmap": "srelic.refmap.json",
   "mixins": [
-
+    "DriveSummonedMixin"
   ],
   "client": [
   ],

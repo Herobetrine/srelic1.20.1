@@ -6,7 +6,10 @@ import mods.flammpfeil.slashblade.capability.concentrationrank.ConcentrationRank
 import mods.flammpfeil.slashblade.util.KnockBacks;
 import mods.flammpfeil.slashblade.util.VectorHelper;
 import net.minecraft.util.Mth;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 
 public class RappaSummon {
@@ -21,6 +24,34 @@ public class RappaSummon {
         doSlash(playerIn, roll, lifetime, colorCode, centerOffset, critical, damage, knockback, minSpeed, maxSpeed, count);
     }
 
+    public static void RappaSummon1(Player playerIn) {
+        Vec3 pos = playerIn.position().add(0.0D, (double) playerIn.getEyeHeight() * 0.75D, 0.0D)
+                .add(playerIn.getLookAngle().scale(0.3f));
+        Vec3 centerOffset = Vec3.ZERO;
+        pos = pos.add(VectorHelper.getVectorForRotation(-90.0F, playerIn.getViewYRot(0)).scale(centerOffset.y))
+                .add(VectorHelper.getVectorForRotation(0, playerIn.getViewYRot(0) + 90).scale(centerOffset.z))
+                .add(playerIn.getLookAngle().scale(centerOffset.z));
+        {
+
+            RappaEnity drive = new RappaEnity(SREntiteRegristrys.Rappa, playerIn.level());
+
+            playerIn.level().addFreshEntity(drive);
+            float speed = Mth.randomBetween(drive.level().getRandom(), 0.5f, 2f);
+
+            drive.setPos(pos.x, pos.y, pos.z);
+            drive.setDamage(3.5);
+            drive.setSpeed(speed);
+            drive.shoot(playerIn.getLookAngle().x, playerIn.getLookAngle().y, playerIn.getLookAngle().z, drive.getSpeed(), 0);
+
+            drive.setOwner(playerIn);
+
+            drive.getPersistentData().putBoolean("IsSmall",true);
+
+            drive.setColor(16711697);
+            drive.setLifetime(20);
+
+        }
+    }
     public static void doSlash(LivingEntity playerIn, float roll, int lifetime, int colorCode, Vec3 centerOffset,
                                boolean critical, double damage, KnockBacks knockback, float minSpeed, float maxSpeed, int count) {
 

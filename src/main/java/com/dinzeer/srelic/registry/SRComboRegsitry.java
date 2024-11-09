@@ -225,4 +225,18 @@ public class SRComboRegsitry {
                     .addHitEffect(StunManager::setStun)
                     ::build
     );
+
+    public static final RegistryObject<ComboState> BIGSLASH = COMBO_STATES.register("big_slash",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(3, (entityIn) -> BigSlash.doSlash(entityIn,90,5,Vec3.ZERO,false,GetNumUtil.getdamage(entityIn)*10,10,1,1,50)).build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
 }

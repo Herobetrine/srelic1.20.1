@@ -225,7 +225,7 @@ public class SrelicBladeRecipeProvioder extends RecipeProvider implements ICondi
                                 .build()))
                 .define('A',SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
-                                .name(SlashBladeAddonBuiltInRegistry.NIHILBX.location())
+                                .name(SlashBladeAddonBuiltInRegistry.NIHILEX.location())
                                 .refineCount(25)
                                 .addEnchantment(new EnchantmentDefinition(getEnchantmentID(Enchantments.MOB_LOOTING),2))
                                 .build()))
@@ -373,6 +373,51 @@ public class SrelicBladeRecipeProvioder extends RecipeProvider implements ICondi
                 .define('E',  Items.DIAMOND_BLOCK)
                 .define('F',  Items.QUARTZ_BLOCK)
                 .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
+        SlashBladeShapedRecipeBuilder.shaped(SRelicBuiltInRegsitry.LAOTIE.location())
+                .pattern("ABC")
+                .pattern("DED")
+                .pattern("FDG")
+                .define('A',  Items.REDSTONE_BLOCK)
+                .define('B',  Items.NETHER_STAR)
+                .define('C',  SlashBladeIngredient.of(
+                        RequestDefinition.Builder.newInstance()
+                                .name(SlashBladeAddonBuiltInRegistry.KATANA.location())
+                                .killCount(3000)
+                                .refineCount(20)
+                                .build()))
+                .define('D',  SBItems.proudsoul_crystal)
+                .define('E', SlashBladeIngredient.of(
+                        RequestDefinition.Builder.newInstance()
+                                .name(SRelicBuiltInRegsitry.BLADE.location())
+                                .killCount(3000)
+                                .refineCount(20)
+                                .build()))
+                .define('F', SlashBladeIngredient.of(
+                        RequestDefinition.Builder.newInstance()
+                                .name(SlashBladeBuiltInRegistry.TUKUMO.location())
+                                .killCount(3000)
+                                .refineCount(20)
+                                .build()))
+                .define('G', Items.GOLD_BLOCK)
+                .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
+
+        SlashBladeShapedRecipeBuilder.shaped(SRelicBuiltInRegsitry.JINYUAN.location())
+                .pattern("ABA")
+                .pattern("CDE")
+                .pattern("ABA")
+                .define('B',  Items.NETHER_STAR)
+                .define('A',  SBItems.proudsoul_crystal)
+                .define('D',  SlashBladeIngredient.of(
+                        RequestDefinition.Builder.newInstance()
+                                .name(SRelicBuiltInRegsitry.BLADE.location())
+                                .killCount(9000)
+                                .refineCount(40)
+                                .addEnchantment(new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT),1))
+                                .build()))
+                .define('C',Items.BLAZE_ROD)
+                .define('E',  Items.DIAMOND_BLOCK)
+                .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
+
     }
     public Item getItem(ResourceLocation item) {
         return ForgeRegistries.ITEMS.getValue(item);
