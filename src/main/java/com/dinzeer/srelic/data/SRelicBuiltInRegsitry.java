@@ -64,6 +64,8 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> LAOTIE=register("yunli");
     //景元
         public static final ResourceKey<SlashBladeDefinition> JINYUAN=register("jinyuan");
+    //老杨
+    public static final ResourceKey<SlashBladeDefinition> idanstar=register("idanstar");
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(START,
                 new SlashBladeDefinition(Srelic.prefix("none_blue"),
@@ -484,6 +486,24 @@ public class SRelicBuiltInRegsitry {
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3)
                 )));
+        bootstrap.register(
+                idanstar, new SlashBladeDefinition(Srelic.prefix("idanstar"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/idanstar.png"))
+                                .modelName(Srelic.prefix("model/stairail/idanstar.obj"))
+                                .effectColor(16711697)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(22)
+                                .slashArtsType(SRslashArtRegsitry.HQUAN.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3)
+                        )));
+
     }
 
 
