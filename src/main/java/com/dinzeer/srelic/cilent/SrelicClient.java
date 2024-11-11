@@ -4,7 +4,6 @@ import com.dinzeer.srelic.cilent.render.BigDriveRenderer;
 import com.dinzeer.srelic.cilent.render.BlackHoleRenderer;
 import com.dinzeer.srelic.cilent.render.NeoRenderer;
 import com.dinzeer.srelic.cilent.render.RappaRenderer;
-import com.dinzeer.srelic.entity.RappaEnity;
 import com.dinzeer.srelic.registry.SREntiteRegristrys;
 import mods.flammpfeil.slashblade.client.renderer.entity.SummonedSwordRenderer;
 import net.minecraftforge.api.distmarker.Dist;

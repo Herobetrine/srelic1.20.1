@@ -6,7 +6,7 @@ import mods.flammpfeil.slashblade.entity.EntitySlashEffect;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.util.KnockBacks;
 import mods.flammpfeil.slashblade.util.VectorHelper;
-import net.minecraft.client.Minecraft;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MoverType;
@@ -101,7 +101,7 @@ public class fourslash {
             playerIn.setPos(findFarthestNonAirBlock(playerIn,8).getCenter());
 
             Vec3 pos = playerIn.position().add(0.0, (double)playerIn.getEyeHeight() * 0.75, 0.0).add(playerIn.getLookAngle().scale(0.30000001192092896));
-            Minecraft.getInstance().cameraEntity.move(MoverType.SELF, playerIn.getLookAngle().scale(0.4));
+//            Minecraft.getInstance().cameraEntity.move(MoverType.SELF, playerIn.getLookAngle().scale(0.4));
             pos = pos.add(VectorHelper.getVectorForRotation(-90.0F, playerIn.getViewYRot(0.0F)).scale(centerOffset.y)).add(VectorHelper.getVectorForRotation(0.0F, playerIn.getViewYRot(0.0F) + 90.0F).scale(centerOffset.z)).add(playerIn.getLookAngle().scale(centerOffset.z));
            for (int i =0;i<=5;i++){
             EntitySlashEffect jc = new EntitySlashEffect(SlashBlade.RegistryEvents.SlashEffect, playerIn.level());
