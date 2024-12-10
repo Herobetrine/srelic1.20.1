@@ -3,7 +3,7 @@ loaderVersion="${loader_version_range}"
 license="${mod_license}"
 [[mods]] #mandatory
 modId="srelic"
-version="1.0.0"
+version="2.0.2"
 displayName="Slash blade relic"
 authors="dinzeer"
 description='''Added some swords and knives'''

@@ -66,6 +66,10 @@ public class SRelicBuiltInRegsitry {
         public static final ResourceKey<SlashBladeDefinition> JINYUAN=register("jinyuan");
     //老杨
     public static final ResourceKey<SlashBladeDefinition> idanstar=register("idanstar");
+    //黑塔
+    public static final ResourceKey<SlashBladeDefinition> heita=register("heita");
+    //痛刀「爱莉西雅」
+    public static final ResourceKey<SlashBladeDefinition> eiliy=register("eiliy");
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(START,
                 new SlashBladeDefinition(Srelic.prefix("none_blue"),
@@ -497,6 +501,23 @@ public class SRelicBuiltInRegsitry {
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(22)
                                 .slashArtsType(SRslashArtRegsitry.HQUAN.getId())
+                                .maxDamage(80)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3)
+                        )));
+        bootstrap.register(
+                heita, new SlashBladeDefinition(Srelic.prefix("heita"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/heita.png"))
+                                .modelName(Srelic.prefix("model/stairail/heita.obj"))
+                                .effectColor(4456703)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(22)
+                                .slashArtsType(SRslashArtRegsitry.Heita.getId())
                                 .maxDamage(80)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
