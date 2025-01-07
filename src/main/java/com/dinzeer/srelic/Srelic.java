@@ -1,5 +1,6 @@
 package com.dinzeer.srelic;
 
+import com.dinzeer.srelic.Utils.DashMessage;
 import com.dinzeer.srelic.registry.*;
 import com.mojang.logging.LogUtils;
 import net.minecraft.resources.ResourceLocation;
@@ -15,6 +16,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.simple.SimpleChannel;
 import net.minecraftforge.registries.RegisterEvent;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
@@ -32,12 +35,19 @@ public class Srelic {
 
         return new ResourceLocation(MODID, path);
     }
+
     public static ResourceLocation id(@NotNull String path) {
         return new ResourceLocation(MODID, path);
     }
 
     // Define mod id in a common place for everything to reference
     public static final String MODID = "srelic";
+    public static SimpleChannel INSTANCE = NetworkRegistry.newSimpleChannel(
+            new ResourceLocation(MODID, "main"),
+            () -> "1.0",
+            s -> true,
+            s -> true
+    );
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "srelic" namespace
@@ -52,9 +62,16 @@ public class Srelic {
         ParticleRegistry.register(modEventBus);
         //注册
         SRComboRegsitry.COMBO_STATES.register(modEventBus);
+        HeitaComBoRegistry.COMBO_STATES.register(modEventBus);
         SRslashArtRegsitry.SLASH_ARTS.register(modEventBus);
         SRSpecialEffectsRegistry.REGISTRY_KEY2.register(modEventBus);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+//        int id = 0;
+//        INSTANCE.messageBuilder(DashMessage.class, id++)
+//                .encoder(DashMessage::encode)
+//                .decoder(DashMessage::decode)
+//                .consumerMainThread(DashMessage::handle)
+//                .add();
     }
     public void register(RegisterEvent event) {
         SREntiteRegristrys.register(event);

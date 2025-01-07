@@ -83,9 +83,9 @@ public class BigSlash {
                 pos = pos.add(VectorHelper.getVectorForRotation(-90.0F, playerIn.getViewYRot(0)).scale(centerOffset.y))
                         .add(VectorHelper.getVectorForRotation(0, playerIn.getViewYRot(0) + 90).scale(centerOffset.z))
                         .add(playerIn.getLookAngle().scale(centerOffset.z));
-                EntityDrive drive = new EntityDrive(SlashBlade.RegistryEvents.Drive, playerIn.level());
+            EntityDrive drive = new EntityDrive(SlashBlade.RegistryEvents.Drive, playerIn.level());
 
-                playerIn.level().addFreshEntity(drive);
+            playerIn.level().addFreshEntity(drive);
 
             drive.setBaseSize(30);
             drive.getDimensions(Pose.STANDING).scale(12,12);
@@ -98,14 +98,14 @@ public class BigSlash {
             drive.shoot(playerIn.getLookAngle().x, playerIn.getLookAngle().y, playerIn.getLookAngle().z, drive.getSpeed(), 0);
             drive.setColor(16514816);
             drive.setOwner(playerIn);
+            drive.setKnockBack(knockback);
 
-
+            drive.setLifetime(lifetime+90);
            // drive.setPierce((byte) 10);
             drive.getPersistentData().putBoolean("shenjun",true);
             // 设置 xRot 为 0，使实体水平
             // drive.setIsCritical(critical);
-            drive.setKnockBack(knockback);
-            drive.setLifetime(lifetime+90);
+
                 if (playerIn != null)
                     playerIn.getCapability(ConcentrationRankCapabilityProvider.RANK_POINT)
                             .ifPresent(rank -> drive.setRank(rank.getRankLevel(playerIn.level().getGameTime())));
