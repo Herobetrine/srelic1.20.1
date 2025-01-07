@@ -23,9 +23,9 @@
   ],
   "name": "srelic:ye_star",
   "properties": {
-    "attack_base": 17.0,
+    "attack_base": 20.0,
     "max_damage": 80,
-    "slash_art": "slashblade:sakura_end",
+    "slash_art": "srelic:big_drived",
     "sword_type": [
       "bewitched"
     ]

@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.Mod;
 public class Flameerosion extends SpecialEffect {
 
     public Flameerosion() {
-        super(50, true, true);
+        super(70, true, false);
     }
     @SubscribeEvent
     public  static  void blaze(SlashBladeEvent.UpdateEvent event){
@@ -33,7 +33,7 @@ public class Flameerosion extends SpecialEffect {
             int level = player.experienceLevel;
 
             if(!SpecialEffect.isEffective(SRSpecialEffectsRegistry.FLAMEROSION.get(),level)){
-               player.setHealth(2);
+               player.setHealth(1);
             }
         }
     }

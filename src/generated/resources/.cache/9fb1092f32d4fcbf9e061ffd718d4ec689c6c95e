@@ -1,9 +1,10 @@
-// 1.20.1	2024-11-09T13:15:30.9250251	Recipes
+// 1.20.1	2024-12-26T18:04:42.3447745	Recipes
 517d8257e0e444e721b9caa93743a3d094e77563 data/srelic/advancements/recipes/combat/ark_fire.json
 281bedb523112de2d4bca66347dbfee2cf6210c7 data/srelic/advancements/recipes/combat/blade.json
 7796586196c82e2a8dc726c3fa610d88170011c4 data/srelic/advancements/recipes/combat/end_fire.json
 ebc79f71659f2ab681d26a3d0af88a1760fd92f1 data/srelic/advancements/recipes/combat/eternal_vows.json
 fa15f347c6ee17af681f0f5ab87cfb7406f9dae2 data/srelic/advancements/recipes/combat/fire_knight.json
+f8af5eefdb5f31531479a69ff8bade0a2bed2921 data/srelic/advancements/recipes/combat/heita.json
 9a75901e3876a0ae8d58fd3a3d6d7319f0abbc80 data/srelic/advancements/recipes/combat/ice_cry.json
 67adb260c87f345e304a914b1c1bd3186fd94d62 data/srelic/advancements/recipes/combat/jinyuan.json
 b35ba86f9d98d4bcd68e1219650fa0c267e06057 data/srelic/advancements/recipes/combat/kafuka.json
@@ -23,14 +24,15 @@ c114c4aaf747392534d5c295426c05cb10ccf369 data/srelic/advancements/recipes/combat
 45136e34d8450d1675b96fdaaf93b89b74c17c6a data/srelic/advancements/recipes/combat/yunli.json
 661027b9233a0fcb25864edf5d20012cbfc40e17 data/srelic/recipes/ark_fire.json
 b5035fc8988802a28b33968eb9ff3f8c6e219159 data/srelic/recipes/blade.json
-a79f3a98e7bf21037830552646dd526fa43bfe77 data/srelic/recipes/end_fire.json
-e173d51811dde3d74336ccec6001a86afe0065ed data/srelic/recipes/eternal_vows.json
+4fbfa104d0454d154d11873cebdcbf596c5eb6fc data/srelic/recipes/end_fire.json
+90a4bf3cba7b9b763f91ed42e7d29773f49def00 data/srelic/recipes/eternal_vows.json
 c560c7311d18c2a62f8d5381df6b53e8fe2d98ec data/srelic/recipes/fire_knight.json
+555152bd5c6746e693f24e7e230d28b7b188477b data/srelic/recipes/heita.json
 a4211251a643fa5d4917823c3957bf426fba93b6 data/srelic/recipes/ice_cry.json
 c391469be76649d3804f83d9249216a46d96c2d4 data/srelic/recipes/jinyuan.json
 33588315df4cae2113285ea787d0087d695259fe data/srelic/recipes/kafuka.json
 3d28f171c413c440d68c97e492cc6d6db9fc706f data/srelic/recipes/none_blue.json
-88b93dd740702d2dff1b2615a5a00164008e53f1 data/srelic/recipes/none_red.json
+d974d2c0b6423524e85a979e4c229909b1763fbd data/srelic/recipes/none_red.json
 4d2d069eb867a6d00bb1eeacf0bcbb55855839f6 data/srelic/recipes/raiden.json
 ce020346005a8c0775793edd4b0cbf8c663f9e94 data/srelic/recipes/rappa.json
 0ea01cc56ea32073a7ff9d688d086b42e7f64242 data/srelic/recipes/red_queen.json

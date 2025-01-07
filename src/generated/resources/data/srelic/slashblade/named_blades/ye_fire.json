@@ -32,7 +32,7 @@
   },
   "render": {
     "model": "srelic:model/ornament/ye_fire.obj",
-    "summon_sword_color": 2003199,
+    "summon_sword_color": 16760832,
     "texture": "srelic:model/ornament/ye_fire.png"
   }
 }

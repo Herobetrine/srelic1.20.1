@@ -18,7 +18,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 @Mod.EventBusSubscriber
 public class MaxBreak extends SpecialEffect {
     public MaxBreak() {
-        super(120, true, true);
+        super(120, false, false);
     }
 
     @SubscribeEvent

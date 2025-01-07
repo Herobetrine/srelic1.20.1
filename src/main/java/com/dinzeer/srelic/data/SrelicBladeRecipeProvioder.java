@@ -101,6 +101,8 @@ public class SrelicBladeRecipeProvioder extends RecipeProvider implements ICondi
                 .define('D',SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                                 .name(SlashBladeAddonBuiltInRegistry.FROSTY_CHERRY.location())
+                                .killCount(6000)
+                                .refineCount(20)
                                 .build()))
                 .define('E',SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
@@ -111,6 +113,8 @@ public class SrelicBladeRecipeProvioder extends RecipeProvider implements ICondi
                 .define('F',SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                                 .name(SlashBladeAddonBuiltInRegistry.KAMUY_FIRE.location())
+                                .killCount(6000)
+                                .refineCount(20)
                                 .build()))
                 .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
         SlashBladeShapedRecipeBuilder.shaped(SRelicBuiltInRegsitry.ETERNAL_VOWS.location())
@@ -122,7 +126,7 @@ public class SrelicBladeRecipeProvioder extends RecipeProvider implements ICondi
                 .define('C',SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                                 .name(SRelicBuiltInRegsitry.BLADE.location())
-                                .killCount(2000)
+                                .killCount(6000)
                                 .refineCount(10)
                                 .build()))
                 .define('D',SlashBladeIngredient.of(
@@ -226,6 +230,7 @@ public class SrelicBladeRecipeProvioder extends RecipeProvider implements ICondi
                 .define('A',SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                                 .name(SlashBladeAddonBuiltInRegistry.NIHILEX.location())
+                                .killCount(9000)
                                 .refineCount(25)
                                 .addEnchantment(new EnchantmentDefinition(getEnchantmentID(Enchantments.MOB_LOOTING),2))
                                 .build()))
@@ -415,6 +420,21 @@ public class SrelicBladeRecipeProvioder extends RecipeProvider implements ICondi
                                 .addEnchantment(new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT),1))
                                 .build()))
                 .define('C',Items.BLAZE_ROD)
+                .define('E',  Items.DIAMOND_BLOCK)
+                .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
+        SlashBladeShapedRecipeBuilder.shaped(SRelicBuiltInRegsitry.heita.location())
+                .pattern("ABA")
+                .pattern("CDE")
+                .pattern("ABA")
+                .define('B',  Items.NETHER_STAR)
+                .define('A',  SBItems.proudsoul_trapezohedron)
+                .define('D',  SlashBladeIngredient.of(
+                        RequestDefinition.Builder.newInstance()
+                                .name(SRelicBuiltInRegsitry.BLADE.location())
+                                .killCount(9000)
+                                .refineCount(50)
+                                .build()))
+                .define('C',Items.OBSIDIAN)
                 .define('E',  Items.DIAMOND_BLOCK)
                 .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
 

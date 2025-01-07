@@ -13,7 +13,9 @@
       "type": "slashblade:blade",
       "item": "slashblade:slashblade",
       "request": {
-        "name": "slashblade_addon:frosty_cherry"
+        "kill": 6000,
+        "name": "slashblade_addon:frosty_cherry",
+        "refine": 20
       }
     },
     "E": {
@@ -29,7 +31,9 @@
       "type": "slashblade:blade",
       "item": "slashblade:slashblade",
       "request": {
-        "name": "slashblade_addon:kamuy_fire"
+        "kill": 6000,
+        "name": "slashblade_addon:kamuy_fire",
+        "refine": 20
       }
     }
   },

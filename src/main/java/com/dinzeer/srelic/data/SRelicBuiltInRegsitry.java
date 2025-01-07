@@ -99,7 +99,7 @@ public class SRelicBuiltInRegsitry {
                                 .effectColor(13504014)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
-                                .baseAttackModifier(21)
+                                .baseAttackModifier(32)
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .slashArtsType(SRslashArtRegsitry.FORDEADCRY.getId())
                                 .maxDamage(80)
@@ -215,7 +215,7 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(32)
+                                .baseAttackModifier(40)
                                 .slashArtsType(SRslashArtRegsitry.NEODRIVE.getId())
                                 .maxDamage(80)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.FLAMEROSION.getId())
@@ -334,7 +334,7 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(17)
+                                .baseAttackModifier(30)
                                 .slashArtsType(SRslashArtRegsitry.EXPLANATION.getId())
                                 .maxDamage(80)
                                 .build(),
@@ -349,7 +349,7 @@ public class SRelicBuiltInRegsitry {
                         RenderDefinition.Builder.newInstance()
                                 .textureName(Srelic.prefix("model/ornament/ye_fire.png"))
                                 .modelName(Srelic.prefix("model/ornament/ye_fire.obj"))
-                                .effectColor(2003199)
+                                .effectColor(16760832)
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
@@ -373,8 +373,8 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(17)
-                                .slashArtsType(SlashArtsRegistry.SAKURA_END.getId())
+                                .baseAttackModifier(20)
+                                .slashArtsType(SRslashArtRegsitry.BIG_DRIVEF.getId())
                                 .maxDamage(80)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
