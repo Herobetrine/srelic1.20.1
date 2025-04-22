@@ -13,16 +13,21 @@
       "lvl": 5
     }
   ],
+  "item": "srelic:srelic_slashblade",
   "name": "srelic:star",
   "properties": {
-    "attack_base": 14.0,
+    "attack_base": 21.0,
     "max_damage": 80,
     "slash_art": "srelic:home_run",
+    "special_effects": [
+      "srelic:white_maker"
+    ],
     "sword_type": [
       "bewitched"
     ]
   },
   "render": {
+    "carry_type": "ninja",
     "model": "srelic:model/stairail/star.obj",
     "summon_sword_color": 2003199,
     "texture": "srelic:model/stairail/star.png"

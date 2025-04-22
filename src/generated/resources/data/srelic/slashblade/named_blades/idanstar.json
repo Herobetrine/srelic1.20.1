@@ -13,16 +13,21 @@
       "lvl": 3
     }
   ],
+  "item": "srelic:srelic_slashblade",
   "name": "srelic:idanstar",
   "properties": {
     "attack_base": 22.0,
     "max_damage": 80,
     "slash_art": "srelic:black_hole",
+    "special_effects": [
+      "srelic:white_maker"
+    ],
     "sword_type": [
       "bewitched"
     ]
   },
   "render": {
+    "carry_type": "ninja",
     "model": "srelic:model/stairail/idanstar.obj",
     "summon_sword_color": 16711697,
     "texture": "srelic:model/stairail/idanstar.png"

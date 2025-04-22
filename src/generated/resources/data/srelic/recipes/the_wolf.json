@@ -1,5 +1,5 @@
 {
-  "type": "slashblade:shaped_blade",
+  "type": "srelic:srelic_blade",
   "blade": "srelic:the_wolf",
   "category": "equipment",
   "key": {
@@ -14,9 +14,9 @@
     },
     "D": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
-        "kill": 5000,
+        "kill": 3000,
         "name": "srelic:blade",
         "refine": 30
       }
@@ -26,7 +26,7 @@
     },
     "F": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
         "enchantments": [
           {
@@ -44,7 +44,7 @@
     "ECF"
   ],
   "result": {
-    "item": "slashblade:slashblade"
+    "item": "srelic:srelic_slashblade"
   },
   "show_notification": true
 }

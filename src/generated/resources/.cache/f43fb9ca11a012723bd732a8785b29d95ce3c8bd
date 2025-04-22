@@ -1,0 +1,4 @@
+// 1.20.1	2025-04-23T00:40:46.2997068	Registrate Provider for srelic [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+4a781aa7fd6666fc64fff597162a217a1e767490 assets/srelic/lang/en_ud.json
+41de26f37ede1b62eae1ba798cde90e48770f6e2 assets/srelic/lang/en_us.json
+b8e2f075b532046ad5dff4cb05f1398d83ed4f8f assets/srelic/models/item/rainbow_star.json

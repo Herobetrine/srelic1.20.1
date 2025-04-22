@@ -21,16 +21,21 @@
       "lvl": 5
     }
   ],
+  "item": "srelic:srelic_slashblade",
   "name": "srelic:ye_fire",
   "properties": {
-    "attack_base": 17.0,
+    "attack_base": 24.0,
     "max_damage": 80,
     "slash_art": "slashblade:sakura_end",
+    "special_effects": [
+      "srelic:white_maker"
+    ],
     "sword_type": [
       "bewitched"
     ]
   },
   "render": {
+    "carry_type": "ninja",
     "model": "srelic:model/ornament/ye_fire.obj",
     "summon_sword_color": 16760832,
     "texture": "srelic:model/ornament/ye_fire.png"

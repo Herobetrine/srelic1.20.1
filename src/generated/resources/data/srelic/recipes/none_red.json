@@ -1,11 +1,11 @@
 {
-  "type": "slashblade:shaped_blade",
+  "type": "srelic:srelic_blade",
   "blade": "srelic:none_red",
   "category": "equipment",
   "key": {
     "A": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
         "enchantments": [
           {
@@ -13,14 +13,14 @@
             "lvl": 2
           }
         ],
-        "kill": 9000,
+        "kill": 4500,
         "name": "slashblade_addon:nihilex",
         "refine": 25
       }
     },
     "B": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
         "enchantments": [
           {
@@ -28,7 +28,7 @@
             "lvl": 5
           }
         ],
-        "kill": 9000,
+        "kill": 4500,
         "name": "srelic:none_blue",
         "refine": 25
       }
@@ -49,7 +49,7 @@
     "SAS"
   ],
   "result": {
-    "item": "slashblade:slashblade"
+    "item": "srelic:srelic_slashblade"
   },
   "show_notification": true
 }

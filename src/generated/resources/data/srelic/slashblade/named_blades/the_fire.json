@@ -12,12 +12,14 @@
       "lvl": 3
     }
   ],
+  "item": "srelic:srelic_slashblade",
   "name": "srelic:the_fire",
   "properties": {
-    "attack_base": 10.0,
+    "attack_base": 18.0,
     "max_damage": 80,
     "slash_art": "slashblade:wave_edge",
     "special_effects": [
+      "srelic:white_maker",
       "srelic:flamerosion"
     ],
     "sword_type": [
@@ -25,6 +27,7 @@
     ]
   },
   "render": {
+    "carry_type": "ninja",
     "model": "srelic:model/honkai/the_fire.obj",
     "summon_sword_color": 16760832,
     "texture": "srelic:model/honkai/the_fire.jpg"

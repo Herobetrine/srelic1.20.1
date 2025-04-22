@@ -1,5 +1,5 @@
 {
-  "type": "slashblade:shaped_blade",
+  "type": "srelic:srelic_blade",
   "blade": "srelic:ye_taichi",
   "category": "equipment",
   "key": {
@@ -11,7 +11,7 @@
     },
     "D": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
         "kill": 3000,
         "name": "srelic:ye_tachi"
@@ -19,7 +19,7 @@
     },
     "E": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
         "name": "slashblade_addon:kamuy_fire"
       }
@@ -31,7 +31,7 @@
     "AEA"
   ],
   "result": {
-    "item": "slashblade:slashblade"
+    "item": "srelic:srelic_slashblade"
   },
   "show_notification": true
 }

@@ -13,19 +13,23 @@
       "lvl": 3
     }
   ],
+  "item": "srelic:srelic_slashblade",
   "name": "srelic:ice_cry",
   "properties": {
-    "attack_base": 22.0,
+    "attack_base": 25.0,
     "max_damage": 80,
     "slash_art": "srelic:wither_breaker",
     "special_effects": [
-      "slashblade:wither_edge"
+      "slashblade:wither_edge",
+      "srelic:lich",
+      "srelic:white_maker"
     ],
     "sword_type": [
       "bewitched"
     ]
   },
   "render": {
+    "carry_type": "ninja",
     "model": "srelic:model/ow/frostmourne.obj",
     "summon_sword_color": 2003199,
     "texture": "srelic:model/ow/ice_cry.png"

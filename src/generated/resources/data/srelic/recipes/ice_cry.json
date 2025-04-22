@@ -1,5 +1,5 @@
 {
-  "type": "slashblade:shaped_blade",
+  "type": "srelic:srelic_blade",
   "blade": "srelic:ice_cry",
   "category": "equipment",
   "key": {
@@ -8,14 +8,14 @@
     },
     "B": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
         "name": "slashblade:koseki"
       }
     },
     "C": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
         "enchantments": [
           {
@@ -30,7 +30,7 @@
     },
     "D": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
         "name": "slashblade:sange"
       }
@@ -42,7 +42,7 @@
     "ADA"
   ],
   "result": {
-    "item": "slashblade:slashblade"
+    "item": "srelic:srelic_slashblade"
   },
   "show_notification": true
 }

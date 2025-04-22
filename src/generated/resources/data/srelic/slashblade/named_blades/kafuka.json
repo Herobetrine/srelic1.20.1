@@ -13,16 +13,21 @@
       "lvl": 3
     }
   ],
+  "item": "srelic:srelic_slashblade",
   "name": "srelic:kafuka",
   "properties": {
-    "attack_base": 15.0,
+    "attack_base": 23.0,
     "max_damage": 80,
     "slash_art": "srelic:big_drived",
+    "special_effects": [
+      "srelic:white_maker"
+    ],
     "sword_type": [
       "bewitched"
     ]
   },
   "render": {
+    "carry_type": "ninja",
     "model": "srelic:model/stairail/kafuka.obj",
     "summon_sword_color": 14947317,
     "texture": "srelic:model/stairail/kafuka.png"

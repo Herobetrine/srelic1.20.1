@@ -1,11 +1,20 @@
 package com.dinzeer.srelic;
 
-import com.dinzeer.srelic.Utils.DashMessage;
+import com.dinzeer.srelic.blade.SRItem;
+import com.dinzeer.srelic.blade.re.SrelicRecipeSerializerRegistry;
 import com.dinzeer.srelic.registry.*;
 import com.mojang.logging.LogUtils;
+import com.tterrag.registrate.Registrate;
+import mods.flammpfeil.slashblade.client.renderer.model.BladeModelManager;
+import mods.flammpfeil.slashblade.init.SBItems;
+import mods.flammpfeil.slashblade.item.ItemSlashBlade;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,14 +27,13 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.simple.SimpleChannel;
+import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegisterEvent;
+import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
-import java.util.AbstractMap;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -52,6 +60,52 @@ public class Srelic {
     public static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "srelic" namespace
 
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS
+            = DeferredRegister.create(Registries.CREATIVE_MODE_TAB,MODID);  ;
+
+    public static final Registrate REGISTRATE = Registrate.create(MODID);
+
+
+    public static final RegistryObject<CreativeModeTab> SRSlashblade = CREATIVE_MODE_TABS.register(MODID+"_slashblade",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("item_group."+MODID+"."+MODID+"_slashblade")).icon(() -> {
+                        ItemStack stack = new ItemStack(SBItems.slashblade);
+                        stack.getCapability(ItemSlashBlade.BLADESTATE).ifPresent(s -> {
+                            s.setModel(new ResourceLocation(MODID, "model/stairail/none.obj"));
+                            s.setTexture(new ResourceLocation(MODID, "model/stairail/none_red.jpg"));
+                        });
+                        return stack;
+                    })
+                    .displayItems((parameters, tabData) -> {
+
+                        fillBlades(tabData);
+                    })
+                    .build());
+
+
+
+    private static void fillBlades(CreativeModeTab.Output output) {
+        if (Minecraft.getInstance().getConnection() != null) {
+            BladeModelManager.getClientSlashBladeRegistry()
+                    .entrySet().stream()
+                    // 步骤1：过滤空值
+                    .filter(entry -> entry.getKey() != null && entry.getValue() != null)
+                    // 步骤2：解析字符串为ResourceLocation并过滤命名空间
+                    .filter(entry -> {
+                        ResourceLocation loc = ResourceLocation.tryParse(entry.getKey().location().toString());
+                        return loc != null && loc.getNamespace().equals(MODID);
+                    })
+                    // 步骤3：按字符串键排序
+                    .sorted(Map.Entry.comparingByKey())
+                    .forEach(entry -> {
+                        LOGGER.info("Registering Slashblade: {}", entry.getKey());
+                        output.accept(entry.getValue().getBlade());
+                    });
+        }
+    }
+
+
+
     public Srelic() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -62,10 +116,15 @@ public class Srelic {
         ParticleRegistry.register(modEventBus);
         //注册
         SRComboRegsitry.COMBO_STATES.register(modEventBus);
+        CREATIVE_MODE_TABS.register(modEventBus);
         HeitaComBoRegistry.COMBO_STATES.register(modEventBus);
         SRslashArtRegsitry.SLASH_ARTS.register(modEventBus);
         SRSpecialEffectsRegistry.REGISTRY_KEY2.register(modEventBus);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        SRPaintings.register(modEventBus);
+        SrelicRecipeSerializerRegistry.RECIPE_SERIALIZER.register(modEventBus);
+        SRItemRegsitry.regsitry();
+        LangRegistry.register();
 //        int id = 0;
 //        INSTANCE.messageBuilder(DashMessage.class, id++)
 //                .encoder(DashMessage::encode)
@@ -75,6 +134,7 @@ public class Srelic {
     }
     public void register(RegisterEvent event) {
         SREntiteRegristrys.register(event);
+        SRItem.register(event);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

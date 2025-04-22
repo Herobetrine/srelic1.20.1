@@ -1,5 +1,5 @@
 {
-  "type": "slashblade:shaped_blade",
+  "type": "srelic:srelic_blade",
   "blade": "srelic:end_fire",
   "category": "equipment",
   "key": {
@@ -11,27 +11,27 @@
     },
     "D": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
-        "kill": 6000,
+        "kill": 3000,
         "name": "slashblade_addon:frosty_cherry",
         "refine": 20
       }
     },
     "E": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
-        "kill": 12000,
+        "kill": 6000,
         "name": "srelic:ark_fire",
         "refine": 50
       }
     },
     "F": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
-        "kill": 6000,
+        "kill": 3000,
         "name": "slashblade_addon:kamuy_fire",
         "refine": 20
       }
@@ -43,7 +43,7 @@
     "ABA"
   ],
   "result": {
-    "item": "slashblade:slashblade"
+    "item": "srelic:srelic_slashblade"
   },
   "show_notification": true
 }

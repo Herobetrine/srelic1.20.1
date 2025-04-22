@@ -1,5 +1,5 @@
 {
-  "type": "slashblade:shaped_blade",
+  "type": "srelic:srelic_blade",
   "blade": "srelic:ark_fire",
   "category": "equipment",
   "key": {
@@ -14,9 +14,9 @@
     },
     "D": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
-        "kill": 6000,
+        "kill": 3000,
         "name": "srelic:the_fire",
         "refine": 30
       }
@@ -26,7 +26,7 @@
     },
     "F": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
         "name": "srelic:blade"
       }
@@ -38,7 +38,7 @@
     "AFA"
   ],
   "result": {
-    "item": "slashblade:slashblade"
+    "item": "srelic:srelic_slashblade"
   },
   "show_notification": true
 }

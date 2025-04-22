@@ -1,5 +1,5 @@
 {
-  "type": "slashblade:shaped_blade",
+  "type": "srelic:srelic_blade",
   "blade": "srelic:eternal_vows",
   "category": "equipment",
   "key": {
@@ -11,16 +11,16 @@
     },
     "C": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
-        "kill": 6000,
+        "kill": 4000,
         "name": "srelic:blade",
         "refine": 10
       }
     },
     "D": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
         "kill": 2000,
         "name": "slashblade_addon:kamuy_water",
@@ -34,7 +34,7 @@
     "BDB"
   ],
   "result": {
-    "item": "slashblade:slashblade"
+    "item": "srelic:srelic_slashblade"
   },
   "show_notification": true
 }

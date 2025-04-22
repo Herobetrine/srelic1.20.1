@@ -17,16 +17,21 @@
       "lvl": 3
     }
   ],
+  "item": "srelic:srelic_slashblade",
   "name": "srelic:red_queen",
   "properties": {
-    "attack_base": 20.0,
+    "attack_base": 27.0,
     "max_damage": 80,
     "slash_art": "srelic:xdrive",
+    "special_effects": [
+      "srelic:white_maker"
+    ],
     "sword_type": [
       "bewitched"
     ]
   },
   "render": {
+    "carry_type": "ninja",
     "model": "srelic:model/dmc/red_queen.obj",
     "summon_sword_color": 16711697,
     "texture": "srelic:model/dmc/red_queen.png"

@@ -136,7 +136,7 @@ public class BlackHolePro {
         }
         BlackHole blackHole = new BlackHole(level, playerIn);
         blackHole.setOwner(playerIn);
-        blackHole.setRadius(5);
+        blackHole.setRadius(25);
         blackHole.setDamage((float) ((float) playerIn.getAttributeValue(Attributes.ATTACK_DAMAGE)*1.5));
         center.add(0,playerIn.getY()- center.y,0);
         blackHole.moveTo(center);

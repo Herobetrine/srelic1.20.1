@@ -1,5 +1,5 @@
 {
-  "type": "slashblade:shaped_blade",
+  "type": "srelic:srelic_blade",
   "blade": "srelic:raiden",
   "category": "equipment",
   "key": {
@@ -17,9 +17,9 @@
     },
     "E": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
-        "kill": 10000,
+        "kill": 5000,
         "name": "srelic:blade",
         "refine": 50
       }
@@ -29,7 +29,7 @@
     },
     "H": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
         "name": "slashblade:yuzukitukumo"
       }
@@ -44,7 +44,7 @@
     "CHI"
   ],
   "result": {
-    "item": "slashblade:slashblade"
+    "item": "srelic:srelic_slashblade"
   },
   "show_notification": true
 }

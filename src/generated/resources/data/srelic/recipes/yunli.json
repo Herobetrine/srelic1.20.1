@@ -1,5 +1,5 @@
 {
-  "type": "slashblade:shaped_blade",
+  "type": "srelic:srelic_blade",
   "blade": "srelic:yunli",
   "category": "equipment",
   "key": {
@@ -11,9 +11,9 @@
     },
     "C": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
-        "kill": 3000,
+        "kill": 1500,
         "name": "slashblade_addon:katana",
         "refine": 20
       }
@@ -23,18 +23,18 @@
     },
     "E": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
-        "kill": 3000,
+        "kill": 1500,
         "name": "srelic:blade",
         "refine": 20
       }
     },
     "F": {
       "type": "slashblade:blade",
-      "item": "slashblade:slashblade",
+      "item": "srelic:srelic_slashblade",
       "request": {
-        "kill": 3000,
+        "kill": 1500,
         "name": "slashblade:yuzukitukumo",
         "refine": 20
       }
@@ -49,7 +49,7 @@
     "FDG"
   ],
   "result": {
-    "item": "slashblade:slashblade"
+    "item": "srelic:srelic_slashblade"
   },
   "show_notification": true
 }

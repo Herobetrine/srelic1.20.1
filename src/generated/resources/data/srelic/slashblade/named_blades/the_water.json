@@ -13,16 +13,21 @@
       "lvl": 5
     }
   ],
+  "item": "srelic:srelic_slashblade",
   "name": "srelic:the_water",
   "properties": {
-    "attack_base": 14.0,
+    "attack_base": 23.0,
     "max_damage": 80,
     "slash_art": "slashblade:wave_edge",
+    "special_effects": [
+      "srelic:white_maker"
+    ],
     "sword_type": [
       "bewitched"
     ]
   },
   "render": {
+    "carry_type": "ninja",
     "model": "srelic:model/genshine/the_water.obj",
     "summon_sword_color": 2003199,
     "texture": "srelic:model/genshine/sword_of_narzissenkreuz.png"

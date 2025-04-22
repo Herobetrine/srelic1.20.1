@@ -29,6 +29,7 @@
       "lvl": 5
     }
   ],
+  "item": "srelic:srelic_slashblade",
   "name": "srelic:end_fire",
   "properties": {
     "attack_base": 40.0,
@@ -36,13 +37,15 @@
     "slash_art": "srelic:neo_drive",
     "special_effects": [
       "srelic:flamerosion",
-      "srelic:maxbreak"
+      "srelic:maxbreak",
+      "srelic:white_maker"
     ],
     "sword_type": [
       "bewitched"
     ]
   },
   "render": {
+    "carry_type": "ninja",
     "model": "srelic:model/honkai/end_fire.obj",
     "summon_sword_color": 16760832,
     "texture": "srelic:model/honkai/end_fire.png"

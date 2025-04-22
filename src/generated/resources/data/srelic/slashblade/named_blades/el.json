@@ -1,0 +1,34 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 3
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:el",
+  "properties": {
+    "attack_base": 35.0,
+    "max_damage": 80,
+    "special_effects": [
+      "srelic:white_maker"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "carry_type": "ninja",
+    "model": "srelic:model/honkai/el.obj",
+    "summon_sword_color": 16711697,
+    "texture": "srelic:model/honkai/el.png"
+  }
+}

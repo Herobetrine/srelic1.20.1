@@ -24,6 +24,8 @@ public class SRslashArtRegsitry {
     public static final RegistryObject<SlashArts> YUNLI;
     public static final RegistryObject<SlashArts> BIGSLASH;
     public static final RegistryObject<SlashArts> Heita;
+    public static final RegistryObject<SlashArts> SummoningThunderNi;
+    public static final RegistryObject<SlashArts> confused;
 static {
     XDRIVE= SLASH_ARTS.register("xdrive", () -> new SlashArts((e) ->
             SRComboRegsitry.EXdrive.getId()));
@@ -41,5 +43,7 @@ static {
     YUNLI=SLASH_ARTS.register("yunli",()->new SlashArts((e)->SRComboRegsitry.YUNLI.getId()));
     BIGSLASH=SLASH_ARTS.register("bigslash",()->new SlashArts((e)->SRComboRegsitry.BIGSLASH.getId()));
     Heita=SLASH_ARTS.register("heita",()->new SlashArts((e)->HeitaComBoRegistry.CIRCLE_SLASH.getId()));
+    SummoningThunderNi=SLASH_ARTS.register("summoning_thunder_ni",()->new SlashArts((e)->SRComboRegsitry.SummoningThunderNi.getId()));
+    confused=SLASH_ARTS.register("confused",()->new SlashArts((e)->SRComboRegsitry.confused.getId()));
 }
 }
