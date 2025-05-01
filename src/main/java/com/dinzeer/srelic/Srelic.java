@@ -8,6 +8,7 @@ import com.tterrag.registrate.Registrate;
 import mods.flammpfeil.slashblade.client.renderer.model.BladeModelManager;
 import mods.flammpfeil.slashblade.init.SBItems;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
+import mods.flammpfeil.slashblade.registry.SpecialEffectsRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -15,6 +16,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -82,8 +84,28 @@ public class Srelic {
                     })
                     .build());
 
+    public static final RegistryObject<CreativeModeTab> SRSE = CREATIVE_MODE_TABS.register(MODID+"_se",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("item_group."+MODID+"."+MODID+"_se")).icon(() -> {
 
+                        return SRItemRegsitry.rainbow_star.get().getDefaultInstance();
+                    })
+                    .displayItems((parameters, tabData) -> {
 
+                        fillSEs(tabData);
+                    })
+                    .build());
+
+    public static final RegistryObject<CreativeModeTab> SRItems = CREATIVE_MODE_TABS.register(MODID+"_item",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("item_group."+MODID+"."+MODID+"_se")).icon(() -> {
+
+                        return SRItemRegsitry.black_hole_metal.get().getDefaultInstance();
+                    })
+                    .displayItems((parameters, tabData) -> {
+
+                    })
+                    .build());
     private static void fillBlades(CreativeModeTab.Output output) {
         if (Minecraft.getInstance().getConnection() != null) {
             BladeModelManager.getClientSlashBladeRegistry()
@@ -104,6 +126,43 @@ public class Srelic {
         }
     }
 
+    private static void fillSEs(CreativeModeTab.Output output) {
+        if (Minecraft.getInstance().getConnection() != null) {
+            // 添加universal_test的NBT变种
+            SRSpecialEffectsRegistry.PATH_SE_POOL.stream()
+                    .sorted(Comparator.comparing(se -> se.getId().getPath())) // 按特效ID排序
+                    .forEach(effect -> {
+                        // 生成带NBT的物品实例
+                        ItemStack stack = ItemNBTHelper.createTestItem(effect);
+                        output.accept(stack);
+                    });
+        }
+    }
+
+    private static void fillSEs2(CreativeModeTab.Output output) {
+        if (Minecraft.getInstance().getConnection() != null) {
+            // 添加universal_test的NBT变种
+            SpecialEffectsRegistry.REGISTRY.get().forEach(effect -> {
+                        // 生成带NBT的物品实例
+                        ItemStack stack = ItemNBTHelper.createTestItem(effect);
+                        output.accept(stack);
+                    });
+        }
+    }
+
+    public static final RegistryObject<CreativeModeTab> SRSE2 = CREATIVE_MODE_TABS.register(MODID+"_se2",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("item_group."+MODID+"."+MODID+"_se2")).icon(() -> {
+
+                        return SRItemRegsitry.rainbow_star.get().getDefaultInstance();
+                    })
+                    .displayItems((parameters, tabData) -> {
+
+                        fillSEs2(tabData);
+                    })
+                    .build());
+
+
 
 
     public Srelic() {
@@ -116,7 +175,7 @@ public class Srelic {
         ParticleRegistry.register(modEventBus);
         //注册
         SRComboRegsitry.COMBO_STATES.register(modEventBus);
-        CREATIVE_MODE_TABS.register(modEventBus);
+        SRSpecialEffectsRegistry.SRadd();
         HeitaComBoRegistry.COMBO_STATES.register(modEventBus);
         SRslashArtRegsitry.SLASH_ARTS.register(modEventBus);
         SRSpecialEffectsRegistry.REGISTRY_KEY2.register(modEventBus);
@@ -125,6 +184,8 @@ public class Srelic {
         SrelicRecipeSerializerRegistry.RECIPE_SERIALIZER.register(modEventBus);
         SRItemRegsitry.regsitry();
         LangRegistry.register();
+        CREATIVE_MODE_TABS.register(modEventBus);
+
 //        int id = 0;
 //        INSTANCE.messageBuilder(DashMessage.class, id++)
 //                .encoder(DashMessage::encode)
@@ -183,4 +244,17 @@ public class Srelic {
 
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

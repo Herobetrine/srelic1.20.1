@@ -2,6 +2,7 @@ package com.dinzeer.srelic.registry;
 
 import com.dinzeer.srelic.Srelic;
 import com.dinzeer.srelic.entity.*;
+import com.dinzeer.srelic.entity.boom.BulletEntityGalaxy;
 import com.google.common.base.CaseFormat;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
@@ -37,6 +38,8 @@ public class SREntiteRegristrys {
     public static final ResourceLocation YunLiLOC = new ResourceLocation(MODID, classToString(YunLiEntity.class));
     public static EntityType<YunLiEntity> YunLi;
 
+    public static final ResourceLocation BulletLOC = new ResourceLocation(MODID, classToString(BulletEntityGalaxy.class));
+    public static EntityType<BulletEntityGalaxy> Bullet;
     public static final RegistryObject<EntityType<BlackHole>> BLACK_HOLE =
             ENTITIES.register("black_hole", () -> EntityType.Builder.<BlackHole>of(BlackHole::new, MobCategory.MISC)
                     .sized(11, 11)
@@ -84,6 +87,14 @@ public class SREntiteRegristrys {
                         .sized(3.0F, 3.0F).setTrackingRange(4).setUpdateInterval(20)
                         .setCustomClientFactory(YunLiEntity::createInstance).build(YunLiLOC.toString());
                 helper.register(YunLiLOC, entity);
+            }
+        });
+        event.register(ForgeRegistries.Keys.ENTITY_TYPES, helper -> {
+            {
+                EntityType<BulletEntityGalaxy> entity = Bullet = EntityType.Builder.of(BulletEntityGalaxy::new, MobCategory.MISC)
+                        .sized(3.0F, 3.0F).setTrackingRange(4).setUpdateInterval(20)
+                        .setCustomClientFactory(BulletEntityGalaxy::createInstance).build(BulletLOC.toString());
+                helper.register(BulletLOC, entity);
             }
         });
     }

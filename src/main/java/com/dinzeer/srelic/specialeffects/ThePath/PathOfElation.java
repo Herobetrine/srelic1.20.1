@@ -20,7 +20,7 @@ public class PathOfElation extends SeEX {
     public static void onHeal(LivingHealEvent event) {
         if (event.getEntity() instanceof Player player) {
             ItemStack blade = player.getMainHandItem();
-            if (!hasSpecialEffect(blade, "path_of_elation")) return;
+            if (!hasSpecialEffect(blade, "path_of_elation", player.experienceLevel)) return;
 
             // 将治疗量的50%转化为范围效果
             float healAmount = event.getAmount();

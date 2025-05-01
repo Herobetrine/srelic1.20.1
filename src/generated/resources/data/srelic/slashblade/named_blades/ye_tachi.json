@@ -16,7 +16,7 @@
   "name": "srelic:ye_tachi",
   "properties": {
     "attack_base": 25.0,
-    "max_damage": 80,
+    "max_damage": 200,
     "slash_art": "slashblade:wave_edge",
     "special_effects": [
       "srelic:white_maker"

@@ -24,10 +24,12 @@
   "name": "srelic:none_red",
   "properties": {
     "attack_base": 40.0,
-    "max_damage": 80,
+    "max_damage": 200,
     "slash_art": "srelic:dead_cry",
     "special_effects": [
-      "srelic:white_maker"
+      "srelic:white_maker",
+      "srelic:lament_of_phantoms",
+      "srelic:void_finale"
     ],
     "sword_type": [
       "bewitched"

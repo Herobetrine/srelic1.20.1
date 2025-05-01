@@ -20,7 +20,7 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber
 public class Lich extends SpecialEffect {
     public Lich() {
-        super(120);
+        super(100);
     }
     @SubscribeEvent
     public static void onSlashBladeHit(SlashBladeEvent.HitEvent event) {

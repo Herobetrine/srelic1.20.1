@@ -18,7 +18,7 @@ public class PathOfRemembrance extends SeEX {
     public static void onAttack(LivingHurtEvent event) {
         if (event.getSource().getEntity() instanceof Player player) {
             ItemStack blade = player.getMainHandItem();
-            if (!hasSpecialEffect(blade, "path_of_remembrance")) return;
+            if (!hasSpecialEffect(blade, "path_of_remembrance", player.experienceLevel)) return;
 
             // 50%概率冻结目标
             if (player.getRandom().nextFloat() < 0.5f) {

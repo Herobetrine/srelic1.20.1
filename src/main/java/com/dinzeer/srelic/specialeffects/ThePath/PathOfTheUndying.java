@@ -21,7 +21,7 @@ public class PathOfTheUndying  extends SeEX {
     @SubscribeEvent
     public static void onLivingDamage(LivingDamageEvent event) {
         if (event.getEntity() instanceof Player player) {
-            if (hasSpecialEffect(player.getMainHandItem(), "path_of_the_undying")) {
+            if (hasSpecialEffect(player.getMainHandItem(), "path_of_the_undying", player.experienceLevel)) {
                 CompoundTag tag = player.getPersistentData();
 
                 // 免死触发（10分钟冷却）

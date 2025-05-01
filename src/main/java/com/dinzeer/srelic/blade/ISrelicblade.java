@@ -58,6 +58,12 @@ public class ISrelicblade extends ItemSlashBlade {
 
                 if ( Screen.hasShiftDown() && !Screen.hasControlDown()){
                     tooltip.add(Component.translatable("se."+se.toLanguageKey()+".desc"));
+                    for (int i = 0; i < 12; i++){
+                    String subKey = "se."+se.toLanguageKey()+".desc_"+(i+1);
+                    if (I18n.exists(subKey)) {
+                        tooltip.add(Component.translatable(subKey));
+                    }
+                    }
                 }
             });
 

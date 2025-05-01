@@ -34,35 +34,8 @@ public class WhiteMaker extends SpecialEffect {
             RandomSource random = player.getRandom();
             Level worldIn = player.level();
             if (SpecialEffect.isEffective((SpecialEffect)SRSpecialEffectsRegistry.WhiteMaker.get(), level)) {
-                if (random.nextInt(100)>50) {
+                if (random.nextInt(100)>80) {
                     Drive.doSlash(player, event.getRoll(), 10, Vec3.ZERO, false, event.getDamage(), 1.5F);
-                }else {
-                    WitherBreakerEntity ss = new WitherBreakerEntity(SREntiteRegristrys.WitherBreaker, worldIn);
-
-                    worldIn.addFreshEntity(ss);
-
-                    ss.setSpeed(1.5F);
-                    ss.setIsCritical(true);
-                    ss.setOwner(player);
-                    ss.setColor(12698049);
-                    ss.setRoll(0);
-                    ss.setDamage(10+event.getDamage());
-                    // force riding
-                    ss.startRiding(player, true);
-
-                    ss.setDelay(10);
-
-                    boolean isRight = ss.getDelay() % 2 == 0;
-
-
-                    double xOffset = random.nextDouble() * 2.5 * (isRight ? 1 : -1);
-                    double yOffset = random.nextFloat() * 2;
-                    double zOffset = random.nextFloat() * 0.5;
-
-                    ss.setPos(player.position().add(xOffset, yOffset, zOffset));
-                    ss.setOffset(new Vec3(xOffset, yOffset, zOffset));
-
-                    player.playSound(SoundEvents.CHORUS_FRUIT_TELEPORT, 0.2F, 1.45F);
                 }
             }
         }

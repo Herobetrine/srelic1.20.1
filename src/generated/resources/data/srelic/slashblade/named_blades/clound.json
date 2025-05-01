@@ -16,8 +16,8 @@
   "item": "srelic:srelic_slashblade",
   "name": "srelic:clound",
   "properties": {
-    "attack_base": 35.0,
-    "max_damage": 80,
+    "attack_base": 17.0,
+    "max_damage": 200,
     "special_effects": [
       "srelic:white_maker"
     ],

@@ -46,9 +46,9 @@ public class SRComboRegsitry {
                                     (
                                             ComboState.TimeLineTickAction.getBuilder()
                                     .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 6F))
-                                    .put(3, (entityIn) -> DriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 7, 1f, 5f, 2,2003199))
+                                    .put(3, (entityIn) -> DriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 2, 1f, 5f, 2,2003199))
                                     .put(4, (entityIn) -> AttackManager.doSlash(entityIn, 45F, Vec3.ZERO, false, false, 6F))
-                                    .put(5,(entityIn) ->  DriveSumon.doSlash(entityIn, -45F, 20, Vec3.ZERO, false, 7, 1f, 5f, 2,2003199))
+                                    .put(5,(entityIn) ->  DriveSumon.doSlash(entityIn, -45F, 20, Vec3.ZERO, false, 2, 1f, 5f, 2,2003199))
                                     .build()
                                     )
                             .addHitEffect(StunManager::setStun)

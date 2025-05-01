@@ -21,10 +21,11 @@
   "name": "srelic:red_queen",
   "properties": {
     "attack_base": 27.0,
-    "max_damage": 80,
+    "max_damage": 200,
     "slash_art": "srelic:xdrive",
     "special_effects": [
-      "srelic:white_maker"
+      "srelic:white_maker",
+      "srelic:nero_devil_breaker"
     ],
     "sword_type": [
       "bewitched"

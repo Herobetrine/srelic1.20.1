@@ -21,10 +21,12 @@
   "name": "srelic:fire_knight",
   "properties": {
     "attack_base": 23.0,
-    "max_damage": 80,
-    "slash_art": "srelic:xdrive",
+    "max_damage": 200,
+    "slash_art": "slashblade:piercing",
     "special_effects": [
-      "srelic:white_maker"
+      "srelic:white_maker",
+      "srelic:blazing_heart_shield",
+      "srelic:path_of_preservation"
     ],
     "sword_type": [
       "bewitched"

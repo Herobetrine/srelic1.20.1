@@ -20,7 +20,7 @@ public class PathOfErudition extends SeEX {
     public static void onAttack(LivingHurtEvent event) {
         if (event.getSource().getEntity() instanceof Player player) {
             ItemStack blade = player.getMainHandItem();
-            if (!hasSpecialEffect(blade, "path_of_erudition")) return;
+            if (!hasSpecialEffect(blade, "path_of_erudition", player.experienceLevel)) return;
 
             // 根据附魔等级触发协同效果
             int sharpness = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SHARPNESS, blade);

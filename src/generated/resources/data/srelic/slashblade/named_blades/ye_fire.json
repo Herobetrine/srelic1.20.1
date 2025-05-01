@@ -25,10 +25,11 @@
   "name": "srelic:ye_fire",
   "properties": {
     "attack_base": 24.0,
-    "max_damage": 80,
+    "max_damage": 200,
     "slash_art": "slashblade:sakura_end",
     "special_effects": [
-      "srelic:white_maker"
+      "srelic:white_maker",
+      "srelic:ghost_thunder"
     ],
     "sword_type": [
       "bewitched"

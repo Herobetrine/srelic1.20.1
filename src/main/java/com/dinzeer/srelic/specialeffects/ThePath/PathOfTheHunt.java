@@ -28,7 +28,7 @@ public class PathOfTheHunt  extends SpecialEffect {
 
         if (charges >= 7) {
             // 满层释放星矢效果
-            target.hurt(player.damageSources().playerAttack(player), 15f);
+            target.hurt(player.damageSources().magic(), 15f);
             player.addEffect(new MobEffectInstance(
                     MobEffects.MOVEMENT_SPEED, 200, 2));
             charges = 0;
@@ -45,7 +45,7 @@ public class PathOfTheHunt  extends SpecialEffect {
     public  static void onHurt(LivingHurtEvent event) {
         if (!(event.getSource().getEntity() instanceof Player player))return;
         if (event.getEntity() == null)return;
-        if (!hasSpecialEffect(player.getMainHandItem(), "path_of_the_hunt"))return;
+        if (!hasSpecialEffect(player.getMainHandItem(), "path_of_the_hunt", player.experienceLevel))return;
         onAttack(player, event.getEntity());
 
 

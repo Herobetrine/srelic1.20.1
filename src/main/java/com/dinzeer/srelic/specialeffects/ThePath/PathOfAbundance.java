@@ -25,7 +25,7 @@ public class PathOfAbundance extends SeEX {
         Player player = event.player;
         ItemStack blade = player.getMainHandItem();
 
-        if (!hasSpecialEffect(blade, "path_of_abundance")) return;
+        if (!hasSpecialEffect(blade, "path_of_abundance", player.experienceLevel)) return;
 
         // 每5秒群体治疗（100 ticks = 5秒）
         if (player.tickCount % 100 == 0) {
@@ -48,7 +48,7 @@ public class PathOfAbundance extends SeEX {
         if (event.getSource().getEntity() instanceof Player player) {
             ItemStack blade = player.getMainHandItem();
 
-            if (!hasSpecialEffect(blade, "path_of_abundance")) return;
+            if (!hasSpecialEffect(blade, "path_of_abundance", player.experienceLevel)) return;
 
             // 30%概率清除debuff
             if (player.getRandom().nextFloat() < 0.3f) {

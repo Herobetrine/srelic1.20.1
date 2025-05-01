@@ -1,6 +1,8 @@
 package com.dinzeer.srelic.specialeffects.ThePath;
 
+import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.specialeffects.SeEX;
+import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -22,7 +24,8 @@ public class PathOfEquilibrium extends SeEX {
     @SubscribeEvent
     public static void onPlayerSwapItem(PlayerInteractEvent event) {
         Player player = event.getEntity();
-        if (hasSpecialEffect(player.getMainHandItem(), "path_of_equilibrium")) {
+        if (!SpecialEffect.isEffective(SRSpecialEffectsRegistry.path_of_equilibrium.getId(), player.experienceLevel))return;
+        if (hasSpecialEffect(player.getMainHandItem(), "path_of_equilibrium", player.experienceLevel)) {
             // 切换武器时转换模式
             int state = balanceState.getOrDefault(player.getUUID(), 0);
             balanceState.put(player.getUUID(), 1 - state);
@@ -36,13 +39,16 @@ public class PathOfEquilibrium extends SeEX {
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         Player player = event.player;
         int state = balanceState.getOrDefault(player.getUUID(), 0);
+        if (!SpecialEffect.isEffective(SRSpecialEffectsRegistry.path_of_equilibrium.getId(), player.experienceLevel))return;
 
+        if (hasSpecialEffect(player.getMainHandItem(), "path_of_equilibrium", player.experienceLevel)){
         if (state == 0) { // 攻击模式
             player.addEffect(new MobEffectInstance(
                     MobEffects.DAMAGE_BOOST, 40, 2));
         } else { // 防御模式
             player.addEffect(new MobEffectInstance(
                     MobEffects.DAMAGE_RESISTANCE, 40, 1));
+        }
         }
     }
 }

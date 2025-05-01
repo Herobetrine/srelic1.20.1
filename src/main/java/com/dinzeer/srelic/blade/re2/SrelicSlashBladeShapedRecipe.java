@@ -71,6 +71,7 @@ public class SrelicSlashBladeShapedRecipe extends SlashBladeShapedRecipe {
             resultState.setProudSoulCount(resultState.getProudSoulCount() + ingredientState.getProudSoulCount());
             resultState.setKillCount(resultState.getKillCount() + ingredientState.getKillCount());
             resultState.setRefine(resultState.getRefine() + ingredientState.getRefine());
+            resultState.setMaxDamage(resultState.getMaxDamage() + ingredientState.getMaxDamage());
             updateEnchantment(result, stack);
         }
 

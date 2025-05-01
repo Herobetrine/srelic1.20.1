@@ -21,7 +21,7 @@ public class PathOfNihility extends SeEX {
     public static void onAttack(LivingHurtEvent event) {
         if (event.getSource().getEntity() instanceof Player player) {
             ItemStack blade = player.getMainHandItem();
-            if (!hasSpecialEffect(blade, "path_of_nihility")) return;
+            if (!hasSpecialEffect(blade, "path_of_nihility", player.experienceLevel)) return;
 
             // 施加虚无印记
             event.getEntity().addEffect(new MobEffectInstance(

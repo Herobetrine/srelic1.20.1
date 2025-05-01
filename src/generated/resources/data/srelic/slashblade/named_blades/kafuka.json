@@ -17,10 +17,12 @@
   "name": "srelic:kafuka",
   "properties": {
     "attack_base": 23.0,
-    "max_damage": 80,
+    "max_damage": 200,
     "slash_art": "srelic:big_drived",
     "special_effects": [
-      "srelic:white_maker"
+      "srelic:white_maker",
+      "srelic:path_of_finality",
+      "srelic:kafka_strings"
     ],
     "sword_type": [
       "bewitched"

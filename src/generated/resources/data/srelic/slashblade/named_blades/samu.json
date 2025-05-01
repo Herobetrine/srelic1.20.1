@@ -6,7 +6,7 @@
     },
     {
       "id": "minecraft:unbreaking",
-      "lvl": 5
+      "lvl": 7
     },
     {
       "id": "minecraft:sharpness",
@@ -16,19 +16,21 @@
   "item": "srelic:srelic_slashblade",
   "name": "srelic:samu",
   "properties": {
-    "attack_base": 35.0,
-    "max_damage": 80,
+    "attack_base": 20.0,
+    "max_damage": 200,
     "special_effects": [
-      "srelic:white_maker"
+      "srelic:white_maker",
+      "srelic:path_of_finality",
+      "srelic:sam_overdrive"
     ],
     "sword_type": [
       "bewitched"
     ]
   },
   "render": {
-    "carry_type": "ninja",
+    "carry_type": "katana",
     "model": "srelic:model/stairail/samu.obj",
-    "summon_sword_color": 16711697,
+    "summon_sword_color": 65500,
     "texture": "srelic:model/stairail/samu.png"
   }
 }

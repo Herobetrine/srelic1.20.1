@@ -1,6 +1,8 @@
 package com.dinzeer.srelic.specialeffects.ThePath;
 
+import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.specialeffects.SeEX;
+import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -26,15 +28,13 @@ public class PathOfTrailblaze extends SeEX {
         BlockPos currentPos = player.blockPosition();
         BlockPos prevPos = lastPos.getOrDefault(player.getUUID(), currentPos);
 
-        if (!currentPos.equals(prevPos)) {
-            int distance = (int) Math.sqrt(currentPos.distSqr(prevPos));
-
-            // 根据移动距离获得增益
-            player.addEffect(new MobEffectInstance(
-                    MobEffects.MOVEMENT_SPEED, 100, Math.min(2, distance/10)));
-
-            lastPos.put(player.getUUID(), currentPos);
-        }
+       if (hasSpecialEffect(player.getMainHandItem(), "path_of_trailblaze", player.experienceLevel)){
+           if (SpecialEffect.isEffective(SRSpecialEffectsRegistry.path_of_trailblaze.get(), player.experienceLevel)){
+               player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 2));
+               player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 100, 2));
+               player.addEffect(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 100, 0));
+           }
+       }
     }
 }
 

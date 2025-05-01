@@ -17,10 +17,12 @@
   "name": "srelic:heita",
   "properties": {
     "attack_base": 25.0,
-    "max_damage": 80,
+    "max_damage": 200,
     "slash_art": "srelic:heita",
     "special_effects": [
-      "srelic:white_maker"
+      "srelic:white_maker",
+      "srelic:path_of_erudition",
+      "srelic:herta_cryo_stage"
     ],
     "sword_type": [
       "bewitched"

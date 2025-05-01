@@ -21,10 +21,11 @@
   "name": "srelic:eternal_vows",
   "properties": {
     "attack_base": 30.0,
-    "max_damage": 80,
+    "max_damage": 200,
     "slash_art": "srelic:explashon",
     "special_effects": [
-      "srelic:white_maker"
+      "srelic:white_maker",
+      "srelic:eternal_flow"
     ],
     "sword_type": [
       "bewitched"

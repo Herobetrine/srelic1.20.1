@@ -18,7 +18,7 @@ public class PathOfHarmony extends SeEX {
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         Player player = event.player;
         ItemStack blade = player.getMainHandItem();
-        if (!hasSpecialEffect(blade, "path_of_harmony")) return;
+        if (!hasSpecialEffect(blade, "path_of_harmony", player.experienceLevel)) return;
 
         if (player.tickCount % 40 == 0) {
             player.level().getEntitiesOfClass(Player.class,

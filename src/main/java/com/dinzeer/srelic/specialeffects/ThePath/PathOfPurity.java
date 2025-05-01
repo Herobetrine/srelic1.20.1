@@ -1,6 +1,8 @@
 package com.dinzeer.srelic.specialeffects.ThePath;
 
+import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.specialeffects.SeEX;
+import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -24,21 +26,9 @@ public class PathOfPurity extends SeEX {
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         Player player = event.player;
         ItemStack blade = player.getMainHandItem();
-        if (!hasSpecialEffect(blade, "path_of_purity")) return;
+        if (!hasSpecialEffect(blade, "path_of_purity", player.experienceLevel)) return;
+        if (!SpecialEffect.isEffective(SRSpecialEffectsRegistry.path_of_trailblaze.get(), player.experienceLevel))return;
+        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, 2));
 
-        // 生成圣洁领域
-        player.level().getEntitiesOfClass(Player.class,
-                        player.getBoundingBox().inflate(AURA_RANGE))
-                .forEach(p -> {
-                    p.addEffect(new MobEffectInstance(
-                            MobEffects.REGENERATION, 100, 1));
-                    p.getActiveEffects().removeIf(e ->
-                            e.getEffect().getCategory() == MobEffectCategory.HARMFUL);
-
-                    // 净化粒子效果
-                    if (player.tickCount % 10 == 0) {
-                        SeEX.spawnParticleRing(p, ParticleTypes.END_ROD, 1.5, 12);
-                    }
-                });
     }
 }

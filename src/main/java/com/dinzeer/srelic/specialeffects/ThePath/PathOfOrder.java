@@ -24,7 +24,7 @@ public class PathOfOrder extends SeEX {
     public static void onPlayerTick(LivingEvent.LivingTickEvent event) {
         if (event.getEntity() instanceof Player player) {
             ItemStack blade = player.getMainHandItem();
-            if (!hasSpecialEffect(blade, "path_of_order")) return;
+            if (!hasSpecialEffect(blade, "path_of_order", player.experienceLevel)) return;
 
             // 维持秩序获得增益
             if (player.getActiveEffects().stream().noneMatch(e ->
@@ -42,7 +42,7 @@ public class PathOfOrder extends SeEX {
     public static void onAttack(LivingHurtEvent event) {
         if (event.getSource().getEntity() instanceof Player player) {
             ItemStack blade = player.getMainHandItem();
-            if (!hasSpecialEffect(blade, "path_of_order")) return;
+            if (!hasSpecialEffect(blade, "path_of_order", player.experienceLevel)) return;
 
             // 清除敌方增益
             event.getEntity().getActiveEffects().removeIf(e ->

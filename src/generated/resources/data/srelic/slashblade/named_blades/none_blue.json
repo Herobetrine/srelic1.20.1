@@ -17,10 +17,11 @@
   "name": "srelic:none_blue",
   "properties": {
     "attack_base": 20.0,
-    "max_damage": 80,
+    "max_damage": 200,
     "slash_art": "slashblade:void_slash",
     "special_effects": [
-      "srelic:white_maker"
+      "srelic:white_maker",
+      "srelic:path_of_nihility"
     ],
     "sword_type": [
       "bewitched"

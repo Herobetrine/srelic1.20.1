@@ -27,7 +27,7 @@ public class PathOfMystery extends SeEX {
     public static void onAttack(LivingHurtEvent event) {
         if (event.getSource().getEntity() instanceof Player player) {
             ItemStack blade = player.getMainHandItem();
-            if (!hasSpecialEffect(blade, "path_of_mystery")) return;
+            if (!hasSpecialEffect(blade, "path_of_mystery", player.experienceLevel)) return;
 
             // 随机触发神秘效果
             int effectType = MYSTERY_EFFECTS[RANDOM.nextInt(MYSTERY_EFFECTS.length)];

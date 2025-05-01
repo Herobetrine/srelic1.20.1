@@ -1,47 +1,53 @@
 package com.dinzeer.srelic.specialeffects.ThePath;
 
+import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.specialeffects.SeEX;
+import mods.flammpfeil.slashblade.event.SlashBladeEvent;
+import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.monster.Silverfish;
 import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.phys.AABB;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.UUID;
 
 @Mod.EventBusSubscriber
 public class PathOfPropagation extends SeEX {
 
-    private static final HashMap<UUID, Integer> sporeCountMap = new HashMap<>();
-    private static final int MAX_SPORES = 5;
 
     public PathOfPropagation() {
         super(60);
     }
 
     @SubscribeEvent
-    public static void onMobDeath(LivingDeathEvent event) {
-        if (event.getSource().getEntity() instanceof Player player) {
+    public static void onhit(SlashBladeEvent.HitEvent event) {
+        if (event.getUser() instanceof Player player) {
             ItemStack blade = player.getMainHandItem();
-            if (!hasSpecialEffect(blade, "path_of_propagation")) return;
+            if (!hasSpecialEffect(blade, "path_of_propagation", player.experienceLevel)) return;
+            if (SpecialEffect.isEffective(SRSpecialEffectsRegistry.path_of_propagation.getId(), player.experienceLevel)) {
+                // 检测10格范围内所有蠹虫
+                List<Silverfish> silverfishes = player.level().getEntitiesOfClass(Silverfish.class,
+                        new AABB(player.getX() - 10, player.getY() - 5, player.getZ() - 10,
+                                player.getX() + 10, player.getY() + 5, player.getZ() + 10));
 
-            // 击杀时生成孢子实体
-            int currentCount = sporeCountMap.getOrDefault(player.getUUID(), 0);
-            if (currentCount < MAX_SPORES) {
-                Slime spore = new Slime(EntityType.SLIME, player.level());
-                spore.setSize(1, true);
-                spore.setPos(player.getX(), player.getY(), player.getZ());
-                spore.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 1));
-                player.level().addFreshEntity(spore);
-
-                sporeCountMap.put(player.getUUID(), currentCount + 1);
+                if (silverfishes.size() < 40) {
+                    Silverfish spore = new Silverfish(EntityType.SILVERFISH, player.level());
+                    spore.setHealth(10);
+                    spore.setPos(player.getX(), player.getY(), player.getZ());
+                    player.level().addFreshEntity(spore);
+                }
             }
+
         }
     }
 

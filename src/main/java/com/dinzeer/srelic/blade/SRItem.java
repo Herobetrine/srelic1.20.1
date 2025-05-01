@@ -23,6 +23,8 @@ import static com.dinzeer.srelic.Srelic.MODID;
 public class SRItem {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
     public static final ResourceLocation SRELIC_BLADE_ID = new ResourceLocation(MODID, "srelic_slashblade");
+    public static final ResourceLocation SRELIC_BLADE_Super = new ResourceLocation(MODID, "srelic_slashblade_super");
+
 
     private static final Tier CUSTOM_TIER = new Tier() {
         @Override public int getUses() { return 1000; }
@@ -53,6 +55,24 @@ public class SRItem {
             );
 
             helper.register(SRELIC_BLADE_ID, srelicBlade);
+        });
+        event.register(ForgeRegistries.Keys.ITEMS, helper -> {
+            if (helper == null) {
+                throw new IllegalStateException("Item registry helper is null");
+            }
+
+            Item srelicBlade = new ISrelicblade(
+                    CUSTOM_TIER,
+                    5,
+                    -2.4f,
+                    new Item.Properties()
+                            .stacksTo(1)
+                            .durability(1000)
+                            .fireResistant()
+                            .rarity(Rarity.EPIC)
+            );
+
+            helper.register(SRELIC_BLADE_Super, srelicBlade);
         });
     }
     public static Item getItem(ResourceLocation item) {

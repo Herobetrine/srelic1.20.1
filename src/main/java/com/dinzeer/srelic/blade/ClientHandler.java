@@ -25,10 +25,15 @@ public class ClientHandler {
             BladeModel.user = p_174566_;
             return 0;
         });
+        ItemProperties.register( SRItem.getItem(SRItem.SRELIC_BLADE_Super),
+                new ResourceLocation("slashblade:user"), (ClampedItemPropertyFunction) (p_174564_, p_174565_, p_174566_, p_174567_) -> {
+                    BladeModel.user = p_174566_;
+                    return 0;
+                });
 }
     @SubscribeEvent
     public static void Baked(ModelEvent.ModifyBakingResult event) {
         bakeBlade( SRItem.getItem(SRItem.SRELIC_BLADE_ID), event);
-
+        bakeBlade( SRItem.getItem(SRItem.SRELIC_BLADE_Super), event);
     }
 }

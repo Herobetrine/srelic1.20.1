@@ -16,10 +16,11 @@
   "item": "srelic:srelic_slashblade",
   "name": "srelic:fireblue2",
   "properties": {
-    "attack_base": 35.0,
-    "max_damage": 80,
+    "attack_base": 20.0,
+    "max_damage": 200,
     "special_effects": [
-      "srelic:white_maker"
+      "srelic:white_maker",
+      "srelic:frost_forging"
     ],
     "sword_type": [
       "bewitched"
@@ -28,7 +29,7 @@
   "render": {
     "carry_type": "ninja",
     "model": "srelic:model/honkai/the_fire.obj",
-    "summon_sword_color": 16711697,
+    "summon_sword_color": 57087,
     "texture": "srelic:model/honkai/thefireextra/the_fire_blue2.png"
   }
 }

@@ -22,7 +22,7 @@ public class PathOfFinality extends SeEX {
     @SubscribeEvent
     public static void onKill(LivingDeathEvent event) {
         if (event.getSource().getEntity() instanceof Player player) {
-            if (hasSpecialEffect(player.getMainHandItem(), "path_of_finality")) {
+            if (hasSpecialEffect(player.getMainHandItem(), "path_of_finality", player.experienceLevel)) {
                 // 连杀计数
                 int streak = killStreak.getOrDefault(player.getUUID(), 0) + 1;
                 killStreak.put(player.getUUID(), streak);

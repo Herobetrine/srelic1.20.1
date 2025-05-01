@@ -23,7 +23,7 @@ public class PathOfTheGluttony extends SeEX {
     @SubscribeEvent
     public static void onLivingHurt(LivingHurtEvent event) {
         if (event.getSource().getEntity() instanceof Player player) {
-            if (hasSpecialEffect(player.getMainHandItem(), "path_of_the_gluttony")) {
+            if (hasSpecialEffect(player.getMainHandItem(), "path_of_the_gluttony", player.experienceLevel)) {
                 // 吸血效果
                 float healAmount = event.getAmount() * 0.3f;
                 player.heal(healAmount);
