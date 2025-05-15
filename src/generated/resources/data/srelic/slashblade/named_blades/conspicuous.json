@@ -1,0 +1,38 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:power",
+      "lvl": 4
+    },
+    {
+      "id": "minecraft:mending"
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:conspicuous",
+  "properties": {
+    "attack_base": 25.0,
+    "max_damage": 1013,
+    "slash_art": "srelic:explashon",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:pledge_matrix"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/ornament/conspicuous.obj",
+    "summon_sword_color": 16711710,
+    "texture": "srelic:model/ornament/conspicuous.png"
+  }
+}

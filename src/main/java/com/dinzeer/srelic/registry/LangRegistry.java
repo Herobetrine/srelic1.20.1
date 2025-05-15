@@ -52,6 +52,39 @@ public class LangRegistry {
         REGISTRATE.addRawLang("item.srelic.spring", "「裁椿」");
         REGISTRATE.addRawLang("item.srelic.the_fire_pink2", "天火圣裁「落樱刹那」");
         REGISTRATE.addRawLang("item.srelic.the_fire_green2", "天火圣裁「暴风天眼」");
+        REGISTRATE.addRawLang("item.srelic.butterfly_lament", "冥镰「蝶哀」");
+        REGISTRATE.addRawLang("item.srelic.staff_of_homa", "长枪「护摩之杖」");
+        REGISTRATE.addRawLang("item.srelic.dawn_flame_feather", "誓焰「拂晓炎翎」");
+        REGISTRATE.addRawLang("item.srelic.rose_spear", "纯美「玫瑰长枪」");
+        REGISTRATE.addRawLang("item.srelic.the_radiance_of_stagnant_water_flow", "静水流涌之辉");
+        REGISTRATE.addRawLang("item.srelic.seele", "旧镰「蝶影」");
+        REGISTRATE.addRawLang("item.srelic.air_none", "紫剪「空无」");
+        REGISTRATE.addRawLang("item.srelic.abyss_eye", "血渊之眸「如一」");
+        REGISTRATE.addRawLang("item.srelic.aphrodite_lyre", "奥菲厄斯的摇篮");
+        REGISTRATE.addRawLang("item.srelic.conspicuous", "「赫刀」");
+        REGISTRATE.addRawLang("item.srelic.radiance", "「绯羽灼华」");
+        REGISTRATE.addRawLang("item.srelic.dash", "战戟「钺贯天冲」");
+
+
+
+
+
+
+
+        REGISTRATE.addRawLang("patchouli.srelic.book.name", "记录了异界信息的书");
+        REGISTRATE.addRawLang("patchouli.srelic.book.landing_text", "一本来自异界的书，上面记载了许多锻造异界之刃的方式，以白模为基础奏响共鸣之路");
+        REGISTRATE.addRawLang("patchouli.srelic.book.categories.arrow.name", "链接一切的起始·超级材料");
+        REGISTRATE.addRawLang("patchouli.srelic.book.categories.arrow.description", "本章节记载了游戏扩增新加材料的获取方式和背景介绍");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.ender_metal.pages.0.text", "让末影人愤怒的特殊金属，可以用于协助白模链接世界并构筑成型,只不过配方让人想说：“这玩意不应该叫末影合金吗?”");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.black_hole_metal.pages.0.text", "四块坚硬无比的下界合金在聚合后因邪灵金属被引爆诞生的终极合金，它将链接白模将异界中“黑洞”这个概念的物品共鸣出来");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.compressed_alloy.pages.0.text", "通常来说压缩不成这样，但是这不是通常情况，毕竟你有下界之星");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.fel_metal.pages.0.text", "来自远古文明的禁忌炼金术带来的特殊金属");
+        REGISTRATE.addRawLang("tips.black_hole.name", "黑洞压缩仪式");
+        REGISTRATE.addRawLang("tips.black_hole.name_tip", "在末地手持邪灵金属对准中心的黑曜石激活");
+        REGISTRATE.addRawLang("tips.compressed_alloy.name", "下界之星压缩");
+        REGISTRATE.addRawLang("tips.compressed_alloy.name_tip", "在下界手持下界执行对准中心的下界合金激活");
+        REGISTRATE.addRawLang("tips.fel_metal.name", "远古邪灵炼成");
+        REGISTRATE.addRawLang("tips.fel_metal.name_tip", "手持下界合金碎片对准中心炼药锅激活");
         // 拔刀技
         REGISTRATE.addRawLang("slash_art.srelic.xdrive", "X幻影刃");
         REGISTRATE.addRawLang("slash_art.srelic.wither_breaker", "幻影衰落矢·哀");
@@ -69,6 +102,17 @@ public class LangRegistry {
         REGISTRATE.addRawLang("slash_art.srelic.heita", "转圈圈！");
         REGISTRATE.addRawLang("slash_art.srelic.summoning_thunder_ni", "唤霆霓");
         REGISTRATE.addRawLang("slash_art.srelic.confused", "燎乱忍法·万千忍杀");
+        REGISTRATE.addRawLang("slash_art.srelic.bloodspirit", "往生愿");
+        REGISTRATE.addRawLang("slash_art.srelic.closingsong", "红莲谢幕曲");
+        REGISTRATE.addRawLang("slash_art.srelic.pure_elegy", "纯美之技艺");
+        REGISTRATE.addRawLang("slash_art.srelic.butterfly_dance", "蝶刃");
+        REGISTRATE.addRawLang("slash_art.srelic.judgment_cube", "裁决魔方");
+        REGISTRATE.addRawLang("slash_art.srelic.the_moment_when_the_scale_collapses", "天秤崩落之刻");
+        REGISTRATE.addRawLang("slash_art.srelic.son_ata", "二间岚啸鸣");
+        REGISTRATE.addRawLang("slash_art.srelic.whitenight", "誓约之舞·白夜");
+        REGISTRATE.addRawLang("slash_art.srelic.break_sky", "凿破大荒");
+
+        REGISTRATE.addRawLang("slash_art.srelic.ice_music", "赋格奏鸣曲");
 
         // 特殊效果
         REGISTRATE.addRawLang("se.srelic.flamerosion", "火焰侵蚀");
@@ -440,6 +484,174 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.storm_fury.desc_6", "§e• 消耗3层召唤龙卷风牵引敌人");
         REGISTRATE.addRawLang("se.srelic.storm_fury.desc_7", "§e• 移动速度提升攻击速度");
 
+        // 特殊效果
+        REGISTRATE.addRawLang("se.srelic.ming_mang", "§5幽冥·冥芒噬魂");
+        REGISTRATE.addRawLang("se.srelic.ming_mang.desc", "§5【魂火献祭】");
+        REGISTRATE.addRawLang("se.srelic.ming_mang.desc_1", "§d每次攻击消耗5%当前生命获取冥芒(上限10层)");
+        REGISTRATE.addRawLang("se.srelic.ming_mang.desc_2", "§5【冥府恩赐】");
+        REGISTRATE.addRawLang("se.srelic.ming_mang.desc_3", "§d每层提供3%攻速与1%伤害增幅");
+        REGISTRATE.addRawLang("se.srelic.ming_mang.desc_4", "§5【黄泉回溯】");
+        REGISTRATE.addRawLang("se.srelic.ming_mang.desc_5", "§d生命低于30%时消耗冥芒治疗(每层3%最大生命)");
+        REGISTRATE.addRawLang("se.srelic.ming_mang.desc_6", "§5【九幽爆发】");
+        REGISTRATE.addRawLang("se.srelic.ming_mang.desc_7", "§d满层时造成(攻击+生命)x5的幽冥伤害");
+
+        // 特殊效果
+        REGISTRATE.addRawLang("se.srelic.butterfly_falling", "§5蝶落冥世·其为死亡");
+        REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc", "§5【魂火献祭】");
+        REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_1", "§d每次攻击消耗50%当前生命获取冥芒(上限10层)");
+        REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_2", "§5【冥府恩赐】");
+        REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_3", "§d每层提供50%伤害加成");
+        REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_4", "§5【黄泉回溯】");
+        REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_5", "§d生命低于30%时消耗冥芒治疗(每层4%最大生命)");
+        REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_6", "§5【九幽爆发】");
+        REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_7", "§d满层时造成(攻击+生命)x5的幽冥伤害");
+
+        REGISTRATE.addRawLang("se.srelic.blood_plum_memory", "§5血梅之忆·往生之梅");
+        REGISTRATE.addRawLang("se.srelic.blood_plum_memory.desc", "§5【血梅香】");
+        REGISTRATE.addRawLang("se.srelic.blood_plum_memory.desc_1", "§d允许叠加血梅，血梅上限为30层，每层提供10%增伤。");
+        REGISTRATE.addRawLang("se.srelic.blood_plum_memory.desc_2", "§5【血棺】");
+        REGISTRATE.addRawLang("se.srelic.blood_plum_memory.desc_3", "§对亡灵生物造成300%额外伤害.");
+        REGISTRATE.addRawLang("se.srelic.blood_plum_memory.desc_4", "§5【血忆】");
+        REGISTRATE.addRawLang("se.srelic.blood_plum_memory.desc_5", "§d血量每降低10%会获得40%的增伤，最多280%。");
+
+        // 炽炎勇魄
+        REGISTRATE.addRawLang("se.srelic.blazing_valor", "§c炽炎勇魄");
+        REGISTRATE.addRawLang("se.srelic.blazing_valor.desc", "§4【勇炎】");
+        REGISTRATE.addRawLang("se.srelic.blazing_valor.desc_1", "§c• 攻击伤害+45% §7| §c获得§6抗火效果");
+        REGISTRATE.addRawLang("se.srelic.blazing_valor.desc_2", "§4【烈炎】");
+        REGISTRATE.addRawLang("se.srelic.blazing_valor.desc_3", "§c攻击燃烧目标时§4无视防御§c（护甲/韧性）");
+        REGISTRATE.addRawLang("se.srelic.blazing_valor.desc_4", "§4【红莲战歌】");
+        REGISTRATE.addRawLang("se.srelic.blazing_valor.desc_5", "§c10格内燃烧敌人死亡叠加§4红莲印记§c（+10%伤害/层）");
+        REGISTRATE.addRawLang("se.srelic.blazing_valor.desc_6", "§8最大层数：§715 §7| §8持续：§730秒");
+
+        // 特殊效果
+        REGISTRATE.addRawLang("se.srelic.pure_elegy", "§6纯美赞歌");
+        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc", "§6【升格】");
+        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_1", "§6每次攻击叠加升格（上限300层）");
+        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_2", "§6【骑士之护】");
+        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_3", "§6每75层获得抗性提升");
+        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_4", "§6【赞颂】");
+        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_5", "§6100层时潜行右键可冲刺");
+
+
+        // 特殊效果
+        REGISTRATE.addRawLang("se.srelic.water_symphony", "§b纵水交响曲");
+        REGISTRATE.addRawLang("se.srelic.water_symphony.desc", "§b【众水叠章】");
+        REGISTRATE.addRawLang("se.srelic.water_symphony.desc_1", "§3Ⅰ-Ⅲ层: 攻击附加§9缓慢Ⅰ§3，持续5秒");
+        REGISTRATE.addRawLang("se.srelic.water_symphony.desc_2", "§b【歌剧叠章】");
+        REGISTRATE.addRawLang("se.srelic.water_symphony.desc_3", "§3Ⅳ-Ⅴ层: 每层提供§c15%§3伤害加成");
+        REGISTRATE.addRawLang("se.srelic.water_symphony.desc_4", "§d【终幕独奏】");
+        REGISTRATE.addRawLang("se.srelic.water_symphony.desc_5", "§5满层时获得§c40%§5额外加成");
+        REGISTRATE.addRawLang("se.srelic.water_symphony.desc_6", "§8※副手持有时同样生效");
+
+// 特殊效果
+        REGISTRATE.addRawLang("se.srelic.quantum_dance", "§5量镰影舞");
+        REGISTRATE.addRawLang("se.srelic.quantum_dance.desc", "§5【再现·量蝶】");
+        REGISTRATE.addRawLang("se.srelic.quantum_dance.desc_1", "§d击杀叠加量蝶层数§7(每层+40%伤害，上限10层)");
+        REGISTRATE.addRawLang("se.srelic.quantum_dance.desc_2", "§5【增幅·量锋】");
+        REGISTRATE.addRawLang("se.srelic.quantum_dance.desc_3", "§d攻击叠加量锋层数§7(每层+50%伤害，上限3层)");
+        REGISTRATE.addRawLang("se.srelic.quantum_dance.desc_4", "§5【回蝶共鸣】");
+        REGISTRATE.addRawLang("se.srelic.quantum_dance.desc_5", "§d双buff共存时获得§b速度IV+夜视+力量II+发光+急迫II");
+        REGISTRATE.addRawLang("se.srelic.quantum_dance.desc_6", "§8※效果持续期间自动刷新");
+
+// 特殊效果
+        REGISTRATE.addRawLang("se.srelic.void_scissors", "§5空境紫剪");
+        REGISTRATE.addRawLang("se.srelic.void_scissors.desc", "§d【魔方立场】");
+        REGISTRATE.addRawLang("se.srelic.void_scissors.desc_1", "§5每层提供§c40%§5增伤，十层时每层额外+§c10%§5（最高500%）");
+        REGISTRATE.addRawLang("se.srelic.void_scissors.desc_2", "§d【焦糖布丁】");
+        REGISTRATE.addRawLang("se.srelic.void_scissors.desc_3", "§5持续散发金/紫交替粒子特效");
+        REGISTRATE.addRawLang("se.srelic.void_scissors.desc_4", "§d【祝福之火】");
+        REGISTRATE.addRawLang("se.srelic.void_scissors.desc_5", "§5对燃烧目标造成§c150%§5额外伤害，5%概率叠加立场");
+// 特殊效果
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss", "§5魇梦渊卷之夜");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc", "§d【赤痕渊锁】");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_1", "§5攻击15%概率获得§c赤痕§5（上限10层）");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_2", "§5当§c赤痕≥8层§5时，每秒流失§41%§5最大生命值");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_3", "§d【罪罚两断之刃】");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_4", "§5攻击触发§e(7%+赤痕层数×1%)§5概率召唤寒冰棘刺");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_5", "§5棘刺领域持续§78秒§5，每秒造成§c30%§5武器白值冰冻伤害");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_6", "§5对领域内敌人施加§e11级缓慢§5（移动速度降低90%）");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_7", "§5击杀目标后棘刺领域将§d扩散§5至半径3格范围");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_8", "§5扩散后的领域持续时间递减§c30%§5，可连锁扩散§e3次");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_9", "§d【枯萎的白花】");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_10", "§5生命≤§440%§5时获得§c20%§5伤害加成");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_11", "§5当§e天秤崩落§5激活时，额外获得§c25%§5伤害加成");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_12", "§5攻击§b冻结目标§5时伤害提升§c30%");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_13", "§5§e天秤崩落§5状态下冻结加成提升至§c45%");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_14", "§d【终焉噩梦】");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_15", "§5每次攻击叠加§8噩梦层数§5（上限6层）");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_16", "§5每层提供§c15%§5伤害加成，持续§718秒");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_17", "§5当§8噩梦§5叠加至§46层§5时：");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_18", "§d• 消耗所有层数释放§c冰渊爆发§d");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_19", "§d• 造成§c(200%白值 + 200%已损生命值)§5的冰冻伤害");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_20", "§d• 对§74格§5范围内敌人施加§b绝对冻结§5（移动禁止3秒）");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_21", "§8※所有效果可同时生效，触发优先级：赤痕→罪罚→白花→噩梦");
+        REGISTRATE.addRawLang("se.srelic.nightmare_abyss.desc_22", "§8※如果崩端，概不负责");
+
+// 特殊效果
+        REGISTRATE.addRawLang("se.srelic.mugen_ice", "§b无我·极冰演算");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc", "§b【无我之境】");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_1", "§3获得抗性提升III，持续积累变奏值");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_2", "§b【时滞演算】");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_3", "§335格范围施加缓慢255，持续120秒");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_4", "§b【覆冰增幅】");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_5", "§3基础伤害+120%，副手拔刀剑时额外+20%");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_6", "§b【极冰穿刺】");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_7", "§3极冰层≥20时，15格范围持续造成50%白值伤害");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_8", "§b◇变奏系统◇");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_9", "§d击杀消耗100耀魂叠加，50层时岚啸伤害+100%");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_10", "§d25层时岚啸伤害+50%");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_11", "§b◆极冰机制◆");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_12", "§5每击杀5敌消耗150耀魂叠加，10层激活覆冰");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_13", "§520层激活冰刺领域");
+        REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_14", "§8※耀魂值不足时无法叠加层数");
+
+        // 誓约矩阵
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix", "§6誓约矩阵");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc", "§e【光耀节点】");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_1", "§625%攻击概率生成持续脉冲节点");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_2", "§e【荣光领域】");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_3", "§6形成三角区域时：");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_4", "§b- 友军伤害+40% §7| §c- 敌人每秒灼烧伤害");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_5", "§e【脉冲网络】");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_6", "§6节点间自动连接形成能量光束");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_7", "§c【赤焰共鸣】");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_8", "§e友军攻击燃烧目标时：");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_9", "§b- 每层+2%伤害 §7(§d上限50层§7)");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_10", "§c【协同作战】");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_11", "§e领域内共鸣效率提升30%");
+
+        REGISTRATE.addRawLang("se.srelic.white_rose", "§d白夜蔷薇");
+        REGISTRATE.addRawLang("se.srelic.white_rose.desc", "§5【蔷薇绽放】");
+        REGISTRATE.addRawLang("se.srelic.white_rose.desc_1", "§dSA命中+1层 §7| §5友方攻燃+2层(2秒CD)");
+        REGISTRATE.addRawLang("se.srelic.white_rose.desc_2", "§5Ⅰ-Ⅴ层: §c粉色幻影刃§7(90%伤害)");
+        REGISTRATE.addRawLang("se.srelic.white_rose.desc_3", "§5Ⅵ-Ⅹ层: §b「心火」§735%减伤");
+        REGISTRATE.addRawLang("se.srelic.white_rose.desc_4", "§5Ⅺ-ⅩⅤ层: §c每层+10%伤害");
+        REGISTRATE.addRawLang("se.srelic.white_rose.desc_5", "§d【永炎领域】");
+        REGISTRATE.addRawLang("se.srelic.white_rose.desc_6", "§5攻击燃敌时治疗35%伤害值");
+        REGISTRATE.addRawLang("se.srelic.white_rose.desc_7", "§5领域内每友方提供:");
+        REGISTRATE.addRawLang("se.srelic.white_rose.desc_8", "§c- 火焰伤害+10% §7| §b- 对亡灵+5%");
+        REGISTRATE.addRawLang("se.srelic.white_rose.desc_9", "§d【灼烧连锁】");
+        REGISTRATE.addRawLang("se.srelic.white_rose.desc_10", "§5友方攻击燃敌追加80%火焰伤害");
+
+        // 岚身
+        REGISTRATE.addRawLang("se.srelic.storm_body", "§b帝弓天将·巡猎天击");
+        REGISTRATE.addRawLang("se.srelic.storm_body.desc", "§3【岚身】");
+        REGISTRATE.addRawLang("se.srelic.storm_body.desc_1", "§b每10次攻击+1层,每次挥刀都会聚集生物并加一层");
+        REGISTRATE.addRawLang("se.srelic.storm_body.desc_2", "§b使用SA每消耗层数提供§c20%§b增伤 §7(上限30层)");
+        REGISTRATE.addRawLang("se.srelic.storm_body.desc_3", "§3【惟首正丘】");
+        REGISTRATE.addRawLang("se.srelic.storm_body.desc_4", "§b挥刀生成两道追踪幻影剑");
+        REGISTRATE.addRawLang("se.srelic.storm_body.desc_5", "§3【流风回雪】");
+        REGISTRATE.addRawLang("se.srelic.storm_body.desc_6", "§b幻影剑自动追踪12格内敌人");
+
+// 特殊效果
+        REGISTRATE.addRawLang("se.srelic.ice_rhythm", "§b凛华引奏");
+        REGISTRATE.addRawLang("se.srelic.ice_rhythm.desc", "§3【极冰旋律】");
+        REGISTRATE.addRawLang("se.srelic.ice_rhythm.desc_1", "§b每次攻击积累§3冰华层数§b（每5击+1层，上限15层）");
+        REGISTRATE.addRawLang("se.srelic.ice_rhythm.desc_2", "§3【凛冬庇护】");
+        REGISTRATE.addRawLang("se.srelic.ice_rhythm.desc_3", "§b每层提供§310%§b减伤，满层时获得§3抗性提升II");
+        REGISTRATE.addRawLang("se.srelic.ice_rhythm.desc_4", "§3【极冰狂奏】");
+        REGISTRATE.addRawLang("se.srelic.ice_rhythm.desc_5", "§b锻造≥200时，附加目标§c5%§b当前生命真实伤害");
 
 
         REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_slashblade", "§6游戏扩增·异界之刃");

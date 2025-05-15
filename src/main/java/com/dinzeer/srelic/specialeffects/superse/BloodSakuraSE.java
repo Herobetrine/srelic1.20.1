@@ -29,7 +29,7 @@ public class BloodSakuraSE extends SpecialEffect {
     private static final float SAKURA_DAMAGE_BONUS = 1.8f;// 斩击强化倍率
 
     public BloodSakuraSE() {
-        super(96, true, true);
+        super(96, false, false);
     }
 
     @SubscribeEvent

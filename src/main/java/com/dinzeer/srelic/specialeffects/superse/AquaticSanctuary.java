@@ -36,7 +36,7 @@ public class AquaticSanctuary extends SpecialEffect {
     private static final float TIDE_DAMAGE = 7.5f;    // 冲击波伤害
 
     public AquaticSanctuary() {
-        super(90, false, true);
+        super(90, false, false);
     }
 
 

@@ -32,6 +32,8 @@ public class SRItemRegsitry {
 
     public static final ItemEntry<SrelicItem> ender_metal =iteminit("ender_metal");
 
+    public static final ItemEntry<SrelicItem> soul_metal =iteminit("soul_metal");
+    public static final ItemEntry<SrelicItem> ex_star =iteminit("ex_star");
 
 
     public static ItemEntry<SrelicItem> iteminit(String name){

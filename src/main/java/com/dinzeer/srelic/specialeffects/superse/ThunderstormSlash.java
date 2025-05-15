@@ -37,7 +37,7 @@ public class ThunderstormSlash extends SpecialEffect {
     private static final float OVERLOAD_BOOST = 1.5f;  // 超载伤害加成
 
     public ThunderstormSlash() {
-        super(90, false, true);
+        super(90, false, false);
     }
 
     @SubscribeEvent

@@ -27,7 +27,7 @@ public class DiceEffect extends SpecialEffect {
     private static final float HEAL_MULTIPLIER = 6.0f;
 
     public DiceEffect() {
-        super(0, false, true);
+        super(0, false, false);
     }
 
     @SubscribeEvent

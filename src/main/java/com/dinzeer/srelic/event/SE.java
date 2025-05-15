@@ -3,10 +3,12 @@ package com.dinzeer.srelic.event;
 import com.dinzeer.srelic.Srelic;
 import com.dinzeer.srelic.registry.SRItemRegsitry;
 import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
+import com.mojang.datafixers.kinds.IdF;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState;
 import mods.flammpfeil.slashblade.capability.slashblade.SlashBladeState;
 import mods.flammpfeil.slashblade.event.SlashBladeEvent;
+import mods.flammpfeil.slashblade.init.SBItems;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import mods.flammpfeil.slashblade.slasharts.SlashArts;
@@ -22,6 +24,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
@@ -30,13 +33,30 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
 
+import static com.dinzeer.srelic.Srelic.MODID;
 
 
 @Mod.EventBusSubscriber
 public class SE {
 
 
-
+    @SubscribeEvent(priority = EventPriority.HIGH)
+    public static void handleBladeStandAttack1(SlashBladeEvent.BladeStandAttackEvent event) {
+        if (event.getDamageSource().getEntity() instanceof Player player) {
+            if (player.level().isClientSide()) return;
+          String[] v=  event.getBlade().getDescriptionId().split("\\.");
+            if (v[1].equals(MODID)){
+                if (player.getMainHandItem().getItem()== SBItems.proudsoul_sphere){
+                    player.sendSystemMessage(Component.literal("异界之魂在排斥耀魂宝珠"));
+                    event.setCanceled(true);
+                }
+                if (player.getMainHandItem().getItem()== SBItems.proudsoul_ingot){
+                    player.sendSystemMessage(Component.literal("异界之魂在排斥耀魂铁锭"));
+                    event.setCanceled(true);
+                }
+            }
+        }
+    }
 
 
 

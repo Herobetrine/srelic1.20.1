@@ -25,7 +25,7 @@ public class BlackHoleRitualHandler {
 
     @SubscribeEvent
     public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-        if (!RitualUtils.basicRitualCheck(event, SRItemRegsitry.compressed_alloy.asItem(), Level.END)) return;
+        if (!RitualUtils.basicRitualCheck(event, SRItemRegsitry.fel_metal.asItem(), Level.END)) return;
 
         BlockPos center = event.getPos().above();
         boolean validStructure = RitualUtils.validatePlatform(

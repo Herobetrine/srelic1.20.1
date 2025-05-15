@@ -35,7 +35,7 @@ public class HertaCryoStage extends SpecialEffect {
     private static final int FREEZE_CHANCE = 30;      // 冻结概率(%)
 
     public HertaCryoStage() {
-        super(90, false, true);
+        super(90, false, false);
     }
 
     @SubscribeEvent

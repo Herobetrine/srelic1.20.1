@@ -35,7 +35,7 @@ public class JingyuanThunder extends SpecialEffect {
     private static final int ULT_COOLDOWN = 200;       // 终结技冷却
 
     public JingyuanThunder() {
-        super(90, false, true);
+        super(90, false, false);
     }
 
     @SubscribeEvent

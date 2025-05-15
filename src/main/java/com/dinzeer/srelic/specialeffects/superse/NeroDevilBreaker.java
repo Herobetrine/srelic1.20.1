@@ -35,7 +35,7 @@ public class NeroDevilBreaker extends SpecialEffect {
     private static final float OVERLOAD_DAMAGE = 3.0f;// 超载额外伤害
 
     public NeroDevilBreaker() {
-        super(90, false, true);
+        super(90, false, false);
     }
 
     @SubscribeEvent

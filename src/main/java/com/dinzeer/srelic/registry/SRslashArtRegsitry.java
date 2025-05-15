@@ -26,6 +26,16 @@ public class SRslashArtRegsitry {
     public static final RegistryObject<SlashArts> Heita;
     public static final RegistryObject<SlashArts> SummoningThunderNi;
     public static final RegistryObject<SlashArts> confused;
+    public static final RegistryObject<SlashArts> Bloodspirit;
+    public static final RegistryObject<SlashArts> Closingsong;
+    public static final RegistryObject<SlashArts> pure_elegy;
+    public static final RegistryObject<SlashArts> ButterflyDance;
+    public static final RegistryObject<SlashArts> Judgmentcube;
+    public static final RegistryObject<SlashArts> the_moment_when_the_scale_collapses;
+    public static final RegistryObject<SlashArts> SonAta;
+    public static final RegistryObject<SlashArts> Whitenight;
+    public static final RegistryObject<SlashArts> BreakSky;
+    public static final RegistryObject<SlashArts> Icemusic;
 static {
     XDRIVE= SLASH_ARTS.register("xdrive", () -> new SlashArts((e) ->
             SRComboRegsitry.EXdrive.getId()));
@@ -45,5 +55,15 @@ static {
     Heita=SLASH_ARTS.register("heita",()->new SlashArts((e)->HeitaComBoRegistry.CIRCLE_SLASH.getId()));
     SummoningThunderNi=SLASH_ARTS.register("summoning_thunder_ni",()->new SlashArts((e)->SRComboRegsitry.SummoningThunderNi.getId()));
     confused=SLASH_ARTS.register("confused",()->new SlashArts((e)->SRComboRegsitry.confused.getId()));
+    Bloodspirit=SLASH_ARTS.register("bloodspirit",()->new SlashArts((e)->SRComboRegsitry.Bloodspirit.getId()));
+    Closingsong=SLASH_ARTS.register("closingsong",()->new SlashArts((e)->SRComboRegsitry.Closingsong.getId()));
+    pure_elegy=SLASH_ARTS.register("pure_elegy",()->new SlashArts((e)->SRComboRegsitry.pure_elegy.getId()));
+    ButterflyDance=SLASH_ARTS.register("butterfly_dance",()->new SlashArts((e)->SRComboRegsitry.ButterflyDance.getId()));
+    Judgmentcube=SLASH_ARTS.register("judgment_cube",()->new SlashArts((e)->SRComboRegsitry.Judgmentcube.getId()));
+    the_moment_when_the_scale_collapses= SLASH_ARTS.register("the_moment_when_the_scale_collapses",()->new SlashArts((e)->SRComboRegsitry.the_moment_when_the_scale_collapses.getId()));
+    SonAta=SLASH_ARTS.register("son_ata",()->new SlashArts((e)->SRComboRegsitry.SonAta.getId()));
+    Whitenight=SLASH_ARTS.register("whitenight",()->new SlashArts((e)->SRComboRegsitry.Whitenight.getId()));
+    BreakSky=SLASH_ARTS.register("break_sky",()->new SlashArts((e)->SRComboRegsitry.BreakSky.getId()));
+    Icemusic=SLASH_ARTS.register("ice_music",()->new SlashArts((e)->SRComboRegsitry.Icemusic.getId()));
 }
 }

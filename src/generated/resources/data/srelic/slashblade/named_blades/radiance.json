@@ -1,0 +1,38 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:power",
+      "lvl": 4
+    },
+    {
+      "id": "minecraft:mending"
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:radiance",
+  "properties": {
+    "attack_base": 25.0,
+    "max_damage": 1013,
+    "slash_art": "srelic:whitenight",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:white_rose"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/ornament/radiance.obj",
+    "summon_sword_color": 16711710,
+    "texture": "srelic:model/ornament/radiance.png"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:power",
+      "lvl": 5
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:rose_spear",
+  "properties": {
+    "attack_base": 25.0,
+    "max_damage": 616,
+    "slash_art": "srelic:pure_elegy",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:pure_elegy"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/stairail/pure_elegy.obj",
+    "summon_sword_color": 16711710,
+    "texture": "srelic:model/stairail/pure_elegy.png"
+  }
+}

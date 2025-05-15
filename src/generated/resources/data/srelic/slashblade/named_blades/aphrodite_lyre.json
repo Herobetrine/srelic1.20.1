@@ -1,0 +1,38 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:power",
+      "lvl": 4
+    },
+    {
+      "id": "minecraft:mending"
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:aphrodite_lyre",
+  "properties": {
+    "attack_base": 40.0,
+    "max_damage": 2026,
+    "slash_art": "srelic:ice_music",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:ice_rhythm"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/ornament/aphrodite_lyre.obj",
+    "summon_sword_color": 459263,
+    "texture": "srelic:model/ornament/aphrodite_lyre.png"
+  }
+}

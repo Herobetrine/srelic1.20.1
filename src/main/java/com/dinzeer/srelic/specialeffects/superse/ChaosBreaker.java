@@ -40,7 +40,7 @@ public class ChaosBreaker extends SpecialEffect {
     private static final float SLASH_ANGLE = 120.0f;  // 扇形角度
 
     public ChaosBreaker() {
-        super(90, false, true);
+        super(90, false, false);
     }
 
     @SubscribeEvent

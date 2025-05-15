@@ -9,11 +9,11 @@ import mods.flammpfeil.slashblade.ability.StunManager;
 import mods.flammpfeil.slashblade.entity.EntitySlashEffect;
 import mods.flammpfeil.slashblade.init.DefaultResources;
 import mods.flammpfeil.slashblade.registry.combo.ComboState;
-import mods.flammpfeil.slashblade.slasharts.Drive;
-import mods.flammpfeil.slashblade.slasharts.JudgementCut;
-import mods.flammpfeil.slashblade.slasharts.SakuraEnd;
-import mods.flammpfeil.slashblade.slasharts.WaveEdge;
+import mods.flammpfeil.slashblade.slasharts.*;
 import mods.flammpfeil.slashblade.util.AttackManager;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -264,6 +264,265 @@ public class SRComboRegsitry {
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
                             .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F,false))
                             .put(3, (entityIn) -> Confused.doSlash(entityIn,30,0.5F,2F,1) )
+                            .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+
+    public static final RegistryObject<ComboState> Bloodspirit = COMBO_STATES.register("blood_spirit",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> {
+                                CircleSlash.doCircleSlashAttack(entityIn, 180);
+                                CircleSlash.doCircleSlashAttack(entityIn, 90);
+                                CircleSlash.doCircleSlashAttack(entityIn, 0);
+                                CircleSlash.doCircleSlashAttack(entityIn, -90);
+                                for (int a =0; a<100;a++) {
+                                    if (entityIn.level() instanceof ServerLevel serverLevel) {
+                                        serverLevel.sendParticles(ParticleTypes.FLAME,
+                                                entityIn.getX(), entityIn.getY(), entityIn.getZ(), 5, 0.2, 0.2, 0.2, 0.2);
+                                    }
+                                }
+                            })
+                            .put(3, BloodSpirit::doslash )
+                            .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+
+
+
+
+
+    public static final RegistryObject<ComboState> Closingsong = COMBO_STATES.register("closing_song",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> {
+                                CircleSlash.doCircleSlashAttack(entityIn, 180);
+                                CircleSlash.doCircleSlashAttack(entityIn, 90);
+                                CircleSlash.doCircleSlashAttack(entityIn, 0);
+                                CircleSlash.doCircleSlashAttack(entityIn, -90);
+                            })
+                            .put(3, ClosingSong::doslash )
+                            .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+
+
+    public static final RegistryObject<ComboState> pure_elegy = COMBO_STATES.register("pure_elegy",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> StackClean.cleantodo(entityIn,10))
+                            .put(3, (e) -> StackClean.cleantodo(e, 20))
+                            .put(4, (e) -> StackClean.cleantodo(e, 30))
+                            .put(5, (e) -> StackClean.cleantodo(e, 40))
+                            .put(6, (e) -> StackClean.cleantodo(e, 50))
+                            .put(7, (e) -> StackClean.cleantodo(e, 60))
+                            .put(8, (e) -> StackClean.cleantodo(e, 70))
+                            .put(9, (e) -> StackClean.cleantodo(e, 80))
+                            .put(10, (e) -> StackClean.cleantodo(e, 90))
+                            .put(11, (e) -> StackClean.cleantodo(e, 100))
+                            .put(12, (e) ->{
+                                if (e instanceof Player player){
+                                StackClean.clean(e, SRStacksReg.PureElegy.getCurrentStacks(player)*-1);
+                                }
+                            })
+                            .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+
+
+
+    public static final RegistryObject<ComboState> ButterflyDance = COMBO_STATES.register("butter_fly_dance",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> StackClean.cleantodo(entityIn,10))
+                            .put(3,ButterFlyDance::doslash)
+                            .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+
+
+    public static final RegistryObject<ComboState> Judgmentcube = COMBO_STATES.register("judgment_cube",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> StackClean.cleantodo(entityIn,10))
+                            .put(3,JudgmentCube::cleantodo)
+                            .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+
+    public static final RegistryObject<ComboState> the_moment_when_the_scale_collapses = COMBO_STATES.register("the_moment_when_the_scale_collapses",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(1, (entityIn) -> AttackManager.doSlash(entityIn, 45F, Vec3.ZERO, false, false, 0.1F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 0.1F))
+                            .put(3,Themomentwhenthescalecollapses::doslash)
+                            .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+    public static final RegistryObject<ComboState> SonAta = COMBO_STATES.register("sonata",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> {
+                                CircleSlash.doCircleSlashAttack(entityIn, 180);
+                                CircleSlash.doCircleSlashAttack(entityIn, 90);
+                                CircleSlash.doCircleSlashAttack(entityIn, 0);
+                                CircleSlash.doCircleSlashAttack(entityIn, -90);
+                            })
+                            .put(3, Sonata::doSlash)
+                            .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+    public static final RegistryObject<ComboState> Whitenight = COMBO_STATES.register("white_night",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> {
+                                CircleSlash.doCircleSlashAttack(entityIn, 180);
+                                CircleSlash.doCircleSlashAttack(entityIn, 90);
+                                CircleSlash.doCircleSlashAttack(entityIn, 0);
+                                CircleSlash.doCircleSlashAttack(entityIn, -90);
+                            })
+                            .put(3, WhiteNight::dois)
+                            .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+    public static final RegistryObject<ComboState> Icemusic = COMBO_STATES.register("ice_music",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> {
+                                CircleSlash.doCircleSlashAttack(entityIn, 180);
+                                CircleSlash.doCircleSlashAttack(entityIn, 90);
+                                CircleSlash.doCircleSlashAttack(entityIn, 0);
+                                CircleSlash.doCircleSlashAttack(entityIn, -90);
+                            })
+                            .put(3, IceMusic::doslash)
+                            .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+
+    public static final RegistryObject<ComboState> BreakSky = COMBO_STATES.register("break_sky",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) ->
+                            {
+
+                                int ex=SRStacksReg.FLY_YELLOW_STACKS.getCurrentStacks((Player) entityIn);
+                                if (ex>6){
+                                    ex=6;
+                                }
+
+                                SakuraEnd.doSlash(entityIn, -80F,Vec3.ZERO,false,false,0.5F*(
+                                    1+ex*0.2F
+                            ));
+                            })
+                            .put(3, (entityIn) ->  {
+
+                                int ex=SRStacksReg.FLY_YELLOW_STACKS.getCurrentStacks((Player) entityIn);
+                                if (ex>6){
+                                    ex=6;
+                                }SakuraEnd.doSlash(entityIn, 60F,Vec3.ZERO,false,false, (1 + SRStacksReg.FLY_YELLOW_STACKS.getCurrentStacks((Player) entityIn) * 0.2F)
+                            );
+                            })
+                            .put(4, (entityIn) -> {
+                                int ex=SRStacksReg.FLY_YELLOW_STACKS.getCurrentStacks((Player) entityIn);
+                                if (ex>6){
+                                    ex=6;
+                                }
+                                    SakuraEnd.doSlash(entityIn, 90F,Vec3.ZERO,false,false,1.5F*(1+ex*0.2F));
+                            })
+                            .put(5, (entityIn) -> {
+                                        int ex=SRStacksReg.FLY_YELLOW_STACKS.getCurrentStacks((Player) entityIn);
+                                        if (ex>6){
+                                            ex=6;
+                                        }
+                                SakuraEnd.doSlash(entityIn, 30F,Vec3.ZERO,false,false,2F*(1+ex*0.2F));
+                            }
+                            )
+                            .put(6,
+                                    (entityIn) -> {
+                                        int ex=SRStacksReg.FLY_YELLOW_STACKS.getCurrentStacks((Player) entityIn);
+                                        if (ex>6){
+                                            ex=6;
+                                        }
+                                        SakuraEnd.doSlash(entityIn, -50F,Vec3.ZERO,false,false,
+                                                2.5F*(1+ex*0.2F));
+                            })
+                            .put(7, (entityIn) -> {
+                                int ex=SRStacksReg.FLY_YELLOW_STACKS.getCurrentStacks((Player) entityIn);
+                                if (ex>6){
+                                    ex=6;
+                                }
+                                SakuraEnd.doSlash(entityIn, 80F,Vec3.ZERO,false,false,
+                                        3F*(1+ex*0.2F));
+                            })
+                            .put(12, (e) ->{
+                                if (e instanceof Player player){
+                                    int ex=SRStacksReg.FLY_YELLOW_STACKS.getCurrentStacks(player);
+                                    if (ex>6){
+                                        ex=6;
+                                    }
+                                    SRStacksReg.FLY_YELLOW_STACKS.addStacks(player, -ex);
+                                }
+                            })
                             .build())
                     .addHitEffect(StunManager::setStun)
                     ::build

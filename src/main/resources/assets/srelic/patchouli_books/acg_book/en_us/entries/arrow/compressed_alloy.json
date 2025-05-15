@@ -1,0 +1,31 @@
+{
+    "sortnum": 1,
+    "name": "item.srelic.compressed_alloy",
+    "icon": "srelic:compressed_alloy",
+    "category": "srelic:arrow",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "srelic:compressed_alloy",
+            "text": "patchouli.srelic.book.entries.arrow.compressed_alloy.pages.0.text"
+        },
+        {
+            "type": "multiblock",
+            "name": "tips.compressed_alloy.name",
+            "multiblock": {
+                "pattern": [
+                    [  "___","_0_","___" ],
+                    [  "AAA","AAA","AAA" ],
+                    [  "BBB","BBB","BBB" ]
+                ],
+                "mapping": {
+                    "A": "minecraft:netherite_block",
+                    "B": "minecraft:nether_bricks"
+                },
+                "symmetrical": true
+            },
+            "text": "tips.compressed_alloy.name_tip"
+        }
+
+    ]
+}

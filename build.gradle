@@ -150,6 +150,9 @@ repositories {
         }
         mavenLocal()
     }
+    flatDir {
+        dir 'libs'
+    }
 }
 
 dependencies {
@@ -192,11 +195,17 @@ dependencies {
     implementation fg.deobf("curse.maven:jade-324717:6271651")
     //拔刀剑重锋依赖
     implementation fg.deobf("curse.maven:slashblade-resharped-1022428:6395356")
+    //帕秋莉手册
+    implementation fg.deobf("curse.maven:patchouli-306770:6164575")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.2.0")) {
         jarJar.ranged(it, "[0.2.0,)")
     }
+
+
+//    implementation fg.deobf("curse.maven:armourers-workshop-229523:6232905")
+//
 
 
 

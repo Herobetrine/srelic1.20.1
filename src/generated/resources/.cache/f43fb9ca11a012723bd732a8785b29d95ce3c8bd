@@ -1,11 +1,13 @@
-// 1.20.1	2025-04-30T23:52:30.3647126	Registrate Provider for srelic [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
-703d0eb3de1c5dcb4eeb7a6e1c4a3f164be84b52 assets/srelic/lang/en_ud.json
-00984fcd866e19df1c04b777d061b4b35c208694 assets/srelic/lang/en_us.json
+// 1.20.1	2025-05-15T20:49:27.9679499	Registrate Provider for srelic [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+e7170a70046d36059a3b9092feb27a75d5fe7259 assets/srelic/lang/en_ud.json
+d2eb75b9e1196a9c6c2b751000fabd97c77ac37b assets/srelic/lang/en_us.json
 9057a5a46dcab42e315aed3044eff31e214a50a6 assets/srelic/models/item/black_hole_metal.json
 bcd86321bb43db8b73d5267a295110a753ab3713 assets/srelic/models/item/compressed_alloy.json
 380bd922dd4875b3f3806aef8715274764531a25 assets/srelic/models/item/ender_metal.json
+9cf7734bf0ec6912372c5901b4ab8b965b9aead8 assets/srelic/models/item/ex_star.json
 d7979eec097d6df8edf1387cab392fefffc794b5 assets/srelic/models/item/fel_metal.json
 b8e2f075b532046ad5dff4cb05f1398d83ed4f8f assets/srelic/models/item/rainbow_star.json
+1d05a1b6a4fa2f598a8f68d9d4f8a6cfbe24581c assets/srelic/models/item/soul_metal.json
 b8e2f075b532046ad5dff4cb05f1398d83ed4f8f assets/srelic/models/item/universal_test.json
 a1364cbf575c1b8f89c5e80a7f54490f297d41b2 data/srelic/advancements/recipes/misc/ender_metal.json
 edb7c2b75f7524aa608db47d323caff191b42311 data/srelic/recipes/ender_metal.json

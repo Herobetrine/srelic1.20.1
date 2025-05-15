@@ -1,0 +1,31 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 10
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:dash",
+  "properties": {
+    "attack_base": 35.0,
+    "max_damage": 1013,
+    "slash_art": "srelic:break_sky",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:storm_body"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/stairail/dash.obj",
+    "summon_sword_color": 7012096,
+    "texture": "srelic:model/stairail/dash.png"
+  }
+}

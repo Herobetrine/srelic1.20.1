@@ -1,0 +1,30 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.black_hole_metal",
+  "icon": "srelic:black_hole_metal",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:black_hole_metal",
+      "text": "patchouli.srelic.book.entries.arrow.black_hole_metal.pages.0.text"
+    },
+    {
+      "type": "multiblock",
+      "name": "tips.black_hole.name",
+      "multiblock": {
+        "pattern": [
+          [  "A___A","_____","__0__","_____", "A___A" ],
+          [  "BBBBB","BBBBB","BBBBB","BBBBB", "BBBBB" ]
+        ],
+        "mapping": {
+          "A": "minecraft:netherite_block",
+          "B": "minecraft:obsidian"
+        },
+        "symmetrical": true
+      },
+      "text": "tips.black_hole.name_tip"
+    }
+
+  ]
+}

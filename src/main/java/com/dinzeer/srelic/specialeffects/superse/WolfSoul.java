@@ -42,7 +42,7 @@ public class WolfSoul extends SpecialEffect {
     private static final int TEAM_EFFECT_DURATION = 160; // 8秒
 
     public WolfSoul() {
-        super(95, false, true);
+        super(95, false, false);
     }
 
     // 玩家连击状态

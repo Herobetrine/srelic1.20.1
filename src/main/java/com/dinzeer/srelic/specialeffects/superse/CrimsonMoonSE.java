@@ -28,7 +28,7 @@ public class CrimsonMoonSE extends SpecialEffect {
     private static final float LIFE_STEAL_MULTI = 1.5f;   // 吸血倍率增幅
 
     public CrimsonMoonSE() {
-        super(97, true, true);
+        super(97, false, false);
     }
 
     @SubscribeEvent
@@ -40,6 +40,7 @@ public class CrimsonMoonSE extends SpecialEffect {
         accumulateBloodEcho(player);
         tryEnterShadowForm(player);
         int echoes = player.getPersistentData().getInt("BloodEcho");
+        System.out.println("echoes: " + echoes);
         event.setAmount(event.getAmount() * (1 + echoes * CRIT_BOOST_PER_ECHO));
     }
 

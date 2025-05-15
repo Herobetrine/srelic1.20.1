@@ -1,0 +1,10 @@
+{
+    "name": "patchouli.srelic.book.name",
+    "landing_text": "patchouli.srelic.book.landing_text",
+    "model": "srelic:acg_book",
+    "version": 1,
+    "creative_tab": "srelic:srelic_item",
+    "show_progress": false,
+    "i18n": true,
+    "use_resource_pack": true
+}

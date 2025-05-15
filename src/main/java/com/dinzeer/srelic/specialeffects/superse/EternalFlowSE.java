@@ -34,7 +34,7 @@ public class EternalFlowSE extends SpecialEffect {
     private static final float SURGE_DAMAGE = 12.0f;  // 基础冲击伤害
 
     public EternalFlowSE() {
-        super(95, true, true);
+        super(95, false, false);
     }
 
     @SubscribeEvent

@@ -25,7 +25,9 @@ public class PathOfErudition extends SeEX {
             // 根据附魔等级触发协同效果
             int sharpness = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SHARPNESS, blade);
             int fireAspect = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FIRE_ASPECT, blade);
-
+            if (sharpness > 3){
+                sharpness=3;
+            }
             if (sharpness > 0) {
                 event.setAmount(event.getAmount() * (1 + sharpness * 0.1f));
             }

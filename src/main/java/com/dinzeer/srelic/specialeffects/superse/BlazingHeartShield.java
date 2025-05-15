@@ -33,7 +33,7 @@ public class BlazingHeartShield extends SpecialEffect {
     private static final float EXPLOSION_DAMAGE = 15.0f;
 
     public BlazingHeartShield() {
-        super(90, false, true);
+        super(90, false, false);
     }
 
     @SubscribeEvent

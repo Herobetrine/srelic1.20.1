@@ -18,7 +18,7 @@ public class LamentOfPhantoms extends SpecialEffect {
     private static final int COOLDOWN = 600; // 30秒冷却（20ticks/sec）
 
     public LamentOfPhantoms() {
-        super(85, false, true);
+        super(85, false, false);
     }
 
     @SubscribeEvent

@@ -1,0 +1,32 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.fel_metal",
+  "icon": "srelic:fel_metal",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:fel_metal",
+      "text": "patchouli.srelic.book.entries.arrow.fel_metal.pages.0.text"
+    },
+    {
+      "type": "multiblock",
+      "name": "tips.fel_metal.name",
+      "multiblock": {
+        "pattern": [
+          [  "_____","_____","__0__","_____","_____" ],
+          [  "C___C","_____","__A__","_____","C___C" ],
+          [  "_____","_BBB_","_BBB_","_BBB_","_____" ]
+        ],
+        "mapping": {
+          "A": "minecraft:cauldron",
+          "B": "minecraft:nether_bricks",
+          "C": "minecraft:sculk_catalyst"
+        },
+        "symmetrical": true
+      },
+      "text": "tips.fel_metal.name_tip"
+    }
+
+  ]
+}

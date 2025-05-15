@@ -1,0 +1,31 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:looting",
+      "lvl": 3
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:air_none",
+  "properties": {
+    "attack_base": 23.0,
+    "max_damage": 1013,
+    "slash_art": "srelic:judgment_cube",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:void_scissors"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/honkai/air_none.obj",
+    "summon_sword_color": 4063487,
+    "texture": "srelic:model/honkai/air_none.png"
+  }
+}

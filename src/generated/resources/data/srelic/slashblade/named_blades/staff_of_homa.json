@@ -1,0 +1,39 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:fire_aspect",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:smite",
+      "lvl": 15
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 5
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:staff_of_homa",
+  "properties": {
+    "attack_base": 31.0,
+    "max_damage": 200,
+    "slash_art": "srelic:bloodspirit",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:blood_plum_memory"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/genshine/staff_of_homa.obj",
+    "summon_sword_color": 16711710,
+    "texture": "srelic:model/genshine/staff_of_homa.png"
+  }
+}

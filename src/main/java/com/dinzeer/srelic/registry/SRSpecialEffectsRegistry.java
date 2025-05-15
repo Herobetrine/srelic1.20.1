@@ -10,7 +10,7 @@ import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import com.dinzeer.srelic.specialeffects.superse.*;
-
+import com.dinzeer.srelic.specialeffects.superSe2.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -91,10 +91,20 @@ public class SRSpecialEffectsRegistry {
     public static final RegistryObject<SpecialEffect> CRIMSON_ANNIHILATION;//红椿蚀骨·湮烬
     public static final RegistryObject<SpecialEffect> SAKURA_BLOOM;//樱华·刹那芳华
     public static final RegistryObject<SpecialEffect> STORM_FURY;//疾风·暴风之怒
-
-
-
-
+    public static final RegistryObject<SpecialEffect> MING_MANG; //冥芒
+    public static final RegistryObject<SpecialEffect> BUTTERFLY_FALLING; //蝶落冥世
+    public static final RegistryObject<SpecialEffect> BLOOD_PLUM_MEMORY;//血梅之忆
+    public static final RegistryObject<SpecialEffect> BLAZING_VALOR;//炽炎勇魄
+    public static final RegistryObject<SpecialEffect> PureElegy;//纯美赞歌
+    public static final RegistryObject<SpecialEffect> WATER_SYMPHONY;//纵水交响曲
+    public static final RegistryObject<SpecialEffect> QUANTUM_DANCE;//量镰影舞
+    public static final RegistryObject<SpecialEffect> VOID_SCISSORS;//空境紫剪
+    public static final RegistryObject<SpecialEffect> NIGHTMARE_ABYSS;//魇梦渊卷之夜
+    public static final RegistryObject<SpecialEffect> MUGEN_ICE;//无我·极冰演算
+    public static final RegistryObject<SpecialEffect> PLEDGE_MATRIX;//誓约矩阵
+    public static final RegistryObject<SpecialEffect> WHITE_ROSE;//白夜蔷薇
+    public static final RegistryObject<SpecialEffect> STORM_BODY;//风岚之身
+    public static final RegistryObject<SpecialEffect> ICE_RHYTHM ;
 
     public SRSpecialEffectsRegistry() {
 
@@ -182,6 +192,20 @@ public class SRSpecialEffectsRegistry {
         CRIMSON_ANNIHILATION = REGISTRY_KEY2.register("crimson_annihilation", CrimsonAnnihilationSE::new);
         SAKURA_BLOOM = REGISTRY_KEY2.register("sakura_bloom", SakuraBloomSE::new);
         STORM_FURY = REGISTRY_KEY2.register("storm_fury", StormFurySE::new);
+        MING_MANG = REGISTRY_KEY2.register("ming_mang", MingMangSE::new);
+        BUTTERFLY_FALLING = REGISTRY_KEY2.register("butterfly_falling", ButterflyFalling::new);
+        BLOOD_PLUM_MEMORY = REGISTRY_KEY2.register("blood_plum_memory", BloodPlumMemory::new);
+        BLAZING_VALOR = REGISTRY_KEY2.register("blazing_valor", BlazingValor::new);
+        PureElegy = REGISTRY_KEY2.register("pure_elegy", PureElegy::new);
+        WATER_SYMPHONY = REGISTRY_KEY2.register("water_symphony", WaterSymphonySE::new);
+        QUANTUM_DANCE = REGISTRY_KEY2.register("quantum_dance", QuantumDanceSE::new);
+        VOID_SCISSORS = REGISTRY_KEY2.register("void_scissors", VoidScissorsSE::new);
+        NIGHTMARE_ABYSS = REGISTRY_KEY2.register("nightmare_abyss", NightmareAbyssSE::new);
+        MUGEN_ICE = REGISTRY_KEY2.register("mugen_ice", MugenIceSE::new);
+        PLEDGE_MATRIX = REGISTRY_KEY2.register("pledge_matrix", PledgeMatrixSE::new);
+        WHITE_ROSE = REGISTRY_KEY2.register("white_rose", WhiteRoseSE::new);
+        STORM_BODY = REGISTRY_KEY2.register("storm_body", StormBodySE::new);
+        ICE_RHYTHM= REGISTRY_KEY2.register("ice_rhythm", IceRhythmSE::new);
     }
 
 

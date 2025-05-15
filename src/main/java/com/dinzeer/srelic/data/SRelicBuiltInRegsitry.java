@@ -107,6 +107,30 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> galaxy=register("galaxy");
     //圣卡特琳娜「Alter」
     public static final ResourceKey<SlashBladeDefinition> santa_caterina=register("santa_caterina");
+    //冥镰「蝶哀」
+    public static final ResourceKey<SlashBladeDefinition> ButterflyLament=register("butterfly_lament");
+    //长枪「护摩之杖」
+    public static final ResourceKey<SlashBladeDefinition> staff_of_homa=register("staff_of_homa");
+    //誓焰「拂晓炎翎」
+    public static final ResourceKey<SlashBladeDefinition> dawn_flame_feather=register("dawn_flame_feather");
+    //纯美「玫瑰长枪」
+    public static final ResourceKey<SlashBladeDefinition> rose_spear=register("rose_spear");
+    //静水流涌之辉
+    public static final ResourceKey<SlashBladeDefinition> The_radiance_of_stagnant_water_flow=register("the_radiance_of_stagnant_water_flow");
+    //旧镰「蝶影」
+    public static final ResourceKey<SlashBladeDefinition> SEELE=register("seele");
+    //紫剪「空无」
+    public static final ResourceKey<SlashBladeDefinition> AIR_NONE =register("air_none");
+    //血渊之眸「如一」
+    public static final ResourceKey<SlashBladeDefinition> Abyss_Eye=register("abyss_eye");
+    //奥菲厄斯的摇篮
+    public static final ResourceKey<SlashBladeDefinition> Aphrodite_Lyre=register("aphrodite_lyre");
+    //「赫刀」
+    public static final ResourceKey<SlashBladeDefinition> conspicuous=register("conspicuous");
+    //「绯羽灼华」
+    public static final ResourceKey<SlashBladeDefinition> radiance=register("radiance");
+    //战戟「钺贯天冲」
+    public static final ResourceKey<SlashBladeDefinition> dash=register("dash");
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(START,
                 new SlashBladeDefinition(
@@ -978,6 +1002,280 @@ public class SRelicBuiltInRegsitry {
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3)
                         )));
+        bootstrap.register(
+                ButterflyLament, new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("butterfly_lament"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/butterfly_lament.png"))
+                                .modelName(Srelic.prefix("model/stairail/butterfly_lament.obj"))
+                                .effectColor(1835263)
+                                .standbyRenderType(CarryType.NINJA)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(27)
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.BUTTERFLY_FALLING.getId())
+                                .maxDamage(200)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5)
+                        )
+                )
+        );
+        bootstrap.register(
+                staff_of_homa, new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("staff_of_homa"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/genshine/staff_of_homa.png"))
+                                .modelName(Srelic.prefix("model/genshine/staff_of_homa.obj"))
+                                .effectColor(16711710)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(31)
+                                .slashArtsType(SRslashArtRegsitry.Bloodspirit.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.BLOOD_PLUM_MEMORY.getId())
+                                .maxDamage(200)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 15),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5)
+                        )
+                )
+        );
+        bootstrap.register(
+                dawn_flame_feather, new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("dawn_flame_feather"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/ornament/dawn_flame_feather.png"))
+                                .modelName(Srelic.prefix("model/ornament/dawn_flame_feather.obj"))
+                                .effectColor(16711710)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(21)
+                                .slashArtsType(SRslashArtRegsitry.Closingsong.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.BLAZING_VALOR.getId())
+                                .maxDamage(616)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 2),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.MOB_LOOTING), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 3)
+                        )
+                )
+        );
+        bootstrap.register(
+                rose_spear, new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("rose_spear"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/pure_elegy.png"))
+                                .modelName(Srelic.prefix("model/stairail/pure_elegy.obj"))
+                                .effectColor(16711710)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(25)
+                                .slashArtsType(SRslashArtRegsitry.pure_elegy.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.PureElegy.getId())
+                                .maxDamage(616)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5)
+                        )
+                )
+        );
+        bootstrap.register(
+                The_radiance_of_stagnant_water_flow, new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("the_radiance_of_stagnant_water_flow"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/genshine/the_radiance_of_stagnant_water_flow.png"))
+                                .modelName(Srelic.prefix("model/genshine/the_radiance_of_stagnant_water_flow.obj"))
+                                .effectColor(22015)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(20)
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WATER_SYMPHONY.getId())
+                                .maxDamage(1013)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.MOB_LOOTING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SWEEPING_EDGE), 1),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.RESPIRATION), 1)
+                        )
+                )
+        );
+        bootstrap.register(
+                SEELE
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("seele"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/seele.png"))
+                                .modelName(Srelic.prefix("model/stairail/seele.obj"))
+                                .effectColor(4063487)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(15)
+                                .slashArtsType(SRslashArtRegsitry.ButterflyDance.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.QUANTUM_DANCE.getId())
+                                .maxDamage(1013)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.MOB_LOOTING), 3)
+                        )
+                )
+        );
+        bootstrap.register(
+                AIR_NONE
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("air_none"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/air_none.png"))
+                                .modelName(Srelic.prefix("model/honkai/air_none.obj"))
+                                .effectColor(4063487)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(23)
+                                .slashArtsType(SRslashArtRegsitry.Judgmentcube.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.VOID_SCISSORS.getId())
+                                .maxDamage(1013)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.MOB_LOOTING), 3)
+                        )
+                )
+        );
+        bootstrap.register(
+                Abyss_Eye
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("abyss_eye"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/abyss_eye.png"))
+                                .modelName(Srelic.prefix("model/honkai/abyss_eye.obj"))
+                                .effectColor(16711710)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(37)
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .maxDamage(2026)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.MOB_LOOTING), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 7),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 7)
+                        )
+                )
+        );
+        bootstrap.register(
+                Aphrodite_Lyre
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("aphrodite_lyre"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/ornament/aphrodite_lyre.png"))
+                                .modelName(Srelic.prefix("model/ornament/aphrodite_lyre.obj"))
+                                .effectColor(459263)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(40)
+                                .slashArtsType(SRslashArtRegsitry.Icemusic.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.ICE_RHYTHM.getId())
+                                .maxDamage(2026)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 4),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.MENDING), 1)
+                        )
+                )
+        );
+        bootstrap.register(
+                conspicuous
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("conspicuous"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/ornament/conspicuous.png"))
+                                .modelName(Srelic.prefix("model/ornament/conspicuous.obj"))
+                                .effectColor(16711710)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(25)
+                                .slashArtsType(SRslashArtRegsitry.EXPLANATION.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.PLEDGE_MATRIX.getId())
+                                .maxDamage(1013)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 4),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.MENDING), 1)
+                        )
+                )
+        );
+
+        bootstrap.register(
+                radiance
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("radiance"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/ornament/radiance.png"))
+                                .modelName(Srelic.prefix("model/ornament/radiance.obj"))
+                                .effectColor(16711710)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(25)
+                                .slashArtsType(SRslashArtRegsitry.Whitenight.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WHITE_ROSE.getId())
+                                .maxDamage(1013)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 5),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 4),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.MENDING), 1)
+                        )
+                )
+        );
+        bootstrap.register(
+                dash
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("dash"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/dash.png"))
+                                .modelName(Srelic.prefix("model/stairail/dash.obj"))
+                                .effectColor(7012096)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(35)
+                                .slashArtsType(SRslashArtRegsitry.BreakSky.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.STORM_BODY.getId())
+                                .maxDamage(1013)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
     }
 
 

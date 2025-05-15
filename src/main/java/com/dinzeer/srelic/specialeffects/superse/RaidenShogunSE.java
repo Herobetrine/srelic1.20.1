@@ -32,7 +32,7 @@ public class RaidenShogunSE extends SpecialEffect {
     private static final float MUSOU_BASE_DAMAGE = 20.0f;  // 基础斩击伤害
 
     public RaidenShogunSE() {
-        super(100, true, false); // 需求等级100的SE
+        super(100, false, false); // 需求等级100的SE
     }
 
     @SubscribeEvent
@@ -45,7 +45,7 @@ public class RaidenShogunSE extends SpecialEffect {
         int resolve = player.getPersistentData().getInt("ResolveStacks");
         int newResolve = Math.min(resolve + 3, MAX_RESOLVE_STACKS);
         player.getPersistentData().putInt("ResolveStacks", newResolve);
-
+      System.out.println("resolve: " + resolve);
         // 附加雷元素伤害
         event.getEntity().hurt(player.damageSources().magic(), 3.0f);
         activateMusouNoHitotachi(player);

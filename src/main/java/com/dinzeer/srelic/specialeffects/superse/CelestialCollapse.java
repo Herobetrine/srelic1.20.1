@@ -28,7 +28,7 @@ public class CelestialCollapse extends SpecialEffect {
 
 
     public CelestialCollapse() {
-        super(90, false, true);
+        super(90, false, false);
     }
 
     @SubscribeEvent

@@ -22,7 +22,7 @@ public class VoidFinale  extends SpecialEffect {
     private static final int COMBO_THRESHOLD = 7; // 需要7连击触发
 
     public VoidFinale() {
-        super(90, true, true);
+        super(90, false, false);
     }
 
     @SubscribeEvent

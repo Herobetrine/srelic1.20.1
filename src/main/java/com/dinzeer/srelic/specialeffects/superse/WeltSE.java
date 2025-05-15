@@ -30,7 +30,7 @@ public class WeltSE extends SpecialEffect {
     private static final float DAMAGE_PER_STACK = 0.15f;// 每层增伤
 
     public WeltSE() {
-        super(95, false, true);
+        super(95, false, false);
     }
 
     @SubscribeEvent

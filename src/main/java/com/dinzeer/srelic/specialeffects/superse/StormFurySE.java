@@ -33,7 +33,7 @@ public class StormFurySE extends SpecialEffect {
     private static final float TORNADO_DAMAGE = 3.0f;   // 每秒基础伤害
 
     public StormFurySE() {
-        super(95, true, true);
+        super(95, false, false);
     }
 
     @SubscribeEvent

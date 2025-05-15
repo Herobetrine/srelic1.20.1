@@ -30,7 +30,7 @@ public class AvengerJeanneSE extends SpecialEffect {
     private static final float NP_DAMAGE_MULTI = 2.5f;    // 宝具伤害倍率
 
     public AvengerJeanneSE() {
-        super(95, true, true);
+        super(95, false, false);
     }
 
     @SubscribeEvent

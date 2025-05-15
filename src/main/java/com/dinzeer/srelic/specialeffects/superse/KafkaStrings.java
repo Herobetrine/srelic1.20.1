@@ -39,7 +39,7 @@ public class KafkaStrings extends SpecialEffect {
     private static final Map<UUID, Integer> toxinStacks = new HashMap<>();
 
     public KafkaStrings() {
-        super(90, false, true);
+        super(90, false, false);
     }
 
     @SubscribeEvent

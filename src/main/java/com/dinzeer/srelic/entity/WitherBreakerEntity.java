@@ -72,7 +72,7 @@ public class WitherBreakerEntity extends EntityAbstractSummonedSword {
 
     public void setSpeed(float speed)
     {
-        this.getEntityData().set(SPEED, speed);
+        this.getEntityData().set(SPEED, speed*3);
     }
 
     public float getSpeed() {return this.getEntityData().get(SPEED);}

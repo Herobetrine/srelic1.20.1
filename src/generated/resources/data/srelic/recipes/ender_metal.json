@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:ender_eye"
+    },
+    "B": {
+      "item": "minecraft:iron_ingot"
+    },
+    "C": {
+      "item": "minecraft:netherite_scrap"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "BCB",
+    "AAA"
+  ],
+  "result": {
+    "item": "srelic:ender_metal"
+  },
+  "show_notification": true
+}
