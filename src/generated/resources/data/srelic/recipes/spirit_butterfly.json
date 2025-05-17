@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:dandelion"
+    },
+    "B": {
+      "item": "minecraft:poppy"
+    },
+    "C": {
+      "item": "minecraft:blue_orchid"
+    },
+    "D": {
+      "item": "minecraft:allium"
+    },
+    "E": {
+      "item": "minecraft:red_tulip"
+    },
+    "F": {
+      "item": "minecraft:oxeye_daisy"
+    },
+    "G": {
+      "item": "minecraft:lily_of_the_valley"
+    },
+    "H": {
+      "item": "minecraft:cornflower"
+    },
+    "I": {
+      "item": "minecraft:wither_rose"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:spirit_butterfly"
+  },
+  "show_notification": true
+}

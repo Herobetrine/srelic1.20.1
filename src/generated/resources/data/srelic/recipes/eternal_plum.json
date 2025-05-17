@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:oak_leaves"
+    },
+    "B": {
+      "item": "minecraft:dark_oak_leaves"
+    },
+    "C": {
+      "item": "minecraft:birch_leaves"
+    },
+    "D": {
+      "item": "minecraft:jungle_leaves"
+    },
+    "E": {
+      "item": "minecraft:spruce_leaves"
+    },
+    "F": {
+      "item": "minecraft:flowering_azalea_leaves"
+    },
+    "G": {
+      "item": "minecraft:azalea_leaves"
+    },
+    "H": {
+      "item": "minecraft:cherry_leaves"
+    },
+    "I": {
+      "item": "minecraft:acacia_leaves"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:eternal_plum"
+  },
+  "show_notification": true
+}
