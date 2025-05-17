@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "srelic:flame_netherite_alloy"
+    },
+    "B": {
+      "item": "srelic:frozen_netherite_alloy"
+    },
+    "C": {
+      "item": "srelic:thunder_netherite_alloy"
+    },
+    "D": {
+      "item": "srelic:oceanic_netherite_alloy"
+    },
+    "E": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    " A ",
+    "BEC",
+    " D "
+  ],
+  "result": {
+    "item": "srelic:demon_ingot"
+  },
+  "show_notification": true
+}
