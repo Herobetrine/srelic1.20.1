@@ -105,7 +105,6 @@ public class SRSpecialEffectsRegistry {
     public static final RegistryObject<SpecialEffect> WHITE_ROSE;//白夜蔷薇
     public static final RegistryObject<SpecialEffect> STORM_BODY;//风岚之身
     public static final RegistryObject<SpecialEffect> ICE_RHYTHM ;
-
     public SRSpecialEffectsRegistry() {
 
 

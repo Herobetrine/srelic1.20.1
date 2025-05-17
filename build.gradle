@@ -197,6 +197,9 @@ dependencies {
     implementation fg.deobf("curse.maven:slashblade-resharped-1022428:6395356")
     //帕秋莉手册
     implementation fg.deobf("curse.maven:patchouli-306770:6164575")
+    //emi
+    implementation fg.deobf("curse.maven:emi-580555:6420945")
+    implementation fg.deobf("curse.maven:emi-trades-villager-trading-emi-plugin-735523:4901194")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.2.0")) {

@@ -1,13 +1,33 @@
-// 1.20.1	2025-05-15T20:49:27.9679499	Registrate Provider for srelic [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
-e7170a70046d36059a3b9092feb27a75d5fe7259 assets/srelic/lang/en_ud.json
-d2eb75b9e1196a9c6c2b751000fabd97c77ac37b assets/srelic/lang/en_us.json
+// 1.20.1	2025-05-17T16:04:39.8667069	Registrate Provider for srelic [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+031d772c2ffd74a9edb51e97efb7501719b96536 assets/srelic/lang/en_ud.json
+6f8801326e839ce3873d86ea3fdc3b4e77920751 assets/srelic/lang/en_us.json
 9057a5a46dcab42e315aed3044eff31e214a50a6 assets/srelic/models/item/black_hole_metal.json
 bcd86321bb43db8b73d5267a295110a753ab3713 assets/srelic/models/item/compressed_alloy.json
+73cc22e73d99e3fa9b07b0d68d5af94cda0baffe assets/srelic/models/item/crimson_paper.json
+9f9ec1d658cc873850dbf7b033ca0cca919b63d0 assets/srelic/models/item/demon_ingot.json
+1ac4312e571136b8bce0b85c12edb42a109482bf assets/srelic/models/item/diamond_star.json
 380bd922dd4875b3f3806aef8715274764531a25 assets/srelic/models/item/ender_metal.json
+40e78d958d01e7dbd9a43d4132198255d3b40532 assets/srelic/models/item/eternal_plum.json
 9cf7734bf0ec6912372c5901b4ab8b965b9aead8 assets/srelic/models/item/ex_star.json
 d7979eec097d6df8edf1387cab392fefffc794b5 assets/srelic/models/item/fel_metal.json
+d531b37c6625e5d0d8693352c4cd0db2a6a010a9 assets/srelic/models/item/flame_netherite_alloy.json
+edf3b362381778247730f93a25b2b8fc26de6a8c assets/srelic/models/item/frozen_netherite_alloy.json
+fb2031c394af046f20c199d230a3c32f418253d7 assets/srelic/models/item/oceanic_netherite_alloy.json
 b8e2f075b532046ad5dff4cb05f1398d83ed4f8f assets/srelic/models/item/rainbow_star.json
+9a3814e0ac569be32b7aaf9634889ef8656f5ce4 assets/srelic/models/item/sakura_steel_ingot.json
 1d05a1b6a4fa2f598a8f68d9d4f8a6cfbe24581c assets/srelic/models/item/soul_metal.json
+61fe9c85da1133d8576c36b463c5744297754a98 assets/srelic/models/item/spirit_butterfly.json
+4b08daa938f3ecbf84fcdf7ecbd21b8a866f16a3 assets/srelic/models/item/thunder_netherite_alloy.json
 b8e2f075b532046ad5dff4cb05f1398d83ed4f8f assets/srelic/models/item/universal_test.json
+cb65f8b6c2d71f1ff7281c8bdd5c095b4803f94a data/srelic/advancements/recipes/misc/demon_ingot.json
+5855eb861ad2f34a0eea0eb73237f527970ada33 data/srelic/advancements/recipes/misc/diamond_star.json
 a1364cbf575c1b8f89c5e80a7f54490f297d41b2 data/srelic/advancements/recipes/misc/ender_metal.json
+a9212fa08f86a0d6fd9c30265a15bdfce80c3a10 data/srelic/advancements/recipes/misc/eternal_plum.json
+1eef332d037de8245af2ae49df97caad8a3ebabb data/srelic/advancements/recipes/misc/soul_metal.json
+4aaa8d0a25d350b40cc7ea2afa940ca242f53f08 data/srelic/advancements/recipes/misc/spirit_butterfly.json
+f3d1e39d0fd57f29a384831fd4dc70491aeffd12 data/srelic/recipes/demon_ingot.json
+a8d6707fcc46708cfa3c07f5495c887eddbd2b89 data/srelic/recipes/diamond_star.json
 edb7c2b75f7524aa608db47d323caff191b42311 data/srelic/recipes/ender_metal.json
+e7a90055f82d3b2380c0fb7b02d5a67129e27189 data/srelic/recipes/eternal_plum.json
+2bd908b737d376101bdcf41888562fe1f12b8b26 data/srelic/recipes/soul_metal.json
+95e4da22a93810cd4ed9997353237a7525ed0b87 data/srelic/recipes/spirit_butterfly.json

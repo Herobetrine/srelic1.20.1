@@ -1,4 +1,4 @@
-// 1.20.1	2025-05-15T20:49:27.9638211	Registries
+// 1.20.1	2025-05-17T14:30:43.3689126	Registries
 5985aec462ab05d5c4569babfd7becbb4cfc7718 data/srelic/slashblade/named_blades/abyss_eye.json
 2acb252db88f6693704dbaf8ff9c759b2e8553ea data/srelic/slashblade/named_blades/air_none.json
 b70d406bdd9b0228c178977bf61c92c8041dcaa7 data/srelic/slashblade/named_blades/aphrodite_lyre.json
@@ -29,7 +29,7 @@ e133ad8bf5841325c642c03a064e2475987b4519 data/srelic/slashblade/named_blades/red
 de86ebd665bce8b0ca98ba83d0179a74d69ee2eb data/srelic/slashblade/named_blades/redsakura.json
 289d212e71fbc4cd0b084a571bbcf2fd57c0e22e data/srelic/slashblade/named_blades/red_queen.json
 d99795760385f4312f1cf65476fed337b14bd859 data/srelic/slashblade/named_blades/rose_spear.json
-b81866ca84db170b380435e9c3382e2292f5fc55 data/srelic/slashblade/named_blades/samu.json
+30ee6aaf4a11064477c7ba8f0f1a28c44fbeaabe data/srelic/slashblade/named_blades/samu.json
 fc33533f047519cd8911f0ad55d6198c0116b501 data/srelic/slashblade/named_blades/santa_caterina.json
 877c52ae6b41a31cbf90316f4caa32f29e15e1bb data/srelic/slashblade/named_blades/seele.json
 c2d27c3259bdc8ef7e1077f97faad4539ce917b1 data/srelic/slashblade/named_blades/sika_gun.json
@@ -40,11 +40,8 @@ dfe75b8c819caafd577cb546b5e1d9829bd614b6 data/srelic/slashblade/named_blades/sta
 b642ecfa475e1008389a93c57e579be9b027f9d9 data/srelic/slashblade/named_blades/the_fire_bule.json
 dce59e02a79a70132c573abb13391ae877ce09b9 data/srelic/slashblade/named_blades/the_fire_bule2.json
 a585e72b315da6059f1c1f4a47e767701a31b16f data/srelic/slashblade/named_blades/the_fire_gray.json
-e0e2bcd3c9a03d3b5f54febcf96d97e6be232a59 data/srelic/slashblade/named_blades/the_fire_green.json
 f866059b081e1ed2cb3de0f3071fe5dd713f4226 data/srelic/slashblade/named_blades/the_fire_green2.json
-f3a525869168baff557b64630e3aa7f708c589b8 data/srelic/slashblade/named_blades/the_fire_pink.json
 fc657053bdc19f2cefb55077617868522ce7c22f data/srelic/slashblade/named_blades/the_fire_pink2.json
-7d02416a6cdb6bd2009a42ddf079fb5d828450d7 data/srelic/slashblade/named_blades/the_fire_pinks.json
 21a26a75597bf596ff4e814574c85c41d16793b7 data/srelic/slashblade/named_blades/the_radiance_of_stagnant_water_flow.json
 3f17ec1f5241a436f98b8e8a04d902291da147eb data/srelic/slashblade/named_blades/the_water.json
 57eace7a99d506a2482b6f36a584d714fdf7036d data/srelic/slashblade/named_blades/the_wolf.json

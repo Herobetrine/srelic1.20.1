@@ -101,6 +101,7 @@ public class StormBodySE extends SpecialEffect {
                 ss.startRiding(playerIn, true);
                 ss.setForward(true);
                 ss.setDelay(20 + i);
+                ss.doFire();
 
                 boolean isRight = ss.getDelay() % 2 == 0;
                 RandomSource random = worldIn.getRandom();

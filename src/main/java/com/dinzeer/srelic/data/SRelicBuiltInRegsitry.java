@@ -70,7 +70,6 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> idanstar=register("idanstar");
     //黑塔
     public static final ResourceKey<SlashBladeDefinition> heita=register("heita");
-
     // 赤月之形
     public static final ResourceKey<SlashBladeDefinition> redmoon=register("redmoon");
     //夜魂左轮
@@ -89,16 +88,10 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> FIREBlue2=register("the_fire_bule2" );
     //天火圣裁「命运投掷」
     public static final ResourceKey<SlashBladeDefinition> the_fire_gray=register("the_fire_gray" );
-    //天火圣裁·绿
-    public static final ResourceKey<SlashBladeDefinition> the_fire_green=register("the_fire_green" );
-    //天火圣裁·绿
+    //天火圣裁「暴风之眼」
     public static final ResourceKey<SlashBladeDefinition> the_fire_green2=register("the_fire_green2" );
-    //天火圣裁·绿
-    public static final ResourceKey<SlashBladeDefinition> the_fire_pink=register("the_fire_pink" );
-    //天火圣裁·绿
+    //天火圣裁「樱落刹那」
     public static final ResourceKey<SlashBladeDefinition> the_fire_pink2=register("the_fire_pink2" );
-    //天火圣裁·绿
-    public static final ResourceKey<SlashBladeDefinition> the_fire_pinks=register("the_fire_pinks" );
     //爱莉的弓
     public static final ResourceKey<SlashBladeDefinition> el=register("el");
     //魂妖刀「血樱寂灭」
@@ -731,7 +724,7 @@ public class SRelicBuiltInRegsitry {
                                 .baseAttackModifier(20)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.path_of_finality.getId())
-                                .addSpecialEffect(SRSpecialEffectsRegistry.SAM_OVERDRIVE.getId())
+
                                 .maxDamage(200)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
@@ -833,25 +826,7 @@ public class SRelicBuiltInRegsitry {
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3)
                         )));
-        bootstrap.register(
-                the_fire_green, new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("the_fire_green"),
-                        RenderDefinition.Builder.newInstance()
-                                .textureName(Srelic.prefix("model/honkai/thefireextra/the_fire_green.png"))
-                                .modelName(Srelic.prefix("model/honkai/the_fire.obj"))
-                                .effectColor(16711697)
-                                .standbyRenderType(CarryType.NINJA)
-                                .build(),
-                        PropertiesDefinition.Builder.newInstance()
-                                .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(35)
-                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
-                                .maxDamage(200)
-                                .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
-                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5)
-                        )
-                )
-        );
+
         bootstrap.register(
                 the_fire_green2, new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("the_fire_green2"),
                         RenderDefinition.Builder.newInstance()
@@ -865,24 +840,6 @@ public class SRelicBuiltInRegsitry {
                                 .baseAttackModifier(20)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.STORM_FURY.getId())
-                                .maxDamage(200)
-                                .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
-                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
-                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3)
-                        )));
-        bootstrap.register(
-                the_fire_pink, new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("the_fire_pink"),
-                        RenderDefinition.Builder.newInstance()
-                                .textureName(Srelic.prefix("model/honkai/thefireextra/the_fire_pink.png"))
-                                .modelName(Srelic.prefix("model/honkai/the_fire.obj"))
-                                .effectColor(16711697)
-                                .standbyRenderType(CarryType.NINJA)
-                                .build(),
-                        PropertiesDefinition.Builder.newInstance()
-                                .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(35)
-                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .maxDamage(200)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
@@ -908,24 +865,7 @@ public class SRelicBuiltInRegsitry {
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3)
                         )));
-        bootstrap.register(
-                the_fire_pinks, new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("the_fire_pinks"),
-                        RenderDefinition.Builder.newInstance()
-                                .textureName(Srelic.prefix("model/honkai/thefireextra/the_fire_pinks.png"))
-                                .modelName(Srelic.prefix("model/honkai/the_fire.obj"))
-                                .effectColor(16711697)
-                                .standbyRenderType(CarryType.NINJA)
-                                .build(),
-                        PropertiesDefinition.Builder.newInstance()
-                                .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(35)
-                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
-                                .maxDamage(200)
-                                .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
-                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
-                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3)
-                        )));
+
         bootstrap.register(
                 el, new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("el"),
                         RenderDefinition.Builder.newInstance()
