@@ -124,6 +124,16 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> radiance=register("radiance");
     //战戟「钺贯天冲」
     public static final ResourceKey<SlashBladeDefinition> dash=register("dash");
+    //天空之刃
+    public static final ResourceKey<SlashBladeDefinition> sky_sword=register("sky_sword");
+    //天空之傲
+    public static final ResourceKey<SlashBladeDefinition> sky_sword_ascent=register("sky_sword_ascent");
+    //隧星盛耀「剑盾」
+    public static final ResourceKey<SlashBladeDefinition> SEVEN_1 =register("seven_1");
+    //隧星盛耀「盾斧」
+    public static final ResourceKey<SlashBladeDefinition> SEVEN_2 =register("seven_2");
+    //劫灭「无烬」
+    public static final ResourceKey<SlashBladeDefinition> kill=register("kill");
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(START,
                 new SlashBladeDefinition(
@@ -141,7 +151,7 @@ public class SRelicBuiltInRegsitry {
                                 .slashArtsType(SlashArtsRegistry.VOID_SLASH.getId())
                                 .maxDamage(200)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
-                                .addSpecialEffect(SRSpecialEffectsRegistry.path_of_nihility.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.PATH_OF_NIHILITY.getId())
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3),
@@ -366,7 +376,7 @@ public class SRelicBuiltInRegsitry {
                                 .baseAttackModifier(23)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .slashArtsType(SRslashArtRegsitry.BIG_DRIVEF.getId())
-                                .addSpecialEffect(SRSpecialEffectsRegistry.path_of_finality.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.PATH_OF_FINALITY.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.KAFKA_STRINGS.getId())
                                 .maxDamage(200)
                                 .build(),
@@ -388,7 +398,7 @@ public class SRelicBuiltInRegsitry {
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.CELESTIAL_COLLAPSE.getId())
-                                .addSpecialEffect(SRSpecialEffectsRegistry.path_of_destruction.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.PATH_OF_DESTRUCTION.getId())
                                 .baseAttackModifier(21)
                                 .slashArtsType(SRslashArtRegsitry.HOMERUN.getId())
 
@@ -410,7 +420,7 @@ public class SRelicBuiltInRegsitry {
                         PropertiesDefinition.Builder.newInstance()
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.BLAZING_HEART_SHIELD.getId())
-                                .addSpecialEffect(SRSpecialEffectsRegistry.path_of_preservation.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.PATH_OF_PRESERVATION.getId())
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(23)
                                 .slashArtsType(SlashArtsRegistry.PIERCING.getId())
@@ -604,7 +614,7 @@ public class SRelicBuiltInRegsitry {
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(22)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
-                                .addSpecialEffect(SRSpecialEffectsRegistry.path_of_the_hunt.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.PATH_OF_THE_HUNT.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.JINGYUAN_THUNDER.getId())
                                 .slashArtsType(SRslashArtRegsitry.BIGSLASH.getId())
                                 .maxDamage(200)
@@ -626,7 +636,7 @@ public class SRelicBuiltInRegsitry {
                                 .baseAttackModifier(22)
                                 .slashArtsType(SRslashArtRegsitry.HQUAN.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
-                                .addSpecialEffect(SRSpecialEffectsRegistry.path_of_trailblaze.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.PATH_OF_TRAILBLAZE.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WELT_SE.getId())
                                 .maxDamage(200)
                                 .build(),
@@ -646,7 +656,7 @@ public class SRelicBuiltInRegsitry {
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(25)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
-                                .addSpecialEffect(SRSpecialEffectsRegistry.path_of_erudition.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.PATH_OF_ERUDITION.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.HERTA_CRYO_STAGE.getId())
                                 .slashArtsType(SRslashArtRegsitry.Heita.getId())
                                 .maxDamage(200)
@@ -723,8 +733,8 @@ public class SRelicBuiltInRegsitry {
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(20)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
-                                .addSpecialEffect(SRSpecialEffectsRegistry.path_of_finality.getId())
-
+                                .addSpecialEffect(SRSpecialEffectsRegistry.PATH_OF_FINALITY.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.FIRE_FLY.getId())
                                 .maxDamage(200)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
@@ -1111,7 +1121,9 @@ public class SRelicBuiltInRegsitry {
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(37)
+                                .slashArtsType(SRslashArtRegsitry.RedScarslash.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.RED_SCAR.getId())
                                 .maxDamage(2026)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
@@ -1209,6 +1221,123 @@ public class SRelicBuiltInRegsitry {
                                 .slashArtsType(SRslashArtRegsitry.BreakSky.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.STORM_BODY.getId())
+                                .maxDamage(1013)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+        bootstrap.register(
+                sky_sword
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("sky_sword"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/genshine/sky/sky_sword.png"))
+                                .modelName(Srelic.prefix("model/genshine/sky/sky_sword.obj"))
+                                .effectColor(56292)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(20)
+                                .slashArtsType(SRslashArtRegsitry.SKY_EXPLOSION_SWORD.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.Elemental_Explosion.getId())
+                                .maxDamage(1013)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+        bootstrap.register(
+                sky_sword_ascent
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("sky_sword_ascent"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/genshine/sky/sky_sword_ascent.bmp"))
+                                .modelName(Srelic.prefix("model/genshine/sky/sky_sword_ascent.obj"))
+                                .effectColor(56292)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(40)
+
+                                .slashArtsType(SRslashArtRegsitry.SKY_WAVE_EDGE.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.VACUUM_BLADE.getId())
+
+                                .maxDamage(1013)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+        bootstrap.register(
+                SEVEN_1
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("seven_1"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/ornament/seven/seven.png"))
+                                .modelName(Srelic.prefix("model/ornament/seven/seven_1.obj"))
+                                .effectColor(16760832)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(30)
+                                .slashArtsType(SRslashArtRegsitry.CELESTIAL_STRIKE.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.CELESTIAL_STRIKE.getId())
+                                .maxDamage(1013)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 2),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 4),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 2)
+                        )
+                )
+        );
+        bootstrap.register(
+                SEVEN_2
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("seven_2"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/ornament/seven/seven.png"))
+                                .modelName(Srelic.prefix("model/ornament/seven/seven_2.obj"))
+                                .effectColor(16760832)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(30)
+                                .slashArtsType(SRslashArtRegsitry.CELESTIAL_STRIKE.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.CELESTIAL_STRIKE.getId())
+                                .maxDamage(1013)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 2),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.SMITE), 4),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.FIRE_ASPECT), 2)
+                        )
+                )
+        );
+        bootstrap.register(
+                kill
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("kill"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/thefire/kill.bmp"))
+                                .modelName(Srelic.prefix("model/honkai/thefire/kill.obj"))
+                                .effectColor(16760832)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(40)
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS.getId())
                                 .maxDamage(1013)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),

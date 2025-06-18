@@ -45,14 +45,20 @@ public class SE {
         if (event.getDamageSource().getEntity() instanceof Player player) {
             if (player.level().isClientSide()) return;
           String[] v=  event.getBlade().getDescriptionId().split("\\.");
+          ISlashBladeState state=event.getSlashBladeState();
+            String[] a=  state.getSlashArts().getDescriptionId().split("\\.");
             if (v[1].equals(MODID)){
                 if (player.getMainHandItem().getItem()== SBItems.proudsoul_sphere){
+                    if (a[1].equals(MODID)){
                     player.sendSystemMessage(Component.literal("异界之魂在排斥耀魂宝珠"));
                     event.setCanceled(true);
+                    }
                 }
                 if (player.getMainHandItem().getItem()== SBItems.proudsoul_ingot){
+                    if (a[1].equals(MODID)){
                     player.sendSystemMessage(Component.literal("异界之魂在排斥耀魂铁锭"));
                     event.setCanceled(true);
+                    }
                 }
             }
         }

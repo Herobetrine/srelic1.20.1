@@ -4,22 +4,15 @@ import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.specialeffects.SeEX;
 import mods.flammpfeil.slashblade.event.SlashBladeEvent;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.monster.Silverfish;
-import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.UUID;
 
 @Mod.EventBusSubscriber
 public class PathOfPropagation extends SeEX {
@@ -34,7 +27,7 @@ public class PathOfPropagation extends SeEX {
         if (event.getUser() instanceof Player player) {
             ItemStack blade = player.getMainHandItem();
             if (!hasSpecialEffect(blade, "path_of_propagation", player.experienceLevel)) return;
-            if (SpecialEffect.isEffective(SRSpecialEffectsRegistry.path_of_propagation.getId(), player.experienceLevel)) {
+            if (SpecialEffect.isEffective(SRSpecialEffectsRegistry.PATH_OF_PROPAGATION.getId(), player.experienceLevel)) {
                 // 检测10格范围内所有蠹虫
                 List<Silverfish> silverfishes = player.level().getEntitiesOfClass(Silverfish.class,
                         new AABB(player.getX() - 10, player.getY() - 5, player.getZ() - 10,

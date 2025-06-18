@@ -20,7 +20,8 @@
     "max_damage": 200,
     "special_effects": [
       "srelic:white_maker",
-      "srelic:path_of_finality"
+      "srelic:path_of_finality",
+      "srelic:fire_fly"
     ],
     "sword_type": [
       "bewitched"

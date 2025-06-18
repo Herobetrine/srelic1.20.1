@@ -1,71 +1,76 @@
 package com.dinzeer.srelic.registry;
 
+import com.dinzeer.srelic.data.SRelicBuiltInRegsitry;
+import mods.flammpfeil.slashblade.registry.slashblade.SlashBladeDefinition;
+import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
+import mods.flammpfeil.slashblade.slasharts.SlashArts;
+import net.minecraft.resources.ResourceKey;
+import net.minecraftforge.registries.RegistryObject;
+
 import static com.dinzeer.srelic.Srelic.MODID;
 import static com.dinzeer.srelic.Srelic.REGISTRATE;
 
 public class LangRegistry {
     public static void register() {
-
-
-
-
         // 绘画
         REGISTRATE.addRawLang("painting.srelic.gwen.author", "LOL");
         REGISTRATE.addRawLang("painting.srelic.gwen.title", "格温");
 
         // 物品
-        REGISTRATE.addRawLang("item.srelic.ye_taichi", "夜煌「燃鲮」");
-        REGISTRATE.addRawLang("item.srelic.ye_tachi", "封刃太刀「夜煌」");
-        REGISTRATE.addRawLang("item.srelic.none_red", "「无」");
-        REGISTRATE.addRawLang("item.srelic.none_blue", "「始」");
-        REGISTRATE.addRawLang("item.srelic.red_queen", "绯红女皇");
-        REGISTRATE.addRawLang("item.srelic.ice_cry", "魔剑「霜之哀伤」");
-        REGISTRATE.addRawLang("item.srelic.eternal_vows", "千古「伏流」");
-        REGISTRATE.addRawLang("item.srelic.raiden", "梦之刃「梦想一心」");
-        REGISTRATE.addRawLang("item.srelic.ye_fire", "夜煌「灼傀」");
-        REGISTRATE.addRawLang("item.srelic.the_wolf", "残剑「狼的末路」");
-        REGISTRATE.addRawLang("item.srelic.the_water", "水仙十字之剑");
-        REGISTRATE.addRawLang("item.srelic.rappa", "缭乱忍法「缭乱破魔」");
-        REGISTRATE.addRawLang("item.srelic.the_fire", "破坏之键「天火圣裁」");
-        REGISTRATE.addRawLang("item.srelic.ark_fire", "异形大剑「天火圣裁·劫灭」");
-        REGISTRATE.addRawLang("item.srelic.end_fire", "天火圣裁「无尽终焉」");
-        REGISTRATE.addRawLang("item.srelic.kafuka", "「游丝」");
-        REGISTRATE.addRawLang("item.srelic.star", "毁灭「星辰王牌」");
-        REGISTRATE.addRawLang("item.srelic.fire_knight", "存护「炎枪」");
-        REGISTRATE.addRawLang("item.srelic.ye_star", "夜煌「星霆」");
-        REGISTRATE.addRawLang("item.srelic.blade", "可塑性白模");
-        REGISTRATE.addRawLang("item.srelic.laotie", "「老铁」");
-        REGISTRATE.addRawLang("item.srelic.jinyuan", "阵刀「石火梦身」");
-        REGISTRATE.addRawLang("item.srelic.idanstar", "伊甸之星「拐杖」");
-        REGISTRATE.addRawLang("item.srelic.redmoon", "赤镰「赤月之形」");
-        REGISTRATE.addRawLang("item.srelic.heita", "§m黑塔の大钻石锤子§r§5「璀璨重锥」");
-        REGISTRATE.addRawLang("item.srelic.santa_caterina", "圣卡特琳娜「Alter」");
-        REGISTRATE.addRawLang("item.srelic.galaxy", "磁暴「斩」");
-        REGISTRATE.addRawLang("item.srelic.samu", "火萤五型「向死而生」");
-        REGISTRATE.addRawLang("item.srelic.lightning", "裁决之键「涤罪七雷」");
-        REGISTRATE.addRawLang("item.srelic.sika_gun", "「夜魂左轮」");
-        REGISTRATE.addRawLang("item.srelic.redsakura", "魂妖刀「血樱寂灭」");
-        REGISTRATE.addRawLang("item.srelic.clound", "孤云");
-        REGISTRATE.addRawLang("item.srelic.el", "真我之境「无瑕回归」");
-        REGISTRATE.addRawLang("item.srelic.the_fire_gray", "天火圣裁「命运之骰」");
-        REGISTRATE.addRawLang("item.srelic.fireblue2", "天火圣裁「寒锋聚气」");
-        REGISTRATE.addRawLang("item.srelic.spring", "「裁椿」");
-        REGISTRATE.addRawLang("item.srelic.the_fire_pink2", "天火圣裁「落樱刹那」");
-        REGISTRATE.addRawLang("item.srelic.the_fire_green2", "天火圣裁「暴风天眼」");
-        REGISTRATE.addRawLang("item.srelic.butterfly_lament", "冥镰「蝶哀」");
-        REGISTRATE.addRawLang("item.srelic.staff_of_homa", "长枪「护摩之杖」");
-        REGISTRATE.addRawLang("item.srelic.dawn_flame_feather", "誓焰「拂晓炎翎」");
-        REGISTRATE.addRawLang("item.srelic.rose_spear", "纯美「玫瑰长枪」");
-        REGISTRATE.addRawLang("item.srelic.the_radiance_of_stagnant_water_flow", "静水流涌之辉");
-        REGISTRATE.addRawLang("item.srelic.seele", "旧镰「蝶影」");
-        REGISTRATE.addRawLang("item.srelic.air_none", "紫剪「空无」");
-        REGISTRATE.addRawLang("item.srelic.abyss_eye", "血渊之眸「如一」");
-        REGISTRATE.addRawLang("item.srelic.aphrodite_lyre", "奥菲厄斯的摇篮");
-        REGISTRATE.addRawLang("item.srelic.conspicuous", "「赫刀」");
-        REGISTRATE.addRawLang("item.srelic.radiance", "「绯羽灼华」");
-        REGISTRATE.addRawLang("item.srelic.dash", "战戟「钺贯天冲」");
-
-
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.YE_TACHI), "封刃太刀「夜煌」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.NONE), "「无」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.START), "「始」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.RED_QUEEN), "绯红女皇");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.ICECRY), "魔剑「霜之哀伤」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.ETERNAL_VOWS), "千古「伏流」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.RAIDIAN), "梦之刃「梦想一心」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.YE_FIRE), "夜煌「灼傀」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.WOLF), "残剑「狼的末路」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.WATER), "水仙十字之剑");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.RAPPA), "缭乱忍法「缭乱破魔」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.FIRE), "破坏之键「天火圣裁」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.ARK_FIRE), "异形大剑「天火圣裁·劫灭」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.END_FIRE), "天火圣裁「无尽终焉」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.KAFUKA), "「游丝」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.STAR), "毁灭「星辰王牌」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.FIRE_KNIGHT), "存护「炎枪」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.YE_STAR), "夜煌「星霆」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.BLADE), "可塑性白模");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.LAOTIE), "「老铁」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.JINYUAN), "阵刀「石火梦身」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.idanstar), "伊甸之星「拐杖」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.redmoon), "赤镰「赤月之形」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.heita), "§m黑塔の大钻石锤子§r§5「璀璨重锥」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.santa_caterina), "圣卡特琳娜「Alter」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.galaxy), "重磁暴「斩」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.samu), "火萤五型「向死而生」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.lightning), "天殛之境「裁决」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.sika_gun), "「夜魂左轮」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.redsakura), "魂妖刀「血樱寂灭」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.clound), "孤云");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.el), "真我之境「无瑕回归」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.the_fire_gray), "天火圣裁「命运之骰」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.FIREBlue2), "天火圣裁「寒锋聚气」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.spring), "「裁椿」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.the_fire_pink2), "天火圣裁「落樱刹那」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.the_fire_green2), "天火圣裁「暴风天眼」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.ButterflyLament), "冥镰「蝶哀」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.staff_of_homa), "长枪「护摩之杖」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.dawn_flame_feather), "誓焰「拂晓炎翎」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.rose_spear), "纯美「玫瑰长枪」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.The_radiance_of_stagnant_water_flow), "静水流涌之辉");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.SEELE), "旧镰「蝶影」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.AIR_NONE), "紫剪「空无」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.Abyss_Eye), "血渊之眸「如一」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.Aphrodite_Lyre), "奥菲厄斯的摇篮");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.conspicuous), "「赫刀」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.radiance), "「绯羽灼华」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.dash), "战戟「钺贯天冲」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.sky_sword), "「天空之刃」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.sky_sword_ascent), "「天空之傲」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.SEVEN_1), "隧星盛耀「剑盾」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.SEVEN_2), "隧星盛耀「盾斧」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.kill), "劫灭「无烬」");
 
 
 
@@ -85,61 +90,63 @@ public class LangRegistry {
         REGISTRATE.addRawLang("tips.compressed_alloy.name_tip", "在下界手持下界执行对准中心的下界合金激活");
         REGISTRATE.addRawLang("tips.fel_metal.name", "远古邪灵炼成");
         REGISTRATE.addRawLang("tips.fel_metal.name_tip", "手持下界合金碎片对准中心炼药锅激活");
+
         // 拔刀技
-        REGISTRATE.addRawLang("slash_art.srelic.xdrive", "X幻影刃");
-        REGISTRATE.addRawLang("slash_art.srelic.wither_breaker", "幻影衰落矢·哀");
-        REGISTRATE.addRawLang("slash_art.srelic.explashon", "幻影爆裂驱动");
-        REGISTRATE.addRawLang("slash_art.srelic.tho", "影·无想的一刀");
-        REGISTRATE.addRawLang("slash_art.srelic.big_drive", "千兆·极巨幻影刃");
-        REGISTRATE.addRawLang("slash_art.srelic.rappa", "缭乱忍法·手里剑");
-        REGISTRATE.addRawLang("slash_art.srelic.black_hole", "黑洞吞噬万物灭");
-        REGISTRATE.addRawLang("slash_art.srelic.dead_cry", "为逝者哀哭");
-        REGISTRATE.addRawLang("slash_art.srelic.neo_drive", "幻影刃驱动·极");
-        REGISTRATE.addRawLang("slash_art.srelic.home_run", "安息全垒打");
-        REGISTRATE.addRawLang("slash_art.srelic.big_drived", "千兆·极巨幻影刃·横");
-        REGISTRATE.addRawLang("slash_art.srelic.yunli", "堪破·斩");
-        REGISTRATE.addRawLang("slash_art.srelic.bigslash", "斩·无赦");
-        REGISTRATE.addRawLang("slash_art.srelic.heita", "转圈圈！");
-        REGISTRATE.addRawLang("slash_art.srelic.summoning_thunder_ni", "唤霆霓");
-        REGISTRATE.addRawLang("slash_art.srelic.confused", "燎乱忍法·万千忍杀");
-        REGISTRATE.addRawLang("slash_art.srelic.bloodspirit", "往生愿");
-        REGISTRATE.addRawLang("slash_art.srelic.closingsong", "红莲谢幕曲");
-        REGISTRATE.addRawLang("slash_art.srelic.pure_elegy", "纯美之技艺");
-        REGISTRATE.addRawLang("slash_art.srelic.butterfly_dance", "蝶刃");
-        REGISTRATE.addRawLang("slash_art.srelic.judgment_cube", "裁决魔方");
-        REGISTRATE.addRawLang("slash_art.srelic.the_moment_when_the_scale_collapses", "天秤崩落之刻");
-        REGISTRATE.addRawLang("slash_art.srelic.son_ata", "二间岚啸鸣");
-        REGISTRATE.addRawLang("slash_art.srelic.whitenight", "誓约之舞·白夜");
-        REGISTRATE.addRawLang("slash_art.srelic.break_sky", "凿破大荒");
-
-        REGISTRATE.addRawLang("slash_art.srelic.ice_music", "赋格奏鸣曲");
-
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.XDRIVE), "X幻影刃");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.WitherBreaker), "幻影衰落矢·哀");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.EXPLANATION), "幻影爆裂驱动");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.THO), "影·无想的一刀");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.BIG_DRIVE), "千兆·极巨幻影刃");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.Rappa), "缭乱忍法·手里剑");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.HQUAN), "黑洞吞噬万物灭");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.FORDEADCRY), "为逝者哀哭");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.NEODRIVE), "幻影刃驱动·极");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.HOMERUN), "安息全垒打");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.BIG_DRIVEF), "千兆·极巨幻影刃·横");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.YUNLI), "堪破·斩");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.BIGSLASH), "斩·无赦");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.Heita), "转圈圈！");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.SummoningThunderNi), "唤霆霓");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.confused), "燎乱忍法·万千忍杀");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.Bloodspirit), "往生愿");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.Closingsong), "红莲谢幕曲");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.pure_elegy), "纯美之技艺");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.ButterflyDance), "蝶刃");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.Judgmentcube), "裁决魔方");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.the_moment_when_the_scale_collapses), "天秤崩落之刻");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.SonAta), "二间岚啸鸣");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.Whitenight), "誓约之舞·白夜");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.BreakSky), "凿破大荒");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.Icemusic), "赋格奏鸣曲");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.RedScarslash), "赤痕斩击");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.SKY_EXPLOSION_SWORD), "剑技·天空·幻影风暴");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.SKY_WAVE_EDGE), "剑技·天空·龙胆波涛");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.CELESTIAL_STRIKE), "决胜轰解");
         // 特殊效果
-        REGISTRATE.addRawLang("se.srelic.flamerosion", "火焰侵蚀");
-        REGISTRATE.addRawLang("se.srelic.maxbreak", "上限突破·救世光辉");
-        REGISTRATE.addRawLang("se.srelic.lich", "亡灵序曲");
-        REGISTRATE.addRawLang("se.srelic.lich.desc", "敌人存在凋零效果时，你每次攻击都会让其层数+!");
-        REGISTRATE.addRawLang("se.srelic.lich.desc_1", "十层时引爆并发射高倍率幻影刃");
-        REGISTRATE.addRawLang("se.srelic.white_maker", "构造即此刻");
-        REGISTRATE.addRawLang("se.srelic.white_maker.desc", "每次攻击概率投射一道幻影刃");
-        REGISTRATE.addRawLang("se.slashblade.wither_edge.desc", "攻击成功施加凋零效果");
-        REGISTRATE.addRawLang("slashblade.tooltip.srelic.santa_caterina", "「复仇的圣女持剑归来」");
-        REGISTRATE.addRawLang("slashblade.tooltip.srelic.santa_caterina_1", "「带着仇人的名单」");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.FLAMEROSION), "火焰侵蚀");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.MAXBREAK), "上限突破·救世光辉");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.LICH), "亡灵序曲");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.LICH)+".desc", "敌人存在凋零效果时，你每次攻击都会让其层数+!");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.LICH)+".desc_1", "十层时引爆并发射高倍率幻影刃");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.WhiteMaker), "构造即此刻");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.WhiteMaker)+".desc", "每次攻击概率投射一道幻影刃");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_DESTRUCTION), "§6命途·毁灭");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_DESTRUCTION)+".desc", "§6生命低于30%时获得150%攻击加成和持续恢复\n受击有25%概率触发伤害反弹");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_HUNT), "§6命途·巡猎");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_HUNT)+".desc", "§6每次攻击积累「星矢」层数，7层后释放高额伤害");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_PRESERVATION), "§6命途·存护");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_PRESERVATION)+".desc", "§6获得伤害吸收");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY), "§6命途·贪饕");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY)+".desc", "§6攻击时吸血30%伤害值\n每次攻击叠加伤害层数最高十层");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING), "§6命途·不朽");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING)+".desc", "§6濒死时触发免死并恢复50%生命\n获得十秒无敌，冷却十分钟");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_ABUNDANCE), "§6命途·丰饶");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_ABUNDANCE)+".desc", "§6每5秒治疗8格内队友\n群体抗性提升效果");
+
+        // 修正重复键问题
         REGISTRATE.addRawLang("se.srelic.shift_nodown", "按下Shift查看SE详细信息");
 
         // 修正重复键问题
-        REGISTRATE.addRawLang("se.srelic.path_of_destruction", "§6命途·毁灭");
-        REGISTRATE.addRawLang("se.srelic.path_of_destruction.desc", "§6生命低于30%时获得150%攻击加成和持续恢复\n受击有25%概率触发伤害反弹");
-        REGISTRATE.addRawLang("se.srelic.path_of_the_hunt", "§6命途·巡猎");
-        REGISTRATE.addRawLang("se.srelic.path_of_the_hunt.desc", "§6每次攻击积累「星矢」层数，7层后释放高额伤害");
-        REGISTRATE.addRawLang("se.srelic.path_of_preservation", "§6命途·存护");
-        REGISTRATE.addRawLang("se.srelic.path_of_preservation.desc", "§6获得伤害吸收");
-        REGISTRATE.addRawLang("se.srelic.path_of_the_gluttony", "§6命途·贪饕");
-        REGISTRATE.addRawLang("se.srelic.path_of_the_gluttony.desc", "§6攻击时吸血30%伤害值\n每次攻击叠加伤害层数最高十层");
-        REGISTRATE.addRawLang("se.srelic.path_of_the_undying", "§6命途·不朽");
-        REGISTRATE.addRawLang("se.srelic.path_of_the_undying.desc", "§6濒死时触发免死并恢复50%生命\n获得十秒无敌，冷却十分钟");
-        REGISTRATE.addRawLang("se.srelic.path_of_abundance", "§6命途·丰饶");
-        REGISTRATE.addRawLang("se.srelic.path_of_abundance.desc", "§6每5秒治疗8格内队友\n群体抗性提升效果");
         REGISTRATE.addRawLang("se.srelic.path_of_remembrance", "§6命途·记忆");
         REGISTRATE.addRawLang("se.srelic.path_of_remembrance.desc", "§6攻击有50%的概率冻结目标");
         REGISTRATE.addRawLang("se.srelic.path_of_harmony", "§6命途·同谐");
@@ -653,10 +660,93 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.ice_rhythm.desc_4", "§3【极冰狂奏】");
         REGISTRATE.addRawLang("se.srelic.ice_rhythm.desc_5", "§b锻造≥200时，附加目标§c5%§b当前生命真实伤害");
 
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.FIRE_FLY), "次级燃烧");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.FIRE_FLY), "每次攻击叠加30层过热值");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY,1), "过热值大于300时清空并开启完全燃烧状态");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY,2), "完全燃烧状态下你可以飞行");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY,3), "攻击获得30%穿甲，伤害提高150%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY,4), "获得迅捷2力量3和抗性提升3");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY,5), "并会对周围生物造成伤害");
+
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.RED_SCAR), "梦中如一");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.RED_SCAR), "攻击叠加一层「赤痕」");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,1), "每两层获得一级的抗性与力量");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,2), "且每层增伤10%持续15秒最高8层");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,3), "叠满8层后，每再获得一层会恢复2点生命值");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,4), "叠满8层后每一刀伤害提高50%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,5), "在手持时不再受生命恢复的影响");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,6), "每次攻击有10%的概率触发量子崩塌(吸引生物并进行一次小范围爆炸)");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,7), "拥有「赤痕」时，周围玩家获得生命恢复Ⅰ，伤害吸收Ⅰ");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,8), "每一层的「赤痕」都会额外附加2点魔法伤害，并造成缓慢效果");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,9), "每次攻击给怪增加10点异常值，异常值满后使怪物处于2s的破防状态，无视敌方40%的护甲值");
+
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.Elemental_Explosion), "空刃·元素爆发");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.Elemental_Explosion), "§3【元素爆发】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.Elemental_Explosion,1), "剑技·天空系列sa释放后会增加一层[空刃]");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.Elemental_Explosion,2), "每层提供一级速度与一级抗性提升(抗性提升最高四级)");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.Elemental_Explosion,3), "造成伤害时触发额外魔法伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.Elemental_Explosion,4), "每30秒减少一层[空刃]");
+
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.VACUUM_BLADE), "空刃·真空刃");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.VACUUM_BLADE), "§3【真空刃】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.VACUUM_BLADE,1), "剑技·天空系列sa释放后会增加一层[空刃]");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.VACUUM_BLADE,2), "持有[空刃]后可打出倍率80%的幻影刃");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.VACUUM_BLADE,3), "每额外有一层[空刃]倍率就+20%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.VACUUM_BLADE,4), "每30秒减少一层[空刃]");
+
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.CELESTIAL_STRIKE), "天宇贯星击");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.CELESTIAL_STRIKE), "【剑盾模式】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,1), "每次攻击为敌人叠加1层「星蚀」标记（上限20层）");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,2), "每层星蚀标记会对敌人造成0.75%当前生命值的伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,3), "释放sa【决胜轰解】时，如果半径10格有敌人持有星蚀则会被直接引爆");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,4), "此外，不管敌人是否有20层星蚀在释放sa后都会切换为【盾斧模式】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,5), "【盾斧模式】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,6), "你的所有非火焰伤害类型攻击都会被转为4段火焰伤害并为你叠加2层解放值");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,7), "同时，会根据你的hp的2%来增加额外的伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,8), "解放值满100时，攻击概率触发极解");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,9), "释放sa后如果解放值=100则对半径十格范围的生物造成等同于玩家面板的8段火焰伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,10), "同时解放值=100的情况下释放sa后会切换为【剑盾模式】");
+
+
+
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS), "炎烬千劫");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS), "【炎烬千劫】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS,1), "你造成的伤害提高200%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS,2), "同时会对自身造成最大生命值2%的虚空属性伤害，这被扣除的部分会按照1颗心+10%的比例进行额外伤害增幅");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS,3), "同时持刀时会展开火焰领域每5刻对敌人造成一次等于玩家50%攻击力的火焰伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS,4), "玩家受到的伤害减半");
+
 
         REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_slashblade", "§6游戏扩增·异界之刃");
         REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_se", "§6游戏扩增·命途轨迹");
         REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_se2", "§6游戏扩增·测试用SE遍历（用处只有看有多少个SE，物品不一定能用）");
         REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_item", "§6游戏扩增·利刃素材");
     }
+
+
+
+
+
+
+
+
+
+    public static String CreateItemLang(ResourceKey<SlashBladeDefinition> a){
+        return "item."+MODID+"."+a.location().getPath();
+    }
+    public static String CreateSeLang(RegistryObject<SpecialEffect> a){
+        return "se."+MODID+"."+a.getId().getPath();
+    }
+    public static String CreateSeLangDescs(RegistryObject<SpecialEffect> a){
+        return "se."+MODID+"."+a.getId().getPath()+".desc";
+    }
+    public static String CreateSeLangDescsCounts(RegistryObject<SpecialEffect> a,int i){
+        return "se."+MODID+"."+a.getId().getPath()+".desc_"+i;
+    }
+    public static String CreateSaLang(RegistryObject<SlashArts> a){
+        return "slash_art."+MODID+"."+a.getId().getPath();
+    }
+
+
+
 }

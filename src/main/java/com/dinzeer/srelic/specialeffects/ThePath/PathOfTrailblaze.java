@@ -29,7 +29,7 @@ public class PathOfTrailblaze extends SeEX {
         BlockPos prevPos = lastPos.getOrDefault(player.getUUID(), currentPos);
 
        if (hasSpecialEffect(player.getMainHandItem(), "path_of_trailblaze", player.experienceLevel)){
-           if (SpecialEffect.isEffective(SRSpecialEffectsRegistry.path_of_trailblaze.get(), player.experienceLevel)){
+           if (SpecialEffect.isEffective(SRSpecialEffectsRegistry.PATH_OF_TRAILBLAZE.get(), player.experienceLevel)){
                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 2));
                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 100, 2));
                player.addEffect(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 100, 0));

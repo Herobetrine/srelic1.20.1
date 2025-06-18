@@ -1,0 +1,31 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 10
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:sky_sword_ascent",
+  "properties": {
+    "attack_base": 40.0,
+    "max_damage": 1013,
+    "slash_art": "srelic:sky_wave_edge",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:vacuum_blade"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/genshine/sky/sky_sword_ascent.obj",
+    "summon_sword_color": 56292,
+    "texture": "srelic:model/genshine/sky/sky_sword_ascent.bmp"
+  }
+}

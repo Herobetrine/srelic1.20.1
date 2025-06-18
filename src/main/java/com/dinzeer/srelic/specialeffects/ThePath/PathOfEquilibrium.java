@@ -24,7 +24,7 @@ public class PathOfEquilibrium extends SeEX {
     @SubscribeEvent
     public static void onPlayerSwapItem(PlayerInteractEvent event) {
         Player player = event.getEntity();
-        if (!SpecialEffect.isEffective(SRSpecialEffectsRegistry.path_of_equilibrium.getId(), player.experienceLevel))return;
+        if (!SpecialEffect.isEffective(SRSpecialEffectsRegistry.PATH_OF_EQUILIBRIUM.getId(), player.experienceLevel))return;
         if (hasSpecialEffect(player.getMainHandItem(), "path_of_equilibrium", player.experienceLevel)) {
             // 切换武器时转换模式
             int state = balanceState.getOrDefault(player.getUUID(), 0);
@@ -39,7 +39,7 @@ public class PathOfEquilibrium extends SeEX {
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         Player player = event.player;
         int state = balanceState.getOrDefault(player.getUUID(), 0);
-        if (!SpecialEffect.isEffective(SRSpecialEffectsRegistry.path_of_equilibrium.getId(), player.experienceLevel))return;
+        if (!SpecialEffect.isEffective(SRSpecialEffectsRegistry.PATH_OF_EQUILIBRIUM.getId(), player.experienceLevel))return;
 
         if (hasSpecialEffect(player.getMainHandItem(), "path_of_equilibrium", player.experienceLevel)){
         if (state == 0) { // 攻击模式

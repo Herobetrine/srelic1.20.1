@@ -1,0 +1,43 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:power",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 2
+    },
+    {
+      "id": "minecraft:smite",
+      "lvl": 4
+    },
+    {
+      "id": "minecraft:fire_aspect",
+      "lvl": 2
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:seven_2",
+  "properties": {
+    "attack_base": 30.0,
+    "max_damage": 1013,
+    "slash_art": "srelic:celestial_strike",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:celestial_strike"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/ornament/seven/seven_2.obj",
+    "summon_sword_color": 16760832,
+    "texture": "srelic:model/ornament/seven/seven.png"
+  }
+}

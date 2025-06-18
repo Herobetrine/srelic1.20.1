@@ -7,6 +7,11 @@ import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.capabilities.Capability;
@@ -71,4 +76,20 @@ public class SlashBladeUtil {
     public static int getColorCode(Player player) {
         return getState(player.getMainHandItem()).getColorCode();
     }
+
+
+
+
+//造成来源为玩家的特别类型伤害
+    public static DamageSource DamageSourceToCreat(LivingEntity player, ResourceKey<DamageType> damageType){
+        return   new DamageSource(player.level().registryAccess()
+                .registryOrThrow(net.minecraft.core.registries.Registries.DAMAGE_TYPE)
+                .getHolderOrThrow(damageType), player);
+    }
+
+
+
+
+
+
 }

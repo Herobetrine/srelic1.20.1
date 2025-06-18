@@ -36,6 +36,10 @@ public class SRslashArtRegsitry {
     public static final RegistryObject<SlashArts> Whitenight;
     public static final RegistryObject<SlashArts> BreakSky;
     public static final RegistryObject<SlashArts> Icemusic;
+    public static final RegistryObject<SlashArts> RedScarslash;
+    public static final RegistryObject<SlashArts> SKY_EXPLOSION_SWORD;
+    public static final RegistryObject<SlashArts> SKY_WAVE_EDGE;
+    public static final RegistryObject<SlashArts> CELESTIAL_STRIKE;
 static {
     XDRIVE= SLASH_ARTS.register("xdrive", () -> new SlashArts((e) ->
             SRComboRegsitry.EXdrive.getId()));
@@ -65,5 +69,9 @@ static {
     Whitenight=SLASH_ARTS.register("whitenight",()->new SlashArts((e)->SRComboRegsitry.Whitenight.getId()));
     BreakSky=SLASH_ARTS.register("break_sky",()->new SlashArts((e)->SRComboRegsitry.BreakSky.getId()));
     Icemusic=SLASH_ARTS.register("ice_music",()->new SlashArts((e)->SRComboRegsitry.Icemusic.getId()));
+    RedScarslash=SLASH_ARTS.register("red_scarslash",()->new SlashArts((e)->SRComboRegsitry.RedScarslash.getId()));
+    SKY_EXPLOSION_SWORD=SLASH_ARTS.register("sky_explosion_sword",()->new SlashArts((e)->SRComboRegsitry.SKY_EXPLOSION_SWORD.getId()));
+    SKY_WAVE_EDGE=SLASH_ARTS.register("sky_wave_edge",()->new SlashArts((e)->SRComboRegsitry.SKY_WAVE_EDGE.getId()));
+    CELESTIAL_STRIKE=SLASH_ARTS.register("celestial_strike",()->new SlashArts((e)->SRComboRegsitry.CELESTIAL_STRIKE.getId()));
 }
 }

@@ -62,6 +62,11 @@ public class RegisteredStackManager implements IStackManager {
         return effectKey;
     }
 
+    @Override
+    public int getMaxStacks() {
+        return maxStacks;
+    }
+
     // 注册工厂
     public static class Registry {
         private static final Map<String, RegisteredStackManager> REGISTRY = new ConcurrentHashMap<>();

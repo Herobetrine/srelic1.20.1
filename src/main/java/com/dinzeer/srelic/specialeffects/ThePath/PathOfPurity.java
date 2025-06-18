@@ -3,8 +3,6 @@ package com.dinzeer.srelic.specialeffects.ThePath;
 import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.specialeffects.SeEX;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
@@ -27,7 +25,7 @@ public class PathOfPurity extends SeEX {
         Player player = event.player;
         ItemStack blade = player.getMainHandItem();
         if (!hasSpecialEffect(blade, "path_of_purity", player.experienceLevel)) return;
-        if (!SpecialEffect.isEffective(SRSpecialEffectsRegistry.path_of_trailblaze.get(), player.experienceLevel))return;
+        if (!SpecialEffect.isEffective(SRSpecialEffectsRegistry.PATH_OF_TRAILBLAZE.get(), player.experienceLevel))return;
         player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, 2));
 
     }

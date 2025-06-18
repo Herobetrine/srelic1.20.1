@@ -3,7 +3,11 @@ package com.dinzeer.srelic.registry;
 import com.dinzeer.srelic.Config;
 import com.dinzeer.srelic.Srelic;
 import com.dinzeer.srelic.Utils.GetNumUtil;
+import com.dinzeer.srelic.Utils.SlashBladeUtil;
+import com.dinzeer.srelic.entity.superentity.EntitySRBlisteringSword;
 import com.dinzeer.srelic.specialattacks.*;
+import com.dinzeer.srelic.specialattacks.v1.CelestialStrike;
+import com.dinzeer.srelic.specialattacks.v1.RedScarSlash;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.ability.StunManager;
 import mods.flammpfeil.slashblade.entity.EntitySlashEffect;
@@ -13,6 +17,7 @@ import mods.flammpfeil.slashblade.slasharts.*;
 import mods.flammpfeil.slashblade.util.AttackManager;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,6 +28,36 @@ import static com.dinzeer.srelic.Srelic.MODID;
 public class SRComboRegsitry {
     public static final DeferredRegister<ComboState> COMBO_STATES =
             DeferredRegister.create(ComboState.REGISTRY_KEY,MODID);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static final RegistryObject<ComboState> RedScarslash = COMBO_STATES.register("red_scar_slash",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 1F))
+                            .put(3, RedScarSlash::doSlash).build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+
 
 
     public static final RegistryObject<ComboState> ALL_REUSE = COMBO_STATES.register
@@ -318,6 +353,25 @@ public class SRComboRegsitry {
                     .addHitEffect(StunManager::setStun)
                     ::build
     );
+    public static final RegistryObject<ComboState> CELESTIAL_STRIKE = COMBO_STATES.register("celestial_strike",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> {
+                                CircleSlash.doCircleSlashAttack(entityIn, 180);
+                                CircleSlash.doCircleSlashAttack(entityIn, 90);
+                                CircleSlash.doCircleSlashAttack(entityIn, 0);
+                                CircleSlash.doCircleSlashAttack(entityIn, -90);
+                            })
+                            .put(3, CelestialStrike::DoSlash )
+                            .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
 
 
     public static final RegistryObject<ComboState> pure_elegy = COMBO_STATES.register("pure_elegy",
@@ -527,4 +581,60 @@ public class SRComboRegsitry {
                     .addHitEffect(StunManager::setStun)
                     ::build
     );
+
+
+
+
+
+    public static final RegistryObject<ComboState> SKY_WAVE_EDGE = COMBO_STATES.register("sky_wave_edge",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(3, (entityIn) -> WaveEdge.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 2f, 2f, 4f, 6))
+                            .put(4, (entityIn) -> {
+                                if (entityIn instanceof Player player) {
+                                    SRStacksReg.SKY_SWORD.addStacks(player, 1);
+                                }
+                            })
+                            .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+
+
+
+    public static final RegistryObject<ComboState> SKY_EXPLOSION_SWORD = COMBO_STATES.register("sky_explosion_sword",
+        ComboState.Builder.newInstance()
+            .startAndEnd(1600, 1659)
+            .priority(50)
+            .motionLoc(DefaultResources.ExMotionLocation)
+            .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+            .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+            .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                .put(3, (entityIn) -> {
+                    if (entityIn instanceof Player player) {
+                        EntitySRBlisteringSword.spawnSwords(
+                            (LivingEntity) entityIn,
+                            entityIn.level(),
+                            entityIn.position(),
+                            EntitySRBlisteringSword.SpawnMode.RANDOM, // 使用RANDOM模式
+                            30,
+                            false, 0, 0, 0, 0,
+                            1.0, SlashBladeUtil.getColorCode(player), false, 0
+                        );
+
+                        SRStacksReg.SKY_SWORD.addStacks(player, 1);
+                    }
+                })
+                .build())
+            .addHitEffect(StunManager::setStun)
+            ::build
+    );
+
 }

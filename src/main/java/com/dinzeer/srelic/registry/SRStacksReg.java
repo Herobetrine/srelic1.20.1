@@ -21,6 +21,19 @@ public class SRStacksReg {
     public static final IStackManager FLY_YELLOW_STACKS =register("fly_yellow", 30);
     public static final IStackManager ICE_RHYTHM_STACKS = register("ice_rhythm", 15);
 
+    public static final IStackManager OVERHEAT_VALUE_STACKS = register("overheat_value", 300);
+    public static final IStackManager SECONDARY_COMBUSTION_STACKS = register("secondary_combustion", 1);
+
+    public static final IStackManager RED_SCAR = register("red_scar", 8);
+
+
+    public static final IStackManager SKY_SWORD = register("sky_sword", 5);
+
+
+    public static final IStackManager CELESTIAL_STRIKE = register("celestial_strike", 100);
+
+
+
 
     public static IStackManager register(String name,int max){
       return RegisteredStackManager.Registry.register(name, max);

@@ -25,7 +25,6 @@ public class SRItemRegsitry {
     public static final ItemEntry<SrelicItem> ender_metal = iteminit("ender_metal");
     public static final ItemEntry<SrelicItem> soul_metal = iteminit("soul_metal");
     public static final ItemEntry<SrelicItem> ex_star = iteminit("ex_star");
-
     public static final ItemEntry<SrelicItem> flame_netherite_alloy = iteminit("flame_netherite_alloy");
     public static final ItemEntry<SrelicItem> frozen_netherite_alloy = iteminit("frozen_netherite_alloy");
     public static final ItemEntry<SrelicItem> thunder_netherite_alloy = iteminit("thunder_netherite_alloy");

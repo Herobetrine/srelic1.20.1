@@ -3,7 +3,10 @@ package com.dinzeer.srelic.registry;
 import com.dinzeer.srelic.Srelic;
 import com.dinzeer.srelic.entity.*;
 import com.dinzeer.srelic.entity.boom.BulletEntityGalaxy;
+import com.dinzeer.srelic.entity.superentity.EntitySRBlisteringSword;
+import com.dinzeer.srelic.entity.superentity.EntitySummonBlade;
 import com.google.common.base.CaseFormat;
+import mods.flammpfeil.slashblade.entity.Projectile;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -39,7 +42,14 @@ public class SREntiteRegristrys {
     public static EntityType<YunLiEntity> YunLi;
 
     public static final ResourceLocation BulletLOC = new ResourceLocation(MODID, classToString(BulletEntityGalaxy.class));
+    public static EntityType<EntitySRBlisteringSword> SRBlisteringSword;
+    public static final ResourceLocation SRBlisteringSwordLOC = new ResourceLocation(MODID, classToString(EntitySRBlisteringSword.class));
     public static EntityType<BulletEntityGalaxy> Bullet;
+    
+    // 新增：EntitySummonBlade的注册字段
+    public static final ResourceLocation EntitySummonBladeLOC = new ResourceLocation(MODID, classToString(EntitySummonBlade.class));
+    public static EntityType<EntitySummonBlade> SummonBlade;
+    
     public static final RegistryObject<EntityType<BlackHole>> BLACK_HOLE =
             ENTITIES.register("black_hole", () -> EntityType.Builder.<BlackHole>of(BlackHole::new, MobCategory.MISC)
                     .sized(11, 11)
@@ -97,8 +107,30 @@ public class SREntiteRegristrys {
                 helper.register(BulletLOC, entity);
             }
         });
-    }
+        event.register(ForgeRegistries.Keys.ENTITY_TYPES, helper -> {
+            {
+                EntityType<EntitySRBlisteringSword> entity = SRBlisteringSword =
+                        EntityType.Builder.of(EntitySRBlisteringSword::new, MobCategory.MISC)
+                        .sized(3.0F, 3.0F).setTrackingRange(4).setUpdateInterval(20)
+                        .setCustomClientFactory(EntitySRBlisteringSword::createInstance).build(SRBlisteringSwordLOC.toString());
+                helper.register(SRBlisteringSwordLOC, entity);
+            }
+        });
 
+        event.register(ForgeRegistries.Keys.ENTITY_TYPES, helper -> {
+            {
+                EntityType<EntitySummonBlade> entity=SummonBlade = EntityType.Builder
+                        .<EntitySummonBlade>of(EntitySummonBlade::new, MobCategory.MISC) // 显式声明泛型
+                        .sized(3.0F, 3.0F)
+                        .setTrackingRange(4)
+                        .setUpdateInterval(20)
+                        .setCustomClientFactory(EntitySummonBlade::createInstance)
+                        .build(EntitySummonBladeLOC.toString());
+                helper.register(EntitySummonBladeLOC, entity);
+            }
+        });
+
+    }
 
 
     public static String classToString(Class<? extends Entity> entityClass)

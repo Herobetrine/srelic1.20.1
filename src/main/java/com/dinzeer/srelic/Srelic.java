@@ -5,6 +5,7 @@ import com.dinzeer.srelic.blade.re.SrelicRecipeSerializerRegistry;
 import com.dinzeer.srelic.registry.*;
 import com.mojang.logging.LogUtils;
 import com.tterrag.registrate.Registrate;
+import mods.flammpfeil.slashblade.SlashBladeCreativeGroup;
 import mods.flammpfeil.slashblade.client.renderer.model.BladeModelManager;
 import mods.flammpfeil.slashblade.init.SBItems;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
@@ -70,6 +71,7 @@ public class Srelic {
 
     public static final RegistryObject<CreativeModeTab> SRSlashblade = CREATIVE_MODE_TABS.register(MODID+"_slashblade",
             () -> CreativeModeTab.builder()
+                    .withTabsBefore(SlashBladeCreativeGroup.SLASHBLADE_GROUP.getId())
                     .title(Component.translatable("item_group."+MODID+"."+MODID+"_slashblade")).icon(() -> {
                         ItemStack stack = new ItemStack(SBItems.slashblade);
                         stack.getCapability(ItemSlashBlade.BLADESTATE).ifPresent(s -> {

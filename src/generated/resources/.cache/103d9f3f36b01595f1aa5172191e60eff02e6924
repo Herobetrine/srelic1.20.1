@@ -1,5 +1,5 @@
-// 1.20.1	2025-05-17T14:30:43.3689126	Registries
-5985aec462ab05d5c4569babfd7becbb4cfc7718 data/srelic/slashblade/named_blades/abyss_eye.json
+// 1.20.1	2025-06-18T02:29:40.3396399	Registries
+769d6cc42ebb3a909bc23971030c09fcaed1eb17 data/srelic/slashblade/named_blades/abyss_eye.json
 2acb252db88f6693704dbaf8ff9c759b2e8553ea data/srelic/slashblade/named_blades/air_none.json
 b70d406bdd9b0228c178977bf61c92c8041dcaa7 data/srelic/slashblade/named_blades/aphrodite_lyre.json
 d745848058d782d4ab1411d200179385731966d8 data/srelic/slashblade/named_blades/ark_fire.json
@@ -19,6 +19,7 @@ f69902d8d41d8d988d45699275cc768221406fdd data/srelic/slashblade/named_blades/ice
 d420ea8023817c09bddf4da2131adc51606a57dc data/srelic/slashblade/named_blades/idanstar.json
 79d09968073a45b0bb4df5f18c7e7a97dae127ee data/srelic/slashblade/named_blades/jinyuan.json
 8b3bf08be934e870f7c4c050d4ba905c4e447084 data/srelic/slashblade/named_blades/kafuka.json
+c47785505e892d6a826e62ef011fe3f2bf0b8da5 data/srelic/slashblade/named_blades/kill.json
 8449dd4e401c3ea8a95699be473e6cad73d0910c data/srelic/slashblade/named_blades/lightning.json
 7031523caba8c808792c52499cf77cf2ba2e4444 data/srelic/slashblade/named_blades/none_blue.json
 eccdcc5f20efa8417279c9ee8de260cfca43edde data/srelic/slashblade/named_blades/none_red.json
@@ -29,10 +30,14 @@ e133ad8bf5841325c642c03a064e2475987b4519 data/srelic/slashblade/named_blades/red
 de86ebd665bce8b0ca98ba83d0179a74d69ee2eb data/srelic/slashblade/named_blades/redsakura.json
 289d212e71fbc4cd0b084a571bbcf2fd57c0e22e data/srelic/slashblade/named_blades/red_queen.json
 d99795760385f4312f1cf65476fed337b14bd859 data/srelic/slashblade/named_blades/rose_spear.json
-30ee6aaf4a11064477c7ba8f0f1a28c44fbeaabe data/srelic/slashblade/named_blades/samu.json
+25d8159923ea70d5fd0a7dc49b2dca4a9ce7f2d8 data/srelic/slashblade/named_blades/samu.json
 fc33533f047519cd8911f0ad55d6198c0116b501 data/srelic/slashblade/named_blades/santa_caterina.json
 877c52ae6b41a31cbf90316f4caa32f29e15e1bb data/srelic/slashblade/named_blades/seele.json
+dac08449e7a55a80648054fd7323044462bd4b59 data/srelic/slashblade/named_blades/seven_1.json
+53b6a368b126eabee0d395f6424c12440cb039d8 data/srelic/slashblade/named_blades/seven_2.json
 c2d27c3259bdc8ef7e1077f97faad4539ce917b1 data/srelic/slashblade/named_blades/sika_gun.json
+fb234423294d335e674b5a3ee7453ddc637f5e08 data/srelic/slashblade/named_blades/sky_sword.json
+69b70c3d4759b51a74caabf050a75ae9c64f981b data/srelic/slashblade/named_blades/sky_sword_ascent.json
 a3d32a46aadeaa9496b2fd50e72ec894c00b15af data/srelic/slashblade/named_blades/spring.json
 02b68be44bdb8b0899f7e9b14cccc2d034911d9e data/srelic/slashblade/named_blades/staff_of_homa.json
 dfe75b8c819caafd577cb546b5e1d9829bd614b6 data/srelic/slashblade/named_blades/star.json

@@ -5,6 +5,7 @@ import com.dinzeer.srelic.cilent.render.BlackHoleRenderer;
 import com.dinzeer.srelic.cilent.render.NeoRenderer;
 import com.dinzeer.srelic.cilent.render.RappaRenderer;
 import com.dinzeer.srelic.registry.SREntiteRegristrys;
+import mods.flammpfeil.slashblade.client.renderer.entity.DriveRenderer;
 import mods.flammpfeil.slashblade.client.renderer.entity.SummonedSwordRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -24,5 +25,8 @@ public class SrelicClient {
         event.registerEntityRenderer(SREntiteRegristrys.NeoDrive, NeoRenderer::new);
         event.registerEntityRenderer(SREntiteRegristrys.YunLi, SummonedSwordRenderer::new);
         event.registerEntityRenderer(SREntiteRegristrys.Bullet, BulletRenderer::new);
+        event.registerEntityRenderer(SREntiteRegristrys.SRBlisteringSword, SummonedSwordRenderer::new);
+        event.registerEntityRenderer(SREntiteRegristrys.SummonBlade, SBRenderer::new);
+
     }
 }

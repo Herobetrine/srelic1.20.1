@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "srelic.refmap.json",
   "mixins": [
-    "DriveSummonedMixin"
+    "DriveSummonedMixin",
+    "SummonSwordArtMixin"
   ],
   "client": [
   ],

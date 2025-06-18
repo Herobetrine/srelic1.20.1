@@ -194,12 +194,25 @@ dependencies {
     //玉
     implementation fg.deobf("curse.maven:jade-324717:6271651")
     //拔刀剑重锋依赖
-    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:6395356")
+    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:6648061")
     //帕秋莉手册
     implementation fg.deobf("curse.maven:patchouli-306770:6164575")
     //emi
     implementation fg.deobf("curse.maven:emi-580555:6420945")
     implementation fg.deobf("curse.maven:emi-trades-villager-trading-emi-plugin-735523:4901194")
+
+    implementation fg.deobf("curse.maven:aether-255308:6134920")
+    implementation fg.deobf("curse.maven:cumulus-915473:5748437")
+
+    implementation fg.deobf("curse.maven:blue-skies-312918:5010316")
+
+
+
+
+
+
+
+
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.2.0")) {

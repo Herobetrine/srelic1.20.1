@@ -8,4 +8,5 @@ public interface IStackManager {
     int getCurrentStacksoffhand(Player player);
     void resetStacks(Player player);
     String getEffectKey();
+    int getMaxStacks();
 }

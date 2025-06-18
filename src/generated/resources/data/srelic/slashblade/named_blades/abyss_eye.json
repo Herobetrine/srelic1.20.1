@@ -22,8 +22,10 @@
   "properties": {
     "attack_base": 37.0,
     "max_damage": 2026,
+    "slash_art": "srelic:red_scarslash",
     "special_effects": [
-      "srelic:white_maker"
+      "srelic:white_maker",
+      "srelic:red_scar"
     ],
     "sword_type": [
       "bewitched"
