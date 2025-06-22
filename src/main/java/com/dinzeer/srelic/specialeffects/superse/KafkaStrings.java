@@ -16,6 +16,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -43,7 +44,7 @@ public class KafkaStrings extends SpecialEffect {
     }
 
     @SubscribeEvent
-    public static void onAttack(LivingAttackEvent event) {
+    public static void onAttack(LivingHurtEvent event) {
         if (!(event.getSource().getEntity() instanceof Player player)) return;
         if (!SeEX.hasSpecialEffect(player.getMainHandItem(), "kafka_strings", player.experienceLevel)) return;
 

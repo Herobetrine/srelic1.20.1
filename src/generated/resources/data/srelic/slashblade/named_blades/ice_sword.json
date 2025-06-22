@@ -1,0 +1,31 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 10
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:ice_sword",
+  "properties": {
+    "attack_base": 23.0,
+    "max_damage": 1013,
+    "slash_art": "srelic:ice_edge",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:ice_blade"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/genshine/ice/ice_sowrd.obj",
+    "summon_sword_color": 2003199,
+    "texture": "srelic:model/genshine/ice/ice_sowrd.png"
+  }
+}

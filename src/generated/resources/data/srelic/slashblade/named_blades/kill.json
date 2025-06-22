@@ -1,0 +1,30 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 10
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:kill",
+  "properties": {
+    "attack_base": 40.0,
+    "max_damage": 1013,
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:inferno_thousand_trials"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/honkai/thefire/kill.obj",
+    "summon_sword_color": 16760832,
+    "texture": "srelic:model/honkai/thefire/kill.bmp"
+  }
+}

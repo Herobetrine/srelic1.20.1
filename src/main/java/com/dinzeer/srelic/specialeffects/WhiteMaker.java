@@ -32,10 +32,10 @@ public class WhiteMaker extends SpecialEffect {
             Player player = (Player)event.getUser();
             int level = player.experienceLevel;
             RandomSource random = player.getRandom();
-            Level worldIn = player.level();
+
             if (SpecialEffect.isEffective((SpecialEffect)SRSpecialEffectsRegistry.WhiteMaker.get(), level)) {
                 if (random.nextInt(100)>80) {
-                    Drive.doSlash(player, event.getRoll(), 10, Vec3.ZERO, false, event.getDamage(), 1.5F);
+                    Drive.doSlash(player, event.getRoll(), 10, Vec3.ZERO, false,0.75f, 1.5F);
                 }
             }
         }

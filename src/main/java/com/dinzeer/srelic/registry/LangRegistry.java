@@ -71,7 +71,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.SEVEN_1), "隧星盛耀「剑盾」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.SEVEN_2), "隧星盛耀「盾斧」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.kill), "劫灭「无烬」");
-
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.ice_sword), "雪葬的星荧");
 
 
 
@@ -122,6 +122,8 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.SKY_EXPLOSION_SWORD), "剑技·天空·幻影风暴");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.SKY_WAVE_EDGE), "剑技·天空·龙胆波涛");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.CELESTIAL_STRIKE), "决胜轰解");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.ICE_EDGE), "雪葬");
+
         // 特殊效果
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.FLAMEROSION), "火焰侵蚀");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.MAXBREAK), "上限突破·救世光辉");
@@ -713,9 +715,14 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS), "【炎烬千劫】");
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS,1), "你造成的伤害提高200%");
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS,2), "同时会对自身造成最大生命值2%的虚空属性伤害，这被扣除的部分会按照1颗心+10%的比例进行额外伤害增幅");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS,3), "同时持刀时会展开火焰领域每5刻对敌人造成一次等于玩家50%攻击力的火焰伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS,3), "每攻击十次会展开一次火焰领域对敌人造成一次等于玩家50%攻击力的火焰伤害");
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS,4), "玩家受到的伤害减半");
 
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.ICE_BLADE), "天降寒天之钉");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.ICE_BLADE), "【天降寒天之钉】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLADE,1), "你造成的伤害提高200%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLADE,2), "攻击有30%的概率召唤冰锥");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLADE,3), "冰锥的伤害倍率为360%");
 
         REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_slashblade", "§6游戏扩增·异界之刃");
         REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_se", "§6游戏扩增·命途轨迹");

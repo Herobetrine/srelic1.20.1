@@ -134,6 +134,8 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> SEVEN_2 =register("seven_2");
     //劫灭「无烬」
     public static final ResourceKey<SlashBladeDefinition> kill=register("kill");
+    //雪葬的星荧
+    public static final ResourceKey<SlashBladeDefinition> ice_sword=register("ice_sword");
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(START,
                 new SlashBladeDefinition(
@@ -1338,6 +1340,28 @@ public class SRelicBuiltInRegsitry {
                                 .baseAttackModifier(40)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS.getId())
+                                .maxDamage(1013)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+        bootstrap.register(
+                ice_sword
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("ice_sword"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/genshine/ice/ice_sowrd.png"))
+                                .modelName(Srelic.prefix("model/genshine/ice/ice_sowrd.obj"))
+                                .effectColor(2003199)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(23)
+                                .slashArtsType(SRslashArtRegsitry.ICE_EDGE.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.ICE_BLADE.getId())
                                 .maxDamage(1013)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),

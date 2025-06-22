@@ -1,0 +1,31 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 10
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:sky_sword",
+  "properties": {
+    "attack_base": 20.0,
+    "max_damage": 1013,
+    "slash_art": "srelic:sky_explosion_sword",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:elemental_explosion"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/genshine/sky/sky_sword.obj",
+    "summon_sword_color": 56292,
+    "texture": "srelic:model/genshine/sky/sky_sword.png"
+  }
+}

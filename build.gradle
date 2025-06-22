@@ -194,7 +194,7 @@ dependencies {
     //玉
     implementation fg.deobf("curse.maven:jade-324717:6271651")
     //拔刀剑重锋依赖
-    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:6648061")
+    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:6659951")
     //帕秋莉手册
     implementation fg.deobf("curse.maven:patchouli-306770:6164575")
     //emi
@@ -204,10 +204,9 @@ dependencies {
     implementation fg.deobf("curse.maven:aether-255308:6134920")
     implementation fg.deobf("curse.maven:cumulus-915473:5748437")
 
-    implementation fg.deobf("curse.maven:blue-skies-312918:5010316")
+//    implementation fg.deobf("curse.maven:blue-skies-312918:5010316")
 
-
-
+    implementation fg.deobf(("net.exmo.legendary_slash:legendary_slash:[0.001,0.363)"))
 
 
 

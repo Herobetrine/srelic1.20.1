@@ -77,7 +77,8 @@ public class CelestialStrike extends SpecialEffect {
         // 验证攻击者是否为持有特效的玩家
         if (!(event.getSource().getEntity() instanceof Player player)) return;
         if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.CELESTIAL_STRIKE.get())) return;
-        
+        if (event.getSource().is(DamageTypes.ON_FIRE) || event.getSource().is(DamageTypes.IN_FIRE)) return;
+
         ISlashBladeState state = SlashBladeUtil.getState(player.getMainHandItem());
         LivingEntity target = event.getEntity();
         
@@ -103,7 +104,6 @@ public class CelestialStrike extends SpecialEffect {
         }
         // 七之型·贰: 触发连锁火焰伤害
         else if (state.getTranslationKey().equals(LangRegistry.CreateItemLang(SRelicBuiltInRegsitry.SEVEN_2))) {
-            if (event.getSource().is(DamageTypes.ON_FIRE) || event.getSource().is(DamageTypes.IN_FIRE)) return;
             
             // 计算额外伤害并积累解放值
             float extra = player.getMaxHealth() * 0.02f;

@@ -111,6 +111,7 @@ public class SRSpecialEffectsRegistry {
     public static final RegistryObject<SpecialEffect> VACUUM_BLADE;
     public static final RegistryObject<SpecialEffect> CELESTIAL_STRIKE;
     public static final RegistryObject<SpecialEffect> INFERNO_THOUSAND_TRIALS; // 炎烬千劫
+    public static final RegistryObject<SpecialEffect> ICE_BLADE;
     
     public SRSpecialEffectsRegistry() {
 
@@ -218,6 +219,7 @@ public class SRSpecialEffectsRegistry {
         VACUUM_BLADE=REGISTRY_KEY2.register("vacuum_blade", VacuumBlade::new);
         CELESTIAL_STRIKE=REGISTRY_KEY2.register("celestial_strike", CelestialStrike::new);
         INFERNO_THOUSAND_TRIALS = REGISTRY_KEY2.register("inferno_thousand_trials", InfernoThousandTrials::new);
+        ICE_BLADE=REGISTRY_KEY2.register("ice_blade", IceBlade::new);
     }
 
 

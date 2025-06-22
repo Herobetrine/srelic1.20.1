@@ -21,10 +21,11 @@ import java.util.WeakHashMap;
 
 @Mod.EventBusSubscriber
 public class InfernoThousandTrials extends SpecialEffect {
-
-    // 存储玩家的火焰领域计时器
-    private static final Map<Player, Integer> flameFieldTimers = new WeakHashMap<>();
-    private static final int FLAME_FIELD_INTERVAL = 5; // 每5刻触发一次
+    
+    // 新增: 攻击计数器 (记录玩家攻击次数)
+    private static final Map<Player, Integer> attackCountMap = new WeakHashMap<>();
+    private static final int ATTACKS_REQUIRED = 10; // 需要10次攻击才能触发火焰领域
+    
     private static final float DAMAGE_BONUS = 2.0f; // 200%伤害提升
     private static final float SELF_DAMAGE_PERCENT = 0.02f; // 自身伤害百分比
     private static final float DAMAGE_REDUCTION = 0.5f; // 伤害减半
@@ -38,7 +39,11 @@ public class InfernoThousandTrials extends SpecialEffect {
     @SubscribeEvent
     public static void onAttack(LivingHurtEvent event) {
         if (!(event.getSource().getEntity() instanceof Player player)) return;
-        if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS.get())) return;
+        if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS.get())) {
+            // 新增: 移除无特效玩家的攻击计数
+            attackCountMap.remove(player);
+            return;
+        }
         
         float selfDamage = player.getMaxHealth() * SELF_DAMAGE_PERCENT;
         player.hurt(SlashBladeUtil.DamageSourceToCreat(player, DamageTypes.FELL_OUT_OF_WORLD), selfDamage);
@@ -61,8 +66,15 @@ public class InfernoThousandTrials extends SpecialEffect {
         float boostedDamage = originalDamage * (1 + DAMAGE_BONUS) + heartBonus;
         event.setAmount(boostedDamage);
         
-        // 重置火焰领域计时器
-        flameFieldTimers.put(player, FLAME_FIELD_INTERVAL);
+        // 新增: 攻击计数逻辑
+        int currentCount = attackCountMap.getOrDefault(player, 0) + 1;
+        attackCountMap.put(player, currentCount);
+        
+        // 当达到10次攻击时触发火焰领域
+        if (currentCount >= ATTACKS_REQUIRED&&!event.getSource().is(DamageTypes.IN_FIRE)) {
+            triggerFlameField(player);
+            attackCountMap.put(player, 0); // 重置计数器
+        }
     }
     
     // 玩家受伤事件处理（伤害减半）
@@ -73,25 +85,6 @@ public class InfernoThousandTrials extends SpecialEffect {
         
         // 伤害减半
         event.setAmount(event.getAmount() * DAMAGE_REDUCTION);
-    }
-    
-    // 玩家tick事件处理（火焰领域）
-    @SubscribeEvent
-    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        Player player = event.player;
-        if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS.get())) {
-            flameFieldTimers.remove(player);
-            return;
-        }
-        
-        // 更新火焰领域计时器
-        int timer = flameFieldTimers.getOrDefault(player, 0) - 1;
-        if (timer <= 0) {
-            // 触发火焰领域效果
-            triggerFlameField(player);
-            timer = FLAME_FIELD_INTERVAL;
-        }
-        flameFieldTimers.put(player, timer);
     }
     
     // 火焰领域效果实现
