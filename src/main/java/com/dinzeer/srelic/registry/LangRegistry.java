@@ -72,6 +72,8 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.SEVEN_2), "隧星盛耀「盾斧」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.kill), "劫灭「无烬」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.ice_sword), "雪葬的星荧");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.THIRD_RELIC), "3rd圣遗物");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.FROST_SNIPER), "「霜狙」");
 
 
 
@@ -123,6 +125,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.SKY_WAVE_EDGE), "剑技·天空·龙胆波涛");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.CELESTIAL_STRIKE), "决胜轰解");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.ICE_EDGE), "雪葬");
+
 
         // 特殊效果
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.FLAMEROSION), "火焰侵蚀");
@@ -723,6 +726,21 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLADE,1), "你造成的伤害提高200%");
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLADE,2), "攻击有30%的概率召唤冰锥");
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLADE,3), "冰锥的伤害倍率为360%");
+
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW), "3rd圣能充溢");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW), "【3rd圣能充溢】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW,1), "你造成的伤害提高30%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW,2), "你的攻击伤害变为两段");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW,3), "当你锻造数>100时：");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW,4), "你造成的伤害再次提高60%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW,5), "你的攻击伤害变为三段");
+
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.DREAM_COMPANION), "与梦的同行");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.DREAM_COMPANION), "【与梦的同行】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.DREAM_COMPANION,1), "你造成的伤害提高100%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.DREAM_COMPANION,2), "攻击会叠加霜冻值，满层后缓慢敌人，这种方式冻结的敌人受到的伤害增加25%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.DREAM_COMPANION,3), "你周围对你没仇恨的生物获得力量3");
+
 
         REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_slashblade", "§6游戏扩增·异界之刃");
         REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_se", "§6游戏扩增·命途轨迹");

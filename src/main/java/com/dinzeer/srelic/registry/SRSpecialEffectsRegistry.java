@@ -113,6 +113,9 @@ public class SRSpecialEffectsRegistry {
     public static final RegistryObject<SpecialEffect> INFERNO_THOUSAND_TRIALS; // 炎烬千劫
     public static final RegistryObject<SpecialEffect> ICE_BLADE;
     
+    // 新增圣能充溢特效
+    public static final RegistryObject<SpecialEffect> HOLY_ENERGY_OVERFLOW;
+    public static final RegistryObject<SpecialEffect> DREAM_COMPANION;
     public SRSpecialEffectsRegistry() {
 
 
@@ -220,6 +223,8 @@ public class SRSpecialEffectsRegistry {
         CELESTIAL_STRIKE=REGISTRY_KEY2.register("celestial_strike", CelestialStrike::new);
         INFERNO_THOUSAND_TRIALS = REGISTRY_KEY2.register("inferno_thousand_trials", InfernoThousandTrials::new);
         ICE_BLADE=REGISTRY_KEY2.register("ice_blade", IceBlade::new);
+        HOLY_ENERGY_OVERFLOW = REGISTRY_KEY2.register("holy_energy_overflow", HolyEnergyOverflow::new);
+        DREAM_COMPANION = REGISTRY_KEY2.register("dream_companion", DreamCompanion::new);
     }
 
 

@@ -1,0 +1,31 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 10
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:third_relic",
+  "properties": {
+    "attack_base": 15.0,
+    "max_damage": 300,
+    "slash_art": "slashblade:wave_edge",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:holy_energy_overflow"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/honkai/3rd/third_relic.obj",
+    "summon_sword_color": 16056064,
+    "texture": "srelic:model/honkai/3rd/third_relic.png"
+  }
+}

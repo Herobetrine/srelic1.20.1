@@ -131,6 +131,12 @@ jarJar.enable()
 reobf {
     jarJar { }
 }
+jar {
+    archiveClassifier.set('UnReg')
+}
+tasks.jarJar.configure {
+    archiveClassifier.set('forge')
+}
 
 tasks.jarJar.finalizedBy('reobfJarJar')
 
@@ -147,6 +153,9 @@ repositories {
     repositories {
         maven { // Registrate
             url "https://maven.tterrag.com/"
+        }
+        maven { // Registrate
+            url "https://maven.ithundxr.dev/mirror"
         }
         mavenLocal()
     }
@@ -206,7 +215,6 @@ dependencies {
 
 //    implementation fg.deobf("curse.maven:blue-skies-312918:5010316")
 
-    implementation fg.deobf(("net.exmo.legendary_slash:legendary_slash:[0.001,0.363)"))
 
 
 

@@ -26,6 +26,7 @@ public class SRStacksReg {
 
     public static final IStackManager RED_SCAR = register("red_scar", 8);
 
+    public static final IStackManager FROST_VALUE = register("frost_value", 100);
 
     public static final IStackManager SKY_SWORD = register("sky_sword", 5);
 

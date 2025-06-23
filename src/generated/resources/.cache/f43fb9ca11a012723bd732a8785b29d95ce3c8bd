@@ -1,6 +1,6 @@
-// 1.20.1	2025-06-21T17:45:27.3147638	Registrate Provider for srelic [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
-19c33dee4d08f333479501262447ba3261a1a027 assets/srelic/lang/en_ud.json
-7f801ed9ab2ae40e91970eaab9bdbfd553161296 assets/srelic/lang/en_us.json
+// 1.20.1	2025-06-23T21:25:17.8865848	Registrate Provider for srelic [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+7099b18f583de2cc5248c6fb391cf0398e47672c assets/srelic/lang/en_ud.json
+91773c0326f4c83e5b0f8c3c11b9f9d1bc3a2068 assets/srelic/lang/en_us.json
 9057a5a46dcab42e315aed3044eff31e214a50a6 assets/srelic/models/item/black_hole_metal.json
 bcd86321bb43db8b73d5267a295110a753ab3713 assets/srelic/models/item/compressed_alloy.json
 73cc22e73d99e3fa9b07b0d68d5af94cda0baffe assets/srelic/models/item/crimson_paper.json

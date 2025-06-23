@@ -136,6 +136,12 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> kill=register("kill");
     //雪葬的星荧
     public static final ResourceKey<SlashBladeDefinition> ice_sword=register("ice_sword");
+    //3rd圣遗物
+    public static final ResourceKey<SlashBladeDefinition> THIRD_RELIC=register("third_relic");
+    //霜狙
+    public static final ResourceKey<SlashBladeDefinition> FROST_SNIPER=register("frost_sniper");
+    //仿灵刀「冰昙天」
+    public static final ResourceKey<SlashBladeDefinition> ICE_BLUE=register("ice_blue");
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(START,
                 new SlashBladeDefinition(
@@ -1362,9 +1368,53 @@ public class SRelicBuiltInRegsitry {
                                 .slashArtsType(SRslashArtRegsitry.ICE_EDGE.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.ICE_BLADE.getId())
-                                .maxDamage(1013)
+                                .maxDamage(300)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+        bootstrap.register(
+                THIRD_RELIC
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("third_relic"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/3rd/third_relic.png"))
+                                .modelName(Srelic.prefix("model/honkai/3rd/third_relic.obj"))
+                                .effectColor(16056064)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(15)
+                                .slashArtsType(SlashArtsRegistry.WAVE_EDGE.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW.getId())
+                                .maxDamage(300)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+        bootstrap.register(
+                FROST_SNIPER
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("frost_sniper"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/frost_sniper/frost_sniper.png"))
+                                .modelName(Srelic.prefix("model/honkai/frost_sniper/frost_sniper.obj"))
+                                .effectColor(2003199)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(25)
+                                .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.DREAM_COMPANION.getId())
+                                .maxDamage(300)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
                         )
                 )
