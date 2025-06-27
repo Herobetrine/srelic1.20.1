@@ -16,6 +16,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
 import twilightforest.init.TFItems;
@@ -43,7 +44,7 @@ public class SrelicBladeRecipeProvioder extends RecipeProvider implements ICondi
                 .pattern("DEF")
                 .pattern("AGA")
                 .define('A', SBItems.proudsoul_trapezohedron)
-                .define('B', Items.NETHERITE_INGOT)
+                .define('B',Tags.Items.INGOTS_NETHERITE)
                 .define('C', SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                                 .name(SlashBladeBuiltInRegistry.RODAI_NETHERITE.location())
@@ -55,7 +56,7 @@ public class SrelicBladeRecipeProvioder extends RecipeProvider implements ICondi
                         SRItem.getItem(SRItem.SRELIC_BLADE_ID),RequestDefinition.Builder.newInstance()
                                 .name(SRelicBuiltInRegsitry.BLADE.location())
                                 .build()))
-                .define('F',Items.DIAMOND)
+                .define('F', Tags.Items.GEMS_DIAMOND)
                 .define('G', SRItemRegsitry.fel_metal)
                 .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
 

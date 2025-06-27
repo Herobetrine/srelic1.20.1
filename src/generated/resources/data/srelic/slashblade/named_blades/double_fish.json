@@ -1,0 +1,31 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 10
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:double_fish",
+  "properties": {
+    "attack_base": 35.0,
+    "max_damage": 300,
+    "slash_art": "srelic:afflordite",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:afflordite"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/honkai/double_fish/double_fish.obj",
+    "summon_sword_color": 2003199,
+    "texture": "srelic:model/honkai/double_fish/double_fish.png"
+  }
+}

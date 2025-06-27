@@ -44,7 +44,7 @@ public class ButterflyFalling extends SpecialEffect {
         System.out.println("Butterfly Falling: " + stacks);
         handleStackAccumulation(player);
         checkFullStacks(player, event.getEntity());
-        event.setAmount((event.getAmount() * (1+(stacks*0.5F))));
+        event.setAmount((event.getAmount() * (1+(stacks*0.25F))));
 
     }
     @SubscribeEvent
@@ -78,7 +78,7 @@ public class ButterflyFalling extends SpecialEffect {
         // 计算爆发伤害
         float attackDamage = (float)player.getAttributeValue(Attributes.ATTACK_DAMAGE);
         float hp = player.getMaxHealth();
-        float totalDamage = (attackDamage + hp) * DAMAGE_MULTIPLIER;
+        float totalDamage = ((attackDamage + hp) * DAMAGE_MULTIPLIER)/2;
 
         target.hurt(player.damageSources().magic(), totalDamage);
         stackManager.resetStacks(player);

@@ -1,0 +1,31 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 10
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:ice_blue",
+  "properties": {
+    "attack_base": 17.0,
+    "max_damage": 300,
+    "slash_art": "slashblade:drive_vertical",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:bitter_cold_hell"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/honkai/ice_blue/ice_blue.obj",
+    "summon_sword_color": 2003199,
+    "texture": "srelic:model/honkai/ice_blue/ice_blue.png"
+  }
+}

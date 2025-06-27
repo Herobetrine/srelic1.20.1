@@ -7,7 +7,7 @@
       "item": "slashblade:proudsoul_trapezohedron"
     },
     "B": {
-      "item": "minecraft:netherite_ingot"
+      "tag": "forge:ingots/netherite"
     },
     "C": {
       "type": "slashblade:blade",
@@ -28,7 +28,7 @@
       }
     },
     "F": {
-      "item": "minecraft:diamond"
+      "tag": "forge:gems/diamond"
     },
     "G": {
       "item": "srelic:fel_metal"

@@ -29,12 +29,18 @@ public class SRStacksReg {
     public static final IStackManager FROST_VALUE = register("frost_value", 100);
 
     public static final IStackManager SKY_SWORD = register("sky_sword", 5);
-
-
     public static final IStackManager CELESTIAL_STRIKE = register("celestial_strike", 100);
+    // 新增朔望层数管理器
+    public static final IStackManager ICE_BLOOM_STACKS = register("ice_bloom", 9);
 
+    // 新增冥芒层数管理器
+    public static final IStackManager MING_MANG_STACKS = register("ming_mang", 10);
 
+    // 新增苦寒地狱堆栈管理器
+    public static final IStackManager BITTER_COLD_HELL_STACKS = register("bitter_cold_hell", 10);
 
+    // 新增EX苦寒地狱堆栈管理器
+    public static final IStackManager BITTER_COLD_HELL_EX_STACKS = register("bitter_cold_hell_ex", 10);
 
     public static IStackManager register(String name,int max){
       return RegisteredStackManager.Registry.register(name, max);

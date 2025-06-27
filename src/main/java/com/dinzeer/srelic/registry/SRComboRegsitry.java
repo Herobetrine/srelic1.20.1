@@ -6,10 +6,7 @@ import com.dinzeer.srelic.Utils.GetNumUtil;
 import com.dinzeer.srelic.Utils.SlashBladeUtil;
 import com.dinzeer.srelic.entity.superentity.EntitySRBlisteringSword;
 import com.dinzeer.srelic.specialattacks.*;
-import com.dinzeer.srelic.specialattacks.v1.CelestialStrike;
-import com.dinzeer.srelic.specialattacks.v1.IceEdge;
-import com.dinzeer.srelic.specialattacks.v1.RedScarSlash;
-import com.dinzeer.srelic.specialattacks.v1.TenDrive;
+import com.dinzeer.srelic.specialattacks.v1.*;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.ability.StunManager;
 import mods.flammpfeil.slashblade.entity.EntitySlashEffect;
@@ -613,6 +610,20 @@ public class SRComboRegsitry {
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
                             .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
                             .put(3, IceEdge::doSlash)
+                            .build())
+                    .addHitEffect(StunManager::setStun)
+                    ::build
+    );
+    public static final RegistryObject<ComboState> AFFLORDITE = COMBO_STATES.register("afflordite",
+            ComboState.Builder.newInstance()
+                    .startAndEnd(1600, 1659)
+                    .priority(50)
+                    .motionLoc(DefaultResources.ExMotionLocation)
+                    .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                    .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
+                    .addTickAction(ComboState.TimeLineTickAction.getBuilder()
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(3, Afflordite::doSlash)
                             .build())
                     .addHitEffect(StunManager::setStun)
                     ::build

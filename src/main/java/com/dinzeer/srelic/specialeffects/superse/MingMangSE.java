@@ -1,5 +1,7 @@
 package com.dinzeer.srelic.specialeffects.superse;
 
+import com.dinzeer.srelic.registry.SRStacksReg;
+import com.dinzeer.srelic.registry.imp.IStackManager;
 import com.dinzeer.srelic.specialeffects.SeEX;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import net.minecraft.core.particles.ParticleTypes;
@@ -22,8 +24,11 @@ import java.util.UUID;
 
 @Mod.EventBusSubscriber
 public class MingMangSE extends SpecialEffect {
+    // 使用IStackManager管理冥芒层数
+    private static final IStackManager stackManager = SRStacksReg.MING_MANG_STACKS;
+    
     // 核心参数
-    private static final int MAX_STACKS = 10;
+    private static final int MAX_STACKS = stackManager.getMaxStacks(); // 从管理器获取最大层数
     private static final float HP_COST_PERCENT = 0.05f;
     private static final float HP_HEAL_PERCENT = 0.04f;
     private static final float DAMAGE_MULTIPLIER = 5.0f;
@@ -50,8 +55,9 @@ public class MingMangSE extends SpecialEffect {
         if (event.phase != TickEvent.Phase.END) return;
         
         Player player = event.player;
-        int stacks = player.getPersistentData().getInt("MingMangStacks");
-        
+        // 使用堆栈管理器获取层数
+        int stacks = stackManager.getCurrentStacks(player);
+
         applyAttributeModifiers(player, stacks);
         tryConvertStacksToHealing(player);
     }
@@ -64,27 +70,30 @@ public class MingMangSE extends SpecialEffect {
 
         player.hurt(player.damageSources().magic(), hpCost);
         
-        int stacks = Math.min(
-            player.getPersistentData().getInt("MingMangStacks") + 1, 
-            MAX_STACKS
-        );
-        player.getPersistentData().putInt("MingMangStacks", stacks);
+        // 替换NBT操作为堆栈管理器
+        stackManager.addStacks(player, 1);
+        int stacks = stackManager.getCurrentStacks(player);
+        
+        // 删除旧的NBT操作
+        // player.getPersistentData().putInt("MingMangStacks", stacks);
         
         spawnAccumulationParticles(player, stacks);
     }
 
     private static void checkFullStacks(Player player, LivingEntity target) {
-        int stacks = player.getPersistentData().getInt("MingMangStacks");
+        // 使用堆栈管理器获取当前层数
+        int stacks = stackManager.getCurrentStacks(player);
         if (stacks < MAX_STACKS) return;
 
         // 计算爆发伤害
         float attackDamage = (float)player.getAttributeValue(Attributes.ATTACK_DAMAGE);
         float hp = player.getHealth();
-        float totalDamage = (attackDamage + hp) * DAMAGE_MULTIPLIER;
+        float totalDamage = ((attackDamage + hp) * DAMAGE_MULTIPLIER);
         
         target.hurt(player.damageSources().magic(), totalDamage);
-        player.getPersistentData().putInt("MingMangStacks", 0);
-        
+        // 重置层数
+        stackManager.resetStacks(player);
+
         // 爆发特效
         if (player.level() instanceof ServerLevel server) {
             server.sendParticles(ParticleTypes.SOUL_FIRE_FLAME,
@@ -119,12 +128,19 @@ public class MingMangSE extends SpecialEffect {
     private static void tryConvertStacksToHealing(Player player) {
         if (player.getHealth() / player.getMaxHealth() > 0.3f) return;
         
-        int stacks = player.getPersistentData().getInt("MingMangStacks");
+        // 使用堆栈管理器获取层数
+        int stacks = stackManager.getCurrentStacks(player);
+        // 删除旧的NBT操作
+        // int stacks = player.getPersistentData().getInt("MingMangStacks");
+        
         if (stacks <= 0) return;
 
         float healAmount = player.getMaxHealth() * HP_HEAL_PERCENT * stacks;
         player.heal(healAmount);
-        player.getPersistentData().putInt("MingMangStacks", 0);
+        // 重置层数
+        stackManager.resetStacks(player);
+        // 删除旧的NBT操作
+        // player.getPersistentData().putInt("MingMangStacks", 0);
         
         // 治疗特效
         if (player.level() instanceof ServerLevel server) {

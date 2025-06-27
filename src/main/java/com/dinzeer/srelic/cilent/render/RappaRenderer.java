@@ -47,22 +47,8 @@ public class RappaRenderer<T extends RappaEnity> extends EntityRenderer<T> {
                     / deathTime);
             baseAlpha = Math.max(0, -Math.pow(baseAlpha - 1, 4.0) + 0.75);
 
-
-
-
-
-
-
-
-
-
             matrixStack.mulPose(
-                    Axis.YP.rotationDegrees((entity.tickCount+ partialTicks)*2));
-
-
-
-//            matrixStack.mulPose(
-//                    Axis.YP.rotationDegrees(Mth.rotLerp(partialTicks, entity.yRotO, entity.getYRot()) - 90.0F));
+                    Axis.YP.rotationDegrees(Mth.rotLerp(partialTicks, entity.yRotO, entity.getYRot()) - 90.0F));
             matrixStack.mulPose(Axis.ZP.rotationDegrees(Mth.rotLerp(partialTicks, entity.xRotO, entity.getXRot())));
             matrixStack.mulPose(Axis.XP.rotationDegrees(entity.getRotationRoll()));
 
@@ -74,7 +60,7 @@ public class RappaRenderer<T extends RappaEnity> extends EntityRenderer<T> {
             WavefrontObject model = BladeModelManager.getInstance().getModel(MODEL);
 
             BladeRenderState.setCol(color | alpha);
-            BladeRenderState.renderOverrided(ItemStack.EMPTY, model, "base", TEXTURE, matrixStack, bufferIn,
+            BladeRenderState.renderOverridedLuminous(ItemStack.EMPTY, model, "base", TEXTURE, matrixStack, bufferIn,
                     packedLightIn);
         }
     }

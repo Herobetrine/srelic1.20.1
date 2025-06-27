@@ -1,0 +1,31 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 10
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:third_blue_2",
+  "properties": {
+    "attack_base": 40.0,
+    "max_damage": 300,
+    "slash_art": "slashblade:drive_vertical",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:ice_bloom"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/stairail/third_blue/third_blue_2.obj",
+    "summon_sword_color": 2003199,
+    "texture": "srelic:model/stairail/third_blue/third_blue.png"
+  }
+}

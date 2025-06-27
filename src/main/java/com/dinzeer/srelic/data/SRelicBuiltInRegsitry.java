@@ -142,6 +142,21 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> FROST_SNIPER=register("frost_sniper");
     //仿灵刀「冰昙天」
     public static final ResourceKey<SlashBladeDefinition> ICE_BLUE=register("ice_blue");
+    //御灵刀「寒狱冰天」
+    public static final ResourceKey<SlashBladeDefinition> ICE_BLUE_EX=register("ice_blue_ex");
+    //「昙华剑」
+    public static final ResourceKey<SlashBladeDefinition> THIRD_BLUE_1=register("third_blue_1");
+    //转魄「昙华剑」
+    public static final ResourceKey<SlashBladeDefinition> THIRD_BLUE_2=register("third_blue_2");
+    //「阿芙洛狄忒」
+    public static final ResourceKey<SlashBladeDefinition> AFFLORDITE=register("afflordite");
+    //裁星刃「双鱼座」
+    public static final ResourceKey<SlashBladeDefinition> DOUBLE_FISH=register("double_fish");
+    //妖刀「无尾」
+    public static final ResourceKey<SlashBladeDefinition> NO_END=register("no_end");
+    //
+
+
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(START,
                 new SlashBladeDefinition(
@@ -1412,6 +1427,164 @@ public class SRelicBuiltInRegsitry {
                                 .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.DREAM_COMPANION.getId())
+                                .maxDamage(300)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+        bootstrap.register(
+                ICE_BLUE
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("ice_blue"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/ice_blue/ice_blue.png"))
+                                .modelName(Srelic.prefix("model/honkai/ice_blue/ice_blue.obj"))
+                                .effectColor(2003199)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(17)
+                                .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.BITTER_COLD_HELL.getId())
+                                .maxDamage(300)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+        bootstrap.register(
+                ICE_BLUE_EX
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("ice_blue_ex"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/ice_blue/ice_blue_ex.png"))
+                                .modelName(Srelic.prefix("model/honkai/ice_blue/ice_blue_ex.obj"))
+                                .effectColor(2003199)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(32)
+                                .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX.getId())
+                                .maxDamage(300)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+
+
+        bootstrap.register(
+                THIRD_BLUE_1
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("third_blue_1"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/third_blue/third_blue.png"))
+                                .modelName(Srelic.prefix("model/stairail/third_blue/third_blue_1.obj"))
+                                .effectColor(2003199)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(40)
+                                .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.ICE_BLOOM.getId())
+                                .maxDamage(300)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+
+        bootstrap.register(
+                THIRD_BLUE_2
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("third_blue_2"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/stairail/third_blue/third_blue.png"))
+                                .modelName(Srelic.prefix("model/stairail/third_blue/third_blue_2.obj"))
+                                .effectColor(2003199)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(40)
+                                .slashArtsType(SlashArtsRegistry.DRIVE_VERTICAL.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.ICE_BLOOM.getId())
+                                .maxDamage(300)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+        bootstrap.register(
+                AFFLORDITE
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("afflordite"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/afflordite/afflordite.png"))
+                                .modelName(Srelic.prefix("model/honkai/afflordite/afflordite.obj"))
+                                .effectColor(16711710)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(20)
+                                .slashArtsType(SRslashArtRegsitry.AFFLORDITE.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.AFFLORDITE.getId())
+
+                                .maxDamage(300)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+        bootstrap.register(
+                DOUBLE_FISH
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("double_fish"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/double_fish/double_fish.png"))
+                                .modelName(Srelic.prefix("model/honkai/double_fish/double_fish.obj"))
+                                .effectColor(2003199)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(35)
+                                .slashArtsType(SRslashArtRegsitry.AFFLORDITE.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.AFFLORDITE.getId())
+
+                                .maxDamage(300)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+        bootstrap.register(
+                NO_END
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("no_end"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/zzz/no_end/no_end.png"))
+                                .modelName(Srelic.prefix("model/zzz/no_end/no_end.obj"))
+                                .effectColor(2003199)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(40)
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+
                                 .maxDamage(300)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),

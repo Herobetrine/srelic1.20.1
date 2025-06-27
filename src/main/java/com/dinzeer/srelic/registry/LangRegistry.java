@@ -74,9 +74,13 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.ice_sword), "雪葬的星荧");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.THIRD_RELIC), "3rd圣遗物");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.FROST_SNIPER), "「霜狙」");
-
-
-
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.ICE_BLUE), "仿灵刀「冰昙天」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.ICE_BLUE_EX), "御灵刀「寒狱冰天」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.THIRD_BLUE_1), "「昙华剑」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.THIRD_BLUE_2), "转魄「昙华剑」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.AFFLORDITE), "「阿芙洛狄忒」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.DOUBLE_FISH), "裁星刃「双鱼座」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.NO_END), "妖刀「无尾」");
 
         REGISTRATE.addRawLang("patchouli.srelic.book.name", "记录了异界信息的书");
         REGISTRATE.addRawLang("patchouli.srelic.book.landing_text", "一本来自异界的书，上面记载了许多锻造异界之刃的方式，以白模为基础奏响共鸣之路");
@@ -125,6 +129,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.SKY_WAVE_EDGE), "剑技·天空·龙胆波涛");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.CELESTIAL_STRIKE), "决胜轰解");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.ICE_EDGE), "雪葬");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.AFFLORDITE), "血刺玫");
 
 
         // 特殊效果
@@ -512,11 +517,11 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc", "§5【魂火献祭】");
         REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_1", "§d每次攻击消耗50%当前生命获取冥芒(上限10层)");
         REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_2", "§5【冥府恩赐】");
-        REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_3", "§d每层提供50%伤害加成");
+        REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_3", "§d每层提供25%伤害加成");
         REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_4", "§5【黄泉回溯】");
         REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_5", "§d生命低于30%时消耗冥芒治疗(每层4%最大生命)");
         REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_6", "§5【九幽爆发】");
-        REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_7", "§d满层时造成(攻击+生命)x5的幽冥伤害");
+        REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_7", "§d满层时造成((攻击+生命)x5)/2的幽冥伤害");
 
         REGISTRATE.addRawLang("se.srelic.blood_plum_memory", "§5血梅之忆·往生之梅");
         REGISTRATE.addRawLang("se.srelic.blood_plum_memory.desc", "§5【血梅香】");
@@ -740,6 +745,42 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.DREAM_COMPANION,1), "你造成的伤害提高100%");
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.DREAM_COMPANION,2), "攻击会叠加霜冻值，满层后缓慢敌人，这种方式冻结的敌人受到的伤害增加25%");
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.DREAM_COMPANION,3), "你周围对你没仇恨的生物获得力量3");
+
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.BITTER_COLD_HELL), "苦寒地狱");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.BITTER_COLD_HELL), "【苦寒地狱】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL,1), "你造成的伤害提高50%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL,2), "每3秒自动叠加「勿忘」层数");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL,3), "攻击时消耗层数造成额外伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL,4), "攻击造成霜冻效果");
+
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX), "超限·苦寒地狱");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX), "【超限·苦寒地狱】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX,1), "你造成的伤害提高100%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX,2), "每2秒自动叠加「勿忘」层数");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX,3), "攻击时消耗层数造成额外伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX,4), "攻击造成霜冻效果");
+
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.ICE_BLOOM), "转魄");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.ICE_BLOOM), "【转魄】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM,1), "每次攻击有概率累计「朔望」效果");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM,2), "当「朔望」效果达到4层：");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM,3), "进入「转魄」效果：");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM,4), "在「转魄」效果期间，伤害提高100%，超过4层的「朔望」可额外提高10%的伤害，最高可叠加9层。");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM,5), "「转魄」下获得「幻刃风暴」和力量效果");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM,6), "此外，不管是否转魄，你的所有伤害都会被转为靠生命值为基础的冰属性伤害");
+
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.AFFLORDITE), "银莲花");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.AFFLORDITE), "【银莲花】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.AFFLORDITE,1), "你的伤害增加25%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.AFFLORDITE,2), "攻击概率造成范围伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.AFFLORDITE,3), "范围伤害倍率为1.5");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.AFFLORDITE,4), "如果敌人为boss时，倍率为3");
+
+
+
+
+
+
 
 
         REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_slashblade", "§6游戏扩增·异界之刃");
