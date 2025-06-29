@@ -1,0 +1,19 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.eternal_plum",
+  "icon": "srelic:eternal_plum",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:eternal_plum",
+      "text": "patchouli.srelic.book.entries.arrow.eternal_plum.pages.0.text"
+    },
+    {
+      "type": "crafting",
+      "title": "item.srelic.eternal_plum",
+      "text": "item.srelic.eternal_plum",
+      "recipe": "srelic:eternal_plum"
+    }
+  ]
+}

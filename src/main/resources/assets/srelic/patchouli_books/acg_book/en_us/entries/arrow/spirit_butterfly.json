@@ -1,0 +1,19 @@
+{
+  "sortnum" : 1,
+  "name" : "item.srelic.spirit_butterfly",
+  "icon" : "srelic:spirit_butterfly",
+  "category" : "srelic:arrow",
+  "pages" : [
+    {
+      "type" : "spotlight",
+      "item" : "srelic:spirit_butterfly",
+      "text" : "patchouli.srelic.book.entries.arrow.spirit_butterfly.pages.0.text"
+    },
+    {
+      "type" : "crafting",
+      "title" : "item.srelic.spirit_butterfly",
+      "text" : "item.srelic.spirit_butterfly",
+      "recipe" : "srelic:spirit_butterfly"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "bookGuiScale": 0,
+  "clickedVisualize": true,
+  "bookData": {
+    "srelic:acg_book": {
+      "viewedEntries": [
+        "srelic:arrow/compressed_alloy",
+        "srelic:arrow/ender_metal",
+        "srelic:arrow/black_hole_metal",
+        "srelic:arrow/fel_metal",
+        "srelic:arrow/soul_metal",
+        "srelic:arrow/spirit_butterfly",
+        "srelic:arrow/diamond_star",
+        "srelic:arrow/demon_ingot",
+        "srelic:arrow/eternal_plum",
+        "srelic:arrow/frozen_netherite_alloy",
+        "srelic:arrow/ex_star",
+        "srelic:arrow/thunder_netherite_alloy",
+        "srelic:arrow/flame_netherite_alloy",
+        "srelic:arrow/sakura_steel_ingot"
+      ],
+      "bookmarks": [],
+      "completedManualQuests": []
+    }
+  }
+}

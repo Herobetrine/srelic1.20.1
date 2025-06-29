@@ -1,0 +1,18 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.ex_star",
+  "icon": "srelic:ex_star",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:ex_star",
+      "text": "patchouli.srelic.book.entries.arrow.ex_star.pages.0.text"
+    },
+    {
+      "type": "text",
+      "title": "待填",
+      "text": "待填"
+    }
+  ]
+}
