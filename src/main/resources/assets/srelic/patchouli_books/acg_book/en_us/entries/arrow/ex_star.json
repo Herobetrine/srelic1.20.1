@@ -10,9 +10,24 @@
       "text": "patchouli.srelic.book.entries.arrow.ex_star.pages.0.text"
     },
     {
-      "type": "text",
-      "title": "待填",
-      "text": "待填"
+      "type": "multiblock",
+      "name": "tips.ex_star.name",
+      "multiblock": {
+        "pattern": [
+          [ "_____", "_____", "__0__", "_____" , "_____"  ],
+          [ "A___A", "_____", "__B__", "_____" , "A___A"  ],
+          [ "_____", "_CCC_", "_CCC_", "_CCC_" , "_____"  ],
+          [ "DDDDD", "DDDDD", "DDDDD", "DDDDD" , "DDDDD"  ]
+        ],
+        "mapping": {
+          "A": "minecraft:gold_block",
+          "B": "minecraft:magma_block",
+          "C": "minecraft:ice",
+          "D": "minecraft:crying_obsidian"
+        },
+        "symmetrical": true
+      },
+      "text": "tips.ex_star.name_tip"
     }
   ]
 }

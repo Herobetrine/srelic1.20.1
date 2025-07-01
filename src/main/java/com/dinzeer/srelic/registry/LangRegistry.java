@@ -85,7 +85,9 @@ public class LangRegistry {
         REGISTRATE.addRawLang("patchouli.srelic.book.name", "记录了异界信息的书");
         REGISTRATE.addRawLang("patchouli.srelic.book.landing_text", "一本来自异界的书，上面记载了许多锻造异界之刃的方式，以白模为基础奏响共鸣之路");
         REGISTRATE.addRawLang("patchouli.srelic.book.categories.arrow.name", "链接一切的起始·超级材料");
+        REGISTRATE.addRawLang("patchouli.srelic.book.categories.universal.name", "精神与命运的共鸣·命途虹星");
         REGISTRATE.addRawLang("patchouli.srelic.book.categories.arrow.description", "本章节记载了游戏扩增新加材料的获取方式和背景介绍");
+        REGISTRATE.addRawLang("patchouli.srelic.book.categories.universal.description", "本章节记载了游戏扩增命途的名称以及效果");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.ender_metal.pages.0.text", "让末影人愤怒的特殊金属，可以用于协助白模链接世界并构筑成型,只不过配方让人想说：“这玩意不应该叫末影合金吗?”");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.black_hole_metal.pages.0.text", "四块坚硬无比的下界合金在聚合后因邪灵金属被引爆诞生的终极合金，它将链接白模将异界中“黑洞”这个概念的物品共鸣出来");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.compressed_alloy.pages.0.text", "通常来说压缩不成这样，但是这不是通常情况，毕竟你有下界之星");
@@ -93,9 +95,22 @@ public class LangRegistry {
         REGISTRATE.addRawLang("tips.black_hole.name", "黑洞压缩仪式");
         REGISTRATE.addRawLang("tips.black_hole.name_tip", "在末地手持邪灵金属对准中心的黑曜石激活");
         REGISTRATE.addRawLang("tips.compressed_alloy.name", "下界之星压缩");
+        REGISTRATE.addRawLang("tips.ex_star.name", "蓝莓酱你想一个吧，这几个仪式的名字");
         REGISTRATE.addRawLang("tips.compressed_alloy.name_tip", "在下界手持下界执行对准中心的下界合金激活");
         REGISTRATE.addRawLang("tips.fel_metal.name", "远古邪灵炼成");
         REGISTRATE.addRawLang("tips.fel_metal.name_tip", "手持下界合金碎片对准中心炼药锅激活");
+        REGISTRATE.addRawLang("tips.ex_star.name_tip", "在末地手持下界之星右键激活仪式");
+        REGISTRATE.addRawLang("tips.frozen_netherite_alloy.name_tip", "在水中手持下界合金右击蓝冰获得");
+        REGISTRATE.addRawLang("tips.oceanic_netherite_alloy.name_tip", "在下界手持下界合金右击海晶石块获得");
+        REGISTRATE.addRawLang("tips.sakura_steel_ingot.name_tip", "将樱花树叶和樱花原木相邻放置，然后手持铁锭右键樱花原木获得");
+        REGISTRATE.addRawLang("tips.crimson_paper.name_tip", "与流浪商人交易获得");
+        REGISTRATE.addRawLang("tips.thunder_netherite_alloy.name_tip", "在雷暴天气手持下界合金右击避雷针获得");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.soul_metal.pages.0.text", "纳米机器人组成的金属块，用于隔断崩坏能。当金属块被崩坏能侵蚀时，纳米机器人可以自动修复。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.soul_metal.pages.1.text", "我愚弄了友人，愚弄了至亲，愚弄了世界和它之上的规则……只为了给予那唯一真实的你，以第二次生命。我回来了，卡莲。");
+        REGISTRATE.addRawLang("painting.srelic.aotuo.title", "§a奥§r托·阿波卡利斯");
+        REGISTRATE.addRawLang("painting.srelic.huoqu.title", "获取方式");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.spirit_butterfly.pages.0.text","万花丛中，蝴蝶乱舞，于凋零之中绽放，于往生中留香，灵芳环绕三生，蝴蝶留有血梅香。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.diamond_star.pages.0.text","珍贵且坚硬的材料，三首恶魔的核心与坚硬的材料融合，产生意想不到的材料，钻石之星闪耀着星辰的光芒。");
 
         // 拔刀技
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.XDRIVE), "X幻影刃");
@@ -409,6 +424,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.dice_effect.desc_2", "§d• 40%概率正常伤害");
         REGISTRATE.addRawLang("se.srelic.dice_effect.desc_3", "§d• 39%概率治疗目标600%伤害值");
         REGISTRATE.addRawLang("se.srelic.dice_effect.desc_4", "§d• 1%概率造成1000%暴击伤害");
+        REGISTRATE.addRawLang("se.srelic.dice_effect.text", "se.srelic.dice_effect.text");
 
         REGISTRATE.addRawLang("se.srelic.truth_realm", "§6终焉律·星之归");
         REGISTRATE.addRawLang("se.srelic.truth_realm.desc", "§e【时空奇点】");

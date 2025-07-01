@@ -1,0 +1,18 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.oceanic_netherite_alloy",
+  "icon": "srelic:oceanic_netherite_alloy",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:oceanic_netherite_alloy",
+      "text": "patchouli.srelic.book.entries.arrow.oceanic_netherite_alloy.pages.0.text"
+    },
+    {
+      "type": "text",
+      "title": "painting.srelic.huoqu.title",
+      "text": "tips.oceanic_netherite_alloy.name_tip"
+    }
+  ]
+}
