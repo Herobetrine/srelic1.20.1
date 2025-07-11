@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "srelic:item/phantom_trace_ingot"
+  }
+}

@@ -58,7 +58,7 @@ public class CelestialStrike extends SpecialEffect {
     public static final int JUDGMENT_THRESHOLD = 100;              // 触发审判所需的解放值阈值
     public static final float JUDGMENT_DAMAGE_RATIO = 0.25f;      // 审判伤害比例 (25%玩家最大生命值)
     public static final float JUDGMENT_RADIUS = 8.0f;             // 审判作用半径
-    public static final int JUDGMENT_PARTICLE_COUNT = 50;         // 审判粒子数量
+    public static final int JUDGMENT_PARTICLE_COUNT = 5;         // 审判粒子数量
     
     // 解放值管理器
     public static final IStackManager CELESTIAL_STRIKE = SRStacksReg.CELESTIAL_STRIKE;
@@ -114,7 +114,7 @@ public class CelestialStrike extends SpecialEffect {
             // 分4次触发伤害 (避免单次伤害过高被免疫)
             for (int i = 0; i < 4; i++) {
                 target.invulnerableTime = 0;
-                target.hurt(SlashBladeUtil.DamageSourceToCreat(player, DamageTypes.IN_FIRE), count / 4);
+                target.hurt(SlashBladeUtil.DamageSourceToCreat(player, DamageTypes.IN_FIRE), count / 2);
             }
             
             // 新增: 检查解放值是否达到审判阈值
@@ -206,7 +206,7 @@ public class CelestialStrike extends SpecialEffect {
         for (LivingEntity entity : entities) {
             entity.invulnerableTime = 0;
             entity.hurt(
-                SlashBladeUtil.DamageSourceToCreat(player, DamageTypes.MAGIC),
+                SlashBladeUtil.DamageSourceToCreat(player, DamageTypes.ON_FIRE),
                 damage
             );
         }

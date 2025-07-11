@@ -1,5 +1,6 @@
 package com.dinzeer.srelic.event.handler;
 
+import com.dinzeer.srelic.registry.SRBlockRegsitry;
 import com.dinzeer.srelic.registry.SRItemRegsitry;
 import mods.flammpfeil.slashblade.init.SBItems;
 import net.minecraft.network.chat.Component;
@@ -26,7 +27,12 @@ public class WanderingTraderHandler {
         List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();
         rareTrades.add(new BasicItemListing(new ItemStack(Items.EMERALD, 16),
                 new ItemStack(SRItemRegsitry.crimson_paper.get()), 3, 5, 0.05f));
-
+        rareTrades.add(new BasicItemListing(new ItemStack(Items.EMERALD, 10),
+                new ItemStack(SRItemRegsitry.NightterrorBloodwing.get()), 3, 5, 0.05f));
+        rareTrades.add(new BasicItemListing(new ItemStack(Items.EMERALD, 20),
+                new ItemStack(SRItemRegsitry.PhantomirageButterfly.get()), 3, 5, 0.05f));
+        rareTrades.add(new BasicItemListing(new ItemStack(Items.EMERALD, 64),
+                new ItemStack(SRBlockRegsitry.blood_plum_sampling.get()), 3, 5, 0.05f));
     }
 
 

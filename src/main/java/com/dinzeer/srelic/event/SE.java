@@ -98,8 +98,8 @@ public class SE {
                 .ifPresent(se -> {
                     bladeState.addSpecialEffect(se.getId());
                     mainHand.shrink(1);
-                    event.setCanceled(true);
                 });
+        event.setCanceled(true);
     }
 
     @SubscribeEvent
@@ -135,8 +135,9 @@ public class SE {
                 RegistryObject<SpecialEffect> selectedSE = SRSpecialEffectsRegistry.PATH_SE_POOL.get(index);
                 bladeState.addSpecialEffect(selectedSE.getId());
                 mainHand.shrink(1);
-                event.setCanceled(true);
+
             }
+            event.setCanceled(true);
         }
     }
 

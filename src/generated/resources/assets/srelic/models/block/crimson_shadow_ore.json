@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "srelic:block/crimson_shadow_ore"
+  }
+}

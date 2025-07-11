@@ -19,7 +19,6 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
-import twilightforest.init.TFItems;
 
 import java.util.function.Consumer;
 
@@ -61,7 +60,47 @@ public class SrelicBladeRecipeProvioder extends RecipeProvider implements ICondi
                 .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
 
 
+        SrelicSlashBladeShapedRecipeBuilder.shaped(SRelicBuiltInRegsitry.ICE_BLUE.location())
+                .pattern("ABC")
+                .pattern("BDB")
+                .pattern("EBF")
+                .define('A', Items.SNOW_BLOCK)
+                .define('B',SRItemRegsitry.soul_metal)
+                .define('C', Items.BLUE_ICE
+                )
+                .define('D', Items.NETHER_STAR)
+                .define('E', SlashBladeIngredient.of(
+                        SRItem.getItem(SRItem.SRELIC_BLADE_ID),RequestDefinition.Builder.newInstance()
+                                .name(SRelicBuiltInRegsitry.BLADE.location())
+                                        .proudSoul(30000)
+                                        .refineCount(30)
+                                .build()))
+                .define('F', Items.CHERRY_LEAVES)
+                .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
 
+        SrelicSlashBladeShapedRecipeBuilder.shaped(SRelicBuiltInRegsitry.THIRD_RELIC.location())
+                .pattern("ABC")
+                .pattern("DEF")
+                .pattern("GHI")
+                .define('A', SBItems.proudsoul_ingot)
+                .define('B',SBItems.proudsoul_crystal)
+                .define('C', SRItemRegsitry.sakura_steel_ingot
+                )
+                .define('D',  SBItems.proudsoul_trapezohedron)
+                .define('E', SlashBladeIngredient.of(
+                        SRItem.getItem(SRItem.SRELIC_BLADE_ID),RequestDefinition.Builder.newInstance()
+                                .name(SRelicBuiltInRegsitry.BLADE.location())
+                                .proudSoul(3000)
+                                .refineCount(30)
+                                .build()))
+                .define('F', SBItems.proudsoul_sphere)
+                .define('G', SBItems.proudsoul)
+                .define('H', SlashBladeIngredient.of(
+                        RequestDefinition.Builder.newInstance()
+                                .name(SlashBladeBuiltInRegistry.MURAMASA.location())
+                                .build()))
+                .define('I',SBItems.proudsoul_tiny)
+                .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
 
 
 

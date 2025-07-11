@@ -154,9 +154,10 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> DOUBLE_FISH=register("double_fish");
     //妖刀「无尾」
     public static final ResourceKey<SlashBladeDefinition> NO_END=register("no_end");
-    //
-
-
+    //天霜之斯卡蒂
+    public static final ResourceKey<SlashBladeDefinition> THE_STAR_OF_THE_FROST=register("the_star_of_the_frost");
+    //基因收割者
+    public static final ResourceKey<SlashBladeDefinition> GENE_HARVESTER=register("gene_harvester");
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(START,
                 new SlashBladeDefinition(
@@ -1582,8 +1583,55 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(40)
+                                .baseAttackModifier(26)
+                                .slashArtsType(SRslashArtRegsitry.GoGogo.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.FROST_FLAME.getId())
+                                .maxDamage(300)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+        bootstrap.register(
+                THE_STAR_OF_THE_FROST
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("the_star_of_the_frost"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/the_star_of_the_frost/the_star_of_the_frost.png"))
+                                .modelName(Srelic.prefix("model/honkai/the_star_of_the_frost/the_star_of_the_frost.obj"))
+                                .effectColor(2003199)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(26)
+                                .slashArtsType(SlashArtsRegistry.CIRCLE_SLASH.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY.getId())
+
+                                .maxDamage(300)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+        bootstrap.register(
+                GENE_HARVESTER
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("gene_harvester"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/gene_harvester/gene_harvester.png"))
+                                .modelName(Srelic.prefix("model/honkai/gene_harvester/gene_harvester.obj"))
+                                .effectColor(1769216)
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(26)
+                                .slashArtsType(SlashArtsRegistry.CIRCLE_SLASH.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.HUNTER.getId())
 
                                 .maxDamage(300)
                                 .build(),

@@ -23,7 +23,6 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.Random;
 
-import static twilightforest.util.TFItemStackUtils.damage;
 
 @Mod.EventBusSubscriber
 public class RianBowShoot extends SpecialEffect {

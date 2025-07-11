@@ -2,6 +2,7 @@ package com.dinzeer.srelic;
 
 import com.dinzeer.srelic.registry.SRItemRegsitry;
 import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
+import mods.flammpfeil.slashblade.init.SBItems;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
@@ -27,6 +28,12 @@ public class ItemNBTHelper {
         return stack;
     }
 
+    public static ItemStack createTestItem2(SpecialEffect effect) {
+        ItemStack stack = new ItemStack(SBItems.proudsoul_crystal);
+        CompoundTag tag = stack.getOrCreateTag();
+        tag.putString("SpecialEffectType", effect.toString());
+        return stack;
+    }
 
 
 

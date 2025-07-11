@@ -46,7 +46,7 @@ public class SRItem {
             Item srelicBlade = new ISrelicblade(
                     CUSTOM_TIER,
                     5,
-                    -2.4f,
+                    6f,
                     new Item.Properties()
                             .stacksTo(1)
                             .durability(1000)

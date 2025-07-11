@@ -42,6 +42,7 @@ public class BlazingValor extends SpecialEffect {
     @SubscribeEvent
     public static void onEnemyDeath(LivingDeathEvent event) {
         if (event.getSource().getEntity() instanceof Player player) {
+            if (!SeEX.hasSpecialEffect(player.getMainHandItem(), "blazing_valor", player.experienceLevel)) return;
             handleBlazingRhapsody(player, event.getEntity());
         }
     }
@@ -69,7 +70,7 @@ public class BlazingValor extends SpecialEffect {
             // 无视防御计算
             event.setAmount((event.getAmount() / totalReduction)*getDamageMultiplier(player));
             if (event.getAmount()>10000){
-                event.setAmount(event.getAmount()*0.1f);
+                event.setAmount(event.getAmount()*0.05f);
             }
         }
     }

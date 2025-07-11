@@ -45,7 +45,7 @@ public class ExStarHandler {
                 center,
                 new ItemStack(SRItemRegsitry.ex_star.get(), 1)
             );
-            event.getEntity().setHealth(event.getEntity().getHealth()-20);
+
             // 触发星辉特效
             event.getLevel().explode(null,
                 center.getX(), center.getY(), center.getZ(),

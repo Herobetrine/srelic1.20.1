@@ -1,6 +1,9 @@
 package com.dinzeer.srelic.specialeffects.superse;
 
 import com.dinzeer.srelic.Utils.GetNumUtil;
+import com.dinzeer.srelic.Utils.SlashBladeUtil;
+import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
+import com.dinzeer.srelic.registry.SRStacksReg;
 import com.dinzeer.srelic.specialeffects.SeEX;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import net.minecraft.core.particles.ParticleTypes;
@@ -46,7 +49,7 @@ public class ChaosBreaker extends SpecialEffect {
     @SubscribeEvent
     public static void onAttack(LivingAttackEvent event) {
         if (!(event.getSource().getEntity() instanceof Player player)) return;
-        if (!SeEX.hasSpecialEffect(player.getMainHandItem(), "chaos_breaker", player.experienceLevel)) return;
+        if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.CHAOS_BREAKER.get())) return;
 
         updateComboSystem(player);
         triggerLightningChain(player, event.getEntity());
@@ -63,19 +66,21 @@ public class ChaosBreaker extends SpecialEffect {
     }
 
     private static void updateComboSystem(Player player) {
-        int combo = player.getPersistentData().getInt("ChaosCombo");
+        // 使用堆栈管理器替代直接NBT操作
+        int combo = SRStacksReg.CHAOS_BREAKER_STACKS.getCurrentStacks(player);
         long lastHit = player.getPersistentData().getLong("ChaosLastHit");
         
-        // 连击衰减
         if (player.level().getGameTime() - lastHit > COMBO_DECAY) {
+            SRStacksReg.CHAOS_BREAKER_STACKS.resetStacks(player);
             combo = 0;
         }
         
+        // 更新连击数
+        SRStacksReg.CHAOS_BREAKER_STACKS.addStacks(player, 1);
         combo = Math.min(combo + 1, MAX_COMBO);
-        player.getPersistentData().putInt("ChaosCombo", combo);
         player.getPersistentData().putLong("ChaosLastHit", player.level().getGameTime());
         
-        // 充能检测
+        // 充能检测（独立逻辑）
         if (combo % CHARGE_NEED == 0) {
             player.getPersistentData().putInt("ChargeCount", 
                 player.getPersistentData().getInt("ChargeCount") + 1);
@@ -83,7 +88,8 @@ public class ChaosBreaker extends SpecialEffect {
     }
 
     private static void triggerLightningChain(Player player, LivingEntity target) {
-        int combo = player.getPersistentData().getInt("ChaosCombo");
+        // 从堆栈管理器获取当前连击数
+        int combo = SRStacksReg.CHAOS_BREAKER_STACKS.getCurrentStacks(player);
         float damageBoost = 1 + combo * DAMAGE_BOOST;
         
         // 扇形范围攻击
@@ -114,7 +120,7 @@ public class ChaosBreaker extends SpecialEffect {
             }
         });
 
-        // 充能爆发
+        // 充能爆发检测
         if (player.getPersistentData().getInt("ChargeCount") >= 3) {
             activateStarBurst(player);
         }

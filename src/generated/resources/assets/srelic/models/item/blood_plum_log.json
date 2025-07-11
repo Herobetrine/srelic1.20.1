@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "srelic:block/blood_plum_log_side",
+    "side": "srelic:block/blood_plum_log"
+  }
+}

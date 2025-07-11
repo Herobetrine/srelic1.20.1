@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:feather"
+    },
+    "B": {
+      "item": "minecraft:blaze_rod"
+    },
+    "C": {
+      "item": "minecraft:pink_wool"
+    },
+    "D": {
+      "item": "minecraft:gold_ingot"
+    },
+    "E": {
+      "item": "minecraft:diamond_block"
+    },
+    "F": {
+      "item": "minecraft:quartz_block"
+    },
+    "G": {
+      "item": "minecraft:fire_charge"
+    },
+    "H": {
+      "item": "minecraft:feather"
+    },
+    "I": {
+      "item": "srelic:scarletflame_ingot"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:emberquill"
+  },
+  "show_notification": true
+}

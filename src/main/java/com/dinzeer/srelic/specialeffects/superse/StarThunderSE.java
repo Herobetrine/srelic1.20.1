@@ -1,7 +1,9 @@
 package com.dinzeer.srelic.specialeffects.superse;
 
+import com.dinzeer.srelic.registry.imp.IStackManager;
 import com.dinzeer.srelic.specialeffects.SeEX;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -13,6 +15,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -22,13 +25,57 @@ public class StarThunderSE extends SpecialEffect {
         super(90);
     }
 
+    // 定义星雷特效的层数管理器
+    private static final IStackManager STAR_STACKS = new IStackManager() {
+        @Override
+        public void addStacks(Player player, int amount) {
+            ItemStack weapon = player.getMainHandItem();
+            if (weapon.isEmpty() || !weapon.hasTag()) return;
+            
+            CompoundTag tag = weapon.getOrCreateTag();
+            String key = "StarThunder_Stacks";
+            int current = tag.getInt(key);
+            int newValue = Math.min(current + amount, 3); // 最大3层
+            tag.putInt(key, newValue);
+        }
+
+        @Override
+        public int getCurrentStacks(Player player) {
+            ItemStack weapon = player.getMainHandItem();
+            if (weapon.isEmpty() || !weapon.hasTag()) return 0;
+            return weapon.getTag().getInt("StarThunder_Stacks");
+        }
+
+        @Override
+        public int getCurrentStacksoffhand(Player player) {
+            return 0; // 不需要副手支持
+        }
+
+        @Override
+        public void resetStacks(Player player) {
+            ItemStack weapon = player.getMainHandItem();
+            if (weapon.isEmpty() || !weapon.hasTag()) return;
+            weapon.getTag().remove("StarThunder_Stacks");
+        }
+
+        @Override
+        public String getEffectKey() {
+            return "star_thunder";
+        }
+
+        @Override
+        public int getMaxStacks() {
+            return 3;
+        }
+    };
+    
     private static final String MARK_KEY = "StarMarks";
     private static final String MARK_TIMER_KEY = "MarkTimer";
     private static final String CHARGE_KEY = "ChargingTime";
     private static final String COMBO_KEY = "ThunderCombo";
 
     @SubscribeEvent
-    public static void onAttack(LivingAttackEvent event) {
+    public static void onAttack(LivingHurtEvent event) {
         if (!(event.getSource().getEntity() instanceof Player player)) return;
         
         ItemStack blade = player.getMainHandItem();
@@ -36,18 +83,12 @@ public class StarThunderSE extends SpecialEffect {
         if (!SeEX.hasSpecialEffect(blade, "star_thunder", player.experienceLevel)) return;
 
         if (player.level().random.nextFloat() < 0.25f) {
-            addStarMark(player);
-        }
-    }
-
-    private static void addStarMark(Player player) {
-        int marks = player.getPersistentData().getInt(MARK_KEY);
-        if (marks < 3) {
-            player.getPersistentData().putInt(MARK_KEY, marks + 1);
+            STAR_STACKS.addStacks(player, 1); // 使用层数管理器添加层数
             player.getPersistentData().putLong(MARK_TIMER_KEY, System.currentTimeMillis());
             spawnMarkParticles(player);
         }
     }
+
 
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
@@ -82,7 +123,7 @@ public class StarThunderSE extends SpecialEffect {
     }
 
     private static void triggerStarStrike(Player player) {
-        int marks = player.getPersistentData().getInt(MARK_KEY);
+        int marks = STAR_STACKS.getCurrentStacks(player); // 使用层数管理器获取当前层数
         if (marks == 0) return;
 
         double attackDamage = player.getAttributeValue(Attributes.ATTACK_DAMAGE);
@@ -116,12 +157,7 @@ public class StarThunderSE extends SpecialEffect {
 
         // 连击系统
         player.getPersistentData().putInt(COMBO_KEY, combo + 1);
-        player.getPersistentData().remove(MARK_KEY);
-        
-        // 音效与粒子
-        player.level().playSound(null, player.getX(), player.getY(), player.getZ(),
-            SoundEvents.LIGHTNING_BOLT_THUNDER, player.getSoundSource(), 1.5F, 0.8F);
-        spawnAuraEffect(player);
+        STAR_STACKS.resetStacks(player); // 使用层数管理器重置层数
     }
 
     // 原版粒子效果实现
@@ -155,13 +191,6 @@ public class StarThunderSE extends SpecialEffect {
         }
     }
 
-    private static void spawnAuraEffect(Player player) {
-        if (player.level() instanceof ServerLevel level) {
-            level.sendParticles(ParticleTypes.END_ROD,
-                player.getX(), player.getY() + 1, player.getZ(),
-                50, 1.5, 2.0, 1.5, 0.1);
-        }
-    }
 
     private static void updateComboSystem(Player player) {
         if (player.tickCount % 200 == 0) {

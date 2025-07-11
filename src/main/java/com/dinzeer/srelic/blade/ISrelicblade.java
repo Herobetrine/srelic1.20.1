@@ -1,5 +1,6 @@
 package com.dinzeer.srelic.blade;
 
+import com.dinzeer.srelic.Utils.SlashBladeUtil;
 import mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.item.SwordType;
@@ -31,47 +32,75 @@ public class ISrelicblade extends ItemSlashBlade {
     public ISrelicblade(Tier tier, int attackDamageIn, float attackSpeedIn, Properties builder) {
         super(tier, attackDamageIn, attackSpeedIn, builder);
     }
-
-
     @Override
     public void appendSwordType(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
         EnumSet<SwordType> swordType = SwordType.from(stack);
+        ISlashBladeState state= SlashBladeUtil.getState(stack);
+        int colorCode = state.getColorCode();
+        int dynamicColor = (colorCode != 0) ? (colorCode & 0xFFFFFF) : 0xFFFFFF; // 默认白色
         if (swordType.contains(SwordType.BEWITCHED)) {
-            tooltip.add(Component.translatable("slashblade.sword_type.bewitched").withStyle(ChatFormatting.LIGHT_PURPLE));
+            tooltip.add(Component.translatable("srelic.sword_type.other_world_on") .withStyle(style -> style.withColor(dynamicColor)));
         } else if (swordType.contains(SwordType.ENCHANTED)) {
-            tooltip.add(Component.translatable("slashblade.sword_type.enchanted").withStyle(ChatFormatting.RED));
+            tooltip.add(Component.translatable("srelic.sword_type.other_world").withStyle(style -> style.withColor(dynamicColor)));
         } else {
-            tooltip.add(Component.translatable("slashblade.sword_type.noname").withStyle(ChatFormatting.DARK_AQUA));
+            tooltip.add(Component.translatable("srelic.sword_type.other_world_off").withStyle(style -> style.withColor(dynamicColor)));
         }
-
     }
-
-
     @Override
-    public void appendSpecialEffects(List<Component> tooltip, @NotNull ISlashBladeState s) {
-        if (!s.getSpecialEffects().isEmpty()) {
+    public void appendSpecialEffects(List<Component> tooltip, @NotNull ISlashBladeState state) {
+        int colorCode = state.getColorCode();
+        int dynamicColor = (colorCode != 0) ? (colorCode & 0xFFFFFF) : 0xFFFFFF;
+        if (!state.getSpecialEffects().isEmpty()) {
             Minecraft mcinstance = Minecraft.getInstance();
             Player player = mcinstance.player;
-            s.getSpecialEffects().forEach((se) -> {
+            state.getSpecialEffects().forEach((se) -> {
                 boolean showingLevel = SpecialEffect.getRequestLevel(se) > 0;
-                tooltip.add(Component.translatable("slashblade.tooltip.special_effect", new Object[]{SpecialEffect.getDescription(se), Component.literal(showingLevel ? String.valueOf(SpecialEffect.getRequestLevel(se)) : "").withStyle(SpecialEffect.isEffective(se, player.experienceLevel) ? ChatFormatting.RED : ChatFormatting.DARK_GRAY)}).withStyle(ChatFormatting.LIGHT_PURPLE));
+                tooltip.add(Component.translatable("slashblade.tooltip.special_effect", new Object[]{SpecialEffect.getDescription(se), Component.literal(showingLevel ? String.valueOf(SpecialEffect.getRequestLevel(se)) : "").withStyle(SpecialEffect.isEffective(se, player.experienceLevel) ? ChatFormatting.RED : ChatFormatting.DARK_GRAY)})
+                        .withStyle(style -> style.withColor(dynamicColor)));
 
-                if ( Screen.hasShiftDown() && !Screen.hasControlDown()){
-                    tooltip.add(Component.translatable("se."+se.toLanguageKey()+".desc"));
+                if ( Screen.hasShiftDown()){
+                    tooltip.add(Component.translatable("se."+se.toLanguageKey()+".desc")
+                            .withStyle(style -> style.withColor(dynamicColor)));
                     for (int i = 0; i < 300; i++){
-                    String subKey = "se."+se.toLanguageKey()+".desc_"+(i+1);
-                    if (I18n.exists(subKey)) {
-                        tooltip.add(Component.translatable(subKey));
-                    }
+                        String subKey = "se."+se.toLanguageKey()+".desc_"+(i+1);
+                        if (I18n.exists(subKey)) {
+                            tooltip.add(Component.translatable(subKey)
+                                    .withStyle(style -> style.withColor(dynamicColor)));
+                        }
                     }
                 }
             });
 
         }
     }
+    @Override
+    public void appendSlashArt(ItemStack stack, List<Component> tooltip, @NotNull ISlashBladeState s) {
+        EnumSet<SwordType> swordType = SwordType.from(stack);
+        if (s.getKillCount()<1000){
+            super.appendSlashArt(stack, tooltip, s);
+            return;
+        }
+        if (swordType.contains(SwordType.BEWITCHED) && !swordType.contains(SwordType.SEALED)) {
+            int colorCode = s.getColorCode(); // 获取负数十进制颜色值
+            int rgb = colorCode & 0xFFFFFF; // 转换为RGB十六进制值（去除符号位）
+            tooltip.add(Component.translatable("slashblade.tooltip.slash_art",
+                            new Object[]{s.getSlashArts().getDescription()})
+                    .withStyle(style -> style.withColor(rgb)));
 
+        }
+    }
+    @NotNull
+    @Override
+    public Component getName(@NotNull ItemStack stack) {
+        // 从物品堆栈获取颜色代码（需要确保bladeState存在）
+        ISlashBladeState state= SlashBladeUtil.getState(stack);
+        int colorCode = state.getColorCode();
+        int rgb = colorCode & 0xFFFFFF;
 
-
+        // 获取原始名称并附加颜色
+        return super.getName(stack).copy()
+                .withStyle(style -> style.withColor(rgb));
+    }
     @OnlyIn(Dist.CLIENT)
     private void appendSpecialLore(List<Component> tooltip) {
        if (!Screen.hasShiftDown()){
@@ -118,12 +147,6 @@ public class ISrelicblade extends ItemSlashBlade {
         if (translationKey.isEmpty()) {
             return;
         }
-
-
-
-
-
-
         // 修复点1：数组越界保护
         if (split.length < 3) {
             Minecraft.getInstance().player.sendSystemMessage(
@@ -131,9 +154,7 @@ public class ISrelicblade extends ItemSlashBlade {
                             .withStyle(ChatFormatting.RED));
             return;
         }
-
         String baseKey = "slashblade.tooltip." +split[1]+"."+ split[2];
-
         // 修复点2：动态检测有效翻译条目
 
             tooltip.add(Component.translatable(baseKey).withStyle(ChatFormatting.LIGHT_PURPLE));
@@ -146,27 +167,6 @@ public class ISrelicblade extends ItemSlashBlade {
             }
         }
     }
-
-//    public static String gettranslationKey(ItemStack stack) {
-//        CompoundTag tag = stack.getOrCreateTag(); // 获取或创建NBT标签
-//
-//        if (tag.contains("bladeState")) { // 检查是否存在ForgeCaps标签
-//            CompoundTag forgeCaps = tag.getCompound("bladeState");
-//
-//            if (forgeCaps.contains("translationKey")) { // 检查SpecialEffects标签
-//                System.out.println(forgeCaps.getString("translationKey"));
-//                return forgeCaps.getString("translationKey");
-//            }
-//
-//        }
-//        return "blade"; // 没有找到指定的特殊效果
-//    }
-
-
-
-
-
-    // 修复点3：正确获取Capability数据
     public static String gettranslationKey(ItemStack stack) {
         return stack.getCapability(BLADESTATE)
                 .map(state -> {

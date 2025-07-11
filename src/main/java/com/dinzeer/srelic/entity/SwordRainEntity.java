@@ -28,9 +28,9 @@ import java.util.List;
 import java.util.Optional;
 
 public class SwordRainEntity extends EntityAbstractSummonedSword {
-    private static final EntityDataAccessor<Boolean> IT_FIRED;
-    private static final EntityDataAccessor<Boolean> Forword;
-    private static final EntityDataAccessor<Boolean> Vis;
+    public static final EntityDataAccessor<Boolean> IT_FIRED;
+    public static final EntityDataAccessor<Boolean> Forword;
+    public static final EntityDataAccessor<Boolean> Vis;
     long fireTime = -1L;
     int ON_GROUND_LIFE_TIME = 20;
     int ticksInGround = 0;

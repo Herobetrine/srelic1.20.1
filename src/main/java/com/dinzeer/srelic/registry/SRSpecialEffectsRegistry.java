@@ -112,20 +112,18 @@ public class SRSpecialEffectsRegistry {
     public static final RegistryObject<SpecialEffect> CELESTIAL_STRIKE;
     public static final RegistryObject<SpecialEffect> INFERNO_THOUSAND_TRIALS; // 炎烬千劫
     public static final RegistryObject<SpecialEffect> ICE_BLADE;
-    // 新增冰华特效
     public static final RegistryObject<SpecialEffect> ICE_BLOOM;
-    // 新增圣能充溢特效
     public static final RegistryObject<SpecialEffect> HOLY_ENERGY_OVERFLOW;
     public static final RegistryObject<SpecialEffect> DREAM_COMPANION;
-    
-    // 新增苦寒地狱特效
-    public static final RegistryObject<SpecialEffect> BITTER_COLD_HELL; 
-    
-    // 新增EX苦寒地狱特效
+    public static final RegistryObject<SpecialEffect> BITTER_COLD_HELL;
     public static final RegistryObject<SpecialEffect> BITTER_COLD_HELL_EX;
-
     public static final RegistryObject<SpecialEffect> AFFLORDITE;
-    
+    public static final RegistryObject<SpecialEffect> FROST_FLAME;
+    // 新增冰魄·寒月霜天特效
+    public static final RegistryObject<SpecialEffect> ICE_SOUL_FROST_SKY;
+    // 新增追猎者特效
+    public static final RegistryObject<SpecialEffect> HUNTER;
+
     public SRSpecialEffectsRegistry() {
 
 
@@ -237,10 +235,15 @@ public class SRSpecialEffectsRegistry {
         DREAM_COMPANION = REGISTRY_KEY2.register("dream_companion", DreamCompanion::new);
         BITTER_COLD_HELL = REGISTRY_KEY2.register("bitter_cold_hell", BitterColdHell::new);
         BITTER_COLD_HELL_EX = REGISTRY_KEY2.register("bitter_cold_hell_ex", BitterColdHellEX::new);
+        // 注册风花霜月·寒炎特效
+        FROST_FLAME = REGISTRY_KEY2.register("frost_flame", FrostFlame::new);
         // 注册冰华特效
         ICE_BLOOM = REGISTRY_KEY2.register("ice_bloom", IceBloom::new);
         AFFLORDITE=REGISTRY_KEY2.register("afflordite", Afflordite::new);
-        
+        // 注册冰魄·寒月霜天特效
+        ICE_SOUL_FROST_SKY = REGISTRY_KEY2.register("ice_soul_frost_sky", IceSoulFrostSky::new);
+        // 注册追猎者特效
+        HUNTER = REGISTRY_KEY2.register("hunter", Hunter::new);
     }
 
 

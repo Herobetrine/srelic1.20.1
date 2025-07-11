@@ -1,0 +1,31 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 10
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:gene_harvester",
+  "properties": {
+    "attack_base": 26.0,
+    "max_damage": 300,
+    "slash_art": "slashblade:circle_slash",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:hunter"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/honkai/gene_harvester/gene_harvester.obj",
+    "summon_sword_color": 1769216,
+    "texture": "srelic:model/honkai/gene_harvester/gene_harvester.png"
+  }
+}

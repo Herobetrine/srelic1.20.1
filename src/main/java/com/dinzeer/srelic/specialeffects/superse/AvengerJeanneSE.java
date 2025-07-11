@@ -52,6 +52,7 @@ public class AvengerJeanneSE extends SpecialEffect {
     }
 
     private static void handleVengeanceStack(Player player) {
+
         int stacks = player.getPersistentData().getInt("VengeanceStacks");
         stacks = Math.min(stacks + 1, MAX_VENGEANCE);
         player.getPersistentData().putInt("VengeanceStacks", stacks);

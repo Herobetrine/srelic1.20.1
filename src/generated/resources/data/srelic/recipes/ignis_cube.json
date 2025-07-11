@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "srelic:flame_netherite_alloy"
+    },
+    "B": {
+      "item": "srelic:max_ingot"
+    },
+    "C": {
+      "item": "srelic:ex_star"
+    },
+    "D": {
+      "item": "minecraft:soul_campfire"
+    },
+    "E": {
+      "item": "minecraft:fire_charge"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "BCB",
+    "DEE"
+  ],
+  "result": {
+    "item": "srelic:ignis_cube"
+  },
+  "show_notification": true
+}

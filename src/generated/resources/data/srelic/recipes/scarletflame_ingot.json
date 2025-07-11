@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "B": {
+      "item": "minecraft:blaze_rod"
+    },
+    "C": {
+      "item": "minecraft:pink_stained_glass_pane"
+    },
+    "D": {
+      "item": "srelic:pledge_flame_vermilion_strand"
+    },
+    "E": {
+      "item": "minecraft:gold_ingot"
+    },
+    "F": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "CDC",
+    "EFE"
+  ],
+  "result": {
+    "item": "srelic:scarletflame_ingot"
+  },
+  "show_notification": true
+}

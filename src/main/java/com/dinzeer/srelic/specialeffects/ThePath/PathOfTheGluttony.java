@@ -25,7 +25,7 @@ public class PathOfTheGluttony extends SeEX {
         if (event.getSource().getEntity() instanceof Player player) {
             if (hasSpecialEffect(player.getMainHandItem(), "path_of_the_gluttony", player.experienceLevel)) {
                 // 吸血效果
-                float healAmount = event.getAmount() * 0.3f;
+                float healAmount = event.getAmount() * 0.1f;
                 player.heal(healAmount);
 
                 // 层数积累

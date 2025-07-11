@@ -1,5 +1,7 @@
 package com.dinzeer.srelic.specialattacks;
 
+import com.dinzeer.srelic.Utils.SlashBladeUtil;
+import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.registry.SRStacksReg;
 import com.dinzeer.srelic.registry.imp.IStackManager;
 import net.minecraft.core.particles.ParticleTypes;
@@ -26,7 +28,6 @@ public class BloodSpirit {
     public static void doslash(LivingEntity entity) {
         if (!(entity instanceof Player player)) return;
         if (player.level().isClientSide) return;
-
         float healthRatio = player.getHealth() / player.getMaxHealth();
         CompoundTag tag = player.getPersistentData();
 
@@ -60,6 +61,7 @@ public class BloodSpirit {
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if (event.phase != TickEvent.Phase.END) return;
+        if (!SlashBladeUtil.hasSpecialEffect(event.player, SRSpecialEffectsRegistry.BLOOD_PLUM_MEMORY.get()))return;
         Player player = event.player;
         CompoundTag tag = player.getPersistentData();
 
@@ -83,6 +85,7 @@ public class BloodSpirit {
     @SubscribeEvent
     public static void onAttack(LivingHurtEvent event) {
         if (event.getSource().getEntity() instanceof Player player) {
+            if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.BLOOD_PLUM_MEMORY.get()))return;
             CompoundTag tag = player.getPersistentData();
             if (tag.getBoolean("BloodSpiritActive")) {
                 tag.putFloat("BloodSpiritDamageAccum",
@@ -95,6 +98,7 @@ public class BloodSpirit {
     @SubscribeEvent
     public static void onHeal(LivingHealEvent event) {
         if (event.getEntity() instanceof Player player) {
+            if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.BLOOD_PLUM_MEMORY.get()))return;
             if (player.getPersistentData().getBoolean("BloodSpiritActive")) {
                 event.setCanceled(true);
                 System.out.println("BloodSpirit: 禁止恢复");
@@ -106,6 +110,7 @@ public class BloodSpirit {
     @SubscribeEvent
     public static void onFatalDamage(LivingDamageEvent event) {
         if (event.getEntity() instanceof Player player) {
+            if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.BLOOD_PLUM_MEMORY.get()))return;
             CompoundTag tag = player.getPersistentData();
             if (tag.getBoolean("BloodSpiritActive") && !tag.getBoolean("BloodSpiritImmune")) {
                 if (event.getAmount() >= player.getHealth()) {
@@ -119,6 +124,7 @@ public class BloodSpirit {
     }
 
     private static void deactivateBloodSpirit(Player player) {
+        if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.BLOOD_PLUM_MEMORY.get()))return;
         CompoundTag tag = player.getPersistentData();
         float healAmount = tag.getFloat("BloodSpiritDamageAccum") * 0.05f;
 
@@ -139,6 +145,7 @@ public class BloodSpirit {
 
     // 粒子效果实现（示例）
     private static void spawnBloodParticles(Player player, int count) {
+        if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.BLOOD_PLUM_MEMORY.get()))return;
         if (player.level() instanceof ServerLevel server) {
             server.sendParticles(ParticleTypes.DAMAGE_INDICATOR,
                     player.getX(), player.getY()+1, player.getZ(),

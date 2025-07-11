@@ -3,37 +3,45 @@ package com.dinzeer.srelic.event.handler;
 import com.dinzeer.srelic.registry.SRItemRegsitry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.WeakHashMap; // 新增导入
 
 @Mod.EventBusSubscriber
 public class ItemRightClickHandler {
-
-
+    // 新增：冷却时间跟踪（使用WeakHashMap防止内存泄漏）
+    private static final WeakHashMap<Player, Long> COOLDOWN_MAP = new WeakHashMap<>();
+    private static final long COOLDOWN_TICKS = 1; // 1游戏刻冷却
 
     @SubscribeEvent
     public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
         Player player = event.getEntity();
+        // 防御性检查：玩家和物品堆栈非空
+        if (player == null) return;
+        
         ItemStack stack = player.getMainHandItem();
+        // 防御性检查：物品堆栈有效
+        if (stack == null || stack.isEmpty()) return;
+        
+        // 新增：冷却时间检查
+        Long lastTriggerTime = COOLDOWN_MAP.get(player);
+        long currentTime = player.level().getGameTime();
+        if (lastTriggerTime != null && currentTime - lastTriggerTime < COOLDOWN_TICKS) {
+            return; // 冷却中，跳过处理
+        }
+
         BlockState state = event.getLevel().getBlockState(event.getPos());
-        if (player.level().isClientSide)return;
+
         // 检查物品和方块
         if (stack.getItem() == Items.NETHERITE_INGOT
             && state.getBlock() == Blocks.MAGMA_BLOCK
@@ -55,11 +63,10 @@ public class ItemRightClickHandler {
 
             processConversion(player, stack, SRItemRegsitry.sakura_steel_ingot.get());
 
-            // 樱花特效
-            if (player.level().isClientSide) {
+
                 spawnCherryBlossomParticles(player.level(), event.getPos());
                 player.playSound(SoundEvents.BAMBOO_BREAK, 1.0F, 0.8F);
-            }
+
         }
 
         // 极寒合金仪式
@@ -81,22 +88,16 @@ public class ItemRightClickHandler {
                ) {
             processConversion(player, stack, SRItemRegsitry.oceanic_netherite_alloy.get());
 
-            // 添加海洋特效
-            if (player.level().isClientSide) {
+
                 player.level().addParticle(ParticleTypes.BUBBLE_COLUMN_UP,
                         player.getX(), player.getY(), player.getZ(), 0, 0.5, 0);
-            }
+
         }
 
-
-
-
-
-
-
-
-
-
+        // 处理完事件后更新冷却时间（非客户端侧）
+        if (!player.level().isClientSide) {
+            COOLDOWN_MAP.put(player, currentTime);
+        }
     }
 
 
