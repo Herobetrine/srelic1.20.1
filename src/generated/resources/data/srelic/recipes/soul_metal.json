@@ -10,11 +10,14 @@
     },
     "C": {
       "item": "minecraft:gold_ingot"
+    },
+    "D": {
+      "item": "minecraft:diamond"
     }
   },
   "pattern": [
     "ABC",
-    "CCC",
+    "DCD",
     "ABC"
   ],
   "result": {

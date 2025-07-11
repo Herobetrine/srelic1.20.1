@@ -1,11 +1,18 @@
 package com.dinzeer.srelic.specialeffects.superse;
 
+import com.dinzeer.srelic.Utils.SlashBladeUtil;
+import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.registry.SRStacksReg;
 import com.dinzeer.srelic.registry.imp.IStackManager;
 import com.dinzeer.srelic.specialeffects.SeEX;
+import mods.flammpfeil.slashblade.event.SlashBladeEvent;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
+import mods.flammpfeil.slashblade.slasharts.Drive;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -20,16 +27,20 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Mod.EventBusSubscriber
 public class WhiteRoseSE extends SpecialEffect {
     private static final IStackManager ROSE_STACK = SRStacksReg.WHITE_ROSE_STACKS;
     private static final Map<UUID, Long> COOLDOWNS = new HashMap<>();
     private static final Map<UUID, RoseField> ACTIVE_FIELDS = new HashMap<>();
+    // 新增倒计时计时器 (45秒 = 900tick)
+    private static final Map<UUID, Integer> COUNTDOWN_TIMERS = new ConcurrentHashMap<>();
     
     // 参数配置
     private static final int FIELD_RADIUS = 10;
     private static final int FIELD_DURATION = 400; // 20秒*20tick
+    private static final int COUNTDOWN_INTERVAL = 900; // 45秒 * 20tick
 
     public WhiteRoseSE() {
         super(90);
@@ -39,20 +50,20 @@ public class WhiteRoseSE extends SpecialEffect {
     @SubscribeEvent
     public static void onSAAttack(LivingHurtEvent event) {
         if (!(event.getSource().getEntity() instanceof Player player)) return;
-
+        if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.WHITE_ROSE.get())) return;
         
         ROSE_STACK.addStacks(player, 1);
     }
     private static boolean hasEffect(Player player) {
         ItemStack main = player.getMainHandItem();
         ItemStack off = player.getOffhandItem();
-        return SeEX.hasSpecialEffect(main, "white_rose", player.experienceLevel) ||
-                SeEX.hasSpecialEffect(off, "white_rose", player.experienceLevel);
+        return  SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.WHITE_ROSE.get());
     }
 
     @SubscribeEvent
     public static void onAllyAttack(LivingHurtEvent event) {
         if (!(event.getSource().getEntity() instanceof LivingEntity ally)) return;
+        if (event.getSource().is(DamageTypes.MAGIC))return;
         LivingEntity target=event.getEntity();
         if (!target.isOnFire()) return;
 
@@ -78,18 +89,32 @@ public class WhiteRoseSE extends SpecialEffect {
         handleFieldCreation(player, stacks);
     }
 
+
+    @SubscribeEvent
+        public static void ondoslash(SlashBladeEvent.DoSlashEvent event) {
+        if (!(event.getUser()instanceof Player player)) return;
+        if (!hasEffect(player)) return;
+        int stacks = ROSE_STACK.getCurrentStacks(player);
+        if (stacks >= 1) {
+            Drive.doSlash(player, event.getRoll(), FIELD_DURATION, 16646399, Vec3.ZERO, true, 0.9f, null, 5.0f);
+        }
+    }
+
+
+
+
+
+
     // ====== 核心逻辑 ======
     private static void applyTierEffects(Player player, LivingHurtEvent event, int stacks) {
-        // 1-5层：幻影刃
-        if (stacks >= 1 && stacks <= 5) {
-            event.setAmount(event.getAmount() * 1.9f); // 90%额外伤害
-            spawnPinkBladeParticles(player);
-        }
 
+        if (stacks >= 1) {
+            event.setAmount(event.getAmount() * 1.3f);
+        }
         // 6-10层：伤害减免
         if (stacks >= 6) {
             player.addEffect(new MobEffectInstance(
-                MobEffects.DAMAGE_RESISTANCE, 40, 0, false, true));
+                MobEffects.DAMAGE_RESISTANCE, 40, 1, false, true));
         }
 
         // 11-15层：增伤
@@ -147,6 +172,33 @@ public class WhiteRoseSE extends SpecialEffect {
             MobEffects.FIRE_RESISTANCE, 50, 0, false, true));
         player.addEffect(new MobEffectInstance(
             MobEffects.DAMAGE_BOOST, 50, (int)(allyCount * 0.1f), false, true));
+    }
+
+    // ====== 新增倒计时逻辑 ======
+    @SubscribeEvent
+    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+        if (event.phase != TickEvent.Phase.END) return;
+        Player player = event.player;
+        
+        // 防御性检查
+        if (player == null || !hasEffect(player)) {
+            COUNTDOWN_TIMERS.remove(player.getUUID());
+            return;
+        }
+        
+        // 获取当前倒计时值
+        int remaining = COUNTDOWN_TIMERS.getOrDefault(player.getUUID(), COUNTDOWN_INTERVAL);
+        remaining--;
+        
+        if (remaining <= 0) {
+            // 减少一层
+            ROSE_STACK.addStacks(player, -1);
+            // 重置倒计时
+            remaining = COUNTDOWN_INTERVAL;
+        }
+        
+        // 更新倒计时
+        COUNTDOWN_TIMERS.put(player.getUUID(), remaining);
     }
 
     // 辅助方法

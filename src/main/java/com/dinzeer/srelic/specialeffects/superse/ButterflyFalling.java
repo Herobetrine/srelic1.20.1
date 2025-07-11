@@ -44,7 +44,7 @@ public class ButterflyFalling extends SpecialEffect {
         System.out.println("Butterfly Falling: " + stacks);
         handleStackAccumulation(player);
         checkFullStacks(player, event.getEntity());
-        event.setAmount((event.getAmount() * (1+(stacks*0.25F))));
+        event.setAmount((event.getAmount() * (1+(stacks*0.4F))));
 
     }
     @SubscribeEvent

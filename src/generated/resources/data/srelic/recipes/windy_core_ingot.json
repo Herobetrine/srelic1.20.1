@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "srelic:windy_core"
+    },
+    "B": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    " A ",
+    " B ",
+    "   "
+  ],
+  "result": {
+    "item": "srelic:windy_core_ingot"
+  },
+  "show_notification": true
+}

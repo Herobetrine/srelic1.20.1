@@ -1,5 +1,7 @@
 package com.dinzeer.srelic.specialeffects.superse;
 
+import com.dinzeer.srelic.Utils.SlashBladeUtil;
+import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.specialeffects.SeEX;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import net.minecraft.core.particles.ParticleTypes;
@@ -7,6 +9,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
@@ -21,6 +24,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.*;
+import java.util.WeakHashMap;
 
 @Mod.EventBusSubscriber
 public class KafkaStrings extends SpecialEffect {
@@ -38,6 +42,8 @@ public class KafkaStrings extends SpecialEffect {
     private static final int CONTROL_COOLDOWN = 400;   // 控制冷却时间
 
     private static final Map<UUID, Integer> toxinStacks = new HashMap<>();
+    // 添加递归抑制标记
+    private static final WeakHashMap<LivingEntity, Boolean> processingEntities = new WeakHashMap<>();
 
     public KafkaStrings() {
         super(90, false, false);
@@ -46,10 +52,20 @@ public class KafkaStrings extends SpecialEffect {
     @SubscribeEvent
     public static void onAttack(LivingHurtEvent event) {
         if (!(event.getSource().getEntity() instanceof Player player)) return;
-        if (!SeEX.hasSpecialEffect(player.getMainHandItem(), "kafka_strings", player.experienceLevel)) return;
-
-        applyNeurotoxin(event.getEntity());
-        triggerLightningWeb(player, event.getEntity());
+        
+        // 替换老旧方法
+        if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.KAFKA_STRINGS.get())) return;
+        
+        // 检查是否正在处理中
+        if (processingEntities.containsKey(event.getEntity())) return;
+        
+        processingEntities.put(event.getEntity(), true);
+        try {
+            applyNeurotoxin(event.getEntity());
+            triggerLightningWeb(player, event.getEntity());
+        } finally {
+            processingEntities.remove(event.getEntity());
+        }
     }
 
     @SubscribeEvent
@@ -94,8 +110,8 @@ public class KafkaStrings extends SpecialEffect {
             // 应用玩家伤害加成（基础伤害 + 攻击强度系数）
             float finalDamage = damage * (1.0f + player.getAttackStrengthScale(1F));
 
-            // 创建带有玩家属性的伤害源（同时保留闪电伤害类型）
-            target.hurt(player.damageSources().lightningBolt(), finalDamage);
+            // 使用特定伤害类型
+            target.hurt(SlashBladeUtil.DamageSourceToCreat(player, DamageTypes.LIGHTNING_BOLT), finalDamage);
 
             // 添加闪电特效（保持原有视觉效果）
             serverLevel.sendParticles(ParticleTypes.ELECTRIC_SPARK,
@@ -123,7 +139,8 @@ public class KafkaStrings extends SpecialEffect {
             if (player.level() instanceof ServerLevel serverLevel) {
                 LivingEntity entity = (LivingEntity) serverLevel.getEntity(entry.getKey());
                 if (entity != null && entity.isAlive()) {
-                    entity.hurt(player.damageSources().magic(), entry.getValue() * 0.5f);
+                    // 使用特定伤害类型
+                    entity.hurt(SlashBladeUtil.DamageSourceToCreat(player, DamageTypes.LIGHTNING_BOLT), entry.getValue() * 0.5f);
                     return false;
                 }
             }

@@ -12,18 +12,20 @@
   "item": "srelic:srelic_slashblade",
   "name": "srelic:no_end",
   "properties": {
-    "attack_base": 40.0,
+    "attack_base": 26.0,
     "max_damage": 300,
+    "slash_art": "srelic:go_gogo",
     "special_effects": [
-      "srelic:white_maker"
+      "srelic:white_maker",
+      "srelic:frost_flame"
     ],
     "sword_type": [
       "bewitched"
     ]
   },
   "render": {
-    "model": "srelic:model/honkai/no_end/no_end.obj",
+    "model": "srelic:model/zzz/no_end/no_end.obj",
     "summon_sword_color": 2003199,
-    "texture": "srelic:model/honkai/no_end/no_end.png"
+    "texture": "srelic:model/zzz/no_end/no_end.png"
   }
 }

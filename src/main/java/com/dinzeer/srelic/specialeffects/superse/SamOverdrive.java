@@ -1,6 +1,8 @@
 package com.dinzeer.srelic.specialeffects.superse;
 
+import com.dinzeer.srelic.Utils.SlashBladeUtil;
 import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
+import com.dinzeer.srelic.registry.SRStacksReg;
 import com.dinzeer.srelic.specialeffects.SeEX;
 import mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState;
 import mods.flammpfeil.slashblade.event.SlashBladeEvent;
@@ -17,7 +19,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -26,7 +27,6 @@ import java.util.Random;
 @Mod.EventBusSubscriber
 public class SamOverdrive extends SpecialEffect {
     // 核心参数
-    private static final int OVERHEAT_MAX = 300;       // 最大过热值
     private static final int OVERLOAD_THRESHOLD = 250; // 过载阈值
     private static final int DASH_COOLDOWN = 20;       // 突袭冷却
 
@@ -44,10 +44,6 @@ public class SamOverdrive extends SpecialEffect {
         super(90, false, false);
     }
 
-
-
-
-
     @SubscribeEvent
     public  static  void blaze(SlashBladeEvent.DoSlashEvent event){
         ISlashBladeState state = event.getSlashBladeState();
@@ -56,38 +52,22 @@ public class SamOverdrive extends SpecialEffect {
                 return;
             }
 
-
             int level = player.experienceLevel;
-
             if(SpecialEffect.isEffective(SRSpecialEffectsRegistry.SAM_OVERDRIVE.get(),level)){
-
-            if (SeEX.hasSpecialEffect(player.getOffhandItem(), "sam_overdrive", player.experienceLevel)){
-
-                SakuraEnd.doSlash(player, 180-event.getRoll(), Vec3.ZERO,
-                        false, false, 0.1F, KnockBacks.cancel);
-
+                // 使用SlashBladeUtil检测副手SE
+                if (SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.SAM_OVERDRIVE.get())) {
+                    SakuraEnd.doSlash(player, 180-event.getRoll(), Vec3.ZERO,
+                            false, false, 0.1F, KnockBacks.cancel);
+                }
             }
-
-            }
-
-
-
-
         }
     }
-
-
-
-
-
-
-
-
 
     @SubscribeEvent
     public static void onAttack(LivingAttackEvent event) {
         if (!(event.getSource().getEntity() instanceof Player player)) return;
-        if (!SeEX.hasSpecialEffect(player.getMainHandItem(), "sam_overdrive", player.experienceLevel)) return;
+        // 使用SlashBladeUtil检测主手SE
+        if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.SAM_OVERDRIVE.get())) return;
 
         handleHeatSystem(player);
         executeFlameDash(player, event.getEntity());
@@ -96,20 +76,21 @@ public class SamOverdrive extends SpecialEffect {
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         Player player = event.player;
-        if (event.phase == TickEvent.Phase.END &&
+        if (event.phase == TickEvent.Phase.END && 
                 player.getPersistentData().getBoolean("OverloadMode")) {
-
+            if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.SAM_OVERDRIVE.get())) return;
             updateOverloadEffects(player);
             maintainBurnField(player);
         }
     }
 
     private static void handleHeatSystem(Player player) {
-        int heat = player.getPersistentData().getInt("SamHeat");
-        heat = Math.min(heat + 35, OVERHEAT_MAX);
-        player.getPersistentData().putInt("SamHeat", heat);
+        if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.SAM_OVERDRIVE.get())) return;
+        int currentHeat = SRStacksReg.SAM_OVERDRIVE_STACKS.getCurrentStacks(player);
+        int newHeat = Math.min(currentHeat + 35, SRStacksReg.SAM_OVERDRIVE_STACKS.getMaxStacks());
+        SRStacksReg.SAM_OVERDRIVE_STACKS.addStacks(player, 35);
 
-        if (heat >= OVERLOAD_THRESHOLD && !player.getPersistentData().getBoolean("OverloadMode")) {
+        if (newHeat >= OVERLOAD_THRESHOLD && !player.getPersistentData().getBoolean("OverloadMode")) {
             activateOverload(player);
         }
     }
@@ -134,10 +115,6 @@ public class SamOverdrive extends SpecialEffect {
         if (player.level().getGameTime() - lastDash < DASH_COOLDOWN) return;
         long cooldownRemaining = DASH_COOLDOWN - (player.level().getGameTime() - lastDash);
 
-
-
-
-
         if (cooldownRemaining > 0) {
             if (!player.level().isClientSide) {
                 player.displayClientMessage(Component.literal(
@@ -145,12 +122,6 @@ public class SamOverdrive extends SpecialEffect {
             }
             return;
         }
-
-
-
-
-
-
 
         // 计算突进方向
         Vec3 dashVector = target.position()
@@ -173,18 +144,14 @@ public class SamOverdrive extends SpecialEffect {
         player.getPersistentData().putLong("LastDashTime", player.level().getGameTime());
         SeEX.spawnParticleRing(player, ParticleTypes.FLAME, IMPACT_RADIUS, 48);
 
-
-
-
         // 添加突袭提示
         if (!player.level().isClientSide) {
             player.sendSystemMessage(Component.literal("§6[炽焰突袭] §c突进！"));
         }
-
     }
 
     private static void updateOverloadEffects(Player player) {
-        long overloadTime = player.level().getGameTime() -
+        long overloadTime = player.level().getGameTime() - 
                 player.getPersistentData().getLong("OverloadStart");
 
         // 动态粒子效果
@@ -195,8 +162,9 @@ public class SamOverdrive extends SpecialEffect {
 
         // 过热衰减
         if (overloadTime % 20 == 0) {
-            int heat = player.getPersistentData().getInt("SamHeat");
-            player.getPersistentData().putInt("SamHeat", Math.max(heat - 15, 0));
+            int currentHeat = SRStacksReg.SAM_OVERDRIVE_STACKS.getCurrentStacks(player);
+            int newHeat = Math.max(currentHeat - 15, 0);
+            SRStacksReg.SAM_OVERDRIVE_STACKS.addStacks(player, -15);
         }
 
         if (overloadTime % 100 == 0) { // 每5秒提示
@@ -207,26 +175,19 @@ public class SamOverdrive extends SpecialEffect {
             }
         }
 
-        // 添加结束提示
+        // 结束检测
         if (overloadTime > FIELD_DURATION) {
+            player.getPersistentData().putBoolean("OverloadMode", false);
+            SRStacksReg.SAM_OVERDRIVE_STACKS.resetStacks(player);
+            SeEX.spawnParticleRing(player, ParticleTypes.EXPLOSION, 4.0f, 64);
             if (!player.level().isClientSide) {
                 player.sendSystemMessage(Component.literal("§8[系统] 过载核心冷却中..."));
             }
         }
-
-
-
-
-
-        // 结束检测
-        if (overloadTime > FIELD_DURATION) {
-            player.getPersistentData().putBoolean("OverloadMode", false);
-            player.getPersistentData().putInt("SamHeat", 0);
-            SeEX.spawnParticleRing(player, ParticleTypes.EXPLOSION, 4.0f, 64);
-        }
     }
 
     private static void maintainBurnField(Player player) {
+        if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.SAM_OVERDRIVE.get())) return;
         if (player.level().getGameTime() % 20 != 0) return;
         if (!player.level().isClientSide) {
             player.displayClientMessage(Component.literal("§4焚烬领域正在灼烧敌人！"), true);

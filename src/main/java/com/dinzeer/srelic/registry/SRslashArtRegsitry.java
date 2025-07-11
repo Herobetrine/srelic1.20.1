@@ -42,6 +42,7 @@ public class SRslashArtRegsitry {
     public static final RegistryObject<SlashArts> CELESTIAL_STRIKE;
     public static final RegistryObject<SlashArts> ICE_EDGE;
     public static final RegistryObject<SlashArts> AFFLORDITE;
+    public static final RegistryObject<SlashArts> GoGogo;
 static {
     XDRIVE= SLASH_ARTS.register("xdrive", () -> new SlashArts((e) ->
             SRComboRegsitry.EXdrive.getId()));
@@ -77,5 +78,6 @@ static {
     CELESTIAL_STRIKE=SLASH_ARTS.register("celestial_strike",()->new SlashArts((e)->SRComboRegsitry.CELESTIAL_STRIKE.getId()));
     ICE_EDGE=SLASH_ARTS.register("ice_edge",()->new SlashArts((e)->SRComboRegsitry.ICE_EDGE.getId()));
     AFFLORDITE=SLASH_ARTS.register("afflordite",()->new SlashArts((e)->SRComboRegsitry.AFFLORDITE.getId()));
+    GoGogo=SLASH_ARTS.register("go_gogo",()->new SlashArts((e)->SRComboRegsitry.GoGogo.getId()));
 }
 }

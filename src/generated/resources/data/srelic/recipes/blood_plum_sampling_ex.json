@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "srelic:blood_plum_sampling"
+    }
+  },
+  "pattern": [
+    " A ",
+    " A ",
+    " A "
+  ],
+  "result": {
+    "item": "srelic:blood_plum_sampling_ex"
+  },
+  "show_notification": true
+}

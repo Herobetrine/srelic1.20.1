@@ -1,14 +1,16 @@
 package com.dinzeer.srelic.specialattacks;
 
+import com.dinzeer.srelic.registry.SRStacksReg;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.protocol.game.ClientboundLevelParticlesPacket;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import twilightforest.network.ParticlePacket;
+
 
 public class WhiteNight {
     public static void dois(LivingEntity playerIn) {
@@ -23,7 +25,9 @@ public class WhiteNight {
         playerIn.setDeltaMovement(motion);
         playerIn.hurtMarked = true; // 强制同步运动数据到客户端
         playerIn.setOnGround(false); // 解除地面限制
-
+        if (playerIn instanceof Player player){
+        SRStacksReg.WHITE_ROSE_STACKS.addStacks(player, 1);
+        }
         // 运动学增强配置
         playerIn.fallDistance = 0; // 防止坠落伤害
         playerIn.hasImpulse = true; // 确保物理引擎处理该运动

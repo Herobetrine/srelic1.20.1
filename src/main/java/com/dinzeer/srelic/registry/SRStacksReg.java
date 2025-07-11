@@ -36,12 +36,30 @@ public class SRStacksReg {
     // 新增冥芒层数管理器
     public static final IStackManager MING_MANG_STACKS = register("ming_mang", 10);
 
+    // 新增冰魄·寒月霜天的冰蚀层数管理器 (最大15层)
+    public static final IStackManager ICE_SOUL_FROST_SKY_STACKS = register("ice_soul_frost_sky", 15);
+
     // 新增苦寒地狱堆栈管理器
     public static final IStackManager BITTER_COLD_HELL_STACKS = register("bitter_cold_hell", 10);
 
     // 新增EX苦寒地狱堆栈管理器
     public static final IStackManager BITTER_COLD_HELL_EX_STACKS = register("bitter_cold_hell_ex", 10);
 
+    // 新增风花霜月·寒炎的「落霜」层数管理器 (最大6层)
+    public static final IStackManager FROST_FLAME_STACKS = register("frost_flame", 6);
+
+    // 新增追猎者的毒素印记管理器 (最大10层)
+    public static final IStackManager HUNTER_TOXIN_STACKS = register("hunter_toxin", 10);
+
+
+
+
+
+
+
+
+    public static final IStackManager SAM_OVERDRIVE_STACKS = register("SamHeat", 300);
+    public static final IStackManager CHAOS_BREAKER_STACKS = register("chaos_breaker", 3);
     public static IStackManager register(String name,int max){
       return RegisteredStackManager.Registry.register(name, max);
     }

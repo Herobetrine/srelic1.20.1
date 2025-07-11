@@ -81,6 +81,8 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.AFFLORDITE), "「阿芙洛狄忒」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.DOUBLE_FISH), "裁星刃「双鱼座」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.NO_END), "妖刀「无尾」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.THE_STAR_OF_THE_FROST), "「天霜之斯卡蒂」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.GENE_HARVESTER), "「基因收割者」");
 
         REGISTRATE.addRawLang("patchouli.srelic.book.name", "记录了异界信息的书");
         REGISTRATE.addRawLang("patchouli.srelic.book.landing_text", "一本来自异界的书，上面记载了许多锻造异界之刃的方式，以白模为基础奏响共鸣之路");
@@ -111,6 +113,14 @@ public class LangRegistry {
         REGISTRATE.addRawLang("painting.srelic.huoqu.title", "获取方式");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.spirit_butterfly.pages.0.text","万花丛中，蝴蝶乱舞，于凋零之中绽放，于往生中留香，灵芳环绕三生，蝴蝶留有血梅香。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.diamond_star.pages.0.text","珍贵且坚硬的材料，三首恶魔的核心与坚硬的材料融合，产生意想不到的材料，钻石之星闪耀着星辰的光芒。");
+
+
+
+        REGISTRATE.addRawLang("se.slashblade.wither_edge.desc", "攻击成功施加凋零效果");
+        REGISTRATE.addRawLang("slashblade.tooltip.srelic.santa_caterina", "「复仇的圣女持剑归来」");
+        REGISTRATE.addRawLang("slashblade.tooltip.srelic.santa_caterina_1", "「带着仇人的名单」");
+
+
 
         // 拔刀技
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.XDRIVE), "X幻影刃");
@@ -145,6 +155,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.CELESTIAL_STRIKE), "决胜轰解");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.ICE_EDGE), "雪葬");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.AFFLORDITE), "血刺玫");
+        REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.GoGogo), "迅速居合");
 
 
         // 特殊效果
@@ -162,7 +173,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_PRESERVATION), "§6命途·存护");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_PRESERVATION)+".desc", "§6获得伤害吸收");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY), "§6命途·贪饕");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY)+".desc", "§6攻击时吸血30%伤害值\n每次攻击叠加伤害层数最高十层");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY)+".desc", "§6攻击时吸血10%伤害值\n每次攻击叠加伤害层数最高十层");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING), "§6命途·不朽");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING)+".desc", "§6濒死时触发免死并恢复50%生命\n获得十秒无敌，冷却十分钟");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_ABUNDANCE), "§6命途·丰饶");
@@ -533,7 +544,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc", "§5【魂火献祭】");
         REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_1", "§d每次攻击消耗50%当前生命获取冥芒(上限10层)");
         REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_2", "§5【冥府恩赐】");
-        REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_3", "§d每层提供25%伤害加成");
+        REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_3", "§d每层提供40%伤害加成");
         REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_4", "§5【黄泉回溯】");
         REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_5", "§d生命低于30%时消耗冥芒治疗(每层4%最大生命)");
         REGISTRATE.addRawLang("se.srelic.butterfly_falling.desc_6", "§5【九幽爆发】");
@@ -657,7 +668,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.white_rose", "§d白夜蔷薇");
         REGISTRATE.addRawLang("se.srelic.white_rose.desc", "§5【蔷薇绽放】");
         REGISTRATE.addRawLang("se.srelic.white_rose.desc_1", "§dSA命中+1层 §7| §5友方攻燃+2层(2秒CD)");
-        REGISTRATE.addRawLang("se.srelic.white_rose.desc_2", "§5Ⅰ-Ⅴ层: §c粉色幻影刃§7(90%伤害)");
+        REGISTRATE.addRawLang("se.srelic.white_rose.desc_2", "§5Ⅰ-Ⅴ层: §c粉色幻影刃§7(90%伤害)并额外增伤30%");
         REGISTRATE.addRawLang("se.srelic.white_rose.desc_3", "§5Ⅵ-Ⅹ层: §b「心火」§735%减伤");
         REGISTRATE.addRawLang("se.srelic.white_rose.desc_4", "§5Ⅺ-ⅩⅤ层: §c每层+10%伤害");
         REGISTRATE.addRawLang("se.srelic.white_rose.desc_5", "§d【永炎领域】");
@@ -666,6 +677,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.white_rose.desc_8", "§c- 火焰伤害+10% §7| §b- 对亡灵+5%");
         REGISTRATE.addRawLang("se.srelic.white_rose.desc_9", "§d【灼烧连锁】");
         REGISTRATE.addRawLang("se.srelic.white_rose.desc_10", "§5友方攻击燃敌追加80%火焰伤害");
+        REGISTRATE.addRawLang("se.srelic.white_rose.desc_11", "§5层数每45秒下降1层");
 
         // 岚身
         REGISTRATE.addRawLang("se.srelic.storm_body", "§b帝弓天将·巡猎天击");
@@ -792,8 +804,42 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.AFFLORDITE,3), "范围伤害倍率为1.5");
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.AFFLORDITE,4), "如果敌人为boss时，倍率为3");
 
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.FROST_FLAME), "风花霜月·寒炎");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.FROST_FLAME), "【风花霜月·寒炎】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME,1), "伤害提高60%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME,2), "伤害变为火焰伤害和寒冷伤害混伤");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME,3), "攻击概率给目标叠加「霜灼」效果（着火+缓慢3）");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME,4), "攻击带有「霜灼」的目标时，伤害提高30%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME,5), "每五段斩击获得一层「落霜」，上限6层，持续6秒");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME,6), "每层「落霜」提供15%增伤，并无视30%火焰/霜冻抗性");
+
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY), "冰魄·寒月霜天");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY), "【冰魄·寒月霜天】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY,1), "造成伤害提高45%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY,2), "面对boss时额外提高15%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY,3), "击中敌人时+1层冰蚀层数（最高15层）");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY,4), "满15层会自动触发一次SA");
+
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.HUNTER), "【追猎者】");
+        REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.HUNTER), "【追猎者】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER,1), "移动速度提升25%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER,2), "根据移速加成提升你造成的伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER,3), "每次攻击叠加毒素层数");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER,4), "每0.5秒造成毒素伤害（伤害值为玩家基础攻击力的20%×层数）");
 
 
+
+        REGISTRATE.addRawLang("srelic.sword_type.other_world_on", "幻");
+        REGISTRATE.addRawLang("srelic.sword_type.other_world", "解");
+        REGISTRATE.addRawLang("srelic.sword_type.other_world_off", "封");
+
+
+
+
+
+        REGISTRATE.addRawLang("message.srelic.grammer_alloy_obtained", "你获得了格拉默合金！");
+        REGISTRATE.addRawLang("message.srelic.grammer_progress", "蠹虫击杀进度: %d/%d");
+        REGISTRATE.addRawLang("tooltip.srelic.grammer_progress", "蠹虫击杀进度: %d/%d");
 
 
 
@@ -801,7 +847,7 @@ public class LangRegistry {
 
         REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_slashblade", "§6游戏扩增·异界之刃");
         REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_se", "§6游戏扩增·命途轨迹");
-        REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_se2", "§6游戏扩增·测试用SE遍历（用处只有看有多少个SE，物品不一定能用）");
+        REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_se2", "§6游戏扩增·测试用SE遍历");
         REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_item", "§6游戏扩增·利刃素材");
     }
 

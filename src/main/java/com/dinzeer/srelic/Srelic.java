@@ -37,8 +37,7 @@ import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
-import vazkii.patchouli.common.item.ItemModBook;
-import vazkii.patchouli.common.item.PatchouliItems;
+
 
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -104,7 +103,7 @@ public class Srelic {
 
     public static final RegistryObject<CreativeModeTab> SRItems = CREATIVE_MODE_TABS.register(MODID+"_item",
             () -> CreativeModeTab.builder()
-                    .title(Component.translatable("item_group."+MODID+"."+MODID+"_se")).icon(() -> {
+                    .title(Component.translatable("item_group."+MODID+"."+MODID+"_item")).icon(() -> {
 
                         return SRItemRegsitry.black_hole_metal.get().getDefaultInstance();
                     })
@@ -150,7 +149,7 @@ public class Srelic {
             // 添加universal_test的NBT变种
             SpecialEffectsRegistry.REGISTRY.get().forEach(effect -> {
                         // 生成带NBT的物品实例
-                        ItemStack stack = ItemNBTHelper.createTestItem(effect);
+                        ItemStack stack = ItemNBTHelper.createTestItem2(effect);
                         output.accept(stack);
                     });
         }
@@ -191,7 +190,7 @@ public class Srelic {
         SRItemRegsitry.regsitry();
         LangRegistry.register();
         CREATIVE_MODE_TABS.register(modEventBus);
-
+        SRBlockRegsitry.regsitry();
 //        int id = 0;
 //        INSTANCE.messageBuilder(DashMessage.class, id++)
 //                .encoder(DashMessage::encode)
@@ -207,6 +206,7 @@ public class Srelic {
     private void commonSetup(final FMLCommonSetupEvent event) {
 
     }
+
     @SubscribeEvent
     public void tick(TickEvent.ServerTickEvent event) {
         if (event.phase == TickEvent.Phase.END) {
@@ -220,20 +220,7 @@ public class Srelic {
             workQueue.removeAll(actions);
         }
     }
-    // Add the example block item to the building blocks tab
-    @Mod.EventBusSubscriber
-    public class simpleEvent{
-        @SubscribeEvent
-        public static void fmlload(FMLCommonSetupEvent event){
-        }
 
-    }
-
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-
-    }
     private static final Collection<AbstractMap.SimpleEntry<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
 
     public static void queueServerWork(int tick, Runnable action) {

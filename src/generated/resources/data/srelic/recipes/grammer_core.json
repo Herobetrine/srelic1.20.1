@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:nether_star"
+    },
+    "B": {
+      "item": "srelic:grammer_alloy"
+    },
+    "C": {
+      "item": "minecraft:soul_campfire"
+    },
+    "D": {
+      "item": "minecraft:sugar"
+    },
+    "E": {
+      "item": "minecraft:campfire"
+    }
+  },
+  "pattern": [
+    " A ",
+    "BCB",
+    "DED"
+  ],
+  "result": {
+    "item": "srelic:grammer_core"
+  },
+  "show_notification": true
+}

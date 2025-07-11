@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-28T02:57:34.4128835	Registries
+// 1.20.1	2025-07-02T01:55:40.3698027	Registries
 769d6cc42ebb3a909bc23971030c09fcaed1eb17 data/srelic/slashblade/named_blades/abyss_eye.json
 154d830a029c6a7bf73d1bea22e20533abf7f327 data/srelic/slashblade/named_blades/afflordite.json
 2acb252db88f6693704dbaf8ff9c759b2e8553ea data/srelic/slashblade/named_blades/air_none.json
@@ -17,6 +17,7 @@ e4de812ceca6cb2b213774f98c585d51a3d62adf data/srelic/slashblade/named_blades/end
 23516bea0f2e8bccc6cfeed3bb3c7e0a8dd84c27 data/srelic/slashblade/named_blades/fire_knight.json
 978262dfdc90b1aa8b17bf1f4b5647cdd6f3097e data/srelic/slashblade/named_blades/frost_sniper.json
 17d290fc40418086fb6aa4ebe7d43add890457c0 data/srelic/slashblade/named_blades/galaxy.json
+56e1dfbe3f771f9688914e89987ff6622466ffdd data/srelic/slashblade/named_blades/gene_harvester.json
 0ab84c9e5d9a82c303b4fc793c31eccabf118c5e data/srelic/slashblade/named_blades/heita.json
 b7abaf28988f532091ebe415e199c4af08bd4bc4 data/srelic/slashblade/named_blades/ice_blue.json
 845f9e9737a079ec502c56036bb4baa3f9810f6f data/srelic/slashblade/named_blades/ice_blue_ex.json
@@ -29,7 +30,7 @@ c47785505e892d6a826e62ef011fe3f2bf0b8da5 data/srelic/slashblade/named_blades/kil
 8449dd4e401c3ea8a95699be473e6cad73d0910c data/srelic/slashblade/named_blades/lightning.json
 7031523caba8c808792c52499cf77cf2ba2e4444 data/srelic/slashblade/named_blades/none_blue.json
 eccdcc5f20efa8417279c9ee8de260cfca43edde data/srelic/slashblade/named_blades/none_red.json
-baf7fd2f0d863c9220486f22024f02c2dd589cb8 data/srelic/slashblade/named_blades/no_end.json
+56760bf83ed5f60172996645230b7af4e443303c data/srelic/slashblade/named_blades/no_end.json
 9aaa980cab1b88a4acb1d9c141daa78a6c038ac3 data/srelic/slashblade/named_blades/radiance.json
 243f3309a411d54b4e4c61ef24e23a0aaf7d8153 data/srelic/slashblade/named_blades/raiden.json
 56cb0a97a48634385cc4bc16f94d5217b816fd69 data/srelic/slashblade/named_blades/rappa.json
@@ -55,6 +56,7 @@ a585e72b315da6059f1c1f4a47e767701a31b16f data/srelic/slashblade/named_blades/the
 f866059b081e1ed2cb3de0f3071fe5dd713f4226 data/srelic/slashblade/named_blades/the_fire_green2.json
 fc657053bdc19f2cefb55077617868522ce7c22f data/srelic/slashblade/named_blades/the_fire_pink2.json
 21a26a75597bf596ff4e814574c85c41d16793b7 data/srelic/slashblade/named_blades/the_radiance_of_stagnant_water_flow.json
+66bfe1d52ee257041de99a20575e0536047f16c0 data/srelic/slashblade/named_blades/the_star_of_the_frost.json
 3f17ec1f5241a436f98b8e8a04d902291da147eb data/srelic/slashblade/named_blades/the_water.json
 57eace7a99d506a2482b6f36a584d714fdf7036d data/srelic/slashblade/named_blades/the_wolf.json
 6904ec59460cf6a80d5e9eb94fc6e95670c920e4 data/srelic/slashblade/named_blades/third_blue_1.json

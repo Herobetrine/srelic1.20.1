@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "srelic:crimson_shadow_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    " A ",
+    "   "
+  ],
+  "result": {
+    "count": 9,
+    "item": "srelic:crimson_shadow_particle"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "srelic:rough_crimson_shadow_ore"
+    },
+    "B": {
+      "item": "minecraft:crying_obsidian"
+    },
+    "C": {
+      "item": "srelic:crimson_shadow_ore"
+    },
+    "D": {
+      "item": "srelic:diamond_star"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "BDB",
+    "CBC"
+  ],
+  "result": {
+    "item": "srelic:crimson_core"
+  },
+  "show_notification": true
+}

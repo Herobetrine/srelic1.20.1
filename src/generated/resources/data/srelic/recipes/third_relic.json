@@ -1,0 +1,53 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:third_relic",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "slashblade:proudsoul_ingot"
+    },
+    "B": {
+      "item": "slashblade:proudsoul_crystal"
+    },
+    "C": {
+      "item": "srelic:sakura_steel_ingot"
+    },
+    "D": {
+      "item": "slashblade:proudsoul_trapezohedron"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000,
+        "refine": 30
+      }
+    },
+    "F": {
+      "item": "slashblade:proudsoul_sphere"
+    },
+    "G": {
+      "item": "slashblade:proudsoul"
+    },
+    "H": {
+      "type": "slashblade:blade",
+      "item": "slashblade:slashblade",
+      "request": {
+        "name": "slashblade:muramasa"
+      }
+    },
+    "I": {
+      "item": "slashblade:proudsoul_tiny"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

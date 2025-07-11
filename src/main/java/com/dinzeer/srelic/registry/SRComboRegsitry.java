@@ -51,7 +51,7 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 1F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.25F))
                             .put(3, RedScarSlash::doSlash).build())
                     .addHitEffect(StunManager::setStun)
                     ::build
@@ -94,7 +94,7 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -30F, Vec3.ZERO, false, false, 0.1F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -30F, Vec3.ZERO, false, false, 0.25F))
                             .put(3, (entityIn) -> WitherBreaker.doSlash(entityIn, false, 7, 2f)).build())
                     .addHitEffect(StunManager::setStun)
                     ::build);
@@ -119,11 +119,11 @@ public class SRComboRegsitry {
                                                     .put(9, (entityIn) -> Drive.doSlash(entityIn, -10F, 10, Vec3.ZERO, false, 0.7, 2f))
                                                     .put(10, JudgementCut::doJudgementCut)
                                                     .put(11, (entityIn) -> WaveEdge.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 1, 0.2f, 1f, 4))
-                                                    .put(12, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 1F))
+                                                    .put(12, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 0.25F))
                                                     .put(13, (entityIn) -> DriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 1, 1f, 5f, 2,2003199))
-                                                    .put(14, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 1F))
+                                                    .put(14, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 0.25F))
                                                     .put(15, (entityIn) -> DriveSumon.doSlash(entityIn, 45F, 20, Vec3.ZERO, false, 1, 1f, 5f, 2,2003199))
-                                                    .put(16, (entityIn) -> AttackManager.doSlash(entityIn, 45F, Vec3.ZERO, false, false, 1F))
+                                                    .put(16, (entityIn) -> AttackManager.doSlash(entityIn, 45F, Vec3.ZERO, false, false, 0.25F))
                                                     .put(17,(entityIn) ->  DriveSumon.doSlash(entityIn, -45F, 20, Vec3.ZERO, false, 1, 1f, 5f, 2,2003199))
                                                     .put(18, (entityIn) -> Drive.doSlash(entityIn, -10F, 10, Vec3.ZERO, false, 1, 2f))
                                                     .build()
@@ -152,7 +152,7 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.25F))
                             .put(3, (entityIn) -> BigDriveSummon.doSlash(entityIn, -90F, 10, Vec3.ZERO, false, 5F, 1f)).build())
                     .addHitEffect(StunManager::setStun)
                     ::build
@@ -165,7 +165,7 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.25F))
                             .put(3, (entityIn) -> RappaSummon.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 7, 0.5f, 1f, 2,16711697)).build())
                     .addHitEffect(StunManager::setStun)
                     ::build
@@ -178,7 +178,7 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.25F))
                             .put(3, (entityIn) -> BlackHolePro.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 7, 0.5f, 1f, 2,16711697)).build())
                     .addHitEffect(StunManager::setStun)
                     ::build
@@ -191,7 +191,7 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.25F))
                             .put(3, (entityIn) -> fourslash.doSlash(entityIn, 180 - 42, Vec3.ZERO, false, false, 10))
                             .put(4, (entityIn) -> fourslash.doSlash(entityIn, 180 - 92, Vec3.ZERO, false, false, 10))
                             .put(5, (entityIn) -> fourslash.doSlash(entityIn, 180 - 102, Vec3.ZERO, false, false, 10))
@@ -226,8 +226,8 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(1, (entityIn) -> AttackManager.doSlash(entityIn, 0F, Vec3.ZERO, false, false, 0.1F))
-                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -90F, Vec3.ZERO, false, false, 0.1F))
+                            .put(1, (entityIn) -> AttackManager.doSlash(entityIn, 0F, Vec3.ZERO, false, false, 0.25F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -90F, Vec3.ZERO, false, false, 0.25F))
                             .put(3,(entityIn) ->  DriveSumon.doSlash(entityIn, 0F, 20, Vec3.ZERO, false, 7, 1f, 5f, 2,2003199))
                             .put(4,(entityIn) ->  DriveSumon.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 7, 1f, 5f, 2,2003199))
                             .build())
@@ -242,7 +242,7 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.25F))
                             .put(3, (entityIn) -> BigDriveSummon.doSlash(entityIn, 0F, 10, Vec3.ZERO, false, 5F, 1f)).build())
                     .addHitEffect(StunManager::setStun)
                     ::build
@@ -255,7 +255,7 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.25F))
                             .put(3, (entityIn) -> YunLi.doSlash( entityIn, false, 7, 2f)).build())
                     .addHitEffect(StunManager::setStun)
                     ::build
@@ -269,7 +269,7 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.25F))
                             .put(3, (entityIn) -> BigSlash.doSlash(entityIn,90,5,Vec3.ZERO,false,10,10,1,1,50)).build())
                     .addHitEffect(StunManager::setStun)
                     ::build
@@ -437,8 +437,8 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(1, (entityIn) -> AttackManager.doSlash(entityIn, 45F, Vec3.ZERO, false, false, 0.1F))
-                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 0.1F))
+                            .put(1, (entityIn) -> AttackManager.doSlash(entityIn, 45F, Vec3.ZERO, false, false, 0.25F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 0.25F))
                             .put(3,Themomentwhenthescalecollapses::doslash)
                             .build())
                     .addHitEffect(StunManager::setStun)
@@ -588,7 +588,7 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.25F))
                             .put(3, (entityIn) -> WaveEdge.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 2f, 2f, 4f, 6))
                             .put(4, (entityIn) -> {
                                 if (entityIn instanceof Player player) {
@@ -608,7 +608,7 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.25F))
                             .put(3, IceEdge::doSlash)
                             .build())
                     .addHitEffect(StunManager::setStun)
@@ -622,7 +622,7 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                            .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.25F))
                             .put(3, Afflordite::doSlash)
                             .build())
                     .addHitEffect(StunManager::setStun)
@@ -637,7 +637,7 @@ public class SRComboRegsitry {
             .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
             .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
             .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.1F))
+                .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -80F, Vec3.ZERO, false, false, 0.25F))
                 .put(3, (entityIn) -> {
                     if (entityIn instanceof Player player) {
                         EntitySRBlisteringSword.spawnSwords(
@@ -657,5 +657,497 @@ public class SRComboRegsitry {
             .addHitEffect(StunManager::setStun)
             ::build
     );
+
+
+
+    public static final RegistryObject<ComboState> GoGogo = COMBO_STATES.register
+            (
+                    "just_go",
+                    ComboState.Builder.newInstance().startAndEnd(400, 459).priority(50)
+                            .motionLoc(DefaultResources.ExMotionLocation)
+                            .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
+                            .nextOfTimeout(entity -> Srelic.prefix("just_go2"))
+                            .addTickAction
+                                    (
+                                            ComboState.TimeLineTickAction.getBuilder()
+                                                    .put(2, (entityIn) -> AttackManager.doSlash(entityIn, -45F, Vec3.ZERO, false, false, 0.25F))
+                                                    .put(3, GoGoGo::dois)
+                                                    .put(4, (entityIn) -> AttackManager.doSlash(entityIn, 45F, Vec3.ZERO, false, false, 0.25F))
+                                                    .put(5,  (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false,
+                                                                false,
+                                                                0.1F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois(entityIn);
+                                                    })
+
+                                                    .put(6, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois(entityIn);
+                                                    })
+
+                                                    .put(7,  (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois(entityIn);
+                                                    })
+
+                                                    .put(8,  (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois(entityIn);
+                                                    })
+
+                                                    .put(9, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois(entityIn);
+                                                    })
+
+                                                    .put(10, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois(entityIn);
+                                                    })
+
+                                                    .put(11, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois(entityIn);
+                                                    })
+
+                                                    .put(12, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois(entityIn);
+                                                    })
+
+                                                    .put(13, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois(entityIn);
+                                                    })
+
+                                                    .put(14, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois(entityIn);
+                                                    })
+
+                                                    .put(15, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois(entityIn);
+                                                    })
+
+                                                    .put(16, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois(entityIn);
+                                                    })
+
+                                                    .put(17,  (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois(entityIn);
+                                                    })
+
+                                                    .put(18, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois(entityIn);
+                                                    })
+
+
+
+                                                    .build()
+                                    )
+                            .addHitEffect(StunManager::setStun)
+                            ::build
+            );
+    public static final RegistryObject<ComboState> GoGogo2 = COMBO_STATES.register
+            (
+                    "just_go2",
+                    ComboState.Builder.newInstance().startAndEnd(459, 488).priority(50)
+                            .motionLoc(DefaultResources.ExMotionLocation).next(entity -> SlashBlade.prefix("none"))
+                            .nextOfTimeout(entity -> SlashBlade.prefix("none"))
+                            .addTickAction
+                                    (
+                                            ComboState.TimeLineTickAction.getBuilder()
+                                                    .put(1, GoGoGo::dois2)
+                                                    .put(4, (entityIn) -> AttackManager.doSlash(entityIn, 45F, Vec3.ZERO, false, false, 0.25F))
+                                                    .put(5,  (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois2(entityIn);
+                                                    })
+
+                                                    .put(6, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois2(entityIn);
+                                                    })
+
+                                                    .put(7,  (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois2(entityIn);
+                                                    })
+
+                                                    .put(8,  (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois2(entityIn);
+                                                    })
+
+                                                    .put(9, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois2(entityIn);
+                                                    })
+
+                                                    .put(10, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois2(entityIn);
+                                                    })
+
+                                                    .put(11, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois2(entityIn);
+                                                    })
+
+                                                    .put(12, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois2(entityIn);
+                                                    })
+
+                                                    .put(13, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois2(entityIn);
+                                                    })
+
+                                                    .put(14, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois2(entityIn);
+                                                    })
+
+                                                    .put(15, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois2(entityIn);
+                                                    })
+
+                                                    .put(16, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois2(entityIn);
+                                                    })
+
+                                                    .put(17,  (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois2(entityIn);
+                                                    })
+
+                                                    .put(18, (entityIn) ->{
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        AttackManager.doSlash(
+                                                                entityIn,
+                                                                entityIn.getRandom().nextInt(360),
+                                                                Vec3.ZERO,
+                                                                false, false, 0.25F
+                                                        );
+                                                        GoGoGo.dois2(entityIn);
+                                                    })
+
+
+
+                                                    .build()
+                                    )
+                            .addTickAction(ComboState.TimeLineTickAction.getBuilder().put(0, AttackManager::playQuickSheathSoundAction).build())
+                            .releaseAction(ComboState::releaseActionQuickCharge)::build
+            );
+
 
 }

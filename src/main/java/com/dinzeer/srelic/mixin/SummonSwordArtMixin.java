@@ -5,7 +5,7 @@ import com.dinzeer.srelic.entity.superentity.EntitySummonBlade;
 import com.dinzeer.srelic.registry.SREntiteRegristrys;
 import mods.flammpfeil.slashblade.ability.SummonedSwordArts;
 
-import mods.flammpfeil.slashblade.event.InputCommandEvent;
+import mods.flammpfeil.slashblade.event.handler.InputCommandEvent;
 import mods.flammpfeil.slashblade.slasharts.Drive;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;

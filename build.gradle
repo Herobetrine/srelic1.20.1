@@ -173,7 +173,7 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     //开发环境jei
     implementation fg.deobf("curse.maven:jei-238222:6075247")
-
+//
     //日系附属包依赖
     implementation fg.deobf("curse.maven:slashblade-japanese-addon-pack-310187:5808363")
     //暮色森林
@@ -203,7 +203,7 @@ dependencies {
     //玉
     implementation fg.deobf("curse.maven:jade-324717:6271651")
     //拔刀剑重锋依赖
-    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:6659951")
+    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:6731971")
     //帕秋莉手册
     implementation fg.deobf("curse.maven:patchouli-306770:6164575")
     //emi
@@ -215,7 +215,7 @@ dependencies {
 
 //    implementation fg.deobf("curse.maven:blue-skies-312918:5010316")
 
-
+    implementation fg.deobf("curse.maven:construction-wand-399558:4684054")
 
 
 

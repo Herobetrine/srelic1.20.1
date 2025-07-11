@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:nether_star"
+    },
+    "B": {
+      "item": "srelic:grammer_alloy"
+    }
+  },
+  "pattern": [
+    " A ",
+    " B ",
+    "   "
+  ],
+  "result": {
+    "item": "srelic:grammer_alloy_ex"
+  },
+  "show_notification": true
+}

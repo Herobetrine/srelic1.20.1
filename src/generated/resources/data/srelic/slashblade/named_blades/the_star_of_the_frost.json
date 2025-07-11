@@ -1,0 +1,31 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 10
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:the_star_of_the_frost",
+  "properties": {
+    "attack_base": 26.0,
+    "max_damage": 300,
+    "slash_art": "slashblade:circle_slash",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:ice_soul_frost_sky"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/honkai/the_star_of_the_frost/the_star_of_the_frost.obj",
+    "summon_sword_color": 2003199,
+    "texture": "srelic:model/honkai/the_star_of_the_frost/the_star_of_the_frost.png"
+  }
+}

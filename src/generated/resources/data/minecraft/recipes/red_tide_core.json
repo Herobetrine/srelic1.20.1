@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:redstone_block"
+    },
+    "B": {
+      "item": "minecraft:lava_bucket"
+    },
+    "C": {
+      "item": "srelic:crimson_shadow_ingot"
+    },
+    "D": {
+      "item": "srelic:diamond_star"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "CDC",
+    "CBA"
+  ],
+  "result": {
+    "item": "srelic:red_tide_core"
+  },
+  "show_notification": true
+}

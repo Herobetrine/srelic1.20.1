@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "srelic:blood_plum_log"
+    }
+  },
+  "pattern": [
+    " A ",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 4,
+    "item": "srelic:blood_plum_planks"
+  },
+  "show_notification": true
+}

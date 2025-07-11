@@ -2,6 +2,7 @@ package com.dinzeer.srelic.registry.imp;
 
 import com.dinzeer.srelic.StackChargeEvent;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.ForgeMod;
@@ -31,10 +32,12 @@ public class RegisteredStackManager implements IStackManager {
         MinecraftForge.EVENT_BUS.post(event);
         int current = tag.getInt(key);
         int newValue = Math.min(current + event.amount, maxStacks);
+
         tag.putInt(key, newValue);
 
 
     }
+
 
     @Override
     public int getCurrentStacks(Player player) {

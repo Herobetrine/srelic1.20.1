@@ -435,7 +435,11 @@ public class SeEX extends SpecialEffect {
         String effect2=effect;
         effect=MODID+":"+effect;
 
-        CompoundTag tag = stack.getOrCreateTag(); // 获取或创建NBT标签
+        // 修改点：使用 getTag() 替代 getOrCreateTag() 并添加非空判断
+        CompoundTag tag = stack.getTag(); // 获取现有NBT标签
+        if (tag == null) { // 添加非空判断
+            return false; // 没有NBT标签直接返回false
+        }
 
         if (tag.contains("bladeState")) { // 检查是否存在ForgeCaps标签
             CompoundTag forgeCaps = tag.getCompound("bladeState");

@@ -70,7 +70,7 @@ public class FireFly extends SpecialEffect {
     public static void onSlashBladeUpdate(TickEvent.PlayerTickEvent event) {
         Player player=event.player;
         int currentCombustion = SECONDARY_COMBUSTION_STACKS.getCurrentStacks(player);
-        
+        if (!SlashBladeUtil.hasSpecialEffect(player, SRSpecialEffectsRegistry.FIRE_FLY.get()))return;
         // 新增：检查玩家游戏模式
         boolean isSurvival = !player.isCreative();
 

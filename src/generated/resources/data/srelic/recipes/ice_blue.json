@@ -1,0 +1,40 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:ice_blue",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:snow_block"
+    },
+    "B": {
+      "item": "srelic:soul_metal"
+    },
+    "C": {
+      "item": "minecraft:blue_ice"
+    },
+    "D": {
+      "item": "minecraft:nether_star"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 30000,
+        "refine": 30
+      }
+    },
+    "F": {
+      "item": "minecraft:cherry_leaves"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "BDB",
+    "EBF"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}
