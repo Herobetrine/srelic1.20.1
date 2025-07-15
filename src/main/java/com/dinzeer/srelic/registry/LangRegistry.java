@@ -111,15 +111,13 @@ public class LangRegistry {
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.soul_metal.pages.1.text", "我愚弄了友人，愚弄了至亲，愚弄了世界和它之上的规则……只为了给予那唯一真实的你，以第二次生命。我回来了，卡莲。");
         REGISTRATE.addRawLang("painting.srelic.aotuo.title", "§a奥§r托·阿波卡利斯");
         REGISTRATE.addRawLang("painting.srelic.huoqu.title", "获取方式");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.spirit_butterfly.pages.0.text","万花丛中，蝴蝶乱舞，于凋零之中绽放，于往生中留香，灵芳环绕三生，蝴蝶留有血梅香。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.diamond_star.pages.0.text","珍贵且坚硬的材料，三首恶魔的核心与坚硬的材料融合，产生意想不到的材料，钻石之星闪耀着星辰的光芒。");
-
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.spirit_butterfly.pages.0.text", "万花丛中，蝴蝶乱舞，于凋零之中绽放，于往生中留香，灵芳环绕三生，蝴蝶留有血梅香。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.diamond_star.pages.0.text", "珍贵且坚硬的材料，三首恶魔的核心与坚硬的材料融合，产生意想不到的材料，钻石之星闪耀着星辰的光芒。");
 
 
         REGISTRATE.addRawLang("se.slashblade.wither_edge.desc", "攻击成功施加凋零效果");
         REGISTRATE.addRawLang("slashblade.tooltip.srelic.santa_caterina", "「复仇的圣女持剑归来」");
         REGISTRATE.addRawLang("slashblade.tooltip.srelic.santa_caterina_1", "「带着仇人的名单」");
-
 
 
         // 拔刀技
@@ -162,22 +160,34 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.FLAMEROSION), "火焰侵蚀");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.MAXBREAK), "上限突破·救世光辉");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.LICH), "亡灵序曲");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.LICH)+".desc", "敌人存在凋零效果时，你每次攻击都会让其层数+!");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.LICH)+".desc_1", "十层时引爆并发射高倍率幻影刃");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.LICH) + ".desc", "敌人存在凋零效果时，你每次攻击都会让其层数+!");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.LICH) + ".desc_1", "十层时引爆并发射高倍率幻影刃");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.WhiteMaker), "构造即此刻");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.WhiteMaker)+".desc", "每次攻击概率投射一道幻影刃");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.WhiteMaker) + ".desc", "每次攻击概率投射一道幻影刃");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_DESTRUCTION), "§6命途·毁灭");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_DESTRUCTION)+".desc", "§6生命低于30%时获得150%攻击加成和持续恢复\n受击有25%概率触发伤害反弹");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_DESTRUCTION) + ".desc", "§6生命低于30%时获得150%攻击加成和持续恢复\n受击有25%概率触发伤害反弹");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_DESTRUCTION) + ".text", "星神崩星碎辰，耀变临渊，万物归尘，人魂于毁灭中淬炼，文明在耀变中新生。");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_DESTRUCTION) + ".easter-egg", "当你点燃第一颗恒星时——记住，那火光是你献给终焉的婚烛");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_HUNT), "§6命途·巡猎");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_HUNT)+".desc", "§6每次攻击积累「星矢」层数，7层后释放高额伤害");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_HUNT) + ".desc", "§6每次攻击积累「星矢」层数，7层后释放高额伤害");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_HUNT) + ".text", "审判罪恶，万殛狩渊，星矢破空，渊狩无归，于至暗中迸发复仇烈光，以毁灭创造新生。");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_HUNT) + ".easter-egg", "当第一支箭离弦时——听，弓弦震响是万千湮灭文明的遗恨共鸣 ");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_PRESERVATION), "§6命途·存护");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_PRESERVATION)+".desc", "§6获得伤害吸收");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_PRESERVATION) + ".desc", "§6获得伤害吸收");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_PRESERVATION) + ".text", "琥珀坚固，铸就城墙，铁誓护疆，晶泪封誓，永屹晨碑，千星共御。");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY) + "easter-egg", "当琥珀巨墙拔地而起时——看，墙痕是文明的伤疤，墙顶是未熄的星火  ");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY), "§6命途·贪饕");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY)+".desc", "§6攻击时吸血10%伤害值\n每次攻击叠加伤害层数最高十层");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY) + ".desc", "§6攻击时吸血10%伤害值\n每次攻击叠加伤害层数最高十层");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY) + ".text", "饕星嚼辰，永饥永蚀，将一切化为养料，修复自身，直至吞噬一切。");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + "easter-egg", "贪饕的震撼在于其荒诞悲剧内核——当他吞下最后一粒星辰时，将发现自己啃噬的竟是镜中倒影");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING), "§6命途·不朽");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING)+".desc", "§6濒死时触发免死并恢复50%生命\n获得十秒无敌，冷却十分钟");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + ".desc", "§6濒死时触发免死并恢复50%生命\n获得十秒无敌，冷却十分钟");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + ".text", "肉身亘古、精魂永续、龙裔承志，天脊承鳞，残鳞继道，渊眠蜕神。当最后一片龙鳞沉入星渊时——看，锈骨中正蠕动新生的初卵");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + ".easter-egg", "不朽的震撼正在于其破碎性——龙祖陨落昭示：真正的永恒，需以千万次死亡为祭品。 ");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_ABUNDANCE), "§6命途·丰饶");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_ABUNDANCE)+".desc", "§6每5秒治疗8格内队友\n群体抗性提升效果");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_ABUNDANCE) + ".desc", "§6每5秒治疗8格内队友\n群体抗性提升效果");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_ABUNDANCE) + ".text", "星神不忍见世间之苦，故降下赐福，赐福成界，护佑众生，一法界心。");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_ABUNDANCE) + ".easter-egg", "当第一滴玉露愈合伤口时——听见了吗？你的骨骼正发出新芽的裂响");
 
         // 修正重复键问题
         REGISTRATE.addRawLang("se.srelic.shift_nodown", "按下Shift查看SE详细信息");
@@ -185,29 +195,60 @@ public class LangRegistry {
         // 修正重复键问题
         REGISTRATE.addRawLang("se.srelic.path_of_remembrance", "§6命途·记忆");
         REGISTRATE.addRawLang("se.srelic.path_of_remembrance.desc", "§6攻击有50%的概率冻结目标");
+        REGISTRATE.addRawLang("se.srelic.path_of_remembrance.text1", "记忆承载岁月，光锥封存永恒，残响筑城，焚忆燃夜，永眠钟塔，冰封万物。\n");
+        REGISTRATE.addRawLang("se.srelic.path_of_remembrance.text2", "当最后一盏记忆灯熄灭时——看，浮黎神躯正绽放亿万湮灭宇宙的余晖。");
+        REGISTRATE.addRawLang("se.srelic.path_of_remembrance.easter-egg", "记忆介入轮回，让消散的星光成为刺穿终末黑暗的利刃，以岁月斩破轮回。");
         REGISTRATE.addRawLang("se.srelic.path_of_harmony", "§6命途·同谐");
+        REGISTRATE.addRawLang("se.srelic.path_of_harmony.text1", "万人齐颂，千心同律，交织和谐之网，万灵交响，千灵同辉，回荡圣咏共鸣。群星依序，齐誓永谐。");
+        REGISTRATE.addRawLang("se.srelic.path_of_harmony.easter-egg", "当孤星试图闪耀时，宇宙沉默；当群星同频时，黑洞亦为之歌咏 ");
         REGISTRATE.addRawLang("se.srelic.path_of_harmony.desc", "§6群体获得力量效果");
         REGISTRATE.addRawLang("se.srelic.path_of_nihility", "§6命途·虚无");
+        REGISTRATE.addRawLang("se.srelic.path_of_nihility.text1", "无念无想，万色褪皁，醒寐同棺，万物归寂，空渊吞噬，永燃余烬。");
+        REGISTRATE.addRawLang("se.srelic.path_of_nihility.easter-egg", "当你为胜利欢呼时——请听，余烬中传来所有湮灭宇宙的哄笑");
         REGISTRATE.addRawLang("se.srelic.path_of_nihility.desc", "§6攻击成功后给敌方虚弱和挖掘疲劳3");
         REGISTRATE.addRawLang("se.srelic.path_of_propagation", "§6命途·繁育");
+        REGISTRATE.addRawLang("se.srelic.path_of_propagation.text", "虫群倾巢，万卵噬星，慈胎孽种，无穷无尽，肉绽天穹，虫灾天劫，寰宇蝗灾。");
+        REGISTRATE.addRawLang("se.srelic.path_of_propagation.easter-egg", "当第一枚虫卵嵌入地核时——听，星辰的心跳正渐变成孵化的胎音 ");
         REGISTRATE.addRawLang("se.srelic.path_of_propagation.desc", "§6每次攻击敌人都会生成一只蠹虫（无限增值，但是周围最多40只蠹虫）");
         REGISTRATE.addRawLang("se.srelic.path_of_erudition", "§6命途·智识");
+        REGISTRATE.addRawLang("se.srelic.path_of_erudition.text", "焚典开天，万理织宙，冻光穹脑，熵锁归一，知识就是力量，附魔转化为增幅，");
+        REGISTRATE.addRawLang("se.srelic.path_of_erudition.easter-egg", "当你解出万物公式时——请记住，被删除的“灵魂变量”正在废墟里冷笑 ");
         REGISTRATE.addRawLang("se.srelic.path_of_erudition.desc", "§6根据武器附魔等级获得额外效果：\n锋利→伤害提升（每级+10%）\n火焰附加→点燃时间翻倍\n抢夺→额外掉落概率");
         REGISTRATE.addRawLang("se.srelic.path_of_elation", "§6命途·欢愉");
+        REGISTRATE.addRawLang("se.srelic.path_of_elation.text1", "愚者千面，游戏寰尘，戏谑众生，颠倒是非。");
+        REGISTRATE.addRawLang("se.srelic.path_of_elation.text2", "若有人在现实中对你说 “法典该擦擦了” ，记得立刻把手边的书倒过来——或许真有一颗糖等着你。");
+        REGISTRATE.addRawLang("se.srelic.path_of_elation.easter-egg", "第〇条：所有规则，皆可被阿哈的喷嚏推翻！\n终极真理：蛋糕比哲学重要——尤其当它砸在你脸上时。");
         REGISTRATE.addRawLang("se.srelic.path_of_elation.desc", "§6将50%治疗量转化为群体恢复\n为受影响目标附加5秒发光效果\n每触发一次群体治疗提升10%移动速度（可叠加3层）");
         REGISTRATE.addRawLang("se.srelic.path_of_equilibrium", "§6命途·均衡");
+        REGISTRATE.addRawLang("se.srelic.path_of_equilibrium.text", "均衡维持世间的平衡，万竞息争，赏罚同契，理爆维稳，阴阳相合。 ");
+        REGISTRATE.addRawLang("se.srelic.path_of_equilibrium.easter-egg", "当文明为胜利欢呼时——看，仲裁官已在新生的墓碑上刻下倒计时");
         REGISTRATE.addRawLang("se.srelic.path_of_equilibrium.desc", "§6切换武器时转换攻防姿态\n攻击姿态：+150%伤害\n防御姿态：+40%伤害抵抗");
         REGISTRATE.addRawLang("se.srelic.path_of_finality", "§6命途·终末");
+        REGISTRATE.addRawLang("se.srelic.path_of_finality.text", "终焉回响，命轮永固，终末降临，恒纪无回，永劫无笑，诸神无泪。");
+        REGISTRATE.addRawLang("se.srelic.path_of_finality.easter-egg", "“欢愉”在戏弄中诞生闹剧，而“终末”在沉寂中书写句点——永劫无笑，诸神无泪。");
         REGISTRATE.addRawLang("se.srelic.path_of_finality.desc", "§6每3次连续击杀触发范围爆炸\n受伤时重置连杀计数");
         REGISTRATE.addRawLang("se.srelic.path_of_trailblaze", "§6命途·开拓");
+        REGISTRATE.addRawLang("se.srelic.path_of_trailblaze.text1", "凿宙寻迹的列车，穿行在未知之间，无径筑虹，残舵指辰，虚海留辙，绝地创生，留下无名客的故事，创造无名客的辉煌。");
+        REGISTRATE.addRawLang("se.srelic.path_of_trailblaze.text2", "当列车撞向宇宙障壁时——听，裂痕中传来万千未诞世界的啼哭与欢呼。");
+        REGISTRATE.addRawLang("se.srelic.path_of_trailblaze.easter-egg1", "毁灭中孕育新生的开拓，以自我湮灭为代价唤醒沉睡文明，化不可能为可能。");
+        REGISTRATE.addRawLang("se.srelic.path_of_trailblaze.easter-egg2", "真正的航道，要用神骸铺就，最辽阔的边疆，永远以第一个倒下者的名字命名。");
         REGISTRATE.addRawLang("se.srelic.path_of_trailblaze.desc", "§6获得速度3、力量3、村庄英雄1");
         REGISTRATE.addRawLang("se.srelic.path_of_mystery", "§6命途·神秘");
+        REGISTRATE.addRawLang("se.srelic.path_of_mystery.text", "歪曲是非，悖论织理，万相遮目，虚构史书，渊识蚀智，痴愚贤者，诡计虚妄，信者为真。");
+        REGISTRATE.addRawLang("se.srelic.path_of_mystery.easter-egg", "当你读懂星空时，星空已坍缩成你眼底的灰烬——所谓真相，不过是认知牢狱的新砖");
         REGISTRATE.addRawLang("se.srelic.path_of_mystery.desc", "§6攻击时随机触发以下效果之一：\n时间扭曲/空间裂隙/能量反噬/命运庇护/混沌爆发");
         REGISTRATE.addRawLang("se.srelic.path_of_order", "§6命途·秩序");
+        REGISTRATE.addRawLang("se.srelic.path_of_order.text", "秩序维持稳定，稳定给予力量，万像归模，永锢颂碑，戒律锁星，圣裁雕刀。");
+        REGISTRATE.addRawLang("se.srelic.path_of_order.easter-egg", "当你为永恒法典欢呼时——听，齿轮咬合的声响正碾碎你最后一缕呼吸  ");
         REGISTRATE.addRawLang("se.srelic.path_of_order.desc", "§6未受负面效果时获得攻防加成\n攻击清除敌方所有增益效果");
         REGISTRATE.addRawLang("se.srelic.path_of_purity", "§6命途·纯美");
+        REGISTRATE.addRawLang("se.srelic.path_of_purity.text1", "碎镜星冕，泪塑圣境，追求之人，虹脱囚牢，万诗成刃，千眸凝辉。");
+        REGISTRATE.addRawLang("se.srelic.path_of_purity.text2", "当最后一滴泪结晶时——看，裂痕中的星冕比完整宇宙更接近天国");
+        REGISTRATE.addRawLang("se.srelic.path_of_purity.easter-egg", "银白色的骑士追求世间之美，用手中长枪扫清黑暗，用毕生追寻镜中碎光。");
         REGISTRATE.addRawLang("se.srelic.path_of_purity.desc", "§6获得抗性提升3");
         REGISTRATE.addRawLang("se.srelic.path_of_healing", "§6丰饶·慈悲");
+        REGISTRATE.addRawLang("se.srelic.path_of_healing.text", "千眸慈视，不忍见众生之苦，降下赐福，愿促世间万物和谐，但事与愿违，慈肉噬骨。");
+        REGISTRATE.addRawLang("se.srelic.path_of_healing.easter-egg", "当魔力被释放时——听，星辰的明暗中传来所有虚无的noise");
         REGISTRATE.addRawLang("se.srelic.path_of_healing.desc", "§6你的攻击将会治疗受击者");
 
 
@@ -226,15 +267,14 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.blazing_heart_shield.desc_3", "§6并获得50%伤害值的治疗");
         REGISTRATE.addRawLang("se.srelic.lament_of_phantoms", "§5虚无·幽魂的哀叹");
         REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc", "§c生命≤25%时：");
-        REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc_1","§e• 转移50%伤害给攻击者");
-        REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc_2","§b• 获得3秒无敌§c（附带虚弱II）");
-        REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc_3","§d• 伤害值的30%转化为治疗");
-        REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc_4","§6冷却时间：30秒");
+        REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc_1", "§e• 转移50%伤害给攻击者");
+        REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc_2", "§b• 获得3秒无敌§c（附带虚弱II）");
+        REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc_3", "§d• 伤害值的30%转化为治疗");
+        REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc_4", "§6冷却时间：30秒");
         REGISTRATE.addRawLang("se.srelic.thunderstorm_slash", "「电磁风暴」");
         REGISTRATE.addRawLang("se.srelic.thunderstorm_slash.desc", "§6每次攻击触发5次连锁闪电,每次连锁造成60%前次伤害");
         REGISTRATE.addRawLang("se.srelic.thunderstorm_slash.desc_1", "§6每次攻击叠加感电层数（最大10层）层数满时触发全局闪电冲击波");
         REGISTRATE.addRawLang("se.srelic.thunderstorm_slash.desc_2", "§6感电满层时激活10秒超载状态");
-
 
 
 // 炽焰过载
@@ -435,7 +475,11 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.dice_effect.desc_2", "§d• 40%概率正常伤害");
         REGISTRATE.addRawLang("se.srelic.dice_effect.desc_3", "§d• 39%概率治疗目标600%伤害值");
         REGISTRATE.addRawLang("se.srelic.dice_effect.desc_4", "§d• 1%概率造成1000%暴击伤害");
-        REGISTRATE.addRawLang("se.srelic.dice_effect.text", "se.srelic.dice_effect.text");
+        REGISTRATE.addRawLang("se.srelic.dice_effect.text1", "无穷面的骰子，它是运气的提现，渊面判命，天劫戏谑，万千结局坍缩于一掷之间。");
+        REGISTRATE.addRawLang("se.srelic.dice_effect.text2", "无穷可能性在骰落时焚灭成唯一。欧非一念，天堂地狱。");
+        REGISTRATE.addRawLang("se.srelic.dice_effect.text3", "当听见骰子在虚空中咯咯轻笑时——  记住，不是你在掷骰，而是骰在掷你。");
+        REGISTRATE.addRawLang("se.srelic.dice_effect.easter-egg", "狂赌回合开启！执骰互斫——下一刀，天诛还是天赐？毕竟赌狗最爱的不是赢，而是开骰前心跳停拍的刹那。");
+
 
         REGISTRATE.addRawLang("se.srelic.truth_realm", "§6终焉律·星之归");
         REGISTRATE.addRawLang("se.srelic.truth_realm.desc", "§e【时空奇点】");
@@ -700,133 +744,131 @@ public class LangRegistry {
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.FIRE_FLY), "次级燃烧");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.FIRE_FLY), "每次攻击叠加30层过热值");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY,1), "过热值大于300时清空并开启完全燃烧状态");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY,2), "完全燃烧状态下你可以飞行");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY,3), "攻击获得30%穿甲，伤害提高150%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY,4), "获得迅捷2力量3和抗性提升3");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY,5), "并会对周围生物造成伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY, 1), "过热值大于300时清空并开启完全燃烧状态");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY, 2), "完全燃烧状态下你可以飞行");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY, 3), "攻击获得30%穿甲，伤害提高150%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY, 4), "获得迅捷2力量3和抗性提升3");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FIRE_FLY, 5), "并会对周围生物造成伤害");
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.RED_SCAR), "梦中如一");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.RED_SCAR), "攻击叠加一层「赤痕」");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,1), "每两层获得一级的抗性与力量");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,2), "且每层增伤10%持续15秒最高8层");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,3), "叠满8层后，每再获得一层会恢复2点生命值");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,4), "叠满8层后每一刀伤害提高50%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,5), "在手持时不再受生命恢复的影响");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,6), "每次攻击有10%的概率触发量子崩塌(吸引生物并进行一次小范围爆炸)");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,7), "拥有「赤痕」时，周围玩家获得生命恢复Ⅰ，伤害吸收Ⅰ");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,8), "每一层的「赤痕」都会额外附加2点魔法伤害，并造成缓慢效果");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR,9), "每次攻击给怪增加10点异常值，异常值满后使怪物处于2s的破防状态，无视敌方40%的护甲值");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR, 1), "每两层获得一级的抗性与力量");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR, 2), "且每层增伤10%持续15秒最高8层");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR, 3), "叠满8层后，每再获得一层会恢复2点生命值");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR, 4), "叠满8层后每一刀伤害提高50%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR, 5), "在手持时不再受生命恢复的影响");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR, 6), "每次攻击有10%的概率触发量子崩塌(吸引生物并进行一次小范围爆炸)");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR, 7), "拥有「赤痕」时，周围玩家获得生命恢复Ⅰ，伤害吸收Ⅰ");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR, 8), "每一层的「赤痕」都会额外附加2点魔法伤害，并造成缓慢效果");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.RED_SCAR, 9), "每次攻击给怪增加10点异常值，异常值满后使怪物处于2s的破防状态，无视敌方40%的护甲值");
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.Elemental_Explosion), "空刃·元素爆发");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.Elemental_Explosion), "§3【元素爆发】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.Elemental_Explosion,1), "剑技·天空系列sa释放后会增加一层[空刃]");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.Elemental_Explosion,2), "每层提供一级速度与一级抗性提升(抗性提升最高四级)");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.Elemental_Explosion,3), "造成伤害时触发额外魔法伤害");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.Elemental_Explosion,4), "每30秒减少一层[空刃]");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.Elemental_Explosion, 1), "剑技·天空系列sa释放后会增加一层[空刃]");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.Elemental_Explosion, 2), "每层提供一级速度与一级抗性提升(抗性提升最高四级)");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.Elemental_Explosion, 3), "造成伤害时触发额外魔法伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.Elemental_Explosion, 4), "每30秒减少一层[空刃]");
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.VACUUM_BLADE), "空刃·真空刃");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.VACUUM_BLADE), "§3【真空刃】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.VACUUM_BLADE,1), "剑技·天空系列sa释放后会增加一层[空刃]");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.VACUUM_BLADE,2), "持有[空刃]后可打出倍率80%的幻影刃");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.VACUUM_BLADE,3), "每额外有一层[空刃]倍率就+20%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.VACUUM_BLADE,4), "每30秒减少一层[空刃]");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.VACUUM_BLADE, 1), "剑技·天空系列sa释放后会增加一层[空刃]");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.VACUUM_BLADE, 2), "持有[空刃]后可打出倍率80%的幻影刃");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.VACUUM_BLADE, 3), "每额外有一层[空刃]倍率就+20%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.VACUUM_BLADE, 4), "每30秒减少一层[空刃]");
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.CELESTIAL_STRIKE), "天宇贯星击");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.CELESTIAL_STRIKE), "【剑盾模式】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,1), "每次攻击为敌人叠加1层「星蚀」标记（上限20层）");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,2), "每层星蚀标记会对敌人造成0.75%当前生命值的伤害");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,3), "释放sa【决胜轰解】时，如果半径10格有敌人持有星蚀则会被直接引爆");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,4), "此外，不管敌人是否有20层星蚀在释放sa后都会切换为【盾斧模式】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,5), "【盾斧模式】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,6), "你的所有非火焰伤害类型攻击都会被转为4段火焰伤害并为你叠加2层解放值");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,7), "同时，会根据你的hp的2%来增加额外的伤害");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,8), "解放值满100时，攻击概率触发极解");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,9), "释放sa后如果解放值=100则对半径十格范围的生物造成等同于玩家面板的8段火焰伤害");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE,10), "同时解放值=100的情况下释放sa后会切换为【剑盾模式】");
-
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE, 1), "每次攻击为敌人叠加1层「星蚀」标记（上限20层）");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE, 2), "每层星蚀标记会对敌人造成0.75%当前生命值的伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE, 3), "释放sa【决胜轰解】时，如果半径10格有敌人持有星蚀则会被直接引爆");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE, 4), "此外，不管敌人是否有20层星蚀在释放sa后都会切换为【盾斧模式】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE, 5), "【盾斧模式】");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE, 6), "你的所有非火焰伤害类型攻击都会被转为4段火焰伤害并为你叠加2层解放值");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE, 7), "同时，会根据你的hp的2%来增加额外的伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE, 8), "解放值满100时，攻击概率触发极解");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE, 9), "释放sa后如果解放值=100则对半径十格范围的生物造成等同于玩家面板的8段火焰伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.CELESTIAL_STRIKE, 10), "同时解放值=100的情况下释放sa后会切换为【剑盾模式】");
 
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS), "炎烬千劫");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS), "【炎烬千劫】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS,1), "你造成的伤害提高200%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS,2), "同时会对自身造成最大生命值2%的虚空属性伤害，这被扣除的部分会按照1颗心+10%的比例进行额外伤害增幅");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS,3), "每攻击十次会展开一次火焰领域对敌人造成一次等于玩家50%攻击力的火焰伤害");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS,4), "玩家受到的伤害减半");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS, 1), "你造成的伤害提高200%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS, 2), "同时会对自身造成最大生命值2%的虚空属性伤害，这被扣除的部分会按照1颗心+10%的比例进行额外伤害增幅");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS, 3), "每攻击十次会展开一次火焰领域对敌人造成一次等于玩家50%攻击力的火焰伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.INFERNO_THOUSAND_TRIALS, 4), "玩家受到的伤害减半");
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.ICE_BLADE), "天降寒天之钉");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.ICE_BLADE), "【天降寒天之钉】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLADE,1), "你造成的伤害提高200%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLADE,2), "攻击有30%的概率召唤冰锥");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLADE,3), "冰锥的伤害倍率为360%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLADE, 1), "你造成的伤害提高200%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLADE, 2), "攻击有30%的概率召唤冰锥");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLADE, 3), "冰锥的伤害倍率为360%");
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW), "3rd圣能充溢");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW), "【3rd圣能充溢】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW,1), "你造成的伤害提高30%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW,2), "你的攻击伤害变为两段");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW,3), "当你锻造数>100时：");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW,4), "你造成的伤害再次提高60%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW,5), "你的攻击伤害变为三段");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW, 1), "你造成的伤害提高30%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW, 2), "你的攻击伤害变为两段");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW, 3), "当你锻造数>100时：");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW, 4), "你造成的伤害再次提高60%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HOLY_ENERGY_OVERFLOW, 5), "你的攻击伤害变为三段");
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.DREAM_COMPANION), "与梦的同行");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.DREAM_COMPANION), "【与梦的同行】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.DREAM_COMPANION,1), "你造成的伤害提高100%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.DREAM_COMPANION,2), "攻击会叠加霜冻值，满层后缓慢敌人，这种方式冻结的敌人受到的伤害增加25%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.DREAM_COMPANION,3), "你周围对你没仇恨的生物获得力量3");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.DREAM_COMPANION, 1), "你造成的伤害提高100%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.DREAM_COMPANION, 2), "攻击会叠加霜冻值，满层后缓慢敌人，这种方式冻结的敌人受到的伤害增加25%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.DREAM_COMPANION, 3), "你周围对你没仇恨的生物获得力量3");
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.BITTER_COLD_HELL), "苦寒地狱");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.BITTER_COLD_HELL), "【苦寒地狱】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL,1), "你造成的伤害提高50%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL,2), "每3秒自动叠加「勿忘」层数");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL,3), "攻击时消耗层数造成额外伤害");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL,4), "攻击造成霜冻效果");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL, 1), "你造成的伤害提高50%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL, 2), "每3秒自动叠加「勿忘」层数");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL, 3), "攻击时消耗层数造成额外伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL, 4), "攻击造成霜冻效果");
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX), "超限·苦寒地狱");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX), "【超限·苦寒地狱】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX,1), "你造成的伤害提高100%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX,2), "每2秒自动叠加「勿忘」层数");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX,3), "攻击时消耗层数造成额外伤害");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX,4), "攻击造成霜冻效果");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX, 1), "你造成的伤害提高100%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX, 2), "每2秒自动叠加「勿忘」层数");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX, 3), "攻击时消耗层数造成额外伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.BITTER_COLD_HELL_EX, 4), "攻击造成霜冻效果");
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.ICE_BLOOM), "转魄");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.ICE_BLOOM), "【转魄】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM,1), "每次攻击有概率累计「朔望」效果");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM,2), "当「朔望」效果达到4层：");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM,3), "进入「转魄」效果：");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM,4), "在「转魄」效果期间，伤害提高100%，超过4层的「朔望」可额外提高10%的伤害，最高可叠加9层。");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM,5), "「转魄」下获得「幻刃风暴」和力量效果");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM,6), "此外，不管是否转魄，你的所有伤害都会被转为靠生命值为基础的冰属性伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM, 1), "每次攻击有概率累计「朔望」效果");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM, 2), "当「朔望」效果达到4层：");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM, 3), "进入「转魄」效果：");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM, 4), "在「转魄」效果期间，伤害提高100%，超过4层的「朔望」可额外提高10%的伤害，最高可叠加9层。");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM, 5), "「转魄」下获得「幻刃风暴」和力量效果");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_BLOOM, 6), "此外，不管是否转魄，你的所有伤害都会被转为靠生命值为基础的冰属性伤害");
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.AFFLORDITE), "银莲花");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.AFFLORDITE), "【银莲花】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.AFFLORDITE,1), "你的伤害增加25%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.AFFLORDITE,2), "攻击概率造成范围伤害");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.AFFLORDITE,3), "范围伤害倍率为1.5");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.AFFLORDITE,4), "如果敌人为boss时，倍率为3");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.AFFLORDITE, 1), "你的伤害增加25%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.AFFLORDITE, 2), "攻击概率造成范围伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.AFFLORDITE, 3), "范围伤害倍率为1.5");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.AFFLORDITE, 4), "如果敌人为boss时，倍率为3");
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.FROST_FLAME), "风花霜月·寒炎");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.FROST_FLAME), "【风花霜月·寒炎】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME,1), "伤害提高60%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME,2), "伤害变为火焰伤害和寒冷伤害混伤");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME,3), "攻击概率给目标叠加「霜灼」效果（着火+缓慢3）");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME,4), "攻击带有「霜灼」的目标时，伤害提高30%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME,5), "每五段斩击获得一层「落霜」，上限6层，持续6秒");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME,6), "每层「落霜」提供15%增伤，并无视30%火焰/霜冻抗性");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME, 1), "伤害提高60%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME, 2), "伤害变为火焰伤害和寒冷伤害混伤");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME, 3), "攻击概率给目标叠加「霜灼」效果（着火+缓慢3）");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME, 4), "攻击带有「霜灼」的目标时，伤害提高30%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME, 5), "每五段斩击获得一层「落霜」，上限6层，持续6秒");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.FROST_FLAME, 6), "每层「落霜」提供15%增伤，并无视30%火焰/霜冻抗性");
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY), "冰魄·寒月霜天");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY), "【冰魄·寒月霜天】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY,1), "造成伤害提高45%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY,2), "面对boss时额外提高15%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY,3), "击中敌人时+1层冰蚀层数（最高15层）");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY,4), "满15层会自动触发一次SA");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY, 1), "造成伤害提高45%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY, 2), "面对boss时额外提高15%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY, 3), "击中敌人时+1层冰蚀层数（最高15层）");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.ICE_SOUL_FROST_SKY, 4), "满15层会自动触发一次SA");
 
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.HUNTER), "【追猎者】");
         REGISTRATE.addRawLang(CreateSeLangDescs(SRSpecialEffectsRegistry.HUNTER), "【追猎者】");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER,1), "移动速度提升25%");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER,2), "根据移速加成提升你造成的伤害");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER,3), "每次攻击叠加毒素层数");
-        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER,4), "每0.5秒造成毒素伤害（伤害值为玩家基础攻击力的20%×层数）");
-
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER, 1), "移动速度提升25%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER, 2), "根据移速加成提升你造成的伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER, 3), "每次攻击叠加毒素层数");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER, 4), "每0.5秒造成毒素伤害（伤害值为玩家基础攻击力的20%×层数）");
 
 
         REGISTRATE.addRawLang("srelic.sword_type.other_world_on", "幻");
@@ -834,47 +876,37 @@ public class LangRegistry {
         REGISTRATE.addRawLang("srelic.sword_type.other_world_off", "封");
 
 
-
-
-
         REGISTRATE.addRawLang("message.srelic.grammer_alloy_obtained", "你获得了格拉默合金！");
         REGISTRATE.addRawLang("message.srelic.grammer_progress", "蠹虫击杀进度: %d/%d");
         REGISTRATE.addRawLang("tooltip.srelic.grammer_progress", "蠹虫击杀进度: %d/%d");
 
 
-
-
-
-        REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_slashblade", "§6游戏扩增·异界之刃");
-        REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_se", "§6游戏扩增·命途轨迹");
-        REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_se2", "§6游戏扩增·测试用SE遍历");
-        REGISTRATE.addRawLang("item_group."+MODID+"."+MODID+"_item", "§6游戏扩增·利刃素材");
+        REGISTRATE.addRawLang("item_group." + MODID + "." + MODID + "_slashblade", "§6游戏扩增·异界之刃");
+        REGISTRATE.addRawLang("item_group." + MODID + "." + MODID + "_se", "§6游戏扩增·命途轨迹");
+        REGISTRATE.addRawLang("item_group." + MODID + "." + MODID + "_se2", "§6游戏扩增·测试用SE遍历");
+        REGISTRATE.addRawLang("item_group." + MODID + "." + MODID + "_item", "§6游戏扩增·利刃素材");
     }
 
 
-
-
-
-
-
-
-
-    public static String CreateItemLang(ResourceKey<SlashBladeDefinition> a){
-        return "item."+MODID+"."+a.location().getPath();
-    }
-    public static String CreateSeLang(RegistryObject<SpecialEffect> a){
-        return "se."+MODID+"."+a.getId().getPath();
-    }
-    public static String CreateSeLangDescs(RegistryObject<SpecialEffect> a){
-        return "se."+MODID+"."+a.getId().getPath()+".desc";
-    }
-    public static String CreateSeLangDescsCounts(RegistryObject<SpecialEffect> a,int i){
-        return "se."+MODID+"."+a.getId().getPath()+".desc_"+i;
-    }
-    public static String CreateSaLang(RegistryObject<SlashArts> a){
-        return "slash_art."+MODID+"."+a.getId().getPath();
+    public static String CreateItemLang(ResourceKey<SlashBladeDefinition> a) {
+        return "item." + MODID + "." + a.location().getPath();
     }
 
+    public static String CreateSeLang(RegistryObject<SpecialEffect> a) {
+        return "se." + MODID + "." + a.getId().getPath();
+    }
+
+    public static String CreateSeLangDescs(RegistryObject<SpecialEffect> a) {
+        return "se." + MODID + "." + a.getId().getPath() + ".desc";
+    }
+
+    public static String CreateSeLangDescsCounts(RegistryObject<SpecialEffect> a, int i) {
+        return "se." + MODID + "." + a.getId().getPath() + ".desc_" + i;
+    }
+
+    public static String CreateSaLang(RegistryObject<SlashArts> a) {
+        return "slash_art." + MODID + "." + a.getId().getPath();
+    }
 
 
 }
