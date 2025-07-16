@@ -113,6 +113,17 @@ public class LangRegistry {
         REGISTRATE.addRawLang("painting.srelic.huoqu.title", "获取方式");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.spirit_butterfly.pages.0.text", "万花丛中，蝴蝶乱舞，于凋零之中绽放，于往生中留香，灵芳环绕三生，蝴蝶留有血梅香。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.diamond_star.pages.0.text", "珍贵且坚硬的材料，三首恶魔的核心与坚硬的材料融合，产生意想不到的材料，钻石之星闪耀着星辰的光芒。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_core.pages.0.text", "绯红色的折纸，拥有无穷的可能性，不同的方式，造就不同的未来，可能会对一些事物产生影响。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.eternal_plum.pages.0.text", "前生今生与来生，人虽变而梅不变。蝴蝶与梅相依恋，共渡凋零赴往生。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.frozen_netherite_alloy.pages.0.text", "坚硬的合金经过极寒的淬炼，蕴含着冰雪的力量，隐约可以看到冰雪的缩影。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.flame_netherite_alloy.pages.0.text", "来自下界的金属，经过岩浆的淬炼，蕴含熔岩的力量，隐约可以听到岩浆的轰鸣。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.oceanic_netherite_alloy.pages.0.text", "温柔且坚韧的海洋将力量赋予下界合金，使其拥有潮水的力量与波纹的和谐。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.thunder_netherite_alloy.pages.0.text", "经历神的怒火，下界合金更加完善，上面环绕的雷电展现其蕴含的强大力量。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.demon_ingot.pages.0.text", "在下界之星的介入下，四种下界合金融合而产生的不应存在之物，世界为它赋予无与伦比的力量。（什么电王顶点形态啊）");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.sakura_steel_ingot.pages.0.text", "铁锭与樱花相结合的材料，有着钢铁的硬度和樱花的香气，表面的樱纹使其更具美感。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.ex_star.pages.0.text", "极致的实体化，可以淬炼武器，激发其蕴含的力量，获取新的能力，帮助武器超越极限。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_core.pages.0.text", "");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_core.pages.0.easter-egg", "");
 
 
         REGISTRATE.addRawLang("se.slashblade.wither_edge.desc", "攻击成功施加凋零效果");
