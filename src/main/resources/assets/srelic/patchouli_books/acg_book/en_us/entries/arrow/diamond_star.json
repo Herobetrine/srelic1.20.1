@@ -1,0 +1,19 @@
+{
+  "sortnum" : 1,
+  "name" : "item.srelic.diamond_star",
+  "icon" : "srelic:diamond_star",
+  "category" : "srelic:arrow",
+  "pages" : [
+    {
+      "type" : "spotlight",
+      "item" : "srelic:diamond_star",
+      "text" : "patchouli.srelic.book.entries.arrow.diamond_star.pages.0.text"
+    },
+    {
+      "type": "crafting",
+      "title": "item.srelic.diamond_star",
+      "text": "item.srelic.diamond_star",
+      "recipe": "srelic:diamond_star"
+    }
+  ]
+}

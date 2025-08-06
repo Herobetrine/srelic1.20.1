@@ -1,0 +1,18 @@
+{
+  "sortnum" : 1,
+  "name" : "item.srelic.sakura_steel_ingot",
+  "icon" : "srelic:sakura_steel_ingot",
+  "category" : "srelic:arrow",
+  "pages" : [
+    {
+      "type" : "spotlight",
+      "item" : "srelic:sakura_steel_ingot",
+      "text" : "patchouli.srelic.book.entries.arrow.sakura_steel_ingot.pages.0.text"
+    },
+    {
+      "type" : "text",
+      "title" : "painting.srelic.huoqu.title",
+      "text" : "tips.sakura_steel_ingot.name_tip"
+    }
+  ]
+}

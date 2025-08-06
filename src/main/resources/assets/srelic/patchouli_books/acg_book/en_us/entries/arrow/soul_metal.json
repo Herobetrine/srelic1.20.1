@@ -1,0 +1,24 @@
+{
+  "sortnum" : 1,
+  "name" : "item.srelic.soul_metal",
+  "icon" : "srelic:soul_metal",
+  "category" : "srelic:arrow",
+  "pages" : [
+    {
+      "type" : "spotlight",
+      "item" : "srelic:soul_metal",
+      "text" : "patchouli.srelic.book.entries.arrow.soul_metal.pages.0.text"
+    },
+    {
+      "type" : "crafting",
+      "title" : "item.srelic.soul_metal",
+      "text" : "item.srelic.soul_metal",
+      "recipe" : "srelic:soul_metal"
+    },
+    {
+      "type" : "text",
+      "title": "painting.srelic.aotuo.title",
+      "text" : "patchouli.srelic.book.entries.arrow.soul_metal.pages.1.text"
+    }
+  ]
+}
