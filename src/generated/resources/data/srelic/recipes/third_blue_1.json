@@ -1,0 +1,48 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:third_blue_1",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:frozen_netherite_alloy"
+    },
+    "B": {
+      "item": "minecraft:sea_lantern"
+    },
+    "C": {
+      "item": "minecraft:diamond_sword"
+    },
+    "D": {
+      "item": "srelic:blood_plum_leaves"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    },
+    "F": {
+      "item": "minecraft:lapis_block"
+    },
+    "G": {
+      "item": "minecraft:snow_block"
+    },
+    "H": {
+      "item": "minecraft:blue_ice"
+    },
+    "I": {
+      "item": "srelic:demon_ingot"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

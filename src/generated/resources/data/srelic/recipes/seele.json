@@ -1,0 +1,47 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:seele",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:fel_metal"
+    },
+    "B": {
+      "item": "srelic:compressed_alloy"
+    },
+    "C": {
+      "item": "srelic:phantom_trace_ingot"
+    },
+    "D": {
+      "item": "srelic:demon_ingot"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "F": {
+      "item": "srelic:ender_metal"
+    },
+    "G": {
+      "item": "srelic:diamond_star"
+    },
+    "H": {
+      "item": "srelic:soul_metal"
+    },
+    "I": {
+      "item": "srelic:dreamweave_ingot"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

@@ -3,7 +3,7 @@ package com.dinzeer.srelic.specialeffects.superse;
 import com.dinzeer.srelic.Utils.SlashBladeUtil;
 import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.registry.SRStacksReg;
-import com.dinzeer.srelic.registry.imp.IStackManager;
+import com.dinzeer.legendreliclib.lib.util.impl.IStackManager;
 import com.dinzeer.srelic.specialeffects.SeEX;
 import mods.flammpfeil.slashblade.event.SlashBladeEvent;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
@@ -119,7 +119,7 @@ public class WhiteRoseSE extends SpecialEffect {
 
         // 11-15层：增伤
         if (stacks >= 11) {
-            float bonus = 1 + (stacks - 10) * 0.1f;
+            float bonus = 1 + (stacks + 1) * 0.1f;
             event.setAmount(event.getAmount() * bonus);
         }
 

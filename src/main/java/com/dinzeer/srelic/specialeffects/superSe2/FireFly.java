@@ -3,7 +3,7 @@ package com.dinzeer.srelic.specialeffects.superSe2;
 import com.dinzeer.srelic.Utils.SlashBladeUtil;
 import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.registry.SRStacksReg;
-import com.dinzeer.srelic.registry.imp.IStackManager;
+import com.dinzeer.legendreliclib.lib.util.impl.IStackManager;
 import com.dinzeer.srelic.specialeffects.SeEX;
 import mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState;
 import mods.flammpfeil.slashblade.event.SlashBladeEvent;

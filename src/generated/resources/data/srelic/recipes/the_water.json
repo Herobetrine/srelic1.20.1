@@ -1,0 +1,47 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:the_water",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:honey_bottle"
+    },
+    "B": {
+      "item": "minecraft:conduit"
+    },
+    "C": {
+      "item": "minecraft:golden_sword"
+    },
+    "D": {
+      "item": "minecraft:sea_lantern"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "F": {
+      "item": "srelic:oceanic_netherite_alloy"
+    },
+    "G": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "H": {
+      "item": "minecraft:beacon"
+    },
+    "I": {
+      "item": "srelic:nereid_s_secret_brew"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,48 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:no_end",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:blue_ice"
+    },
+    "B": {
+      "item": "srelic:frozen_netherite_alloy"
+    },
+    "C": {
+      "item": "srelic:compressed_alloy"
+    },
+    "D": {
+      "item": "srelic:fel_metal"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    },
+    "F": {
+      "item": "srelic:flame_netherite_alloy"
+    },
+    "G": {
+      "item": "srelic:compressed_alloy"
+    },
+    "H": {
+      "item": "srelic:demon_ingot"
+    },
+    "I": {
+      "item": "minecraft:magma_block"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

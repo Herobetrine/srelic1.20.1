@@ -1,0 +1,38 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:rappa",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:compressed_alloy"
+    },
+    "B": {
+      "item": "srelic:max_ingot"
+    },
+    "C": {
+      "item": "minecraft:nether_star"
+    },
+    "D": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "E": {
+      "item": "srelic:demon_ingot"
+    },
+    "F": {
+      "item": "srelic:diamond_star"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "CDE",
+    "FCA"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

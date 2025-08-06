@@ -1,0 +1,36 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:the_radiance_of_stagnant_water_flow",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:oceanic_netherite_alloy"
+    },
+    "B": {
+      "item": "srelic:nereid_s_secret_brew"
+    },
+    "C": {
+      "item": "srelic:surgeheart_vortex"
+    },
+    "D": {
+      "item": "srelic:abyssal_luminance_ingot"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    }
+  },
+  "pattern": [
+    " AA",
+    "BCD",
+    "ED "
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

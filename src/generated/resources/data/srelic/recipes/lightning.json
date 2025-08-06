@@ -1,0 +1,44 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:lightning",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:sakura_steel_ingot"
+    },
+    "B": {
+      "item": "srelic:demon_ingot"
+    },
+    "C": {
+      "item": "minecraft:dragon_breath"
+    },
+    "D": {
+      "item": "srelic:ex_star"
+    },
+    "E": {
+      "item": "srelic:compressed_alloy"
+    },
+    "F": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "G": {
+      "item": "srelic:diamond_star"
+    },
+    "H": {
+      "item": "srelic:soul_metal"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEC",
+    "FGH"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

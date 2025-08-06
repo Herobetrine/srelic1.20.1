@@ -1,0 +1,44 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:the_fire",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:copper_ingot"
+    },
+    "B": {
+      "item": "minecraft:lava_bucket"
+    },
+    "C": {
+      "item": "minecraft:magma_cream"
+    },
+    "D": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "E": {
+      "item": "minecraft:magma_block"
+    },
+    "F": {
+      "item": "minecraft:blaze_rod"
+    },
+    "G": {
+      "item": "minecraft:fire_charge"
+    },
+    "H": {
+      "item": "slashblade:proudsoul_tiny"
+    }
+  },
+  "pattern": [
+    " AB",
+    "CDE",
+    "FGH"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

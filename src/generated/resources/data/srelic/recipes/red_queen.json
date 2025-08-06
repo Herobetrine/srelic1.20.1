@@ -1,0 +1,44 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:red_queen",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:soul_lantern"
+    },
+    "B": {
+      "item": "srelic:max_ingot"
+    },
+    "C": {
+      "item": "minecraft:nether_star"
+    },
+    "D": {
+      "item": "minecraft:ancient_debris"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "F": {
+      "item": "minecraft:lava_bucket"
+    },
+    "G": {
+      "item": "minecraft:blast_furnace"
+    },
+    "H": {
+      "item": "minecraft:dragon_breath"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DED",
+    "FGH"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

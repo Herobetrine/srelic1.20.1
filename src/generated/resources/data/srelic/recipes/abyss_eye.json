@@ -1,0 +1,50 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:abyss_eye",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:nightstalker_ingot"
+    },
+    "B": {
+      "item": "srelic:nightmare_core_ingot"
+    },
+    "C": {
+      "item": "srelic:nightterror_bloodwing"
+    },
+    "D": {
+      "item": "srelic:compressed_alloy"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "kill": 2021,
+        "name": "srelic:blade",
+        "proud_soul": 10180,
+        "refine": 14
+      }
+    },
+    "F": {
+      "item": "minecraft:pink_tulip"
+    },
+    "G": {
+      "item": "srelic:butterfly"
+    },
+    "H": {
+      "item": "srelic:dreamweave_ingot"
+    },
+    "I": {
+      "item": "srelic:phantom_trace_ingot"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

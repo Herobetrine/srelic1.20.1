@@ -1,0 +1,39 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:spring",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "B": {
+      "item": "minecraft:tnt"
+    },
+    "C": {
+      "item": "srelic:diamond_star"
+    },
+    "D": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    },
+    "E": {
+      "item": "minecraft:rose_bush"
+    },
+    "F": {
+      "item": "srelic:fel_metal"
+    }
+  },
+  "pattern": [
+    " FB",
+    "CDA",
+    "EA "
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

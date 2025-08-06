@@ -1,0 +1,39 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:ye_fire",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:crimson_shadow_ingot"
+    },
+    "B": {
+      "item": "srelic:thunder_netherite_alloy"
+    },
+    "C": {
+      "item": "minecraft:soul_campfire"
+    },
+    "D": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:ye_tachi",
+        "proud_soul": 3000
+      }
+    },
+    "E": {
+      "item": "srelic:crimson_core"
+    },
+    "F": {
+      "item": "minecraft:wither_skeleton_skull"
+    }
+  },
+  "pattern": [
+    " AB",
+    "CDE",
+    "BF "
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

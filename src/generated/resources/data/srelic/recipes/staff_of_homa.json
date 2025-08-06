@@ -1,0 +1,43 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:staff_of_homa",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:compressed_alloy"
+    },
+    "B": {
+      "item": "srelic:spirit_butterfly"
+    },
+    "C": {
+      "item": "srelic:eternal_plum"
+    },
+    "D": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "kill": 5000,
+        "name": "srelic:blade",
+        "proud_soul": 30000
+      }
+    },
+    "E": {
+      "item": "srelic:ignis_cube"
+    },
+    "F": {
+      "item": "srelic:pule_apple"
+    },
+    "G": {
+      "item": "minecraft:trident"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEA",
+    "FGA"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

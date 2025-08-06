@@ -1,0 +1,45 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:heita",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "B": {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    "C": {
+      "item": "minecraft:purple_dye"
+    },
+    "D": {
+      "item": "minecraft:ice"
+    },
+    "E": {
+      "item": "srelic:diamond_star"
+    },
+    "F": {
+      "item": "minecraft:diamond_block"
+    },
+    "G": {
+      "item": "srelic:frozen_netherite_alloy"
+    },
+    "H": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    }
+  },
+  "pattern": [
+    "ABC",
+    "HDE",
+    " FG"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

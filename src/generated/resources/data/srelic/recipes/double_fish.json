@@ -1,0 +1,44 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:double_fish",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:diamond_star"
+    },
+    "B": {
+      "item": "slashblade:proudsoul_sphere"
+    },
+    "C": {
+      "item": "slashblade:proudsoul_crystal"
+    },
+    "D": {
+      "item": "srelic:ender_metal"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "F": {
+      "item": "srelic:ender_metal"
+    },
+    "G": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "H": {
+      "item": "minecraft:netherite_boots"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "G H"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

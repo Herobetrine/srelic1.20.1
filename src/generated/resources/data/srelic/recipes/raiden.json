@@ -1,0 +1,58 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:raiden",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:thunder_netherite_alloy"
+    },
+    "B": {
+      "item": "minecraft:diamond_sword"
+    },
+    "C": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    },
+    "D": {
+      "item": "minecraft:small_amethyst_bud"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "slashblade:slashblade",
+      "request": {
+        "name": "slashblade:rodai_netherite",
+        "proud_soul": 3000
+      }
+    },
+    "F": {
+      "item": "minecraft:cherry_sapling"
+    },
+    "G": {
+      "item": "minecraft:lightning_rod"
+    },
+    "H": {
+      "type": "slashblade:blade",
+      "item": "slashblade:slashblade",
+      "request": {
+        "name": "slashblade:sange",
+        "proud_soul": 3000
+      }
+    },
+    "I": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

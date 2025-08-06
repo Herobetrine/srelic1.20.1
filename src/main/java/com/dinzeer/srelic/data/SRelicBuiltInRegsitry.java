@@ -19,6 +19,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.awt.*;
 import java.util.List;
 
 public class SRelicBuiltInRegsitry {
@@ -63,7 +64,7 @@ public class SRelicBuiltInRegsitry {
     //可塑性白模
     public static final ResourceKey<SlashBladeDefinition> BLADE=register("blade");
     //老铁
-    public static final ResourceKey<SlashBladeDefinition> LAOTIE=register("yunli");
+    public static final ResourceKey<SlashBladeDefinition> LAOTIE=register("laotie");
     //景元
         public static final ResourceKey<SlashBladeDefinition> JINYUAN=register("jinyuan");
     //老杨
@@ -85,7 +86,7 @@ public class SRelicBuiltInRegsitry {
     //裁春
     public static final ResourceKey<SlashBladeDefinition> spring=register("spring");
     //天火圣裁「寒气炼成」
-    public static final ResourceKey<SlashBladeDefinition> FIREBlue2=register("the_fire_bule2" );
+    public static final ResourceKey<SlashBladeDefinition> FIREBlue2=register("fireblue2" );
     //天火圣裁「命运投掷」
     public static final ResourceKey<SlashBladeDefinition> the_fire_gray=register("the_fire_gray" );
     //天火圣裁「暴风之眼」
@@ -158,6 +159,10 @@ public class SRelicBuiltInRegsitry {
     public static final ResourceKey<SlashBladeDefinition> THE_STAR_OF_THE_FROST=register("the_star_of_the_frost");
     //基因收割者
     public static final ResourceKey<SlashBladeDefinition> GENE_HARVESTER=register("gene_harvester");
+    //月之恒
+    public static final ResourceKey<SlashBladeDefinition> THE_STAR_OF_THE_HYMN=register("the_star_of_the_hymn");
+    //无名之境
+    public static final ResourceKey<SlashBladeDefinition> UNKNOWN_TERRITORY=register("unknown_territory");
     public static void registerAll(BootstapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(START,
                 new SlashBladeDefinition(
@@ -1636,6 +1641,48 @@ public class SRelicBuiltInRegsitry {
                                 .maxDamage(300)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+
+        bootstrap.register(
+                THE_STAR_OF_THE_HYMN
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("the_star_of_the_hymn"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/kiana/the_star_of_the_hymn.png"))
+                                .modelName(Srelic.prefix("model/honkai/kiana/the_star_of_the_hymn.obj"))
+                                .effectColor(Color.WHITE.getRGB())
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(40)
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .maxDamage(300)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
+                        )
+                )
+        );
+        bootstrap.register(
+                UNKNOWN_TERRITORY
+                , new SlashBladeDefinition(SRItem.SRELIC_BLADE_ID,Srelic.prefix("unknown_territory"),
+                        RenderDefinition.Builder.newInstance()
+                                .textureName(Srelic.prefix("model/honkai/kiana/unknown_territory.png"))
+                                .modelName(Srelic.prefix("model/honkai/kiana/unknown_territory.obj"))
+                                .effectColor(Color.WHITE.getRGB())
+                                .standbyRenderType(CarryType.PSO2)
+                                .build(),
+                        PropertiesDefinition.Builder.newInstance()
+                                .defaultSwordType(List.of(SwordType.BEWITCHED))
+                                .baseAttackModifier(70)
+                                .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .maxDamage(300)
+                                .build(),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 10),
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.BLOCK_FORTUNE), 10)
                         )
                 )

@@ -1,0 +1,38 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:the_fire_green2",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:compass"
+    },
+    "B": {
+      "item": "srelic:windy_core"
+    },
+    "C": {
+      "item": "minecraft:spyglass"
+    },
+    "D": {
+      "item": "minecraft:name_tag"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "F": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:the_fire"
+      }
+    }
+  },
+  "pattern": [
+    "ABC",
+    "BFB",
+    "DBE"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,55 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:laotie",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:waxed_weathered_cut_copper"
+    },
+    "B": {
+      "type": "slashblade:blade",
+      "item": "slashblade:slashblade",
+      "request": {
+        "name": "slashblade:rodai_netherite"
+      }
+    },
+    "C": {
+      "item": "srelic:diamond_star"
+    },
+    "D": {
+      "item": "srelic:demon_ingot"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "F": {
+      "item": "srelic:max_ingot"
+    },
+    "G": {
+      "item": "slashblade:proudsoul_trapezohedron"
+    },
+    "H": {
+      "type": "slashblade:blade",
+      "item": "slashblade:slashblade",
+      "request": {
+        "name": "slashblade:sabigatana_broken"
+      }
+    },
+    "I": {
+      "item": "minecraft:shield"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

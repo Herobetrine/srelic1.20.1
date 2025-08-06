@@ -1,0 +1,33 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:el",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:sakura_steel_ingot"
+    },
+    "B": {
+      "item": "minecraft:pink_dye"
+    },
+    "C": {
+      "item": "minecraft:pink_wool"
+    },
+    "D": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    }
+  },
+  "pattern": [
+    "ABC",
+    "BAB",
+    "CBD"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

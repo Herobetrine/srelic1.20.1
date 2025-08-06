@@ -1,7 +1,7 @@
 package com.dinzeer.srelic.specialeffects.superse;
 
 import com.dinzeer.srelic.registry.SRStacksReg;
-import com.dinzeer.srelic.registry.imp.IStackManager;
+import com.dinzeer.legendreliclib.lib.util.impl.IStackManager;
 import com.dinzeer.srelic.specialeffects.SeEX;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import net.minecraft.core.particles.ParticleTypes;
@@ -25,7 +25,7 @@ public class QuantumDanceSE extends SpecialEffect {
     // 双堆栈系统
     private static final IStackManager STACK_DIE = SRStacksReg.LIANG_DIE_STACKS; // 40%*10=400%
     private static final IStackManager STACK_FENG = SRStacksReg.LIANG_FENG_STACKS; // 50%*3=150%
-    private static final int BUFF_DURATION = 100; // 5秒效果持续时间
+    private static final int BUFF_DURATION = 3000; // 5秒效果持续时间
 
     public QuantumDanceSE() {
         super(85);
@@ -85,16 +85,11 @@ public class QuantumDanceSE extends SpecialEffect {
     private static void applyComboEffects(Player player) {
         // 速度IV(3) 对应参数为等级-1
         player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, BUFF_DURATION, 3, false, true));
-        player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, BUFF_DURATION, 0, false, false));
+        player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, BUFF_DURATION, 0, true, true));
         player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, BUFF_DURATION, 1, false, true)); // 力量II
         player.addEffect(new MobEffectInstance(MobEffects.GLOWING, BUFF_DURATION, 0, false, true));
         player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, BUFF_DURATION, 1, false, true)); // 急迫II
 
-        // 视觉效果
-        if (player instanceof ServerPlayer) {
-            player.level().playSound(null, player.getX(), player.getY(), player.getZ(),
-                    SoundEvents.PLAYER_ATTACK_STRONG, SoundSource.PLAYERS, 1.5F, 0.6F);
-        }
     }
 
     private static void spawnKillParticles(Player player) {

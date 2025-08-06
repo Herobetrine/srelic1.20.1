@@ -3,7 +3,7 @@ package com.dinzeer.srelic.specialattacks;
 import com.dinzeer.srelic.Utils.SlashBladeUtil;
 import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.registry.SRStacksReg;
-import com.dinzeer.srelic.registry.imp.IStackManager;
+import com.dinzeer.legendreliclib.lib.util.impl.IStackManager;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;

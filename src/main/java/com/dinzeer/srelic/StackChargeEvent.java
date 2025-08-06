@@ -1,16 +1,13 @@
 package com.dinzeer.srelic;
 
-import com.dinzeer.srelic.registry.imp.RegisteredStackManager;
-import com.dinzeer.srelic.specialeffects.StackManager;
-import net.minecraft.world.entity.LivingEntity;
+import com.dinzeer.srelic.registry.imp.SRRegisteredStackManager;
 import net.minecraft.world.entity.player.Player;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
 public class StackChargeEvent extends PlayerEvent {
-    public RegisteredStackManager stackManager;
+    public SRRegisteredStackManager stackManager;
     public int amount;
-    public StackChargeEvent(Player player, RegisteredStackManager stackManager, int amount) {
+    public StackChargeEvent(Player player, SRRegisteredStackManager stackManager, int amount) {
 
         super(player);
 

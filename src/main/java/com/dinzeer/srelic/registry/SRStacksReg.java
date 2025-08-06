@@ -1,7 +1,11 @@
 package com.dinzeer.srelic.registry;
 
-import com.dinzeer.srelic.registry.imp.IStackManager;
-import com.dinzeer.srelic.registry.imp.RegisteredStackManager;
+import com.dinzeer.legendreliclib.lib.util.impl.IStackManager;
+import com.dinzeer.legendreliclib.lib.util.impl.RegisteredStackManager;
+import com.dinzeer.srelic.registry.imp.SRRegisteredStackManager;
+
+import static com.dinzeer.srelic.Srelic.MODID;
+
 
 public class SRStacksReg {
     public static final IStackManager BUTTERFLY_STACKS =register("butterfly_falling", 10);
@@ -20,34 +24,23 @@ public class SRStacksReg {
     public static final IStackManager WHITE_ROSE_STACKS =register("white_rose", 15);
     public static final IStackManager FLY_YELLOW_STACKS =register("fly_yellow", 30);
     public static final IStackManager ICE_RHYTHM_STACKS = register("ice_rhythm", 15);
-
     public static final IStackManager OVERHEAT_VALUE_STACKS = register("overheat_value", 300);
     public static final IStackManager SECONDARY_COMBUSTION_STACKS = register("secondary_combustion", 1);
-
-    public static final IStackManager RED_SCAR = register("red_scar", 8);
-
-    public static final IStackManager FROST_VALUE = register("frost_value", 100);
-
+    public static final IStackManager RED_SCAR = register("red_scar", 12);
     public static final IStackManager SKY_SWORD = register("sky_sword", 5);
     public static final IStackManager CELESTIAL_STRIKE = register("celestial_strike", 100);
     // 新增朔望层数管理器
     public static final IStackManager ICE_BLOOM_STACKS = register("ice_bloom", 9);
-
     // 新增冥芒层数管理器
     public static final IStackManager MING_MANG_STACKS = register("ming_mang", 10);
-
     // 新增冰魄·寒月霜天的冰蚀层数管理器 (最大15层)
     public static final IStackManager ICE_SOUL_FROST_SKY_STACKS = register("ice_soul_frost_sky", 15);
-
     // 新增苦寒地狱堆栈管理器
     public static final IStackManager BITTER_COLD_HELL_STACKS = register("bitter_cold_hell", 10);
-
     // 新增EX苦寒地狱堆栈管理器
     public static final IStackManager BITTER_COLD_HELL_EX_STACKS = register("bitter_cold_hell_ex", 10);
-
     // 新增风花霜月·寒炎的「落霜」层数管理器 (最大6层)
     public static final IStackManager FROST_FLAME_STACKS = register("frost_flame", 6);
-
     // 新增追猎者的毒素印记管理器 (最大10层)
     public static final IStackManager HUNTER_TOXIN_STACKS = register("hunter_toxin", 10);
 
@@ -60,7 +53,13 @@ public class SRStacksReg {
 
     public static final IStackManager SAM_OVERDRIVE_STACKS = register("SamHeat", 300);
     public static final IStackManager CHAOS_BREAKER_STACKS = register("chaos_breaker", 3);
-    public static IStackManager register(String name,int max){
-      return RegisteredStackManager.Registry.register(name, max);
+
+    // 新增方法：根据ID获取堆栈管理器
+    public static IStackManager getStackManager(String id) {
+        return RegisteredStackManager.Registry.get(id).orElse(null);
+    }
+
+    public static IStackManager register(String name, int max){
+        return RegisteredStackManager.Registry.register(MODID+":"+name, max);
     }
 }

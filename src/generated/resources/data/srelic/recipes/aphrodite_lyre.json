@@ -1,0 +1,48 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:aphrodite_lyre",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:frozen_netherite_alloy"
+    },
+    "B": {
+      "item": "srelic:demon_ingot"
+    },
+    "C": {
+      "item": "srelic:frozen_netherite_alloy"
+    },
+    "D": {
+      "item": "srelic:demon_ingot"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    },
+    "F": {
+      "item": "srelic:maxim"
+    },
+    "G": {
+      "item": "srelic:frozen_netherite_alloy"
+    },
+    "H": {
+      "item": "minecraft:note_block"
+    },
+    "I": {
+      "item": "srelic:red_tide_core"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

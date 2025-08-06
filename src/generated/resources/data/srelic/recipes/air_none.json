@@ -1,0 +1,38 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:air_none",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:void_ingot"
+    },
+    "B": {
+      "item": "srelic:void_core"
+    },
+    "C": {
+      "item": "minecraft:ender_eye"
+    },
+    "D": {
+      "item": "srelic:shirin_fish"
+    },
+    "E": {
+      "item": "minecraft:dragon_egg"
+    },
+    "F": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    }
+  },
+  "pattern": [
+    "ABA",
+    "CDE",
+    "AFA"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

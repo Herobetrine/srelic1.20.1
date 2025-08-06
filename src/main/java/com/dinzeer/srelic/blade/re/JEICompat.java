@@ -7,6 +7,7 @@ import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.ISubtypeRegistration;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.init.SBItems;
+import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.StringTag;
@@ -26,12 +27,18 @@ public class JEICompat implements IModPlugin {
 
 
     public void registerItemSubtypes(ISubtypeRegistration registration) {
-        registration.registerSubtypeInterpreter(SRItem.getItem(SRItem.SRELIC_BLADE_ID), (stack, context) -> {
-
-            return stack.getOrCreateTagElement("bladeState")
-                    .getString("translationKey")
-                    ;
+        registration.registerSubtypeInterpreter(SRItem.getItem(SRItem.SRELIC_BLADE_ID),
+                (stack, context) -> {
+            //同步nbt到Cap
+            stack.getCapability(ItemSlashBlade.BLADESTATE).ifPresent(cap -> {
+                        cap.deserializeNBT(stack.getOrCreateTag().getCompound("bladeState"));
+                    }
+            );
+            return stack.getCapability(ItemSlashBlade.BLADESTATE)
+                    .map(cap -> cap.getTranslationKey())
+                    .orElse("");
         });
+
     }
 
 

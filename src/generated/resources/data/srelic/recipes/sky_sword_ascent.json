@@ -1,0 +1,35 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:sky_sword_ascent",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:windy_core_ingot"
+    },
+    "B": {
+      "item": "minecraft:dandelion"
+    },
+    "C": {
+      "item": "minecraft:diamond_sword"
+    },
+    "D": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "E": {
+      "item": "slashblade:proudsoul_trapezohedron"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "ADA",
+    "EAA"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

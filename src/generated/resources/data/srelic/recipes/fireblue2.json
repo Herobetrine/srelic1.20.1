@@ -1,0 +1,47 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:fireblue2",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:blue_ice"
+    },
+    "B": {
+      "item": "minecraft:snowball"
+    },
+    "C": {
+      "item": "minecraft:snow"
+    },
+    "D": {
+      "item": "srelic:soul_metal"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:the_fire"
+      }
+    },
+    "F": {
+      "item": "minecraft:string"
+    },
+    "G": {
+      "item": "minecraft:powder_snow_bucket"
+    },
+    "H": {
+      "item": "minecraft:ice"
+    },
+    "I": {
+      "item": "minecraft:packed_ice"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,41 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:afflordite",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:diamond_star"
+    },
+    "B": {
+      "item": "slashblade:proudsoul_crystal"
+    },
+    "C": {
+      "item": "slashblade:proudsoul_sphere"
+    },
+    "D": {
+      "item": "minecraft:red_tulip"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "F": {
+      "item": "minecraft:redstone"
+    },
+    "G": {
+      "item": "minecraft:diamond_hoe"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "  G"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

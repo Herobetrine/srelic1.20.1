@@ -1,0 +1,35 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:frost_sniper",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:soul_metal"
+    },
+    "B": {
+      "item": "minecraft:potion"
+    },
+    "C": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "D": {
+      "item": "slashblade:proudsoul_crystal"
+    },
+    "E": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEB",
+    "A  "
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

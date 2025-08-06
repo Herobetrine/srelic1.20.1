@@ -23,9 +23,16 @@ public class LamentOfPhantoms extends SpecialEffect {
 
     @SubscribeEvent
     public static void onPlayerDamaged(LivingDamageEvent event) {
+
+        if (event.getSource().getEntity() instanceof Player player){
+            if (!SeEX.hasSpecialEffect(player.getMainHandItem(), "lament_of_phantoms", player.experienceLevel)) return;
+            event.setAmount(event.getAmount() *2f);
+        }
+
+
+
         if (!(event.getEntity() instanceof Player player)) return;
         if (!SeEX.hasSpecialEffect(player.getMainHandItem(), "lament_of_phantoms", player.experienceLevel)) return;
-
         // 血量检测和冷却检测
         if (player.getHealth() / player.getMaxHealth() > HEALTH_TRIGGER) return;
         if (player.getPersistentData().getLong("LastLament") + COOLDOWN > player.level().getGameTime()) return;

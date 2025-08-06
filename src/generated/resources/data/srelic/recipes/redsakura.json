@@ -1,0 +1,38 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:redsakura",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:max_ingot"
+    },
+    "B": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "C": {
+      "item": "srelic:soul_metal"
+    },
+    "D": {
+      "item": "srelic:blood_plum_leaves"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "F": {
+      "item": "srelic:demon_ingot"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DED",
+    "CDF"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

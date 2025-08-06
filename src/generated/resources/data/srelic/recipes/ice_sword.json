@@ -1,0 +1,48 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:ice_sword",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:snow_block"
+    },
+    "B": {
+      "item": "srelic:diamond_star"
+    },
+    "C": {
+      "item": "minecraft:ice"
+    },
+    "D": {
+      "item": "srelic:frozen_netherite_alloy"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    },
+    "F": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "G": {
+      "item": "minecraft:sea_lantern"
+    },
+    "H": {
+      "item": "minecraft:pointed_dripstone"
+    },
+    "I": {
+      "item": "minecraft:diamond_sword"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

@@ -316,6 +316,31 @@ public class SrelicBladeRecipeGen {
             .define('C', SRBlockRegsitry.crimson_shadow_ore.get().asItem())
             .define('D', SRItemRegsitry.diamond_star.get())
             .save(pvd, "crimson_core");
+
+        // 添加亚空星璇合成配方
+        unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC,
+                SRItemRegsitry.void_core.get(), 1)::unlockedBy, SRItemRegsitry.void_ingot.get())
+                .pattern(" A ")
+                .pattern("BCB")
+                .pattern(" D ")
+                .define('A', SRItemRegsitry.ender_metal.get())
+                .define('B', SRItemRegsitry.void_ingot.get())
+                .define('C', SRItemRegsitry.PuleApple.get())
+                .define('D', Items.ENDER_EYE)
+                .save(pvd, "void_core_recipe");
+
+        // 添加亚空玄锭合成配方
+        unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC,
+                SRItemRegsitry.void_ingot.get(), 1)::unlockedBy, Items.NETHERITE_INGOT)
+                .pattern("ABA")
+                .pattern("CDC")
+                .pattern("EBE")
+                .define('A', Items.NETHERITE_SCRAP)
+                .define('B', Blocks.PURPUR_BLOCK)
+                .define('C', SRItemRegsitry.ex_star.get())
+                .define('D', Items.ENDER_EYE)
+                .define('E', Blocks.DRAGON_EGG)
+                .save(pvd, "void_ingot_recipe");
     }
     public static <T> T unlock(RegistrateRecipeProvider pvd, BiFunction<String, InventoryChangeTrigger.TriggerInstance, T> func, Item item) {
         return func.apply("has_" + pvd.safeName(item), DataIngredient.items(item).getCritereon(pvd));

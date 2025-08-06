@@ -3,7 +3,7 @@ package com.dinzeer.srelic.specialeffects.superSe2;
 import com.dinzeer.srelic.Utils.SlashBladeUtil;
 import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.registry.SRStacksReg;
-import com.dinzeer.srelic.registry.imp.IStackManager;
+import com.dinzeer.legendreliclib.lib.util.impl.IStackManager;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.effect.MobEffectInstance;

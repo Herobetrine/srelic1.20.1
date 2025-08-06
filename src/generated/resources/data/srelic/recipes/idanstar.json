@@ -1,0 +1,35 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:idanstar",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:soul_metal"
+    },
+    "B": {
+      "item": "srelic:demon_ingot"
+    },
+    "C": {
+      "item": "srelic:black_hole_metal"
+    },
+    "D": {
+      "item": "minecraft:nether_star"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    }
+  },
+  "pattern": [
+    "ABC",
+    "ADA",
+    "EBA"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

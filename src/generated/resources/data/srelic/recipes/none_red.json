@@ -1,0 +1,44 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:none_red",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:compressed_alloy"
+    },
+    "B": {
+      "item": "srelic:black_hole_metal"
+    },
+    "C": {
+      "item": "srelic:ex_star"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:none_blue",
+        "sword_type": [
+          "broken"
+        ]
+      }
+    },
+    "F": {
+      "item": "minecraft:totem_of_undying"
+    },
+    "G": {
+      "item": "srelic:rainbow_star"
+    },
+    "H": {
+      "item": "minecraft:echo_shard"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "AEF",
+    "GAH"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

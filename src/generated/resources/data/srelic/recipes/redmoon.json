@@ -1,0 +1,35 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:redmoon",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:diamond"
+    },
+    "B": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "C": {
+      "item": "srelic:fel_metal"
+    },
+    "D": {
+      "item": "srelic:diamond_star"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    }
+  },
+  "pattern": [
+    " AB",
+    "CDA",
+    "EC "
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

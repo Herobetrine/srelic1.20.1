@@ -1,0 +1,42 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:fire_knight",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    },
+    "B": {
+      "item": "minecraft:fire_coral"
+    },
+    "C": {
+      "item": "minecraft:fire_charge"
+    },
+    "D": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "E": {
+      "item": "minecraft:flint"
+    },
+    "F": {
+      "item": "minecraft:nether_star"
+    },
+    "G": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "A B",
+    "BCD",
+    "EFG"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

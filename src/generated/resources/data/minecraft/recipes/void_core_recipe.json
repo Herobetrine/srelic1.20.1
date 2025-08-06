@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "srelic:ender_metal"
+    },
+    "B": {
+      "item": "srelic:void_ingot"
+    },
+    "C": {
+      "item": "srelic:pule_apple"
+    },
+    "D": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "pattern": [
+    " A ",
+    "BCB",
+    " D "
+  ],
+  "result": {
+    "item": "srelic:void_core"
+  },
+  "show_notification": true
+}

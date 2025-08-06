@@ -1,0 +1,48 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:rose_spear",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:blood_plum_leaves"
+    },
+    "B": {
+      "item": "minecraft:redstone_block"
+    },
+    "C": {
+      "item": "srelic:max_ingot"
+    },
+    "D": {
+      "item": "minecraft:poppy"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    },
+    "F": {
+      "item": "minecraft:red_dye"
+    },
+    "G": {
+      "item": "minecraft:trident"
+    },
+    "H": {
+      "item": "srelic:sakura_steel_ingot"
+    },
+    "I": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}
