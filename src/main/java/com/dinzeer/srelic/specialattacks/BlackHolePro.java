@@ -35,7 +35,7 @@ public class BlackHolePro {
         doSlash(playerIn, roll, lifetime, colorCode, centerOffset, critical, damage, knockback, minSpeed, maxSpeed, count);
     }
     private static float getRadius(int spellLevel, LivingEntity entity) {
-        return (2 * spellLevel + 4) + (1 * .125f * getSpellPower(spellLevel, entity));
+        return ((2 * spellLevel + 4)/8);
     }
     public static float getSpellPower(int spellLevel, @Nullable Entity sourceEntity) {
 
@@ -50,7 +50,7 @@ public class BlackHolePro {
 
         }
 
-        return (float) ((0.8 + 1.2 * (spellLevel - 1)) * entitySpellPowerModifier * entitySchoolPowerModifier * 1);
+        return (float) ((0.8 + 1.2 * (spellLevel - 1)) * (entitySpellPowerModifier/20) * entitySchoolPowerModifier * 1);
     }
     public static HitResult checkEntityIntersecting(Entity entity, Vec3 start, Vec3 end, float bbInflation) {
         Vec3 hitPos = null;

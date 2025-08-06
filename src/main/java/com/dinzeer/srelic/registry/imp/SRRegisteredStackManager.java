@@ -2,21 +2,19 @@ package com.dinzeer.srelic.registry.imp;
 
 import com.dinzeer.srelic.StackChargeEvent;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.common.MinecraftForge;
 
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class RegisteredStackManager implements IStackManager {
+public class SRRegisteredStackManager implements IStackManager {
     private final String effectKey;
     private final int maxStacks;
 
-    private RegisteredStackManager(String effectKey, int maxStacks) {
+    private SRRegisteredStackManager(String effectKey, int maxStacks) {
         this.effectKey = effectKey;
         this.maxStacks = maxStacks;
     }
@@ -72,11 +70,11 @@ public class RegisteredStackManager implements IStackManager {
 
     // 注册工厂
     public static class Registry {
-        private static final Map<String, RegisteredStackManager> REGISTRY = new ConcurrentHashMap<>();
+        private static final Map<String, SRRegisteredStackManager> REGISTRY = new ConcurrentHashMap<>();
 
         public static IStackManager register(String effectKey, int maxStacks) {
             return REGISTRY.computeIfAbsent(effectKey,
-                    k -> new RegisteredStackManager(effectKey, maxStacks)
+                    k -> new SRRegisteredStackManager(effectKey, maxStacks)
             );
         }
 

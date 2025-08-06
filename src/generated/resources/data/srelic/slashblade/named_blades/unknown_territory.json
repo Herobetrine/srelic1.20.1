@@ -1,0 +1,33 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:power",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 10
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:unknown_territory",
+  "properties": {
+    "attack_base": 70.0,
+    "max_damage": 300,
+    "special_effects": [
+      "srelic:white_maker"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/honkai/kiana/unknown_territory.obj",
+    "summon_sword_color": -1,
+    "texture": "srelic:model/honkai/kiana/unknown_territory.png"
+  }
+}

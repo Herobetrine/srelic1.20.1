@@ -1,0 +1,33 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:ye_tachi",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:crimson_shadow_ingot"
+    },
+    "B": {
+      "item": "srelic:thunder_netherite_alloy"
+    },
+    "C": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    },
+    "D": {
+      "item": "srelic:crimson_core"
+    }
+  },
+  "pattern": [
+    "  A",
+    "BA ",
+    "CD "
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

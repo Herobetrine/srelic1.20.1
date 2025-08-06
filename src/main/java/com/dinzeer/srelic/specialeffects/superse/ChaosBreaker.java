@@ -166,14 +166,6 @@ public class ChaosBreaker extends SpecialEffect {
         return look.dot(toTarget) > Math.cos(Math.toRadians(angle/2));
     }
 
-
-
-
-
-
-
-
-
     // 新增连锁闪电方法
     private static void chainLightning(LivingEntity origin, int remainingChain, float damageBoost) {
         if (remainingChain <= 0) return;
@@ -186,12 +178,16 @@ public class ChaosBreaker extends SpecialEffect {
                 float calculatedDamage = attackDamage != null ?
                         (float) (attackDamage.getValue() * damageBoost * 0.7f) :
                         4.0f; // 基础伤害值兜底
+                
+                // 添加伤害上限控制：最大不超过300
+                calculatedDamage = Math.min(calculatedDamage, 300.0f);
 
                 e.hurt(e.damageSources().lightningBolt(), calculatedDamage);
 
                 // 添加递归深度安全检测
                 if (remainingChain > 0 && calculatedDamage > 2.0f) {
-                    chainLightning(e, remainingChain - 1, calculatedDamage);
+                    // 修复：传递原始damageBoost而非计算后的伤害值
+                    chainLightning(e, remainingChain - 1, damageBoost);
                 }
 
                 // 添加粒子效果安全检测

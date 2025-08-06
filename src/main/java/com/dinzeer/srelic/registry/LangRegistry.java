@@ -17,6 +17,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang("painting.srelic.gwen.title", "格温");
 
         // 物品
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.YE_TACHI_FIRE), "夜煌「燃鲮」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.YE_TACHI), "封刃太刀「夜煌」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.NONE), "「无」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.START), "「始」");
@@ -83,6 +84,8 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.NO_END), "妖刀「无尾」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.THE_STAR_OF_THE_FROST), "「天霜之斯卡蒂」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.GENE_HARVESTER), "「基因收割者」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.THE_STAR_OF_THE_HYMN), "月之恒「初」");
+        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.UNKNOWN_TERRITORY), "无名之境「万物滋始」");
 
         REGISTRATE.addRawLang("patchouli.srelic.book.name", "记录了异界信息的书");
         REGISTRATE.addRawLang("patchouli.srelic.book.landing_text", "一本来自异界的书，上面记载了许多锻造异界之刃的方式，以白模为基础奏响共鸣之路");
@@ -131,6 +134,11 @@ public class LangRegistry {
         REGISTRATE.addRawLang("slashblade.tooltip.srelic.santa_caterina_1", "「带着仇人的名单」");
 
 
+        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry", "「I hate people」");
+        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry_1", "「My patience has ended」");
+        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry_2", "「Hi,you are die」");
+        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry_3", "「For the Lich King!!!!」");
+        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry_4", "「Frostmourne」");
         // 拔刀技
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.XDRIVE), "X幻影刃");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.WitherBreaker), "幻影衰落矢·哀");
@@ -169,7 +177,10 @@ public class LangRegistry {
 
         // 特殊效果
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.FLAMEROSION), "火焰侵蚀");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.FLAMEROSION)+".desc", "低于需求等级时，你的血量恒定为1");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.MAXBREAK), "上限突破·救世光辉");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.MAXBREAK)+".desc", "获得力量6");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.MAXBREAK)+".desc_1", "攻击变为多段");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.LICH), "亡灵序曲");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.LICH) + ".desc", "敌人存在凋零效果时，你每次攻击都会让其层数+!");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.LICH) + ".desc_1", "十层时引爆并发射高倍率幻影刃");
@@ -881,6 +892,41 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER, 3), "每次攻击叠加毒素层数");
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER, 4), "每0.5秒造成毒素伤害（伤害值为玩家基础攻击力的20%×层数）");
 
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER,1), "移动速度提升25%");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER,2), "根据移速加成提升你造成的伤害");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER,3), "每次攻击叠加毒素层数");
+        REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER,4), "每0.5秒造成毒素伤害（伤害值为玩家基础攻击力的20%×层数）");
+
+        REGISTRATE.addRawLang(SRStacksReg.RED_SCAR.getDescriptionKey(), "§c「赤痕」");
+        REGISTRATE.addRawLang(SRStacksReg.FROST_FLAME_STACKS.getDescriptionKey(), "§b「落霜」");
+        REGISTRATE.addRawLang(SRStacksReg.MING_MANG_STACKS.getDescriptionKey(), "§5「冥芒」");
+        REGISTRATE.addRawLang(SRStacksReg.BUTTERFLY_STACKS.getDescriptionKey(), "§5「冥芒」");
+        REGISTRATE.addRawLang(SRStacksReg.BLOOD_PLUM_STACKS.getDescriptionKey(), "§4「血梅」");
+        REGISTRATE.addRawLang(SRStacksReg.BLAZING_VALOR_STACKS.getDescriptionKey(), "§6「红莲」");
+        REGISTRATE.addRawLang(SRStacksReg.PureElegy.getDescriptionKey(), "§e「升格」");
+        REGISTRATE.addRawLang(SRStacksReg.WATER_SYMPHONY_STACKS.getDescriptionKey(), "§3「波律颂」");
+        REGISTRATE.addRawLang(SRStacksReg.LIANG_DIE_STACKS.getDescriptionKey(), "§d「量蝶」");
+        REGISTRATE.addRawLang(SRStacksReg.LIANG_FENG_STACKS.getDescriptionKey(), "§d「量锋」");
+        REGISTRATE.addRawLang(SRStacksReg.CUBE_MATRIX_STACKS.getDescriptionKey(), "§5「魔方立场」");
+        REGISTRATE.addRawLang(SRStacksReg.CRIMSON_SCAR_STACKS.getDescriptionKey(), "§7「WIP」");
+        REGISTRATE.addRawLang(SRStacksReg.NIGHTMARE_LAYER_STACKS.getDescriptionKey(), "§7「WIP」");
+        REGISTRATE.addRawLang(SRStacksReg.RHYTHM_VALUE.getDescriptionKey(), "§e「变奏值」");
+        REGISTRATE.addRawLang(SRStacksReg.ICE_LAYER_STACK.getDescriptionKey(), "§b「极冰值」");
+        REGISTRATE.addRawLang(SRStacksReg.FLAME_RESONANCE_STACKS.getDescriptionKey(), "§6「光耀节点」");
+        REGISTRATE.addRawLang(SRStacksReg.WHITE_ROSE_STACKS.getDescriptionKey(), "§d「蔷薇」");
+        REGISTRATE.addRawLang(SRStacksReg.FLY_YELLOW_STACKS.getDescriptionKey(), "§e「飞黄」");
+        REGISTRATE.addRawLang(SRStacksReg.ICE_RHYTHM_STACKS.getDescriptionKey(), "§b「冰华」");
+        REGISTRATE.addRawLang(SRStacksReg.OVERHEAT_VALUE_STACKS.getDescriptionKey(), "§c「过热值」");
+        REGISTRATE.addRawLang(SRStacksReg.SECONDARY_COMBUSTION_STACKS.getDescriptionKey(), "§c「次级燃烧」");
+        REGISTRATE.addRawLang(SRStacksReg.SKY_SWORD.getDescriptionKey(), "§f「空刃」");
+        REGISTRATE.addRawLang(SRStacksReg.CELESTIAL_STRIKE.getDescriptionKey(), "§6「解放值」");
+        REGISTRATE.addRawLang(SRStacksReg.ICE_BLOOM_STACKS.getDescriptionKey(), "§b「朔望」");
+        REGISTRATE.addRawLang(SRStacksReg.ICE_SOUL_FROST_SKY_STACKS.getDescriptionKey(), "§b「冰蚀」");
+        REGISTRATE.addRawLang(SRStacksReg.BITTER_COLD_HELL_STACKS.getDescriptionKey(), "§b「苦寒地狱」");
+        REGISTRATE.addRawLang(SRStacksReg.BITTER_COLD_HELL_EX_STACKS.getDescriptionKey(), "§b「极·苦寒地狱」");
+        REGISTRATE.addRawLang(SRStacksReg.HUNTER_TOXIN_STACKS.getDescriptionKey(), "§a「毒素附着」");
+        REGISTRATE.addRawLang(SRStacksReg.SAM_OVERDRIVE_STACKS.getDescriptionKey(), "§c「过载」");
+        REGISTRATE.addRawLang(SRStacksReg.CHAOS_BREAKER_STACKS.getDescriptionKey(), "§6「天极充能」");
 
         REGISTRATE.addRawLang("srelic.sword_type.other_world_on", "幻");
         REGISTRATE.addRawLang("srelic.sword_type.other_world", "解");

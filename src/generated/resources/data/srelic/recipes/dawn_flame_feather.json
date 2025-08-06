@@ -1,0 +1,39 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:dawn_flame_feather",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:red_tide_core"
+    },
+    "B": {
+      "item": "srelic:ignis_cube"
+    },
+    "C": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    },
+    "D": {
+      "item": "srelic:emberquill"
+    },
+    "E": {
+      "item": "srelic:pledgeflame_heartforge"
+    },
+    "F": {
+      "item": "srelic:flame_netherite_alloy"
+    }
+  },
+  "pattern": [
+    " AB",
+    "DCD",
+    "EF "
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

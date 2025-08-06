@@ -94,17 +94,9 @@ public class BloodPlum {
             }
             if (mainHand.getItem() == SRItemRegsitry.PuleApple.get()) {
             event.setCanceled(true);
-
-
-
-
-
                 if (mainHand.getCount() > 0) {
                     bladeState.setKillCount(bladeState.getKillCount() + 10);
                     mainHand.shrink(1);
-
-                    
-
                 }
             }
         }

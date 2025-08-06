@@ -2,14 +2,17 @@ package com.dinzeer.srelic;
 
 import com.dinzeer.srelic.blade.SRItem;
 import com.dinzeer.srelic.blade.re.SrelicRecipeSerializerRegistry;
+import com.dinzeer.srelic.command.SrelicCommand;
 import com.dinzeer.srelic.registry.*;
 import com.mojang.logging.LogUtils;
 import com.tterrag.registrate.Registrate;
+import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.SlashBladeCreativeGroup;
 import mods.flammpfeil.slashblade.client.renderer.model.BladeModelManager;
 import mods.flammpfeil.slashblade.init.SBItems;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.registry.SpecialEffectsRegistry;
+import mods.flammpfeil.slashblade.registry.slashblade.SlashBladeDefinition;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -43,6 +46,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 // The value here should match an entry in the META-INF/mods.toml file
+//mojang is shit!
 @Mod(Srelic.MODID)
 public class Srelic {
     public static ResourceLocation prefix(String path) {
@@ -85,7 +89,7 @@ public class Srelic {
                     })
                     .displayItems((parameters, tabData) -> {
 
-                        fillBlades(tabData);
+                        fillBladesForNamespace(parameters,tabData,MODID);
                     })
                     .build());
 
@@ -111,25 +115,29 @@ public class Srelic {
 
                     })
                     .build());
-    private static void fillBlades(CreativeModeTab.Output output) {
+
+
+    private static void fillBladesForNamespace(CreativeModeTab.ItemDisplayParameters features, CreativeModeTab.Output output, String namespace) {
         if (Minecraft.getInstance().getConnection() != null) {
-            BladeModelManager.getClientSlashBladeRegistry()
-                    .entrySet().stream()
-                    // 步骤1：过滤空值
-                    .filter(entry -> entry.getKey() != null && entry.getValue() != null)
-                    // 步骤2：解析字符串为ResourceLocation并过滤命名空间
+            SlashBlade.getSlashBladeDefinitionRegistry(features.holders())
+                    .listElements().sorted(SlashBladeDefinition.COMPARATOR)
                     .filter(entry -> {
-                        ResourceLocation loc = ResourceLocation.tryParse(entry.getKey().location().toString());
-                        return loc != null && loc.getNamespace().equals(MODID);
+                        ResourceLocation loc = ResourceLocation.tryParse(entry.value().getName().getNamespace());
+                        return loc != null && entry.value().getName().getNamespace().equals(namespace);
                     })
-                    // 步骤3：按字符串键排序
-                    .sorted(Map.Entry.comparingByKey())
-                    .forEach(entry -> {
-                        LOGGER.info("Registering Slashblade: {}", entry.getKey());
-                        output.accept(entry.getValue().getBlade());
+                    .forEach((entry) -> {
+                        if (!((SlashBladeDefinition)entry.value()).getBlade().isEmpty()) {
+                            output.accept(((SlashBladeDefinition)entry.value()).getBlade());
+                        }
+
                     });
         }
     }
+
+
+
+
+
 
     private static void fillSEs(CreativeModeTab.Output output) {
         if (Minecraft.getInstance().getConnection() != null) {
@@ -226,18 +234,6 @@ public class Srelic {
     public static void queueServerWork(int tick, Runnable action) {
         workQueue.add(new AbstractMap.SimpleEntry(action, tick));
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

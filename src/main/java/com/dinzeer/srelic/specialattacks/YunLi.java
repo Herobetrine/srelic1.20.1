@@ -240,7 +240,7 @@ public class YunLi {
                 if (i==19){
                     ss.setBaseSize(10);
                     ss.setIsCritical(true);
-                    ss.setDamage(GetNumUtil.getdamage(player)*3+6);
+                    ss.setDamage(6);
                     xOffset = 0;
                     yOffset = 2;
                     zOffset = 0;
@@ -259,7 +259,7 @@ public class YunLi {
                 se.setOwner(player);
                 se.setColor(14876929);
                 se.setRoll(0);
-                se.setDamage(GetNumUtil.getdamage(player)*0.3+2);
+                se.setDamage(2);
                 // force riding
                 se.startRiding(player, true);
 
@@ -271,7 +271,7 @@ public class YunLi {
                     se.setDelay(44);
                     se.setSpeed(1.5f);
                     se.setIsCritical(true);
-                    se.setDamage(GetNumUtil.getdamage(player)*3+6);
+                    se.setDamage(6);
                     xOffset = 0;
                     yOffset = 2;
                     zOffset = 0;
@@ -309,38 +309,7 @@ public class YunLi {
                     playerIn.playSound(SoundEvents.WANDERING_TRADER_DEATH, 1F, 1.45F);
                 }
             }
-            //int rank = playerIn.getCapability(CapabilityConcentrationRank.RANK_POINT).map(r -> r.getRank(worldIn.getGameTime()).level).orElse(0);
-           // int count = 32;
 
-            /*for (int i = 0; i < count; i++)
-            {
-                WitherBreakerEntity ss = new WitherBreakerEntity(SREntiteRegristrys.WitherBreaker, worldIn);
-
-                worldIn.addFreshEntity(ss);
-
-                ss.setSpeed(speed);
-                ss.setIsCritical(critical);
-                ss.setOwner(playerIn);
-                ss.setColor(12698049);
-                ss.setRoll(0);
-                ss.setDamage(damage);
-                // force riding
-                ss.startRiding(playerIn, true);
-
-                ss.setDelay(20 + i);
-
-                boolean isRight = ss.getDelay() % 2 == 0;
-                RandomSource random = worldIn.getRandom();
-
-                double xOffset = random.nextDouble() * 2.5 * (isRight ? 1 : -1);
-                double yOffset = random.nextFloat() * 2;
-                double zOffset = random.nextFloat() * 0.5;
-
-                ss.setPos(playerIn.position().add(xOffset, yOffset, zOffset));
-                ss.setOffset(new Vec3(xOffset, yOffset, zOffset));
-
-                playerIn.playSound(SoundEvents.CHORUS_FRUIT_TELEPORT, 0.2F, 1.45F);
-            }*/
         });
     }
 }

@@ -1,0 +1,47 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:ice_blue_ex",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:blue_ice"
+    },
+    "B": {
+      "item": "srelic:frozen_netherite_alloy"
+    },
+    "C": {
+      "item": "srelic:demon_ingot"
+    },
+    "D": {
+      "item": "minecraft:potion"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:ice_blue"
+      }
+    },
+    "F": {
+      "item": "srelic:frozen_netherite_alloy"
+    },
+    "G": {
+      "item": "srelic:ex_star"
+    },
+    "H": {
+      "item": "srelic:diamond_star"
+    },
+    "I": {
+      "item": "srelic:max_ingot"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

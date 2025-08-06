@@ -1,0 +1,42 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:samu",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:grammer_alloy"
+    },
+    "B": {
+      "item": "srelic:grammer_alloy_ex"
+    },
+    "D": {
+      "item": "minecraft:magma_block"
+    },
+    "E": {
+      "item": "srelic:grammer_core"
+    },
+    "F": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    },
+    "G": {
+      "item": "minecraft:lily_of_the_valley"
+    },
+    "H": {
+      "item": "srelic:flame_netherite_alloy"
+    }
+  },
+  "pattern": [
+    "ABB",
+    "DEB",
+    "FGH"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

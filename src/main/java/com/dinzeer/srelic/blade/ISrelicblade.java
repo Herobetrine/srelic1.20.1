@@ -66,6 +66,8 @@ public class ISrelicblade extends ItemSlashBlade {
                         if (I18n.exists(subKey)) {
                             tooltip.add(Component.translatable(subKey)
                                     .withStyle(style -> style.withColor(dynamicColor)));
+                        }else {
+                            i=300;
                         }
                     }
                 }

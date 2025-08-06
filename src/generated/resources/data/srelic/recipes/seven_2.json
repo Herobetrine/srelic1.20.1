@@ -1,0 +1,39 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:seven_2",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:diamond_axe"
+    },
+    "B": {
+      "item": "srelic:thunder_netherite_alloy"
+    },
+    "C": {
+      "item": "srelic:red_tide_core"
+    },
+    "D": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    },
+    "E": {
+      "item": "srelic:diamond_star"
+    },
+    "F": {
+      "item": "minecraft:diamond_axe"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "BDB",
+    "EBF"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

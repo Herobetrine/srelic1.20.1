@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-11T17:46:10.3768194	Registrate Provider for srelic [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+// 1.20.1	2025-08-06T00:32:36.1181447	Registrate Provider for srelic [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
 48889742b54db57ffae2b718dd6bcc401ebbd5c2 assets/srelic/blockstates/blood_plum_leaves.json
 1ff5402f3983d42f0e4a4003ec50f9cca475d89c assets/srelic/blockstates/blood_plum_log.json
 4fcdc38f92f4b8f9c736850c9e0314eb87a1a496 assets/srelic/blockstates/blood_plum_planks.json
@@ -6,8 +6,8 @@
 047c09a5be73fce0ad690da6bb57f11fc543df1d assets/srelic/blockstates/blood_plum_sampling_ex.json
 d2b806ae783c66e4254e9948ae00ce67dc7731f0 assets/srelic/blockstates/crimson_shadow_ore.json
 265f259bf6677e8806ee2213a88e8629c77cca3e assets/srelic/blockstates/stripped_blood_plum_log.json
-0f2cd6a2a01b7a0be258ce4f60cb387ef31b57de assets/srelic/lang/en_ud.json
-9733a222c66212209fb2678a0981bc6255afe68e assets/srelic/lang/en_us.json
+fff35f29f874158e976b7ac1987385ffb452537a assets/srelic/lang/en_ud.json
+ff6fdcc94c8aa98c4e9b1de8c6b94eddfa01e05a assets/srelic/lang/en_us.json
 fcf65b3c846336e9dc758350662e29690533908c assets/srelic/models/block/blood_plum_leaves.json
 d76fcf95733fb191b7ba737f92e4b85d427ddc6b assets/srelic/models/block/blood_plum_log.json
 19116c5cf80e913e9486407d86e7168d05ede2a3 assets/srelic/models/block/blood_plum_log_horizontal.json
@@ -45,6 +45,7 @@ edf3b362381778247730f93a25b2b8fc26de6a8c assets/srelic/models/item/frozen_nether
 456b45d44899871cae6911541aaef95c61c347ce assets/srelic/models/item/grammer_alloy_ex.json
 aa4d33fc40861648e89beedb876f1f91fa3b89ac assets/srelic/models/item/grammer_core.json
 deeb52c720bd4356191b3fe2255ad0267882abea assets/srelic/models/item/ignis_cube.json
+ae6f79585fb0a0f0e4b86aa1abc6c337ac46e0fd assets/srelic/models/item/maxim.json
 1f11e2942f45262268fe8e2103a2d162401f6f37 assets/srelic/models/item/max_ingot.json
 04a3c32b6d79134597efb5a1fe903c222eba0cd7 assets/srelic/models/item/nereid_s_secret_brew.json
 13fdf68dacfc867e7fad868f61b1fa0a4080f90f assets/srelic/models/item/nightmare_core_ingot.json
@@ -60,12 +61,15 @@ b8e2f075b532046ad5dff4cb05f1398d83ed4f8f assets/srelic/models/item/rainbow_star.
 dee6a196033e929264baced4210c415519b718e1 assets/srelic/models/item/rough_crimson_shadow_ore.json
 9a3814e0ac569be32b7aaf9634889ef8656f5ce4 assets/srelic/models/item/sakura_steel_ingot.json
 f605fac64274313947d26539e197c29991e9cfe0 assets/srelic/models/item/scarletflame_ingot.json
+a25ce93486387a65251821bc7bc3fb3863c4c4b7 assets/srelic/models/item/shirin_fish.json
 1d05a1b6a4fa2f598a8f68d9d4f8a6cfbe24581c assets/srelic/models/item/soul_metal.json
 61fe9c85da1133d8576c36b463c5744297754a98 assets/srelic/models/item/spirit_butterfly.json
 8c3f157cc76b8077891fa906e7fcd762bb9a3f0b assets/srelic/models/item/stripped_blood_plum_log.json
 51d92592997fd326ceee78ab4947229caecd3571 assets/srelic/models/item/surgeheart_vortex.json
 4b08daa938f3ecbf84fcdf7ecbd21b8a866f16a3 assets/srelic/models/item/thunder_netherite_alloy.json
 b8e2f075b532046ad5dff4cb05f1398d83ed4f8f assets/srelic/models/item/universal_test.json
+06036b15f2468d631a1c30069e498c68f5500fad assets/srelic/models/item/void_core.json
+94c2be55a279f9c865f9c1305f6198b46588cf70 assets/srelic/models/item/void_ingot.json
 4d5f5a4bff736699aafdf99dfcda045009476ca2 assets/srelic/models/item/windy_core.json
 b335353ae2f3c83e8d4c1ae12878f790ff298a9b assets/srelic/models/item/windy_core_ingot.json
 2d50fdee04b124bc9cc9668b8779582e2e066c64 data/minecraft/advancements/recipes/misc/blood_plum_planks_2.json
@@ -73,11 +77,15 @@ b335353ae2f3c83e8d4c1ae12878f790ff298a9b assets/srelic/models/item/windy_core_in
 843ed5720713ae218650d7d092d9f7440b3fc629 data/minecraft/advancements/recipes/misc/crimson_shadow_ingot_from_particles.json
 bb651c90c45100ef741e423ac9810cc3d0ea21e7 data/minecraft/advancements/recipes/misc/crimson_shadow_particle_from_ingot.json
 fa3d97b9abd966014d3ddc805afb0e024cd90e1e data/minecraft/advancements/recipes/misc/red_tide_core.json
+2b20ebbd5163d9cbf60c6d5ac7b8df1d6110ddb2 data/minecraft/advancements/recipes/misc/void_core_recipe.json
+a0bc37c6d0e1112e52319b39d0f9f6cec1fae885 data/minecraft/advancements/recipes/misc/void_ingot_recipe.json
 df986d5124447a35083d446b7cbdfffc7c892015 data/minecraft/recipes/blood_plum_planks_2.json
 c5404ca11e864e04a4852f81e1dd27a22f99c468 data/minecraft/recipes/crimson_core.json
 da1c69c45d59037e10d7be89b1cd9d3e747367eb data/minecraft/recipes/crimson_shadow_ingot_from_particles.json
 4c72fe30b5cc0149cb5c05f2a3a96f81f6e1e713 data/minecraft/recipes/crimson_shadow_particle_from_ingot.json
 5a79628bda15cbd038a1b46ef1432301af43d7a1 data/minecraft/recipes/red_tide_core.json
+f5ddc119f76a1b3e2869ea550f558b2704a729af data/minecraft/recipes/void_core_recipe.json
+72ee3c45f11029877d64cbe8201ce324c025534f data/minecraft/recipes/void_ingot_recipe.json
 92cfc9a5302c916fb3b9a0777d9e70a85f31e825 data/minecraft/tags/blocks/flowers.json
 92cfc9a5302c916fb3b9a0777d9e70a85f31e825 data/minecraft/tags/blocks/leaves.json
 650cd1552a3e3b56bf6ef6b111638fcee95669ff data/minecraft/tags/blocks/logs.json

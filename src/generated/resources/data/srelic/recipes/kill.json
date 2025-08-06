@@ -1,0 +1,60 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:kill",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "srelic:ignis_cube"
+    },
+    "B": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:fireblue2"
+      }
+    },
+    "C": {
+      "item": "srelic:compressed_alloy"
+    },
+    "D": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:the_fire_green2"
+      }
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:ark_fire"
+      }
+    },
+    "F": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:the_fire_gray"
+      }
+    },
+    "G": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:the_fire_pink2"
+      }
+    },
+    "H": {
+      "item": "srelic:ex_star"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "CGH"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

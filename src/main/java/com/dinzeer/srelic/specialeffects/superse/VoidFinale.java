@@ -42,7 +42,7 @@ public class VoidFinale  extends SpecialEffect {
             event.getTarget().addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 0), event.getTarget());
         }
         // 连击数检测
-        if (event.getTarget().getEffect(MobEffects.WEAKNESS).getAmplifier()>= COMBO_THRESHOLD) {
+        if (event.getTarget().hasEffect(MobEffects.WEAKNESS)&&event.getTarget().getEffect(MobEffects.WEAKNESS).getAmplifier()>= COMBO_THRESHOLD) {
             event.getTarget().curePotionEffects(new ItemStack(Items.MILK_BUCKET));
             // 雷电领域效果
             SeEX.spawnParticleRing(player, ParticleTypes.ELECTRIC_SPARK,
@@ -54,7 +54,7 @@ public class VoidFinale  extends SpecialEffect {
                     .forEach(entity -> {
                         if (entity == player) return;
 
-
+                     entity.invulnerableTime=0;
                      entity.hurt(player.damageSources().mobAttack(player),
                              (state.getBaseAttackModifier()/player.getHealth())
                              *(1+(state.getRefine()*0.1F)));

@@ -2,9 +2,12 @@ package com.dinzeer.srelic.event;
 
 import mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState;
 import mods.flammpfeil.slashblade.event.SlashBladeEvent;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
+import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -18,9 +21,7 @@ public class DamgeEvent {
 
     @SubscribeEvent(priority = EventPriority.LOW)
     public static void onSlashBladeAttack(LivingDamageEvent event) {
-
-
-   if (!(event.getSource().getEntity() instanceof Player player))return;
+        if (!(event.getSource().getEntity() instanceof Player player))return;
         float damage = event.getAmount();
         if (damage > DAMAGE_THRESHOLD) {
             // 动态稀释计算：300 + (超出部分 * 0.5)

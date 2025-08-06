@@ -1,0 +1,38 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:ark_fire",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:lava_bucket"
+    },
+    "B": {
+      "item": "srelic:soul_metal"
+    },
+    "C": {
+      "item": "slashblade:proudsoul_trapezohedron"
+    },
+    "D": {
+      "item": "minecraft:nether_star"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:the_fire"
+      }
+    },
+    "F": {
+      "item": "minecraft:feather"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DED",
+    "FBC"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

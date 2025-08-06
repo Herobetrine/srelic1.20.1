@@ -1,0 +1,38 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:gene_harvester",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:pufferfish"
+    },
+    "B": {
+      "item": "minecraft:nether_star"
+    },
+    "C": {
+      "item": "srelic:diamond_star"
+    },
+    "D": {
+      "item": "srelic:soul_metal"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "F": {
+      "item": "srelic:demon_ingot"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DED",
+    "CFA"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

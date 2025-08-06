@@ -1,0 +1,51 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:ice_cry",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:wither_rose"
+    },
+    "B": {
+      "type": "slashblade:blade",
+      "item": "slashblade:slashblade",
+      "request": {
+        "name": "slashblade:koseki"
+      }
+    },
+    "C": {
+      "item": "slashblade:proudsoul_trapezohedron"
+    },
+    "D": {
+      "item": "minecraft:blue_ice"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "F": {
+      "item": "minecraft:ender_eye"
+    },
+    "G": {
+      "item": "minecraft:ghast_tear"
+    },
+    "H": {
+      "item": "minecraft:netherite_sword"
+    },
+    "I": {
+      "item": "srelic:fel_metal"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

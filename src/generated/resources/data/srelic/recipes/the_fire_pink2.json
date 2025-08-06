@@ -1,0 +1,35 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:the_fire_pink2",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:tipped_arrow"
+    },
+    "B": {
+      "item": "srelic:sakura_steel_ingot"
+    },
+    "C": {
+      "item": "minecraft:potion"
+    },
+    "D": {
+      "item": "minecraft:cherry_leaves"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:the_fire"
+      }
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DED",
+    "CBA"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

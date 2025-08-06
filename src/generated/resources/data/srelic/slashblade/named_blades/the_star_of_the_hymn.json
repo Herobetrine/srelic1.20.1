@@ -1,0 +1,29 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 10
+    },
+    {
+      "id": "minecraft:fortune",
+      "lvl": 10
+    }
+  ],
+  "item": "srelic:srelic_slashblade",
+  "name": "srelic:the_star_of_the_hymn",
+  "properties": {
+    "attack_base": 40.0,
+    "max_damage": 300,
+    "special_effects": [
+      "srelic:white_maker"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "model": "srelic:model/honkai/kiana/the_star_of_the_hymn.obj",
+    "summon_sword_color": -1,
+    "texture": "srelic:model/honkai/kiana/the_star_of_the_hymn.png"
+  }
+}

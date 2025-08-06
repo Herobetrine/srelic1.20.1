@@ -1,0 +1,47 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:the_star_of_the_frost",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:nether_star"
+    },
+    "B": {
+      "item": "slashblade:proudsoul_sphere"
+    },
+    "C": {
+      "item": "slashblade:proudsoul_crystal"
+    },
+    "D": {
+      "item": "minecraft:lapis_block"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "F": {
+      "item": "minecraft:snowball"
+    },
+    "G": {
+      "item": "minecraft:blue_ice"
+    },
+    "H": {
+      "item": "srelic:ender_metal"
+    },
+    "I": {
+      "item": "minecraft:diamond_boots"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

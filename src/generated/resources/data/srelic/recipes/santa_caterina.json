@@ -1,0 +1,44 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:santa_caterina",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:honey_block"
+    },
+    "B": {
+      "item": "minecraft:goat_horn"
+    },
+    "D": {
+      "item": "minecraft:diamond_chestplate"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "F": {
+      "item": "minecraft:magma_cream"
+    },
+    "G": {
+      "item": "minecraft:netherite_sword"
+    },
+    "H": {
+      "item": "minecraft:totem_of_undying"
+    },
+    "I": {
+      "item": "minecraft:chain"
+    }
+  },
+  "pattern": [
+    "A B",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

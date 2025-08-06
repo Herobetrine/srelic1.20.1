@@ -1,0 +1,39 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:jinyuan",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    },
+    "B": {
+      "item": "srelic:thunder_netherite_alloy"
+    },
+    "C": {
+      "item": "minecraft:lightning_rod"
+    },
+    "D": {
+      "item": "minecraft:nether_star"
+    },
+    "E": {
+      "item": "minecraft:arrow"
+    },
+    "F": {
+      "item": "minecraft:trident"
+    }
+  },
+  "pattern": [
+    "AB ",
+    "C D",
+    " EF"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

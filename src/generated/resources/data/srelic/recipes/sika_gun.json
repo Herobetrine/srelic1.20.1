@@ -1,0 +1,44 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:sika_gun",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:bow"
+    },
+    "B": {
+      "item": "srelic:demon_ingot"
+    },
+    "C": {
+      "item": "minecraft:tipped_arrow"
+    },
+    "D": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade"
+      }
+    },
+    "E": {
+      "item": "minecraft:snowball"
+    },
+    "F": {
+      "item": "minecraft:trident"
+    },
+    "G": {
+      "item": "minecraft:egg"
+    },
+    "H": {
+      "item": "minecraft:crossbow"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "BDE",
+    "FGH"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

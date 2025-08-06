@@ -1,0 +1,36 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:eternal_vows",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "B": {
+      "item": "srelic:oceanic_netherite_alloy"
+    },
+    "C": {
+      "item": "srelic:diamond_star"
+    },
+    "D": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 3000
+      }
+    },
+    "E": {
+      "item": "minecraft:enchanted_golden_apple"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "BDB",
+    "CBE"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

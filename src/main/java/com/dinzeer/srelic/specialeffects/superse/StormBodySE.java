@@ -4,7 +4,7 @@ import com.dinzeer.srelic.entity.SwordRainEntityFeiXiao;
 import com.dinzeer.srelic.entity.WitherBreakerEntity;
 import com.dinzeer.srelic.registry.SREntiteRegristrys;
 import com.dinzeer.srelic.registry.SRStacksReg;
-import com.dinzeer.srelic.registry.imp.IStackManager;
+import com.dinzeer.legendreliclib.lib.util.impl.IStackManager;
 import com.dinzeer.srelic.specialeffects.SeEX;
 import mods.flammpfeil.slashblade.capability.concentrationrank.CapabilityConcentrationRank;
 import mods.flammpfeil.slashblade.event.SlashBladeEvent;

@@ -203,12 +203,14 @@ dependencies {
     //玉
     implementation fg.deobf("curse.maven:jade-324717:6271651")
     //拔刀剑重锋依赖
-    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:6731971")
+//    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:6731971")
+//    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:6737015")
+    implementation fg.deobf("curse.maven:slashblade-resharped-1022428:6762159")
     //帕秋莉手册
     implementation fg.deobf("curse.maven:patchouli-306770:6164575")
     //emi
-    implementation fg.deobf("curse.maven:emi-580555:6420945")
-    implementation fg.deobf("curse.maven:emi-trades-villager-trading-emi-plugin-735523:4901194")
+//    implementation fg.deobf("curse.maven:emi-580555:6420945")
+//    implementation fg.deobf("curse.maven:emi-trades-villager-trading-emi-plugin-735523:4901194")
 
     implementation fg.deobf("curse.maven:aether-255308:6134920")
     implementation fg.deobf("curse.maven:cumulus-915473:5748437")
@@ -217,7 +219,7 @@ dependencies {
 
     implementation fg.deobf("curse.maven:construction-wand-399558:4684054")
 
-
+    implementation fg.deobf("curse.maven:legendreliclib-1307366:6797955")
 
 
 

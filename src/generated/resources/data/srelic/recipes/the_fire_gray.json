@@ -1,0 +1,47 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:the_fire_gray",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:clock"
+    },
+    "B": {
+      "item": "minecraft:potion"
+    },
+    "C": {
+      "item": "srelic:flame_netherite_alloy"
+    },
+    "D": {
+      "item": "srelic:rainbow_star"
+    },
+    "E": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:the_fire"
+      }
+    },
+    "F": {
+      "item": "minecraft:nether_star"
+    },
+    "G": {
+      "item": "minecraft:coal"
+    },
+    "H": {
+      "item": "minecraft:totem_of_undying"
+    },
+    "I": {
+      "item": "minecraft:heart_of_the_sea"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

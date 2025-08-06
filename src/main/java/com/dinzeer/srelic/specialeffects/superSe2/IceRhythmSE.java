@@ -81,6 +81,7 @@ public class IceRhythmSE extends SpecialEffect {
 
     private static void applyMagicDamage(LivingHurtEvent event, Player player, float damage) {
         LivingEntity target = (LivingEntity) event.getEntity();
+        target.invulnerableTime=0;
         target.hurt(player.damageSources().magic(), damage);
 
         if (player instanceof ServerPlayer serverPlayer) {

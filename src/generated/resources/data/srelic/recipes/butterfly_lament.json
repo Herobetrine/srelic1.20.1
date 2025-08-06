@@ -1,0 +1,39 @@
+{
+  "type": "srelic:srelic_blade",
+  "blade": "srelic:butterfly_lament",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "B": {
+      "type": "slashblade:blade",
+      "item": "srelic:srelic_slashblade",
+      "request": {
+        "name": "srelic:blade",
+        "proud_soul": 30000
+      }
+    },
+    "C": {
+      "item": "minecraft:purple_dye"
+    },
+    "D": {
+      "item": "srelic:compressed_alloy"
+    },
+    "E": {
+      "item": "minecraft:netherrack"
+    },
+    "F": {
+      "item": "srelic:spirit_butterfly"
+    }
+  },
+  "pattern": [
+    "AB ",
+    "CDE",
+    " F "
+  ],
+  "result": {
+    "item": "srelic:srelic_slashblade"
+  },
+  "show_notification": true
+}

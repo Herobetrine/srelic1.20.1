@@ -63,6 +63,11 @@ public class SRItemRegsitry {
     public static final ItemEntry<SrelicItem> crimson_shadow_ingot = iteminit("crimson_shadow_ingot"); // 绯影锭
     public static final ItemEntry<SrelicItem> red_tide_core = iteminit("red_tide_core"); // 红潮核心
 
+    public static final ItemEntry<SrelicItem> maxim = iteminit("maxim"); // 鸢尾花
+
+    public static final ItemEntry<SrelicItem> shirin_fish = iteminit("shirin_fish"); // 某不知名紫色河豚
+    public static final ItemEntry<SrelicItem> void_ingot = iteminit("void_ingot");//亚空玄钢
+    public static final ItemEntry<SrelicItem> void_core = iteminit("void_core");//亚空星璇
     public static ItemEntry<SrelicItem> iteminit(String name) {
         return REGISTRATE.item(
                 name, SrelicItem::new

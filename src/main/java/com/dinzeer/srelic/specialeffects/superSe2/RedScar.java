@@ -2,8 +2,13 @@ package com.dinzeer.srelic.specialeffects.superSe2;
 
 // ... existing imports ...
 
+// 新增导入
+import com.dinzeer.legendreliclib.lib.util.impl.IStackManager;
+import com.dinzeer.legendreliclib.lib.util.impl.RegisteredStackManager;
 import com.dinzeer.srelic.Utils.SlashBladeUtil;
 import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
+import com.dinzeer.srelic.registry.SRStacksReg;
+import com.dinzeer.srelic.registry.imp.SRRegisteredStackManager;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -27,14 +32,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.WeakHashMap;
 
-/**
- * 红疤特殊效果实现类
- * 功能：
- * 1. 攻击积累层数系统：每次攻击增加层数，层数影响伤害输出
- * 2. 量子坍缩：概率触发范围伤害和击退效果
- * 3. 异常值系统：积累异常值触发破防和额外伤害
- * 4. 群体增益：为周围玩家提供再生和吸收效果
- */
 @Mod.EventBusSubscriber
 public class RedScar extends SpecialEffect {
     // 新增常量
@@ -49,9 +46,8 @@ public class RedScar extends SpecialEffect {
     // 新增状态存储
     private static final Map<Player, Integer> buffTimers = new WeakHashMap<>();
     private static final Map<Player, Integer> cooldownTimers = new WeakHashMap<>();
-    
-    // 层数系统相关常量
-    private static final int MAX_LAYERS = 12;
+    private static final Map<Player, Integer> layerTimers = new WeakHashMap<>();
+
     private static final int FULL_LAYER_THRESHOLD = 8;
     private static final int LAYER_TIMER_DURATION = 300; // 15秒计时器(300tick)
     private static final float HEAL_AMOUNT = 2.0f;
@@ -69,9 +65,9 @@ public class RedScar extends SpecialEffect {
     private static final float ANOMALY_DAMAGE_MULTIPLIER = 0.4f;
     private static final long ARMOR_REDUCE_DURATION = 40; // 破防持续时间
     
+    // 新增: IStackManager实例
+    private static final IStackManager stackManager = SRStacksReg.RED_SCAR;
     // 效果存储Map
-    private static final Map<Player, Integer> scarLayers = new WeakHashMap<>();
-    private static final Map<Player, Integer> layerTimers = new WeakHashMap<>();
     private static final Map<LivingEntity, Integer> anomalyValues = new WeakHashMap<>();
 
     public RedScar() {
@@ -112,16 +108,14 @@ public class RedScar extends SpecialEffect {
      * - 重置层数计时器
      */
     private static void handleScarLayers(Player player) {
-        int layers = scarLayers.getOrDefault(player, 0) + 1;
+        stackManager.addStacks(player, 1);
+        int newStacks = stackManager.getCurrentStacks(player);
         
         // 满层治疗效果
-        if (layers > FULL_LAYER_THRESHOLD) {
+        if (newStacks > FULL_LAYER_THRESHOLD) {
             player.heal(HEAL_AMOUNT);
         }
-        
-        // 更新层数和计时器
-        scarLayers.put(player, Math.min(layers, MAX_LAYERS));
-        layerTimers.put(player, LAYER_TIMER_DURATION);
+
     }
 
     /**
@@ -131,13 +125,14 @@ public class RedScar extends SpecialEffect {
      * 3. 满层额外增伤
      */
     private static void applyLayerEffects(LivingHurtEvent event, Player player) {
-        int layers = scarLayers.getOrDefault(player, 0);
+        // 获取当前层数
+        int layers = stackManager.getCurrentStacks(player);
         
         // 基础层数增伤
         event.setAmount(event.getAmount() + layers * BASE_DAMAGE_PER_LAYER);
         // 附加缓慢效果
         event.getEntity().addEffect(new MobEffectInstance(
-            MobEffects.MOVEMENT_SLOWDOWN, 
+            MobEffects.MOVEMENT_SLOWDOWN,
             100,  // 5秒持续时间 
             0     // 等级0
         ));
@@ -242,7 +237,10 @@ public class RedScar extends SpecialEffect {
             int timer = layerTimers.get(player) - 1;
             if (timer <= 0) {
                 // 层数衰减
-                scarLayers.computeIfPresent(player, (k, v) -> v > 0 ? v - 1 : null);
+                int current = stackManager.getCurrentStacks(player);
+                if (current > 0) {
+                    stackManager.addStacks(player, -1);
+                }
                 layerTimers.put(player, LAYER_TIMER_DURATION);
             } else {
                 layerTimers.put(player, timer);
@@ -269,18 +267,16 @@ public class RedScar extends SpecialEffect {
             }
         }
         
-        // 新增：特殊玩家触发检测
+        // 特殊玩家触发检测
         String playerName = player.getName().getString();
-        if ((      playerName.equals("biantwin")
-                || playerName.equals("Dev"))
-                || playerName.equals("dinzeer_dzr")
-                || playerName.equals("steve") &&
+        if ((playerName.equals("biantwin") || playerName.equals("Dev") || 
+             playerName.equals("dinzeer_dzr") || playerName.equals("steve")) &&
             !cooldownTimers.containsKey(player) &&
             player.getHealth() < player.getMaxHealth() * 0.25f) {
             
-            int layers = scarLayers.getOrDefault(player, 0);
+            // 获取当前层数
+            int layers = stackManager.getCurrentStacks(player);
             if (layers >= TRIGGER_LAYER_THRESHOLD) {
-                // 触发效果
                 triggerSpecialEffect(player, layers);
             }
         }
@@ -291,7 +287,7 @@ public class RedScar extends SpecialEffect {
         }
         
         // 提供群体增益
-        if (scarLayers.getOrDefault(player, 0) > 0) {
+        if (stackManager.getCurrentStacks(player) > 0) {
             player.level().getEntitiesOfClass(Player.class, player.getBoundingBox().inflate(8))
                 .forEach(p -> {
                     p.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 40, 0));
@@ -309,8 +305,7 @@ public class RedScar extends SpecialEffect {
      */
     private static void triggerSpecialEffect(Player player, int layers) {
         // 消耗所有层数
-        scarLayers.remove(player);
-        layerTimers.remove(player);
+        stackManager.resetStacks(player);
         
         // 计算并恢复生命值
         float maxHealth = player.getMaxHealth();
