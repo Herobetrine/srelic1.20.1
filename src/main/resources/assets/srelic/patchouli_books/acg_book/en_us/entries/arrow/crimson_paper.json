@@ -13,6 +13,10 @@
       "type": "text",
       "title": "painting.srelic.huoqu.title",
       "text": "tips.crimson_paper.name_tip"
+    },
+    {
+      "type": "text",
+      "text": "patchouli.srelic.book.entries.arrow.crimson_paper.pages.0.text"
     }
   ]
 }

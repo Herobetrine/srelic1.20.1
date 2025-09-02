@@ -1,0 +1,19 @@
+{
+  "sortnum" : 1,
+  "name" : "item.srelic.nightmare_core_ingot",
+  "icon" : "srelic:nightmare_core_ingot",
+  "category" : "srelic:arrow",
+  "pages" : [
+    {
+      "type" : "spotlight",
+      "item" : "srelic:nightmare_core_ingot",
+      "text" : "patchouli.srelic.book.entries.arrow.rad_ingot.pages.0.text"
+    },
+    {
+      "type": "crafting",
+      "title": "painting.srelic.huoqu.title",
+      "text": "item.srelic.nightmare_core_ingot",
+      "recipe": "srelic:nightmare_core_ingot"
+    }
+  ]
+}

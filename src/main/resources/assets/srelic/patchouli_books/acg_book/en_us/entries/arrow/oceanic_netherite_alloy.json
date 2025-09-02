@@ -10,8 +10,17 @@
       "text": "patchouli.srelic.book.entries.arrow.oceanic_netherite_alloy.pages.0.text"
     },
     {
-      "type": "text",
-      "title": "painting.srelic.huoqu.title",
+      "type": "multiblock",
+      "name": "tips.oceanic_netherite_alloy.name",
+      "multiblock": {
+        "pattern": [
+          ["0"],["_"]
+        ],
+        "mapping": {
+          "0": "minecraft:diamond_block"
+        },
+        "symmetrical": true
+      },
       "text": "tips.oceanic_netherite_alloy.name_tip"
     }
   ]

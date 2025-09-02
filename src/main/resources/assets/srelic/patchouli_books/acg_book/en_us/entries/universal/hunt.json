@@ -1,21 +1,21 @@
 {
   "sortnum": 2,
-  "name": "se.srelic.path_of_remembrance",
+  "name": "se.srelic.path_of_the_hunt",
   "icon": "srelic:rainbow_star",
   "category": "srelic:universal",
   "pages": [
     {
       "type": "spotlight",
       "item": "srelic:rainbow_star",
-      "text": "se.srelic.path_of_remembrance.desc"
+      "text": "se.srelic.path_of_the_hunt.desc"
     },
     {
       "type": "text",
-      "text": "se.srelic.path_of_remembrance.text"
+      "text": "se.srelic.path_of_the_hunt.text"
     },
     {
       "type": "text",
-      "text": "se.srelic.path_of_remembrance.easter-egg"
+      "text": "se.srelic.path_of_the_hunt.easter-egg"
     }
   ]
 }

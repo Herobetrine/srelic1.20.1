@@ -1,0 +1,19 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.grammer_alloy_ex",
+  "icon": "srelic:grammer_alloy_ex",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:grammer_alloy_ex",
+      "text": "patchouli.srelic.book.entries.arrow.grammer_alloy_ex.pages.0.text"
+    },
+    {
+      "type": "crafting",
+      "title": "painting.srelic.huoqu.title",
+      "text": "patchouli.srelic.book.entries.arrow.grammer_alloy_ex.easter-egg",
+      "recipe": "srelic:grammer_alloy_ex"
+    }
+  ]
+}

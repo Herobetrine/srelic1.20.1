@@ -1,0 +1,19 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.max_ingot",
+  "icon": "srelic:max_ingot",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:max_ingot",
+      "text": "patchouli.srelic.book.entries.arrow.max_ingot.pages.0.text"
+    },
+    {
+      "type": "crafting",
+      "title": "painting.srelic.huoqu.title",
+      "text": "patchouli.srelic.book.entries.arrow.max_ingot.easter-egg",
+      "recipe": "srelic:max_ingot"
+    }
+  ]
+}

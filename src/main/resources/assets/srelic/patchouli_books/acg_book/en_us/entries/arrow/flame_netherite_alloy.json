@@ -10,9 +10,18 @@
       "text": "patchouli.srelic.book.entries.arrow.flame_netherite_alloy.pages.0.text"
     },
     {
-      "type": "text",
-      "title": "painting.srelic.huoqu.title",
-      "text": "tips.flame_netherite_alloy.name_tip"
+      "type": "multiblock",
+      "name": "tips.flame_netherite_alloy.name",
+      "multiblock": {
+        "pattern": [
+          ["0"],["_"]
+        ],
+        "mapping": {
+          "0": "minecraft:gold_block"
+        },
+        "symmetrical": true
+      },
+        "text": "tips.flame_netherite_alloy.name_tip"
     }
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.windy_core",
+  "icon": "srelic:windy_core",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:windy_core",
+      "text": "patchouli.srelic.book.entries.arrow.windy_core.pages.0.text"
+    },
+    {
+      "type": "text",
+      "title": "painting.srelic.huoqu.title",
+      "text": "tips.windy_core.name_tip"
+
+    }
+  ]
+}
