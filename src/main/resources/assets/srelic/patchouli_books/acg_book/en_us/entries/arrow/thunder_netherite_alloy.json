@@ -10,9 +10,18 @@
       "text" : "patchouli.srelic.book.entries.arrow.thunder_netherite_alloy.pages.0.text"
     },
     {
-      "type" : "text",
-      "title" : "painting.srelic.huoqu.title",
-      "text" : "tips.thunder_netherite_alloy.name_tip"
+      "type": "multiblock",
+      "name": "tips.thunder_netherite_alloy.name",
+      "multiblock": {
+        "pattern": [
+          ["0"],["_"]
+        ],
+        "mapping": {
+          "0": "minecraft:lightning_rod"
+        },
+        "symmetrical": true
+      },
+      "text": "tips.thunder_netherite_alloy.name_tip"
     }
   ]
 }

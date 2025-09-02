@@ -1,0 +1,17 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.windy_core_ingot",
+  "icon": "srelic:windy_core_ingot",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:windy_core_ingot"
+    },
+    {
+      "type": "crafting",
+      "title": "painting.srelic.huoqu.title",
+      "recipe": "srelic:windy_core_ingot"
+    }
+  ]
+}

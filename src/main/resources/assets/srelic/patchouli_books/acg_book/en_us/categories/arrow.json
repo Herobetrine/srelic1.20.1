@@ -1,6 +1,6 @@
 {
-    "sortnum": 1,
-    "name": "patchouli.srelic.book.categories.arrow.name",
-    "description": "patchouli.srelic.book.categories.arrow.description",
-    "icon": "srelic:ender_metal"
+  "sortnum": 1,
+  "name": "patchouli.srelic.book.categories.arrow.name",
+  "description": "patchouli.srelic.book.categories.arrow.description",
+  "icon": "srelic:ender_metal"
 }

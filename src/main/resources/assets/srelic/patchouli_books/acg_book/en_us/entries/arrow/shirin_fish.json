@@ -1,0 +1,22 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.shirin_fish",
+  "icon": "srelic:shirin_fish",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:shirin_fish",
+      "text": "patchouli.srelic.book.entries.arrow.shirin_fish.pages.0.text"
+    },
+    {
+      "type": "text",
+      "title": "painting.srelic.huoqu.title",
+      "text": "tips.shirin_fish.name_tip"
+    },
+    {
+      "type": "text",
+      "text": "patchouli.srelic.book.entries.arrow.shirin_fish.easter-egg1"
+    }
+  ]
+}

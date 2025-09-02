@@ -10,9 +10,23 @@
       "text" : "patchouli.srelic.book.entries.arrow.sakura_steel_ingot.pages.0.text"
     },
     {
+      "type": "multiblock",
+      "name": "tips.sakura_steel_ingot.name",
+      "multiblock": {
+        "pattern": [
+          ["0","1"],["_","_"]
+        ],
+        "mapping": {
+          "0": "minecraft:cherry_log",
+          "1": "minecraft:cherry_leaves"
+        },
+        "symmetrical": true
+      },
+      "text": "tips.sakura_steel_ingot.name_tip"
+    },
+    {
       "type" : "text",
-      "title" : "painting.srelic.huoqu.title",
-      "text" : "tips.sakura_steel_ingot.name_tip"
+      "text" : "patchouli.srelic.book.entries.arrow.sakura_steel_ingot.pages.0.text"
     }
   ]
 }

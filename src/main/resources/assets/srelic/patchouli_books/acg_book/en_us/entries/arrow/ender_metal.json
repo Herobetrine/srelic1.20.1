@@ -1,20 +1,19 @@
 {
-    "sortnum": 1,
-    "name": "item.srelic.ender_metal",
-    "icon": "srelic:ender_metal",
-    "category": "srelic:arrow",
-    "pages": [
-        {
-            "type": "spotlight",
-            "item": "srelic:ender_metal",
-            "text": "patchouli.srelic.book.entries.arrow.ender_metal.pages.0.text"
-        },
-        {
-            "type": "crafting",
-            "title": "item.srelic.ender_metal",
-            "text": "item.srelic.ender_metal",
-            "recipe": "srelic:ender_metal"
-
-        }
-    ]
+  "sortnum": 1,
+  "name": "item.srelic.ender_metal",
+  "icon": "srelic:ender_metal",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:ender_metal",
+      "text": "patchouli.srelic.book.entries.arrow.ender_metal.pages.0.text"
+    },
+    {
+      "type": "crafting",
+      "title": "item.srelic.ender_metal",
+      "text": "item.srelic.ender_metal",
+      "recipe": "srelic:ender_metal"
+    }
+  ]
 }

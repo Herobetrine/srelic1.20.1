@@ -1,0 +1,18 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.surgeheart_vortex",
+  "icon": "srelic:surgeheart_vortex",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:surgeheart_vortex"
+    },
+    {
+      "type": "crafting",
+      "title": "painting.srelic.huoqu.title",
+      "recipe": "srelic:surgeheart_vortex"
+    }
+
+  ]
+}

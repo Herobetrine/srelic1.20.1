@@ -10,10 +10,13 @@
       "text": "patchouli.srelic.book.entries.arrow.eternal_plum.pages.0.text"
     },
     {
-      "type": "crafting",
-      "title": "item.srelic.eternal_plum",
-      "text": "item.srelic.eternal_plum",
-      "recipe": "srelic:eternal_plum"
+      "type": "text",
+      "title": "painting.srelic.huoqu.title",
+      "text": "tips.plum.name_tip"
+    },
+    {
+      "type": "text",
+      "text": "patchouli.srelic.book.entries.arrow.eternal_plum.easter-egg1"
     }
   ]
 }
