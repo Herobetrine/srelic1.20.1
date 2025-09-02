@@ -18,7 +18,7 @@ public class MaximEvent {
         if (state.getBlock() == Blocks.GRASS) {
 
 
-            if (event.getLevel().getRandom().nextFloat() < 0.01f) {
+            if (event.getLevel().getRandom().nextFloat() < 0.001f) {
                 event.getPlayer().getCommandSenderWorld().addFreshEntity(
                         new ItemEntity(
                                 event.getPlayer().getCommandSenderWorld(),

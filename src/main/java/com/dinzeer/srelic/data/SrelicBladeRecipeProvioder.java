@@ -1,6 +1,8 @@
 package com.dinzeer.srelic.data;
 
+import cn.mmf.slashblade_addon.SlashBladeAddon;
 import cn.mmf.slashblade_addon.data.SlashBladeAddonBuiltInRegistry;
+import com.dinzeer.srelic.Srelic;
 import com.dinzeer.srelic.blade.SRItem;
 import com.dinzeer.srelic.blade.re2.SrelicSlashBladeShapedRecipeBuilder;
 import com.dinzeer.srelic.registry.SRBlockRegsitry;
@@ -10,6 +12,7 @@ import mods.flammpfeil.slashblade.init.SBItems;
 import mods.flammpfeil.slashblade.item.SwordType;
 import mods.flammpfeil.slashblade.recipe.RequestDefinition;
 import mods.flammpfeil.slashblade.recipe.SlashBladeIngredient;
+import mods.flammpfeil.slashblade.recipe.SlashBladeShapedRecipeBuilder;
 import mods.flammpfeil.slashblade.registry.slashblade.EnchantmentDefinition;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -24,6 +27,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -397,19 +401,19 @@ public class SrelicBladeRecipeProvioder extends RecipeProvider implements ICondi
                                 .build()))
                 .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
         SrelicSlashBladeShapedRecipeBuilder.shaped(SRelicBuiltInRegsitry.spring.location())
-                .pattern(" FB")
-                .pattern("CDA")
-                .pattern("EA ")
-                .define('A', Items.NETHERITE_INGOT)
-                .define('B',Items.TNT)
-                .define('C', SRItemRegsitry.diamond_star)
-                .define('D', SlashBladeIngredient.of(
+                .pattern("  A")
+                .pattern("BCD")
+                .pattern("ED ")
+                .define('A', Items.TNT)
+                .define('B', Items.WEEPING_VINES)
+                .define('C', Items.NETHER_STAR)
+                .define('D', SRItemRegsitry.sakura_steel_ingot)
+                .define('E', SlashBladeIngredient.of(
                         SRItem.getItem(SRItem.SRELIC_BLADE_ID),RequestDefinition.Builder.newInstance()
                                 .name(SRelicBuiltInRegsitry.BLADE.location())
                                 .proudSoul(3000)
                                 .build()))
-                .define('E',Items.ROSE_BUSH)
-                .define('F',SRItemRegsitry.fel_metal)
+
                 .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
 
         SrelicSlashBladeShapedRecipeBuilder.shaped(SRelicBuiltInRegsitry.Aphrodite_Lyre.location())
@@ -933,38 +937,47 @@ public class SrelicBladeRecipeProvioder extends RecipeProvider implements ICondi
                 .define('A',SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                                 .name(SlashBladeBuiltInRegistry.YAMATO.location())
+                                .addSwordType(SwordType.BROKEN)
                                 .build()))
                 .define('B',SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                                 .name(SlashBladeBuiltInRegistry.RODAI_STONE.location())
+                                .addSwordType(SwordType.BROKEN)
                                 .build()))
                 .define('C',SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                                 .name(SlashBladeBuiltInRegistry.RODAI_WOODEN.location())
+                                .addSwordType(SwordType.BROKEN)
                                 .build()))
                 .define('D',SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                                 .name(SlashBladeBuiltInRegistry.RODAI_GOLDEN.location())
+                                .addSwordType(SwordType.BROKEN)
                                 .build()))
                 .define('E',SlashBladeIngredient.of(
                         SRItem.getItem(SRItem.SRELIC_BLADE_ID),RequestDefinition.Builder.newInstance()
                                 .name(SRelicBuiltInRegsitry.BLADE.location())
+                                .addSwordType(SwordType.BROKEN)
                                 .build()))
                 .define('F',SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                                 .name(SlashBladeBuiltInRegistry.RODAI_IRON.location())
+                                .addSwordType(SwordType.BROKEN)
                                 .build()))
                 .define('G',SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                                 .name(SlashBladeBuiltInRegistry.RODAI_NETHERITE.location())
+                                .addSwordType(SwordType.BROKEN)
                                 .build()))
                 .define('H',SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                                 .name(SlashBladeBuiltInRegistry.RODAI_DIAMOND.location())
+                                .addSwordType(SwordType.BROKEN)
                                 .build()))
                 .define('I',SlashBladeIngredient.of(
                         RequestDefinition.Builder.newInstance()
                                 .name(SlashBladeBuiltInRegistry.MURAMASA.location())
+                                .addSwordType(SwordType.BROKEN)
                                 .build()))
                 .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
         SrelicSlashBladeShapedRecipeBuilder.shaped(SRelicBuiltInRegsitry.NONE.location())
@@ -1177,6 +1190,54 @@ public class SrelicBladeRecipeProvioder extends RecipeProvider implements ICondi
                 .define('I',SRItemRegsitry.max_ingot)
                 .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(consumer);
 
+
+        ConditionalRecipe.builder()
+                .addCondition(this.modLoaded("energyblade"))
+                .addRecipe(recipeConsumer ->
+                        SlashBladeShapedRecipeBuilder.shaped(SRelicBuiltlnRegsitryHF.samu_hf.location())
+                                .pattern(" A ")
+                                .pattern(" B ")
+                                .pattern(" C ")
+                                .define('A', SRItemRegsitry.thunder_netherite_alloy)
+                                .define('B', SlashBladeIngredient.of(
+                                        SRItem.getItem(SRItem.SRELIC_BLADE_ID),
+                                        RequestDefinition.Builder.newInstance()
+                                                .name(SRelicBuiltInRegsitry.samu.location())
+                                                .build()))
+                                .define('C', Items.REDSTONE)
+                                .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(recipeConsumer)
+                )
+                .build(consumer, Srelic.prefix("samu_hf_ver"));
+        ConditionalRecipe.builder()
+                .addCondition(this.modLoaded("energyblade"))
+                .addRecipe((r) ->
+                        SlashBladeShapedRecipeBuilder.shaped(SRelicBuiltlnRegsitryHF.FIRE_HF.location())
+                                .pattern(" A ")
+                                .pattern(" B ")
+                                .pattern("   ")
+                                .define('A',SRItemRegsitry.thunder_netherite_alloy)
+                                .define('B',SlashBladeIngredient.of(
+                                        SRItem.getItem(SRItem.SRELIC_BLADE_ID),RequestDefinition.Builder.newInstance()
+                                                .name(SRelicBuiltInRegsitry.FIRE.location())
+                                                .build()))
+                                .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(r)
+                )
+                .build(consumer,  Srelic.prefix("fire_hf_ver"));
+        ConditionalRecipe.builder()
+                .addCondition(this.modLoaded("energyblade"))
+                .addRecipe((r) ->
+                        SlashBladeShapedRecipeBuilder.shaped(SRelicBuiltlnRegsitryHF.RED_QUEEN_HF.location())
+                                .pattern(" A ")
+                                .pattern(" B ")
+                                .pattern("   ")
+                                .define('A',SRItemRegsitry.thunder_netherite_alloy)
+                                .define('B',SlashBladeIngredient.of(
+                                        SRItem.getItem(SRItem.SRELIC_BLADE_ID),RequestDefinition.Builder.newInstance()
+                                                .name(SRelicBuiltInRegsitry.RED_QUEEN.location())
+                                                .build()))
+                                .unlockedBy(getHasName(SBItems.slashblade), has(SBItems.slashblade)).save(r)
+                )
+                .build(consumer, Srelic.prefix("red_queen_ver"));
     }
     public Item getItem(ResourceLocation item) {
         return ForgeRegistries.ITEMS.getValue(item);

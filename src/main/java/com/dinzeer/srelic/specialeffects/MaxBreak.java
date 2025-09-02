@@ -1,6 +1,8 @@
 package com.dinzeer.srelic.specialeffects;
 
+import com.dinzeer.legendreliclib.lib.compat.slashblade.SlashEffect;
 import com.dinzeer.srelic.Utils.GetNumUtil;
+import com.dinzeer.srelic.Utils.RandomColor;
 import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState;
 import mods.flammpfeil.slashblade.event.SlashBladeEvent;
@@ -65,9 +67,9 @@ public class MaxBreak extends SpecialEffect {
 
             if(SpecialEffect.isEffective(SRSpecialEffectsRegistry.MAXBREAK.get(),level)){
                  state.setColorCode(random(i));
-                SakuraEnd.doSlash(player, event.getRoll()-2, Vec3.ZERO, false, false, 0.1F, KnockBacks.cancel);
+                SlashEffect.SakuraEnd.doSlash(player, event.getRoll()-2, Vec3.ZERO, false, false, 0.1F, KnockBacks.cancel);
                 state.setColorCode(random(i));
-                SakuraEnd.doSlash(player, event.getRoll()+2, Vec3.ZERO, false, false, 0.1F, KnockBacks.cancel);
+                SlashEffect.SakuraEnd.doSlash(player, event.getRoll()+2, Vec3.ZERO, false, false, 0.1F, KnockBacks.cancel);
 
 
 
@@ -90,7 +92,7 @@ public class MaxBreak extends SpecialEffect {
                     return 16774912;
 
         }
-        return 16740608;
+        return RandomColor.returnner(i+1);
     }
 
 }

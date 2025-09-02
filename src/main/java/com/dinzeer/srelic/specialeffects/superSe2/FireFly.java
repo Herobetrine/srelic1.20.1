@@ -1,5 +1,6 @@
 package com.dinzeer.srelic.specialeffects.superSe2;
 
+import com.dinzeer.legendreliclib.lib.compat.slashblade.SlashEffect;
 import com.dinzeer.srelic.Utils.SlashBladeUtil;
 import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.registry.SRStacksReg;
@@ -181,7 +182,7 @@ public class FireFly extends SpecialEffect {
 
 
 
-                    SakuraEnd.doSlash(player, 180-event.getRoll(), Vec3.ZERO,
+                    SlashEffect.SakuraEnd.doSlash(player, 180-event.getRoll(), Vec3.ZERO,
                             false, false, 0.1F, KnockBacks.cancel);
 
 

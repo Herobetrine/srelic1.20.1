@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:gold_block"
+    },
+    "B": {
+      "item": "srelic:ex_star"
+    }
+  },
+  "pattern": [
+    " A ",
+    " B ",
+    "   "
+  ],
+  "result": {
+    "count": 2,
+    "item": "minecraft:ancient_debris"
+  },
+  "show_notification": true
+}

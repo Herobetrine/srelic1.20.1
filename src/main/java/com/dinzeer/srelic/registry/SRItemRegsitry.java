@@ -1,10 +1,19 @@
 package com.dinzeer.srelic.registry;
 
 import com.dinzeer.srelic.Srelic;
+import com.dinzeer.srelic.items.armor.DiamondBlockArmor;
+import com.dinzeer.srelic.items.armor.ExtremeArmor;
+import com.dinzeer.srelic.items.armor.OceanArmor;
+import com.dinzeer.srelic.items.armor.SkyArmor;
+import com.dinzeer.srelic.items.tool.BlazeTool;
+import com.dinzeer.srelic.items.tool.ExtremeTool;
 import com.dinzeer.srelic.registry.item.SrelicItem;
 import com.dinzeer.srelic.registry.item.SrelicStar;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.SwordItem;
 
 import static com.dinzeer.srelic.Srelic.REGISTRATE;
 
@@ -68,6 +77,114 @@ public class SRItemRegsitry {
     public static final ItemEntry<SrelicItem> shirin_fish = iteminit("shirin_fish"); // 某不知名紫色河豚
     public static final ItemEntry<SrelicItem> void_ingot = iteminit("void_ingot");//亚空玄钢
     public static final ItemEntry<SrelicItem> void_core = iteminit("void_core");//亚空星璇
+    public static final ItemEntry<SrelicItem> fire_smithing_template = iteminit("fire_smithing_template");//灼热下界合金升级模板
+    public static final ItemEntry<SrelicItem> max_smithing_template = iteminit("max_smithing_template");//极限下界合金升级模板
+
+    public static final ItemEntry<ExtremeArmor.Helmet> max_helmet=REGISTRATE.item(
+            "max_helmet", properties -> new ExtremeArmor.Helmet()
+             ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+    public static final ItemEntry<ExtremeArmor.Chestplate> max_chestplate=REGISTRATE.item(
+            "max_chestplate", properties -> new ExtremeArmor.Chestplate()
+    ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+    public static final ItemEntry<ExtremeArmor.Leggings> max_leggings=REGISTRATE.item(
+            "max_leggings", properties -> new ExtremeArmor.Leggings()
+            ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+    public static final ItemEntry<ExtremeArmor.Boots> max_boots=REGISTRATE.item(
+            "max_boots", properties -> new ExtremeArmor.Boots()
+            ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+
+    public static final ItemEntry<DiamondBlockArmor.Helmet> diamond_block_helmet=REGISTRATE.item(
+            "diamond_block_helmet", properties -> new DiamondBlockArmor.Helmet()
+    ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+    public static final ItemEntry<DiamondBlockArmor.Chestplate> diamond_block_chestplate=REGISTRATE.item(
+        "diamond_block_chestplate", properties -> new DiamondBlockArmor.Chestplate()
+            ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+    public static final ItemEntry<DiamondBlockArmor.Leggings> diamond_block_leggings=REGISTRATE.item(
+            "diamond_block_leggings", properties -> new DiamondBlockArmor.Leggings()
+    ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+    public static final ItemEntry<DiamondBlockArmor.Boots> diamond_block_boots=REGISTRATE.item(
+            "diamond_block_boots", properties -> new DiamondBlockArmor.Boots()
+    ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+
+    public static final ItemEntry<SkyArmor.Helmet> sky_helmet=REGISTRATE.item(
+            "sky_helmet", properties -> new SkyArmor.Helmet()
+    ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+    public static final ItemEntry<SkyArmor.Chestplate> sky_chestplate=REGISTRATE.item(
+            "sky_chestplate", properties -> new SkyArmor.Chestplate()
+    ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+    public static final ItemEntry<SkyArmor.Leggings> sky_leggings=REGISTRATE.item(
+            "sky_leggings", properties -> new SkyArmor.Leggings()
+    ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+    public static final ItemEntry<SkyArmor.Boots> sky_boots=REGISTRATE.item(
+            "sky_boots", properties -> new SkyArmor.Boots()
+    ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+
+    public static final ItemEntry<OceanArmor.Helmet> ocean_helmet=REGISTRATE.item(
+            "ocean_helmet", properties -> new OceanArmor.Helmet()
+    ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+    public static final ItemEntry<OceanArmor.Chestplate> ocean_chestplate=REGISTRATE.item(
+            "ocean_chestplate", properties -> new OceanArmor.Chestplate()
+    ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+    public static final ItemEntry<OceanArmor.Leggings> ocean_leggings=REGISTRATE.item(
+            "ocean_leggings", properties -> new OceanArmor.Leggings()
+    ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+    public static final ItemEntry<OceanArmor.Boots> ocean_boots=REGISTRATE.item(
+            "ocean_boots", properties -> new OceanArmor.Boots()
+    ).defaultModel().defaultLang().tab(Srelic.SRItems.getKey()).register();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static final ItemEntry<SwordItem> max_sword=REGISTRATE.item(
+            "max_sword", properties -> new SwordItem(ExtremeTool.EXTREME_SWORD_TIER, 5, -2.4f, new Item.Properties())
+             )
+            .tag(ItemTags.SWORDS)
+            .model((ctx, prov) -> prov.handheld(ctx))
+            .defaultLang().tab(Srelic.SRItems.getKey()).register();
+
+    public static final ItemEntry<PickaxeItem> max_pickaxe=REGISTRATE.item(
+                    "max_pickaxe", properties -> new PickaxeItem(ExtremeTool.EXTREME_PICKAXE_TIER, 5, -2.4f, new Item.Properties())
+            )
+            .tag(ItemTags.PICKAXES)
+            .model((ctx, prov) -> prov.handheld(ctx))
+            .defaultLang().tab(Srelic.SRItems.getKey()).register();
+    public static final ItemEntry<SwordItem> fire_netherite_sword=REGISTRATE.item(
+                    "fire_netherite_sword",
+                    properties -> new SwordItem(BlazeTool.Blaze_TIER, 3, -2.4f, new Item.Properties())
+            )
+            .tag(ItemTags.SWORDS)
+            .model((ctx, prov) -> prov.handheld(ctx))
+            .defaultLang().tab(Srelic.SRItems.getKey()).register();
+
+    public static final ItemEntry<PickaxeItem> fire_netherite_pickaxe=REGISTRATE.item(
+                    "fire_netherite_pickaxe",
+                    properties -> new PickaxeItem(BlazeTool.Blaze_TIER, 2, -2.4f, new Item.Properties())
+            )
+            .tag(ItemTags.PICKAXES)
+            .model((ctx, prov) -> prov.handheld(ctx))
+            .defaultLang().tab(Srelic.SRItems.getKey()).register();
+
+
+
+
     public static ItemEntry<SrelicItem> iteminit(String name) {
         return REGISTRATE.item(
                 name, SrelicItem::new

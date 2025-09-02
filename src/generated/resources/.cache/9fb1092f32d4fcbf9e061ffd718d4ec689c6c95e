@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-05T22:50:04.6063238	Recipes
+// 1.20.1	2025-08-17T17:31:50.2181445	Recipes
 5a7e23029766b826650f82c3b2681d1b8bd52108 data/srelic/advancements/recipes/combat/abyss_eye.json
 3304d343af2a839278835762b6d1ca674683027a data/srelic/advancements/recipes/combat/afflordite.json
 1da9d9372a7cd598e811dfce8c69b1f8f2afedea data/srelic/advancements/recipes/combat/air_none.json
@@ -81,6 +81,7 @@ e778fd168416c88db58b3678af7632af3c92d2e7 data/srelic/recipes/dawn_flame_feather.
 4d08f5cd4a36a976ebb830a233f83a53098287cb data/srelic/recipes/end_fire.json
 c15067fa8778e0e6474899427e7898fbb2d5d5a8 data/srelic/recipes/eternal_vows.json
 07669237dcc89f53deb9a154fba7aa58c66537fc data/srelic/recipes/fireblue2.json
+9768c83bde829e7001f3f0eefe6ff1edf967a462 data/srelic/recipes/fire_hf_ver.json
 f836604d66d066cadb0dda35af08c9616b6962cd data/srelic/recipes/fire_knight.json
 de0b4b5f9839d91d7548a94c46d6b6a25829704a data/srelic/recipes/frost_sniper.json
 283323451f2714aad4e9f332af7ae70452adb7f3 data/srelic/recipes/galaxy.json
@@ -96,7 +97,7 @@ e1b8b30b36cd23073e983e0f7ce46e1770a2ee37 data/srelic/recipes/idanstar.json
 f8b3344302fe0a341c329dc759f7b6ee0792f3b7 data/srelic/recipes/kill.json
 e3365678a18d41e3eeb8c506761b99fd1f004635 data/srelic/recipes/laotie.json
 0dd959aa9938bd9770549e5c360f3a22fb5c02a4 data/srelic/recipes/lightning.json
-027d30ea396a4f81e738e0ffef3906dbbeb35a72 data/srelic/recipes/none_blue.json
+b7f696bfac6368fec521aa63419d89618015fcf4 data/srelic/recipes/none_blue.json
 c0c3772e186338a159d6157db0c5791c6353338b data/srelic/recipes/none_red.json
 5614a2c11947c6ab9c2b9a44529cc6b1ac2f2cd0 data/srelic/recipes/no_end.json
 a6de14f49151f4136edf58a5c5a75ddfae351979 data/srelic/recipes/radiance.json
@@ -105,8 +106,10 @@ a6de14f49151f4136edf58a5c5a75ddfae351979 data/srelic/recipes/radiance.json
 d6f11aaf31d5df2d11442522f11d4f0099aef0b5 data/srelic/recipes/redmoon.json
 f8cdcfacf9b8cd45ddd36225ca50ac28820272a4 data/srelic/recipes/redsakura.json
 1e2bcf85f3b50a8c72cceea8a03b2641a9cd9cbf data/srelic/recipes/red_queen.json
+cd121d71177f4b25001bf0b545de30dc95426124 data/srelic/recipes/red_queen_ver.json
 78be92755e58fb7670ec88363b7a84cd3109be0a data/srelic/recipes/rose_spear.json
 a4fce9ecd07cfff58bf50e5966d922c27a77315b data/srelic/recipes/samu.json
+383f3bffdc92183f34d0ea9cdbf4c5b52055a172 data/srelic/recipes/samu_hf_ver.json
 445f0cd2acf274899400dc25138105f5ec03579c data/srelic/recipes/santa_caterina.json
 b5109bf75e2788872d6639deebc15e607c65b1ae data/srelic/recipes/seele.json
 5398820f074894aa9e025fa479e9aced11be43d4 data/srelic/recipes/seven_1.json
@@ -114,7 +117,7 @@ b5109bf75e2788872d6639deebc15e607c65b1ae data/srelic/recipes/seele.json
 4b1cefc520934c62027946dbc239957419699a52 data/srelic/recipes/sika_gun.json
 096b6d6ff1d3e8f2fc95ccd2c85a276ed74adc1a data/srelic/recipes/sky_sword.json
 243d7d78df2226fb8481b3b56326071ec514d897 data/srelic/recipes/sky_sword_ascent.json
-2f4acf7cfa5c390136646de1dea8038d2cb28d4c data/srelic/recipes/spring.json
+7c28c9e9390f2a9340c473d8362abc4c5dc38eb2 data/srelic/recipes/spring.json
 fecd436db29b6372c904384cbab2f7ebb6032bac data/srelic/recipes/staff_of_homa.json
 2d8d27f0806b9cdeed07ad443823947603722d9a data/srelic/recipes/star.json
 240008aa054e98a828c358b3e47eb2a6b6bc1286 data/srelic/recipes/the_fire.json

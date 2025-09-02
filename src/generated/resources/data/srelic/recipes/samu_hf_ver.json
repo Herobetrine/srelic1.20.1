@@ -1,0 +1,42 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "energyblade"
+        }
+      ],
+      "recipe": {
+        "type": "slashblade:shaped_blade",
+        "blade": "srelic:samu_hf",
+        "category": "equipment",
+        "key": {
+          "A": {
+            "item": "srelic:thunder_netherite_alloy"
+          },
+          "B": {
+            "type": "slashblade:blade",
+            "item": "srelic:srelic_slashblade",
+            "request": {
+              "name": "srelic:samu"
+            }
+          },
+          "C": {
+            "item": "minecraft:redstone"
+          }
+        },
+        "pattern": [
+          " A ",
+          " B ",
+          " C "
+        ],
+        "result": {
+          "item": "slashblade:slashblade"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

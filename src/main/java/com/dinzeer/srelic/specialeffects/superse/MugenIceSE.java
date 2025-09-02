@@ -103,6 +103,7 @@ public class MugenIceSE extends SpecialEffect {
     @SubscribeEvent
     public static void onKill(LivingDeathEvent event) {
         if (!(event.getSource().getEntity() instanceof Player player)) return;
+        if (!hasEffect(player)) return;
        int proudSoul= player.getMainHandItem().getCapability(ItemSlashBlade.BLADESTATE)
                 .map(ISlashBladeState::getProudSoulCount).orElse(0);
         int proudSoulSet=0;

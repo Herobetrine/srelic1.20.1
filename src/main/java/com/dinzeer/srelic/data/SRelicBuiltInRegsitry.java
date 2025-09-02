@@ -537,7 +537,7 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(27)
+                                .baseAttackModifier(23)
                                 .slashArtsType(SRslashArtRegsitry.XDRIVE.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.NERO_DEVIL_BREAKER.getId())
@@ -583,7 +583,7 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(26)
+                                .baseAttackModifier(23)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .slashArtsType(SRslashArtRegsitry.Rappa.getId())
                                 .maxDamage(200)
@@ -604,7 +604,7 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(10)
+                                .baseAttackModifier(6)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .maxDamage(200)
                                 .build(),
@@ -800,7 +800,7 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(35)
+                                .baseAttackModifier(20)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .maxDamage(200)
                                 .build(),
@@ -856,7 +856,7 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(40)
+                                .baseAttackModifier(20)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.DICE_EFFECT.getId())
                                 .maxDamage(200)
@@ -895,7 +895,7 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(35)
+                                .baseAttackModifier(20)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.SAKURA_BLOOM.getId())
                                 .maxDamage(200)
@@ -915,13 +915,13 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(20)
+                                .baseAttackModifier(15)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.PERFECT_SANCTUARY.getId())
                                 .maxDamage(200)
                                 .build(),
-                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 5),
-                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 5),
+                        List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.POWER_ARROWS), 3),
+                                new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 3),
                                 new EnchantmentDefinition(getEnchantmentID(Enchantments.SHARPNESS), 3)
                         )));
         bootstrap.register(
@@ -1679,6 +1679,8 @@ public class SRelicBuiltInRegsitry {
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
                                 .baseAttackModifier(70)
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.TRUTH_REALM.getId())
+                                .addSpecialEffect(SRSpecialEffectsRegistry.PERFECT_SANCTUARY.getId())
                                 .maxDamage(300)
                                 .build(),
                         List.of(new EnchantmentDefinition(getEnchantmentID(Enchantments.UNBREAKING), 10),
@@ -1692,10 +1694,10 @@ public class SRelicBuiltInRegsitry {
 
 
 
-    private static ResourceKey<SlashBladeDefinition> register(String id) {
+    public static ResourceKey<SlashBladeDefinition> register(String id) {
         return ResourceKey.create(SlashBladeDefinition.REGISTRY_KEY, Srelic.prefix(id));
     }
-    static ResourceLocation getEnchantmentID(Enchantment enchantment) {
+    public static ResourceLocation getEnchantmentID(Enchantment enchantment) {
         return ForgeRegistries.ENCHANTMENTS.getKey(enchantment);
     }
 

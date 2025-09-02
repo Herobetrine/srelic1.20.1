@@ -37,14 +37,17 @@ public class SRelicDataGen {
 
 
 
-        REGISTRATE.addDataGenerator(ProviderType.RECIPE, SrelicBladeRecipeGen::onRecipeGen);
-        dataGenerator.addProvider(event.includeServer(), new SrelicBladeRecipeProvioder(packOutput));
+
+
         final RegistrySetBuilder bladeBuilder = new RegistrySetBuilder().add(SlashBladeDefinition.REGISTRY_KEY,
-                SRelicBuiltInRegsitry::registerAll);
+                (a)->{
+            SRelicBuiltInRegsitry.registerAll(a);
+                    SRelicBuiltlnRegsitryHF.registerAll(a);
+        });
         dataGenerator.addProvider(event.includeServer(),
                 new DatapackBuiltinEntriesProvider(packOutput, lookupProvider, bladeBuilder, Set.of(Srelic.MODID)));
-
-
+        REGISTRATE.addDataGenerator(ProviderType.RECIPE, SrelicBladeRecipeGen::onRecipeGen);
+        dataGenerator.addProvider(event.includeServer(), new SrelicBladeRecipeProvioder(packOutput));
 
 
 

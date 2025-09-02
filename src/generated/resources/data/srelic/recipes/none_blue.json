@@ -7,63 +7,90 @@
       "type": "slashblade:blade",
       "item": "slashblade:slashblade",
       "request": {
-        "name": "slashblade:yamato"
+        "name": "slashblade:yamato",
+        "sword_type": [
+          "broken"
+        ]
       }
     },
     "B": {
       "type": "slashblade:blade",
       "item": "slashblade:slashblade",
       "request": {
-        "name": "slashblade:rodai_stone"
+        "name": "slashblade:rodai_stone",
+        "sword_type": [
+          "broken"
+        ]
       }
     },
     "C": {
       "type": "slashblade:blade",
       "item": "slashblade:slashblade",
       "request": {
-        "name": "slashblade:rodai_wooden"
+        "name": "slashblade:rodai_wooden",
+        "sword_type": [
+          "broken"
+        ]
       }
     },
     "D": {
       "type": "slashblade:blade",
       "item": "slashblade:slashblade",
       "request": {
-        "name": "slashblade:rodai_golden"
+        "name": "slashblade:rodai_golden",
+        "sword_type": [
+          "broken"
+        ]
       }
     },
     "E": {
       "type": "slashblade:blade",
       "item": "srelic:srelic_slashblade",
       "request": {
-        "name": "srelic:blade"
+        "name": "srelic:blade",
+        "sword_type": [
+          "broken"
+        ]
       }
     },
     "F": {
       "type": "slashblade:blade",
       "item": "slashblade:slashblade",
       "request": {
-        "name": "slashblade:rodai_iron"
+        "name": "slashblade:rodai_iron",
+        "sword_type": [
+          "broken"
+        ]
       }
     },
     "G": {
       "type": "slashblade:blade",
       "item": "slashblade:slashblade",
       "request": {
-        "name": "slashblade:rodai_netherite"
+        "name": "slashblade:rodai_netherite",
+        "sword_type": [
+          "broken"
+        ]
       }
     },
     "H": {
       "type": "slashblade:blade",
       "item": "slashblade:slashblade",
       "request": {
-        "name": "slashblade:rodai_diamond"
+        "name": "slashblade:rodai_diamond",
+        "sword_type": [
+          "broken"
+        ]
       }
     },
     "I": {
       "type": "slashblade:blade",
       "item": "slashblade:slashblade",
       "request": {
-        "name": "slashblade:muramasa"
+        "name": "slashblade:muramasa",
+        "sword_type": [
+          "broken"
+        ]
       }
     }
   },

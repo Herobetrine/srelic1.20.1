@@ -1,6 +1,12 @@
+// PerfectSanctuarySE.java
 package com.dinzeer.srelic.specialeffects.superse;
 
+import com.dinzeer.legendreliclib.lib.StackReg;
+import com.dinzeer.legendreliclib.lib.util.slashblade.SlashBladeUtil;
+import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
+import com.dinzeer.srelic.registry.SRStacksReg;
 import com.dinzeer.srelic.specialeffects.SeEX;
+import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -29,15 +35,16 @@ public class PerfectSanctuarySE extends SpecialEffect {
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         Player player = event.player;
         ItemStack blade = player.getMainHandItem();
-        if (!SeEX.hasSpecialEffect(blade, "perfect_sanctuary", player.experienceLevel)) return;
+        if (!(blade.getItem() instanceof ItemSlashBlade))return;
+        if (!SlashBladeUtil.hasSpecialEffect(blade, SRSpecialEffectsRegistry.PERFECT_SANCTUARY)) return;
 
         handleShieldDuration(player);
         handleCooldown(player);
-        
-        if (event.phase == TickEvent.Phase.END && 
-            player.tickCount % 20 == 0 && 
-            hasActiveShield(player)) {
-            
+
+        if (event.phase == TickEvent.Phase.END &&
+                player.tickCount % 20 == 0 &&
+                hasActiveShield(player)) {
+
             applyWitherEffect(player);
             spawnShieldParticles((ServerLevel) player.level(), player.position(),player);
         }
@@ -46,29 +53,43 @@ public class PerfectSanctuarySE extends SpecialEffect {
     @SubscribeEvent
     public static void onDamage(LivingHurtEvent event) {
         if (!(event.getEntity() instanceof Player player)) return;
-        
+
         ItemStack blade = player.getMainHandItem();
-        if (!SeEX.hasSpecialEffect(blade, "perfect_sanctuary", 1)) return;
+        if (!SlashBladeUtil.hasSpecialEffect(blade, SRSpecialEffectsRegistry.PERFECT_SANCTUARY)) return;
         if (player.getPersistentData().getLong(COOLDOWN_KEY) > System.currentTimeMillis()) return;
 
         float healthRatio = player.getHealth() / player.getMaxHealth();
         if (healthRatio > 0.5f) return;
 
         activateSanctuary(player);
+        float amount=event.getAmount();
+        if (amount> SRStacksReg.SANCTUARY_SHIELD.getCurrentStacks(player)){
+            amount-= SRStacksReg.SANCTUARY_SHIELD.getCurrentStacks(player);
+            SRStacksReg.SANCTUARY_SHIELD.addStacks(player, -SRStacksReg.SANCTUARY_SHIELD.getCurrentStacks(player));
+        }else if (amount<=SRStacksReg.SANCTUARY_SHIELD.getCurrentStacks(player)){
+            SRStacksReg.SANCTUARY_SHIELD.addStacks(player, (int) -amount);
+            amount=0;
+        }
+
+        event.setAmount(amount);
     }
 
     private static void activateSanctuary(Player player) {
         // 计算护盾值
         float missingHealth = player.getMaxHealth() - player.getHealth();
         float shieldAmount = missingHealth * 2.0f;
-        
-        // 设置护盾参数 [剩余时间(秒), 初始护盾值]
-        player.getPersistentData().putFloat(SHIELD_KEY + "_time", 3.0f); 
+
+        // 设置护盾参数
+        player.getPersistentData().putFloat(SHIELD_KEY + "_time", 3.0f);
         player.getPersistentData().putFloat(SHIELD_KEY, shieldAmount);
-        
+
         // 设置冷却
         player.getPersistentData().putLong(COOLDOWN_KEY, System.currentTimeMillis() + 30000);
-        
+
+        // 初始化堆栈值
+        SRStacksReg.SANCTUARY_SHIELD.resetStacks(player);
+        SRStacksReg.SANCTUARY_SHIELD.addStacks(player, (int) shieldAmount);
+
         // 初始粒子效果
         SeEX.spawnParticleSphere(player.level(), player.position().add(0, 1, 0),
                 ParticleTypes.END_ROD, 2.0f, 50, 0x88FFFF);
@@ -79,11 +100,15 @@ public class PerfectSanctuarySE extends SpecialEffect {
         if (remainingTime <= 0) return;
 
         remainingTime -= 0.05f; // 每tick减少
-        
+
         // 更新护盾值
         float currentShield = Math.max(0, player.getPersistentData().getFloat(SHIELD_KEY));
         player.setAbsorptionAmount(currentShield);
-        
+
+        // 同步更新堆栈值
+        SRStacksReg.SANCTUARY_SHIELD.resetStacks(player);
+        SRStacksReg.SANCTUARY_SHIELD.addStacks(player, (int) currentShield);
+
         if (remainingTime <= 0) {
             triggerShieldEnd(player, currentShield);
         } else {
@@ -92,6 +117,9 @@ public class PerfectSanctuarySE extends SpecialEffect {
     }
 
     private static void triggerShieldEnd(Player player, float remainingShield) {
+        // 清除堆栈值
+        SRStacksReg.SANCTUARY_SHIELD.resetStacks(player);
+
         // 清除护盾数据
         player.getPersistentData().remove(SHIELD_KEY);
         player.getPersistentData().remove(SHIELD_KEY + "_time");
@@ -100,12 +128,12 @@ public class PerfectSanctuarySE extends SpecialEffect {
         // 执行爆破效果
         ServerLevel level = (ServerLevel) player.level();
         AABB area = new AABB(player.blockPosition()).inflate(12);
-        
+
         level.getEntitiesOfClass(LivingEntity.class, area).forEach(e -> {
             if (!e.equals(player)) {
                 float damage = remainingShield * 0.8f;
                 e.hurt(player.damageSources().magic(), damage);
-                
+
                 // 水晶爆破粒子
                 SeEX.spawnParticleChain(level, player.position(), e.position(),
                         ParticleTypes.DRAGON_BREATH, 15, 0.5f);
@@ -126,22 +154,17 @@ public class PerfectSanctuarySE extends SpecialEffect {
     }
 
     private static void applyWitherEffect(LivingEntity target) {
-        target.addEffect(new MobEffectInstance(MobEffects.WITHER, 40, 2)); // 2秒效果
+        target.addEffect(new MobEffectInstance(MobEffects.WITHER, 40, 2));
         target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 2));
         target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 40, 1));
     }
 
     private static void spawnShieldParticles(ServerLevel level, Vec3 center,Player player) {
-
-
-
-
-
         SeEX.spawnRotatingParticles(level, center.add(0, 1, 0),
                 ParticleTypes.END_ROD, 1.8f, 8, level.getGameTime() % 360);
-        
+
         SeEX.spawnPersistentAura(player, ParticleTypes.END_ROD,
-            2.0f, 16, 0x88FFFF);
+                2.0f, 16, 0x88FFFF);
     }
 
     private static boolean hasActiveShield(Player player) {

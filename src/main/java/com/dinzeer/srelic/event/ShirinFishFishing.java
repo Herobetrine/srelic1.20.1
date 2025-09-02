@@ -1,5 +1,6 @@
 package com.dinzeer.srelic.event;
 
+import com.dinzeer.srelic.registry.SRStacksReg;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -24,8 +25,15 @@ public class ShirinFishFishing {
         boolean hasLure = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FISHING_SPEED, rod) >= 3;
         boolean hasLuck = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FISHING_LUCK, rod) >= 3;
         
-        if (hasLure && hasLuck && event.getEntity().getRandom().nextDouble() < 0.0623) {
+        if (hasLure && hasLuck) {
+            SRStacksReg.SHRIN_FISH_STACKS.addStacks(event.getEntity(), 1);
+            if (SRStacksReg.SHRIN_FISH_STACKS.getCurrentStacks(event.getEntity())==SRStacksReg.SHRIN_FISH_STACKS.getMaxStacks()){
+                SRStacksReg.SHRIN_FISH_STACKS.addStacks(event.getEntity(), -SRStacksReg.SHRIN_FISH_STACKS.getMaxStacks());
+                event.getEntity().addItem(new ItemStack(SRItemRegsitry.shirin_fish.get()));
+            }
+            if (event.getEntity().getRandom().nextDouble() < 0.0623){
             event.getDrops().add(new ItemStack(SRItemRegsitry.shirin_fish.get()));
+            }
         }
     }
 }
