@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:crimson_shadow_particle_from_ingot"
+        "recipe": "srelic:red_tide_core"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:crimson_shadow_particle_from_ingot"
+      "srelic:red_tide_core"
     ]
   },
   "sends_telemetry_event": false

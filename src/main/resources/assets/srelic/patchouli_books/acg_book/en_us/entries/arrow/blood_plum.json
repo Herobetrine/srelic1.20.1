@@ -1,0 +1,34 @@
+{
+  "sortnum": 1,
+  "name": "patchouli.srelic.blood_plum.name",
+  "icon": "srelic:blood_plum_sampling",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:blood_plum_sampling",
+      "text": "patchouli.srelic.book.entries.arrow.blood_plum.pages.0.text"
+    },
+    {
+      "type": "crafting",
+      "title": "patchouli.srelic.blood_plum_sampling_ex.name",
+      "text": "patchouli.srelic.book.entries.arrow.blood_plum_sampling_ex.pages.1.text",
+      "recipe": "srelic:blood_plum_sampling_ex"
+    },
+    {
+      "type": "spotlight",
+      "item": "srelic:blood_plum_leaves",
+      "text": "patchouli.srelic.book.entries.arrow.blood_plum_leaves.pages.1.text"
+    },
+    {
+      "type": "spotlight",
+      "item": "srelic:eternal_plum",
+      "text": "tips.plum.name_tip"
+    },
+    {
+      "type": "spotlight",
+      "item": "srelic:pule_apple",
+      "text": "tips.plum.name_tip"
+    }
+  ]
+}

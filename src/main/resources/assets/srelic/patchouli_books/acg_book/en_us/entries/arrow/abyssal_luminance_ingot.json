@@ -1,0 +1,26 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.abyssal_luminance_ingot",
+  "icon": "srelic:abyssal_luminance_ingot",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:abyssal_luminance_ingot"
+    },
+    {
+      "type": "multiblock",
+      "name": "painting.srelic.huoqu.title",
+      "multiblock": {
+        "pattern": [
+          ["0"],["_"]
+        ],
+        "mapping": {
+          "0": "minecraft:sea_lantern"
+        },
+        "symmetrical": true
+      },
+      "text": "tips.abyssal_luminance_ingot.name_tip"
+    }
+  ]
+}

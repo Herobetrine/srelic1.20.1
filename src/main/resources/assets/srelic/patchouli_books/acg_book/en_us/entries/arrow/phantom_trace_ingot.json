@@ -1,0 +1,19 @@
+{
+  "sortnum" : 1,
+  "name" : "item.srelic.phantom_trace_ingot",
+  "icon" : "srelic:phantom_trace_ingot",
+  "category" : "srelic:arrow",
+  "pages" : [
+    {
+      "type" : "spotlight",
+      "item" : "srelic:phantom_trace_ingot",
+      "text" : "patchouli.srelic.book.entries.arrow.bule_ingot.pages.0.text"
+    },
+    {
+      "type": "crafting",
+      "title": "painting.srelic.huoqu.title",
+      "text": "patchouli.srelic.book.entries.arrow.phantom_trace_ingot.easter-egg",
+      "recipe": "srelic:phantom_trace_ingot"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "sortnum" : 1,
+  "name" : "item.srelic.nightstalker_ingot",
+  "icon" : "srelic:nightstalker_ingot",
+  "category" : "srelic:arrow",
+  "pages" : [
+    {
+      "type" : "spotlight",
+      "item" : "srelic:nightstalker_ingot",
+      "text" : "patchouli.srelic.book.entries.arrow.nightstalker_ingot.easter-egg"
+    },
+    {
+      "type": "crafting",
+      "title": "painting.srelic.huoqu.title",
+      "text": "item.srelic.nightstalker_ingot",
+      "recipe": "srelic:nightstalker_ingot"
+    }
+  ]
+}

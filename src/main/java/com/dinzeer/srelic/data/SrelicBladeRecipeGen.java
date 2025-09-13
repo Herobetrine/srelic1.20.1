@@ -282,7 +282,7 @@ public class SrelicBladeRecipeGen {
                 .pattern("   ")
                 .pattern("   ")
                 .define('A',SRBlockRegsitry.stripped_blood_plum_log.get())
-                .save(pvd,"blood_plum_planks_2");
+                .save(pvd,"srelic:blood_plum_planks2");
 
         unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC,
                 Items.ANCIENT_DEBRIS, 2)::unlockedBy, SRBlockRegsitry.blood_plum_planks.get().asItem())
@@ -291,7 +291,7 @@ public class SrelicBladeRecipeGen {
                 .pattern("   ")
                 .define('A',Items.GOLD_BLOCK)
                 .define('B',SRItemRegsitry.ex_star.get())
-                .save(pvd,"ex_star_make_nether_ore");
+                .save(pvd,"srelic:ex_star_make_nether_ore");
         unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC,
                 Items.NETHER_STAR, 2)::unlockedBy, SRBlockRegsitry.blood_plum_planks.get().asItem())
                 .pattern("ACA")
@@ -300,7 +300,7 @@ public class SrelicBladeRecipeGen {
                 .define('A',Items.WITHER_SKELETON_SKULL)
                 .define('B',SRItemRegsitry.ex_star.get())
                 .define('C',Items.SOUL_SAND)
-                .save(pvd,"ex_star_make_nether_star");
+                .save(pvd,"srelic:ex_star_make_nether_star");
         unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC,
                 Items.NETHER_STAR, 1)::unlockedBy, SRBlockRegsitry.blood_plum_planks.get().asItem())
                 .pattern(" A ")
@@ -308,7 +308,7 @@ public class SrelicBladeRecipeGen {
                 .pattern(" A ")
                 .define('A',SRItemRegsitry.rainbow_star.get())
                 .define('B',SRItemRegsitry.ex_star.get())
-                .save(pvd,"ex_star_make_rainbow_star");
+                .save(pvd,"srelic:ex_star_make_rainbow_star");
 
         SimpleCookingRecipeBuilder.smelting(
             Ingredient.of(SRItemRegsitry.rough_crimson_shadow_ore.get()),
@@ -327,7 +327,7 @@ public class SrelicBladeRecipeGen {
                 .pattern(" A ")
                 .pattern("   ")
             .define('A', SRItemRegsitry.crimson_shadow_ingot.get())
-            .save(pvd, "crimson_shadow_particle_from_ingot");
+            .save(pvd);
 
 
         unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SRItemRegsitry.crimson_shadow_ingot.get(), 1)::unlockedBy, Items.IRON_INGOT)
@@ -335,7 +335,7 @@ public class SrelicBladeRecipeGen {
             .pattern("AAA")
             .pattern("AAA")
             .define('A', SRItemRegsitry.crimson_shadow_particle.get())
-            .save(pvd, "crimson_shadow_ingot_from_particles");
+            .save(pvd);
 
         unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SRItemRegsitry.red_tide_core.get(), 1)::unlockedBy, Items.IRON_INGOT)
             .pattern("ABC")
@@ -345,7 +345,7 @@ public class SrelicBladeRecipeGen {
             .define('B', Items.LAVA_BUCKET)
             .define('C', SRItemRegsitry.crimson_shadow_ingot.get())
             .define('D', SRItemRegsitry.diamond_star.get())
-            .save(pvd, "red_tide_core");
+            .save(pvd);
 
 
         unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SRItemRegsitry.crimson_core.get(), 1)::unlockedBy, Items.IRON_INGOT)
@@ -356,7 +356,7 @@ public class SrelicBladeRecipeGen {
             .define('B', Blocks.CRYING_OBSIDIAN)
             .define('C', SRBlockRegsitry.crimson_shadow_ore.get().asItem())
             .define('D', SRItemRegsitry.diamond_star.get())
-            .save(pvd, "crimson_core");
+            .save(pvd);
 
 
         unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC,
@@ -368,7 +368,7 @@ public class SrelicBladeRecipeGen {
                 .define('B', SRItemRegsitry.void_ingot.get())
                 .define('C', SRItemRegsitry.PuleApple.get())
                 .define('D', Items.ENDER_EYE)
-                .save(pvd, "void_core_recipe");
+                .save(pvd);
 
 
         unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC,
@@ -381,7 +381,7 @@ public class SrelicBladeRecipeGen {
                 .define('C', SRItemRegsitry.ex_star.get())
                 .define('D', Items.ENDER_EYE)
                 .define('E', Blocks.DRAGON_EGG)
-                .save(pvd, "void_ingot_recipe");
+                .save(pvd);
     }
     public static <T> T unlock(RegistrateRecipeProvider pvd, BiFunction<String, InventoryChangeTrigger.TriggerInstance, T> func, Item item) {
         return func.apply("has_" + pvd.safeName(item), DataIngredient.items(item).getCritereon(pvd));

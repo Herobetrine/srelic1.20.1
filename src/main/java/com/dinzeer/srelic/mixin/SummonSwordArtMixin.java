@@ -51,6 +51,4 @@ public class SummonSwordArtMixin {
 
 
 
-    // 注入点：在SummonSwordArts.execute方法执行时生成EntitySummonBlade
-
 }

@@ -1034,7 +1034,7 @@ public class SRelicBuiltInRegsitry {
                                 .build(),
                         PropertiesDefinition.Builder.newInstance()
                                 .defaultSwordType(List.of(SwordType.BEWITCHED))
-                                .baseAttackModifier(21)
+                                .baseAttackModifier(34)
                                 .slashArtsType(SRslashArtRegsitry.Closingsong.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.WhiteMaker.getId())
                                 .addSpecialEffect(SRSpecialEffectsRegistry.BLAZING_VALOR.getId())

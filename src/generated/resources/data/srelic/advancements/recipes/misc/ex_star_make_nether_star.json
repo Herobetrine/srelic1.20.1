@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_netherite_ingot": {
+    "has_blood_plum_planks": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:netherite_ingot"
+              "srelic:blood_plum_planks"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:void_ingot_recipe"
+        "recipe": "srelic:ex_star_make_nether_star"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_netherite_ingot",
+      "has_blood_plum_planks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:void_ingot_recipe"
+      "srelic:ex_star_make_nether_star"
     ]
   },
   "sends_telemetry_event": false

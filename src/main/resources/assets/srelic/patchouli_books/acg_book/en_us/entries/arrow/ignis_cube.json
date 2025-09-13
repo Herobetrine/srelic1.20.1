@@ -1,0 +1,17 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.ignis_cube",
+  "icon": "srelic:ignis_cube",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:ignis_cube"
+    },
+    {
+      "type": "crafting",
+      "title": "painting.srelic.huoqu.title",
+      "recipe": "srelic:ignis_cube"
+    }
+  ]
+}

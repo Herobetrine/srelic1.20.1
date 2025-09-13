@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_blood_plum_planks": {
+    "has_iron_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "srelic:blood_plum_planks"
+              "minecraft:iron_ingot"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:blood_plum_planks_2"
+        "recipe": "srelic:crimson_shadow_particle"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_blood_plum_planks",
+      "has_iron_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:blood_plum_planks_2"
+      "srelic:crimson_shadow_particle"
     ]
   },
   "sends_telemetry_event": false

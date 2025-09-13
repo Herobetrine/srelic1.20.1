@@ -1,0 +1,25 @@
+{
+  "sortnum": 1,
+  "name": "patchouli.srelic.crimson_shadow.name",
+  "icon": "srelic:crimson_shadow_ingot",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:crimson_shadow_ore",
+      "text": "patchouli.srelic.book.entries.arrow.crimson_shadow.pages.0.text"
+    },
+    {
+      "type": "spotlight",
+      "item": "srelic:rough_crimson_shadow_ore",
+      "text": "patchouli.srelic.book.entries.arrow.crimson_shadow_ore.pages.0.text"
+    },
+    {
+      "type": "spotlight",
+      "item": "srelic:crimson_shadow_ingot",
+      "text": "patchouli.srelic.book.entries.arrow.crimson_shadow_ore.easter-egg"
+    }
+
+  ]
+
+}

@@ -1,0 +1,18 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.grammer_alloy",
+  "icon": "srelic:grammer_alloy",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:grammer_alloy",
+      "text": "patchouli.srelic.book.entries.arrow.grammer_alloy.pages.0.text"
+    },
+    {
+      "type": "text",
+      "title": "painting.srelic.huoqu.title",
+      "text": "tips.grammer_alloy.name_tip"
+    }
+  ]
+}

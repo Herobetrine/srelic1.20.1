@@ -1,0 +1,22 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.pule_apple",
+  "icon": "srelic:pule_apple",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:pule_apple",
+      "text": "patchouli.srelic.book.entries.arrow.pule_apple.pages.0.text"
+    },
+    {
+      "type": "text",
+      "title": "painting.srelic.huoqu.title",
+      "text": "tips.plum.name_tip"
+    },
+    {
+      "type": "text",
+      "text": "patchouli.srelic.book.entries.arrow.pule_apple.easter-egg"
+    }
+  ]
+}

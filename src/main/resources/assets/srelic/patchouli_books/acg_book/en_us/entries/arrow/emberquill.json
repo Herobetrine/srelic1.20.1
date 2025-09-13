@@ -1,0 +1,17 @@
+{
+  "sortnum": 1,
+  "name": "item.srelic.emberquill",
+  "icon": "srelic:emberquill",
+  "category": "srelic:arrow",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "srelic:emberquill"
+    },
+    {
+      "type": "crafting",
+      "title": "painting.srelic.huoqu.title",
+      "recipe": "srelic:emberquill"
+    }
+  ]
+}
