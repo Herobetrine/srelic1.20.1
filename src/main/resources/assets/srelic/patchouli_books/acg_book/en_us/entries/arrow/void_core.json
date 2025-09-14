@@ -6,13 +6,13 @@
   "pages" : [
     {
       "type" : "spotlight",
-      "item" : "srelic:void_core"
+      "item" : "srelic:void_core",
+      "text": "patchouli.srelic.book.entries.arrow.void_core.easter-egg1"
     },
     {
       "type": "crafting",
       "title": "painting.srelic.huoqu.title",
-      "text": "patchouli.srelic.book.entries.arrow.void_core.easter-egg1",
-      "recipe": "srelic:void_core"
+      "recipe": "srelic:void_core_recipe"
     }
   ]
 }

@@ -6,12 +6,17 @@
   "pages": [
     {
       "type": "spotlight",
-      "item": "srelic:pledge_flame_vermilion_strand"
+      "item": "srelic:pledge_flame_vermilion_strand",
+      "text": "patchouli.srelic.pledge_flame_vermilion_strand.name"
     },
     {
       "type": "text",
       "title": "painting.srelic.huoqu.title",
       "text": "tips.pledge_flame_vermilion_strand.name_tip"
+    },
+    {
+      "type": "text",
+      "text": "patchouli.srelic.book.seele.arrow.pledge_flame_vermilion_strand.pages.0.text"
     }
   ]
 }

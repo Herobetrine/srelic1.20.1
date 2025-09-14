@@ -6,12 +6,22 @@
   "pages": [
     {
       "type": "spotlight",
-      "item": "srelic:windy_core_ingot"
+      "item": "srelic:windy_core_ingot",
+      "text": "patchouli.srelic.book.entries.arrow.windy_core_ingot.pages.1.text"
     },
     {
       "type": "crafting",
       "title": "painting.srelic.huoqu.title",
-      "recipe": "srelic:windy_core_ingot"
+      "recipe": "srelic:windy_core_ingot",
+      "text": "patchouli.srelic.book.entries.arrow.windy_core_ingot.pages.2.text"
+    },
+    {
+      "type": "text",
+      "text": "patchouli.srelic.book.entries.arrow.windy_core_ingot.easter-egg1"
+    },
+    {
+      "type": "text",
+      "text": "patchouli.srelic.book.entries.arrow.windy_core_ingot.easter-egg2"
     }
   ]
 }

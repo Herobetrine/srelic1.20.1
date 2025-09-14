@@ -6,12 +6,14 @@
   "pages": [
     {
       "type": "spotlight",
-      "item": "srelic:scarletflame_ingot"
+      "item": "srelic:scarletflame_ingot",
+      "text": "patchouli.srelic.scarletflame_ingot.name"
     },
     {
       "type": "crafting",
       "title": "painting.srelic.huoqu.title",
-      "recipe": "srelic:scarletflame_ingot"
+      "recipe": "srelic:scarletflame_ingot",
+      "text": "patchouli.srelic.book.seele.arrow.scarletflame_ingot.pages.0.text"
     }
   ]
 }

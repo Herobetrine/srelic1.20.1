@@ -5,13 +5,23 @@
   "category": "srelic:arrow",
   "pages": [
     {
-      "type": "spotlight",
-      "item": "srelic:butterfly"
-    },
-    {
       "type": "text",
       "title": "painting.srelic.huoqu.title",
       "text": "tips.crimson_paper.name_tip"
+    },
+    {
+      "type": "spotlight",
+      "item": "srelic:nightterror_bloodwing",
+      "text": "patchouli.srelic.book.entries.arrow.nightterror_bloodwing.pages.0.text"
+    },
+    {
+      "type": "spotlight",
+      "item": "srelic:butterfly",
+      "text": "patchouli.srelic.book.seele.arrow.butterfly.pages.0.text"
+    },
+    {
+      "type": "text",
+      "text": "patchouli.srelic.book.seele.arrow.butterfly.easter-egg"
     }
   ]
 }

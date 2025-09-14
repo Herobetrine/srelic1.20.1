@@ -1,0 +1,23 @@
+{
+  "sortnum" : 1,
+  "name" : "item.srelic.pledgeflame_heartforge",
+  "icon" : "srelic:pledgeflame_heartforge",
+  "category" : "srelic:arrow",
+  "pages" : [
+    {
+      "type" : "spotlight",
+      "item" : "srelic:pledgeflame_heartforge"
+    },
+    {
+      "type": "crafting",
+      "title": "painting.srelic.huoqu.title",
+      "recipe": "srelic:pledgeflame_heartforge",
+      "text": "patchouli.srelic.pledgeflame_heartforge.name"
+    },
+    {
+      "type": "text",
+      "text": "patchouli.srelic.book.seele.arrow.pledgeflame_heartforge.pages.0.text"
+    }
+  ]
+
+}

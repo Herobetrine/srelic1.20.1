@@ -6,7 +6,8 @@
   "pages": [
     {
       "type": "spotlight",
-      "item": "srelic:abyssal_luminance_ingot"
+      "item": "srelic:abyssal_luminance_ingot",
+      "text": "patchouli.srelic.book.entries.arrow.abyssal_luminance_ingot.pages.0.text"
     },
     {
       "type": "multiblock",
@@ -21,6 +22,10 @@
         "symmetrical": true
       },
       "text": "tips.abyssal_luminance_ingot.name_tip"
+    },
+    {
+      "type": "text",
+      "text": "patchouli.srelic.book.entries.arrow.abyssal_luminance_ingot.easter-egg1"
     }
   ]
 }
