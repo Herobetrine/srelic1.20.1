@@ -108,6 +108,30 @@ public class SRBlockRegsitry {
 
 
 
+
+
+
+    public static final BlockEntry<BloodPlumSaplingBlock> blood_plum_sampling_ex_max =
+            REGISTRATE
+                    .block("blood_plum_sampling_ex_max", p -> new BloodPlumSaplingBlock(new BloodPlumTreeGrowerEx(), p))
+                    .properties(p -> p.strength(0.0F).noCollission().sound(SoundType.GRASS))
+                    .blockstate((ctx, prov) -> prov.simpleBlock(ctx.getEntry(), prov.models().cross(
+                            ctx.getName(), prov.modLoc("block/blood_plum_sampling_ex_max"))))
+                    .lang("不朽之附魔神圣血梅树苗")
+                    // 修复：使用双参数lambda直接获取当前block对象
+                    .item(EnchantedSaplingItem::new) // 表达式lambda
+                    .model((ctx, prov) -> prov.withExistingParent(ctx.getName(), "minecraft:item/generated")
+                            .texture("layer0", prov.modLoc("item/" + ctx.getName()))
+                    )
+                    .tab(Srelic.SRItems.getKey())
+                    .tag(ItemTags.SAPLINGS)
+                    .build().register();
+
+
+
+
+
+
     public static final BlockEntry<RotatedPillarBlock> stripped_blood_plum_log =
             REGISTRATE.block("stripped_blood_plum_log", RotatedPillarBlock::new)
                     .properties(p -> p.strength(2.0F))
