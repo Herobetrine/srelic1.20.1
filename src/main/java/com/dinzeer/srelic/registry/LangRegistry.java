@@ -1,7 +1,6 @@
 package com.dinzeer.srelic.registry;
 
 import com.dinzeer.srelic.data.SRelicBuiltInRegsitry;
-import com.dinzeer.srelic.data.SRelicBuiltlnRegsitryHF;
 import mods.flammpfeil.slashblade.registry.slashblade.SlashBladeDefinition;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import mods.flammpfeil.slashblade.slasharts.SlashArts;
@@ -18,7 +17,6 @@ public class LangRegistry {
         REGISTRATE.addRawLang("painting.srelic.gwen.title", "格温");
 
         // 物品
-        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.YE_TACHI_FIRE), "夜煌「燃鲮」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.YE_TACHI), "封刃太刀「夜煌」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.NONE), "「无」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.START), "「始」");
@@ -85,11 +83,6 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.NO_END), "妖刀「无尾」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.THE_STAR_OF_THE_FROST), "「天霜之斯卡蒂」");
         REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.GENE_HARVESTER), "「基因收割者」");
-        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.THE_STAR_OF_THE_HYMN), "月之恒「初」");
-        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltInRegsitry.UNKNOWN_TERRITORY), "无名之境「万物滋始」");
-        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltlnRegsitryHF.samu_hf), "能量化·火萤五型「向死而生」");
-        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltlnRegsitryHF.FIRE_HF), "能量化·天火圣裁「破坏之键」");
-        REGISTRATE.addRawLang(CreateItemLang(SRelicBuiltlnRegsitryHF.RED_QUEEN_HF), "能量化·绯红女王「demon trigger」");
 
         REGISTRATE.addRawLang("patchouli.srelic.book.name", "记录了异界信息的书");
         REGISTRATE.addRawLang("patchouli.srelic.book.landing_text", "一本来自异界的书，上面记载了许多锻造异界之刃的方式，以白模为基础奏响共鸣之路");
@@ -125,37 +118,43 @@ public class LangRegistry {
         REGISTRATE.addRawLang("painting.srelic.aotuo.title", "§a奥§r托·阿波卡利斯");
         REGISTRATE.addRawLang("painting.srelic.huoqu.title", "获取方式");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.spirit_butterfly.pages.0.text", "万花丛中，蝴蝶乱舞，于凋零之中绽放，于往生中留香，灵芳环绕三生，蝴蝶留有血梅香。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.spirit_butterfly.easter-egg1", "传说它们只停驻在血梅盛开之地，翅上花粉落处，枯骨生花、旧忆留香。$(br2)$(o)「万花丛中，蝴蝶乱舞；凋零绽放，往生留香……」");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.diamond_star.pages.0.text", "珍贵且坚硬的材料，三首恶魔的核心与坚硬的材料融合，产生意想不到的材料，钻石之星闪耀着星辰的光芒。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_paper.pages.0.text", "绯红色的折纸，拥有无穷的可能性，不同的方式，造就不同的未来，可能会对一些事物产生影响。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.eternal_plum.pages.0.text", "前生今生与来生，人w虽变而梅不变。蝴蝶与梅相依恋，共渡凋零赴往生。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.frozen_netherite_alloy.pages.0.text", "坚硬的合金经过极寒的淬炼，蕴含着冰雪的力量，隐约可以看到冰雪的缩影。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.flame_netherite_alloy.pages.0.text", "来自下界的金属，经过岩浆的淬炼，蕴含熔岩的力量，隐约可以听到岩浆的轰鸣。");
         REGISTRATE.addRawLang("tips.flame_netherite_alloy.name_tip", "地狱手持下界合金对准岩浆块使用获得");
-        REGISTRATE.addRawLang("tips.pledge_flame_vermilion_strand.name_tip", "击杀烈焰人掉落(30%概率)或用火焰附加剑破坏蜘蛛网获取");
+        REGISTRATE.addRawLang("tips.pledge_flame_vermilion_strand.name_tip", "击杀烈焰人掉落(30%%概率)或用火焰附加剑破坏蜘蛛网获取");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.pledge_flame_vermilion_strand.pages.0.text", "击杀烈焰人时概率掉落或者用带有「火焰附加」附魔的剑挖取蜘蛛网获取");
         REGISTRATE.addRawLang("tips.abyssal_luminance_ingot.name_tip", "将海洋之心、海洋合金锭与极寒合金锭扔到海晶灯上后点击海晶灯获得(会消耗这四个)");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.oceanic_netherite_alloy.pages.0.text", "温柔且坚韧的海洋将力量赋予下界合金，使其拥有潮水的力量与波纹的和谐。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.thunder_netherite_alloy.pages.0.text", "经历神的怒火，下界合金更加完善，上面环绕的雷电展现其蕴含的强大力量。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.thunder_netherite_alloy.pages.0.text", "经历神的怒火，下界合金更加完善，上面环绕的雷电展现其蕴含的强大·力量。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.demon_ingot.pages.0.text", "在下界之星的介入下，四种下界合金融合而产生的不应存在之物，世界为它赋予无与伦比的力量。（什么电王顶点形态啊）");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.sakura_steel_ingot.pages.0.text", "铁锭与樱花相结合的材料，有着钢铁的硬度和樱花的香气，表面的樱纹使其更具美感。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.ex_star.pages.0.text", "极致的实体化，可以淬炼武器，激发其蕴含的力量，获取新的能力，帮助武器超越极限。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.windy_core.pages.0.text", "大地深处的紫晶，唯有挣脱三百米的束缚，方能拥抱穹顶奔流的自由之风。在那高天之上，地脉的灵性与不羁的天风交融，铸就这轻盈而狂放的晶核。—— 三百米，是紫水晶与风相遇的距离。");
         REGISTRATE.addRawLang("tips.windy_core.name_tip", "紫水晶在300格以上右键转换");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.windy_core_ingot.easter-egg1", "在末地尽头的风眼里，西风骑士们曾试图用下界之烬锻造一双能回到地面的翅膀。$(br)他们熔铸了下界合金的坚韧，却忘了西风结晶里藏着高空的孤独——$(br)于是，天空合金诞生了：$(br)一种黯蓝到发灰的金属，像黎明前最后一道被云吞没的星光。$(br)它轻得几乎违背重力，却能把摔落的伤害反向“馈赠”给空气；");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.windy_core_ingot.easter-egg2", "它冷得让盔甲表面永远凝着一层薄雾，雾中偶尔映出你第一次坠空的残影。$(br)穿上它，你不再属于大地，也不再属于天空——$(br)你只是风暴与岩浆共同签署的流浪者，$(br)在每一次跳跃里，听见西风与下界同时发出的、低低的叹息。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.windy_core_ingot.pages.1.text", "天空合金，黯蓝如夜幕初垂。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.windy_core_ingot.pages.2.text", "西风结晶与下界合金在雷暴中熔合，铸成可触碰的苍穹。$(br)轻若羽，坚若星，行走其上，脚下会落下一段被风剪碎的云。$(br)——若你在新月夜将一块天空合金掷向空中，它不会落地，而是悄悄替你把下一场风暴换成晴天。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.eternal_plum.easter-egg1", "飘落时是雪，扬起时是火 ——往生堂第七十五代堂主说，这是最省钱的引魂灯。有人死在花开前，有人为看花而活。但梅树只管把根扎进墓碑，年复一年地开。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.max_ingot.pages.0.text", "熔地心之火，铸春樱之魂，聚英灵之志——此锭，乃破晓黎明的第一道光！");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.max_ingot.easter-egg", "触之温暖如朝阳，樱纹在锭面流转如生息之河，" + "其中闪烁的魂光，似千万勇者在微笑守望……");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.bule_ingot.pages.0.text", "蓝色的蝴蝶融入下界合金之中，吸收星辰的力量，在量子的作用下形成两种合金。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.blue_ingot.pages.0.text", "蓝色的蝴蝶融入下界合金之中，吸收星辰的力量，在量子的作用下形成两种合金。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.rad_ingot.pages.0.text", "血色的蝴蝶融入下界合金之中，获得凋亡的力量，于量子中形成的两种合金。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.phantom_trace_ingot.easter-egg", "此锭由凝固的酣眠铸成，刃锋所及皆坠入永恒美梦。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.phantom_trace_ingot.easter-egg", "§o持此锭者所见皆虚妄，所触皆蜃楼，唯痛楚真实不虚。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.dreamweave_ingot.easter-egg", "此锭由凝固的酣眠铸成，刃锋所及皆坠入永恒美梦。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.nightstalker_ingot.easter-egg", "以守护之名痛饮敌血，此锭愈伤之刻亦是复生之时。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.nightmare_core_ingot.easter-egg", "当血蝶与蓝蝶共舞，此锭便是刺入美梦的毒牙。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.nightmare_core_ingot.easter-egg", "以护佑之心啜饮苦痛，此锭重铸之时亦是魇临之刻");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.grammer_core.easter-egg", "生命该如萤火——不奢求永恒，只求彻底燃烧一次，飞萤扑火，向死而生。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.butterfly.easter-egg", "影幻蝶的鳞粉铸成温柔的守护,夜魔蝶的血露凝作甜蜜的甘露，这四锭金属的本质——是神明为“守护”与“幻想”标定的 无上奖赏！");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.grammer_alloy_ex.pages.0.text", "当最后一段属于‘人’的记忆蒸发时，合金将听见命运的召唤，燃烧虫群，留下点点萤火。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.grammer_alloy_ex.easter-egg", "翡翠之火冲天而起，化作亿万流萤光群！光群汇聚成她的背影，向深空飞去——所过之处，星辰接连点亮，最终在黑洞边缘炸裂成永不熄灭的星穹萤灯");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.grammer_alloy.pages.0.text", "以虫骸为骨，人魂为薪，铸造苍穹之中最后的希望。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.grammer_core.pages.0.text", "它既是引擎，亦是棺椁——燃烧的是虫群之能，寂灭的是人性余火，原来最极致的锻造，是把心锻成光。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.grammer_core.easter-egg", "生命该如萤火——不奢求永恒，只求彻底燃烧一次，飞萤扑火，向死而生。");
-        REGISTRATE.addRawLang("tips.grammer_alloy.name_tip","使用烈焰下界合金锭击杀20只蠹虫获得");
+        REGISTRATE.addRawLang("tips.grammer_alloy.name_tip", "使用烈焰下界合金锭击杀20只蠹虫获得");
         REGISTRATE.addRawLang("patchouli.srelic.blood_plum.name", "血梅树");
         REGISTRATE.addRawLang("patchouli.srelic.crimson_shadow.name", "绯红矿");
         REGISTRATE.addRawLang("patchouli.srelic.blood_plum_sampling_ex.name", "附魔血梅树苗");
@@ -164,21 +163,40 @@ public class LangRegistry {
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.pule_apple.pages.0.text", "血梅树吸收执念而结出的异果，滋味介于未熟的杏与铁锈之间。可能对刀有特殊的效果。(§4§l不要食用！！！！！！！！！§r)");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.pule_apple.easter-egg", "§o “那疯丫头造的结业果，吃一颗能见亡魂走马灯！就是有个副作用——往后每到毕业季，你吐出的气息会凝成血梅花瓣。(附注：胡桃堂主说这叫‘浪漫肺结核’，她管售后吗？)”");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.blood_plum_sampling_ex.pages.1.text", "此树苗仅可自然生长，不可使用骨粉催熟");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.blood_plum_leaves.pages.1.text", "§4§l 空手破坏无掉落！！！§r 使用剪刀破坏后有概率掉落血梅树苗、结业果、三生梅、耀魂碎片");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.blood_plum_leaves.pages.1.text", "$(4)$(l) 空手破坏无掉落！！！$()使用剪刀破坏后有概率掉落血梅树苗、结业果、三生梅、耀魂碎片");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.maxim.pages.0.text", "§b 当第一缕光切开地平线，鸢尾便举起紫蓝色的剑——为世界签收又一个晴天的快递。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.maxim.easter-egg", "有人问：脆弱的花如何穿越百万年风雨？鸢尾答：把根扎进深渊，却始终相信光会弯腰亲吻你——这便是最温柔的生存主义。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_core.pages.0.text", "以帕弥什病毒结晶为燃料的悖论引擎，植入者右眼将永久染为赤瞳。§o 每次超频运转，骨骼会增生血色晶簇，同时记忆库随机删除一段“幸福数据”作为代价。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_core.easter-egg", "所有机体在超频瞬间，监视器都会闪过同一行错误代码：§c§l§o ERROR：HOPE_NOT_FOUND§r 而绯红核心，是写给这行代码的情书。§l 人类的选择，永远比末日多一次。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.red_tide_core.pages.0.text", "当帕弥什病毒凝结成液态深渊—— §4§l 红潮所至，钢铁绽放血肉之花。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.red_tide_core.easter-egg", "人类用‘§c§l红§r’命名希望，而红潮用它命名了人类的墓志铭—— §l 一篇会流动的讣告。§r §c§o当毁灭成为常态，坚守人性是否是最浪漫的反叛？");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_shadow_ore.pages.0.text", "我们以拯救为名折叠世界，最终把自己折进矿石最深的血纹里，帕弥什病毒与人类绝望共振的结晶—— §c它吞吃阴影，却吐出绯红的谎言。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_core.pages.0.text", "以帕弥什病毒结晶为燃料的悖论引擎，植入者右眼将永久染为赤瞳。$(o) 每次超频运转，骨骼会增生血色晶簇，同时记忆库随机删除一段“幸福数据”作为代价。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_core.easter-egg", "所有机体在超频瞬间，监视器都会闪过同一行错误代码：$(c)$(l)$(o) ERROR：HOPE_NOT_FOUND§r 而绯红核心，是写给这行代码的情书。§l 人类的选择，永远比末日多一次。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.red_tide_core.pages.0.text", "当帕弥什病毒凝结成液态深渊—— $(4)$(l)红潮所至，钢铁绽放血肉之花。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.red_tide_core.easter-egg", "人类用‘$(c)$(l)红$()’命名希望，而红潮用它命名了人类的墓志铭—— $(l) 一篇会流动的讣告。§r §c§o当毁灭成为常态，坚守人性是否是最浪漫的反叛？");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_shadow_ore.pages.0.text", "我们以拯救为名折叠世界，最终把自己折进矿石最深的血纹里，帕弥什病毒与人类绝望共振的结晶—— $(c)它吞吃阴影，却吐出绯红的谎言。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_shadow_ore.easter-egg", "人类用‘绯影矿’铸造救世兵器——却不知每块矿石里，都封存着一个拒绝往生的灵魂。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_shadow.pages.0.text", "使用绯红折纸右键任意的非基岩和绯影原矿的方块获得");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.shirin_fish.pages.0.text","穿越时空而来的可爱又傲娇的生物，轻轻一碰就会膨胀，轻轻一戳就会漏气，对泡面有特殊的情感（？）——§o膨胀是本能，破防是宿命，但美味值得玩命!§r§u§l#本河豚已通过虚数认证##膨胀值超标但可爱豁免死刑#");
-        REGISTRATE.addRawLang("tips.shirin_fish.name_tip","钓鱼有概率获取");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.shirin_fish.easter-egg1","别被她膨胀的刺吓退，别因她漏气的泪窃笑，最珍贵的毒药，§l是巴比伦塔里那个从未被拥抱过的孩子。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.void_ingot.easter-egg1","西琳律者核心的残响，撕裂现实之钢。§l「此物应封印于童话与噩梦的夹层」「但总有人为改写结局而握紧它」§r“§c§o它既是囚笼也是钥匙——巴比伦塔的孩子们在钢中哭喊，而新生的律者用泪滴将其锻成翅膀。§l所谓弑神兵器，不过是上帝递给受害者的匕首。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.void_core.easter-egg1","西琳泪滴坠落的回响，终成撕裂维度之钻“他们说这是毁灭的种子，却忘了每道涡旋都是未寄出的信——那个总在实验室角落写生日愿望的女孩，把‘想要星星’的稚语，哭成了贯穿多元宇宙的§l§o伤痕级浪漫。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.shirin_fish.pages.0.text", "穿越时空而来的可爱又傲娇的生物，轻轻一碰就会膨胀，轻轻一戳就会漏气，对泡面有特殊的情感(?)——$(o)膨胀是本能，破防是宿命，但美味值得玩命!$()$(u)$(l)#本河豚已通过虚数认证##膨胀值超标但可爱豁免死刑#");
+        REGISTRATE.addRawLang("tips.shirin_fish.name_tip", "钓鱼有概率获取");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.shirin_fish.easter-egg1", "别被她膨胀的刺吓退，别因她漏气的泪窃笑，最珍贵的毒药，$(l)是巴比伦塔里那个从未被拥抱过的孩子。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.void_ingot.easter-egg1", "西琳律者核心的残响，撕裂现实之钢。$(l)「此物应封印于童话与噩梦的夹层」「但总有人为改写结局而握紧它」$()$(#FF5555)$(o)它既是囚笼也是钥匙——巴比伦塔的孩子们在钢中哭喊，而新生的律者用泪滴将其锻成翅膀。$(l)所谓弑神兵器，不过是上帝递给受害者的匕首。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.void_core.easter-egg1", "西琳泪滴坠落的回响，终成撕裂维度之钻“他们说这是毁灭的种子，却忘了每道涡旋都是未寄出的信——那个总在实验室角落写生日愿望的女孩，把‘想要星星’的稚语，哭成了贯穿多元宇宙的$(l)$(o)伤痕级浪漫。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.abyssal_luminance_ingot.pages.0.text", "唯有将海洋的精华倾注于晶灯之上，方能唤醒渊底的永恒辉芒。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.abyssal_luminance_ingot.easter-egg1", "海晶灯在暗流中呼吸。你握紧三枚造物：海洋之心搏动着潮汐的律动，海洋合金锭覆满珊瑚的刻痕，极寒合金锭渗出冰川的叹息。当它们坠向晶灯——光，吞没了坠落之物。灯芯如巨鲸开口，合金在熔光中坍缩又重塑，寒与海的脉络在炽蓝中交缠攀升……直至一枚流淌星海的金属锭，从深渊的子宫诞生。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.nereid_s_secret_brew.pages.0.text", "$(l)$(o)$(b)饮下此杯者，非溺毙于深海，即登临水神御座——");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.nereid_s_secret_brew.easter-egg1", "万众的欢呼归于沉寂，华丽的歌剧落下帷幕。此刻，不再是神明扮演者的她，于私人的小憩时光中，为你奉上这杯融汇了‘$(#A8A8A8)神性$()’与‘$(b)人性$()’的独秘之饮。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.surgeheart_vortex.pages.0.text", "你以§b渊海流辉锭§r为刃，剖开海洋之心的那一刻—— §l涌出的不是神血，是上一个纪元的文明之悔。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.surgeheart_vortex.easter-egg1", "潮涌核心迸发出星脉裂痕，九天雷暴在伤痕中浇铸出 转动的虹膜，于是渊瞳圣涡诞生了：这枚核心是活的 §l§b它正凝视着你，以潮汐为睫毛，以星海为瞳孔底色。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.ignis_cube.pages.0.text", "§l§o此立方非火种，是固化的太阳之怒。此立方非火种，是固化的太阳之怒。此立方非火种，是固化的太阳之怒。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.ignis_cube.easter-egg1", "巨剑劈落的轨迹上，日珥奔涌如神血，而你的发梢正化作飞灰，你的眼角膜烙上星爆纹路。你知道，此战若不胜，这枚立方将成为你的 墓碑方碑，镇在文明焦尸的胸口，警示下一个拾火者：“§r§o超限非进阶，乃优雅的自焚。”");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.nightterror_bloodwing.pages.0.text", "于花海中起舞的蝴蝶，为了保护，染上血腥的颜色，在它的身后，起舞着蓝色的蝴蝶。$(br2)$(#E70000)$(o)为了那片湛蓝的蝶翼能永远描绘幻梦，我自愿浸入永夜，以血色为妆。$(br)$()————夜魇低语");
+        REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.butterfly.pages.0.text", "蓝色的蝴蝶构筑出美好的梦境，扇动的翅膀绘出幻想的痕迹，于暗影中孕育希望。$(br2)$(1)$(o)它的每一次振翅，都承载着我未曾说出口的月光$(br)$()。————梦蝶残响");
+        REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.butterfly.easter-egg", "一枚散发着温润蓝光的水晶蝶蛹，内部却有一抹如凝固血液般的深红丝线缠绕。触碰时，耳边仿佛响起翅膀的微颤与无声的叹息。它是守护者染血的誓言，也是被守护者永不褪色的梦境。");
+        REGISTRATE.addRawLang("patchouli.srelic.pledge_flame_vermilion_strand.name", "以炽焰编织的丝线");
+        REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.pledge_flame_vermilion_strand.pages.0.text", "从炽热的烈焰中，你收集到了一缕仍在燃烧的丝线，其核心跃动着熟悉的能量频率$(br)「你明白这并非此世的造物，指尖能感受到其上传来的微弱脉冲，温暖而坚定，仿佛链接了某个遥远的意识，这是独属于你和她之间的连接」");
+        REGISTRATE.addRawLang("patchouli.srelic.scarletflame_ingot.name", "以地狱烈焰淬炼的誓约之金，锋芒未出，炽息已灼尽黑暗");
+        REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.scarletflame_ingot.pages.0.text", "「一块散发着温暖炽光的特殊金属锭，内部似乎有粉色的流火与金色的星点永不熄灭地流淌，轻触时能感受到一股熟悉的、炽热但并不灼人的温度，以及一声清晰并坚定的声音：$(br)$(o)“灰鸦小队队长，露西亚，请多指教。出发吧，指挥官，我们还有很多事要一起去完成”」");
+        REGISTRATE.addRawLang("patchouli.srelic.emberquill.name", "炎翎划破黑暗，炽焰为誓$(br2)「这不是一件武器或材料，而是一份具象化的誓言」");
+        REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.emberquill.pages.0.text", "「它源自一位构造体最为炽热的“心”——当守护的意志冲破维度的枷锁，化作焚尽一切阻碍的红莲，其核心是冰冷的机械，却燃烧的比任何火焰都更彻底」$(br)$(o)「手握它时，你能感受到一种有温度的共鸣，仿佛与一个遥远的意志建立了连接。它并非在向你索取力量，而是在轻声低语：$(br)“$(l)我想和你处于相同的时间，看向相同的世界，无论发生了什么，灰鸦都会再次聚到一起——这也是我对你的誓言。$()”」");
+        REGISTRATE.addRawLang("patchouli.srelic.pledgeflame_heartforge.name", "「燃烧的意志永不熄灭」");
+        REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.pledgeflame_heartforge.pages.0.text", "一阵细微的电流声般的杂音过后，一个清晰而坚定的声音直接在你的意识中响起，如同在寂静的夜空下点燃的第一缕火焰，驱散了所有的混沌。）$(br)“能听到吗，指挥官？”$(br)$(o)（声音带着一丝不易察觉的急切，随即化为找到目标后的安心与确信。）$()$(br)“终于…成功锚定您的坐标了。”$(br)“即便跨越了世界的屏障，我们之间的‘连接’也从未断绝。这份共鸣，正是引导我前来的信标。”$(br)“请您无需犹豫，挥舞这由我的核心与誓言驱动的剑刃吧。”$(br)$(o)（声音变得无比温暖而坚定，充满了无需言说的信任与力量。）$()$(br)“因为，从此刻起—— $(br)$(l)我们将再次‘并肩’而战。”");
 
 
         REGISTRATE.addRawLang("se.slashblade.wither_edge.desc", "攻击成功施加凋零效果");
@@ -186,11 +204,6 @@ public class LangRegistry {
         REGISTRATE.addRawLang("slashblade.tooltip.srelic.santa_caterina_1", "「带着仇人的名单」");
 
 
-        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry", "「I hate people」");
-        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry_1", "「My patience has ended」");
-        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry_2", "「Hi,you are die」");
-        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry_3", "「For the Lich King!!!!」");
-        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry_4", "「Frostmourne」");
         // 拔刀技
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.XDRIVE), "X幻影刃");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.WitherBreaker), "幻影衰落矢·哀");
@@ -199,6 +212,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.BIG_DRIVE), "千兆·极巨幻影刃");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.Rappa), "缭乱忍法·手里剑");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.HQUAN), "黑洞吞噬万物灭");
+
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.FORDEADCRY), "为逝者哀哭");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.NEODRIVE), "幻影刃驱动·极");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.HOMERUN), "安息全垒打");
@@ -227,6 +241,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.GoGogo), "迅速居合");
 
 
+        // 特殊效果
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.FLAMEROSION), "火焰侵蚀");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.MAXBREAK), "上限突破·救世光辉");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.LICH), "亡灵序曲");
@@ -251,7 +266,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY) + ".text", "饕星嚼辰，永饥永蚀，将一切化为养料，修复自身，直至吞噬一切。");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + "easter-egg", "贪饕的震撼在于其荒诞悲剧内核——当他吞下最后一粒星辰时，将发现自己啃噬的竟是镜中倒影");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING), "命途·不朽");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + ".desc", "濒死时触发免死并恢复50%生命获得十秒无敌，冷却十分钟");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + ".desc", "濒死时触发免死并恢复50%%生命获得十秒无敌，冷却十分钟");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + ".text", "肉身亘古、精魂永续、龙裔承志，天脊承鳞，残鳞继道，渊眠蜕神。当最后一片龙鳞沉入星渊时——看，锈骨中正蠕动新生的初卵");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + ".easter-egg", "不朽的震撼正在于其破碎性——龙祖陨落昭示：真正的永恒，需以千万次死亡为祭品。 ");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_ABUNDANCE), "命途·丰饶");
@@ -264,7 +279,7 @@ public class LangRegistry {
 
         // 修正重复键问题
         REGISTRATE.addRawLang("se.srelic.path_of_remembrance", "命途·记忆");
-        REGISTRATE.addRawLang("se.srelic.path_of_remembrance.desc", "攻击有50%的概率冻结目标");
+        REGISTRATE.addRawLang("se.srelic.path_of_remembrance.desc", "攻击有50%%的概率冻结目标");
         REGISTRATE.addRawLang("se.srelic.path_of_remembrance.text", "记忆承载岁月，光锥封存永恒，残响筑城，焚忆燃夜，永眠钟塔，冰封万物。当最后一盏记忆灯熄灭时——看，浮黎神躯正绽放亿万湮灭宇宙的余晖。");
         REGISTRATE.addRawLang("se.srelic.path_of_remembrance.easter-egg", "记忆介入轮回，让消散的星光成为刺穿终末黑暗的利刃，以岁月斩破轮回。");
         REGISTRATE.addRawLang("se.srelic.path_of_harmony", "命途·同谐");
@@ -282,15 +297,15 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.path_of_erudition", "命途·智识");
         REGISTRATE.addRawLang("se.srelic.path_of_erudition.text", "焚典开天，万理织宙，冻光穹脑，熵锁归一，知识就是力量，附魔转化为增幅，");
         REGISTRATE.addRawLang("se.srelic.path_of_erudition.easter-egg", "当你解出万物公式时——请记住，被删除的“灵魂变量”正在废墟里冷笑 ");
-        REGISTRATE.addRawLang("se.srelic.path_of_erudition.desc", "根据武器附魔等级获得额外效果：锋利→伤害提升（每级+10%）火焰附加→点燃时间翻倍抢夺→额外掉落概率");
+        REGISTRATE.addRawLang("se.srelic.path_of_erudition.desc", "根据武器附魔等级获得额外效果：$(br)锋利→伤害提升（每级+10%%）$(br)火焰附加→点燃时间翻倍$(br)抢夺→额外掉落概率");
         REGISTRATE.addRawLang("se.srelic.path_of_elation", "命途·欢愉");
         REGISTRATE.addRawLang("se.srelic.path_of_elation.text", "愚者千面，游戏寰尘，戏谑众生，颠倒是非。若有人在现实中对你说 “法典该擦擦了” ，记得立刻把手边的书倒过来——或许真有一颗糖等着你。");
         REGISTRATE.addRawLang("se.srelic.path_of_elation.easter-egg", "第〇条：所有规则，皆可被阿哈的喷嚏推翻！终极真理：蛋糕比哲学重要——尤其当它砸在你脸上时。");
-        REGISTRATE.addRawLang("se.srelic.path_of_elation.desc", "将50%治疗量转化为群体恢复为受影响目标附加5秒发光效果每触发一次群体治疗提升10%移动速度（可叠加3层）");
+        REGISTRATE.addRawLang("se.srelic.path_of_elation.desc", "将50%%治疗量转化为群体恢复为受影响目标附加5秒发光效果每触发一次群体治疗提升10%%移动速度（可叠加3层）");
         REGISTRATE.addRawLang("se.srelic.path_of_equilibrium", "命途·均衡");
         REGISTRATE.addRawLang("se.srelic.path_of_equilibrium.text", "均衡维持世间的平衡，万竞息争，赏罚同契，理爆维稳，阴阳相合。 ");
         REGISTRATE.addRawLang("se.srelic.path_of_equilibrium.easter-egg", "当文明为胜利欢呼时——看，仲裁官已在新生的墓碑上刻下倒计时");
-        REGISTRATE.addRawLang("se.srelic.path_of_equilibrium.desc", "切换武器时转换攻防姿态攻击姿态：+150%伤害防御姿态：+40%伤害抵抗");
+        REGISTRATE.addRawLang("se.srelic.path_of_equilibrium.desc", "切换武器时转换攻防姿态攻击姿态:+150%%伤害防御姿态:+40伤害抵抗");
         REGISTRATE.addRawLang("se.srelic.path_of_finality", "命途·终末");
         REGISTRATE.addRawLang("se.srelic.path_of_finality.text", "终焉回响，命轮永固，终末降临，恒纪无回，永劫无笑，诸神无泪。");
         REGISTRATE.addRawLang("se.srelic.path_of_finality.easter-egg", "“欢愉”在戏弄中诞生闹剧，而“终末”在沉寂中书写句点——永劫无笑，诸神无泪。");
@@ -317,43 +332,41 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.path_of_healing.desc", "你的攻击将会治疗受击者");
 
 
-
-
-        REGISTRATE.addRawLang("se.slashblade_addon.burst_drive.desc", "§6每次攻击都触发幻影刃");
+        REGISTRATE.addRawLang("se.slashblade_addon.burst_drive.desc", "每次攻击都触发幻影刃");
 
         REGISTRATE.addRawLang("se.srelic.void_finale", "终景·虚无之终末");
-        REGISTRATE.addRawLang("se.srelic.void_finale.desc", "§6每次攻击给敌人施加一层虚弱效果，满七层引爆");
+        REGISTRATE.addRawLang("se.srelic.void_finale.desc", "每次攻击给敌人施加一层虚弱效果，满七层引爆");
 
         REGISTRATE.addRawLang("se.srelic.celestial_collapse", "毁灭·规则击破");
-        REGISTRATE.addRawLang("se.srelic.celestial_collapse.desc", "§6通过连续攻击积累最多7层连击，每层提供15%伤害加成");
-        REGISTRATE.addRawLang("se.srelic.celestial_collapse.desc_1", "§67层时触发破空斩，造成2.5倍伤害");
+        REGISTRATE.addRawLang("se.srelic.celestial_collapse.desc", "通过连续攻击积累最多7层连击，每层提供15%伤害加成");
+        REGISTRATE.addRawLang("se.srelic.celestial_collapse.desc_1", "7层时触发破空斩，造成2.5倍伤害");
         REGISTRATE.addRawLang("se.srelic.blazing_heart_shield", "存护·熔火护心");
-        REGISTRATE.addRawLang("se.srelic.blazing_heart_shield.desc", "§6生命低于30%时自动生成熔火护盾,吸收70%伤害，持续20秒,冷却30秒");
-        REGISTRATE.addRawLang("se.srelic.blazing_heart_shield.desc_1", "§6护盾期间受击时，对攻击者施加5秒灼烧");
-        REGISTRATE.addRawLang("se.srelic.blazing_heart_shield.desc_2", "§6护盾结束时引发火焰爆炸（4格范围）");
-        REGISTRATE.addRawLang("se.srelic.blazing_heart_shield.desc_3", "§6并获得50%伤害值的治疗");
+        REGISTRATE.addRawLang("se.srelic.blazing_heart_shield.desc", "生命低于30%时自动生成熔火护盾,吸收70%伤害，持续20秒,冷却30秒");
+        REGISTRATE.addRawLang("se.srelic.blazing_heart_shield.desc_1", "护盾期间受击时，对攻击者施加5秒灼烧");
+        REGISTRATE.addRawLang("se.srelic.blazing_heart_shield.desc_2", "护盾结束时引发火焰爆炸（4格范围）");
+        REGISTRATE.addRawLang("se.srelic.blazing_heart_shield.desc_3", "并获得50%伤害值的治疗");
         REGISTRATE.addRawLang("se.srelic.lament_of_phantoms", "§5虚无·幽魂的哀叹");
         REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc", "§c生命≤25%时：");
         REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc_1", "§e• 转移50%伤害给攻击者");
         REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc_2", "§b• 获得3秒无敌§c（附带虚弱II）");
         REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc_3", "§d• 伤害值的30%转化为治疗");
-        REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc_4", "§6冷却时间：30秒");
+        REGISTRATE.addRawLang("se.srelic.lament_of_phantoms.desc_4", "冷却时间：30秒");
         REGISTRATE.addRawLang("se.srelic.thunderstorm_slash", "「电磁风暴」");
-        REGISTRATE.addRawLang("se.srelic.thunderstorm_slash.desc", "§6每次攻击触发5次连锁闪电,每次连锁造成60%前次伤害");
-        REGISTRATE.addRawLang("se.srelic.thunderstorm_slash.desc_1", "§6每次攻击叠加感电层数（最大10层）层数满时触发全局闪电冲击波");
-        REGISTRATE.addRawLang("se.srelic.thunderstorm_slash.desc_2", "§6感电满层时激活10秒超载状态");
+        REGISTRATE.addRawLang("se.srelic.thunderstorm_slash.desc", "每次攻击触发5次连锁闪电,每次连锁造成60%前次伤害");
+        REGISTRATE.addRawLang("se.srelic.thunderstorm_slash.desc_1", "每次攻击叠加感电层数（最大10层）层数满时触发全局闪电冲击波");
+        REGISTRATE.addRawLang("se.srelic.thunderstorm_slash.desc_2", "感电满层时激活10秒超载状态");
 
 
 // 炽焰过载
-        REGISTRATE.addRawLang("se.srelic.sam_overdrive", "§6过载·炽焰形态");
-        REGISTRATE.addRawLang("se.srelic.sam_overdrive.desc", "§6【熔核过载系统】");
+        REGISTRATE.addRawLang("se.srelic.sam_overdrive", "过载·炽焰形态");
+        REGISTRATE.addRawLang("se.srelic.sam_overdrive.desc", "【熔核过载系统】");
         REGISTRATE.addRawLang("se.srelic.sam_overdrive.desc_1", "§e• 每次攻击积累35点过热值（最大300）");
         REGISTRATE.addRawLang("se.srelic.sam_overdrive.desc_2", "§e• 过热≥250时进入20秒过载模式：");
         REGISTRATE.addRawLang("se.srelic.sam_overdrive.desc_3", "§b  - 移速提升III §7| §b伤害抗性II");
-        REGISTRATE.addRawLang("se.srelic.sam_overdrive.desc_4", "§6【炽焰突袭】");
+        REGISTRATE.addRawLang("se.srelic.sam_overdrive.desc_4", "【炽焰突袭】");
         REGISTRATE.addRawLang("se.srelic.sam_overdrive.desc_5", "§e• 每1秒可触发火焰突进");
         REGISTRATE.addRawLang("se.srelic.sam_overdrive.desc_6", "§e• 冲刺路径造成12点范围伤害");
-        REGISTRATE.addRawLang("se.srelic.sam_overdrive.desc_7", "§6【焚烬领域】");
+        REGISTRATE.addRawLang("se.srelic.sam_overdrive.desc_7", "【焚烬领域】");
         REGISTRATE.addRawLang("se.srelic.sam_overdrive.desc_8", "§e• 过载期间生成5格灼烧领域");
         REGISTRATE.addRawLang("se.srelic.sam_overdrive.desc_9", "§e• 领域内敌人每秒受到3点火焰伤害");
         REGISTRATE.addRawLang("se.srelic.sam_overdrive.desc_10", "§c冷却时间：§730秒");
@@ -407,14 +420,14 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.kafka_strings.desc_8", "§d• 失控目标无法攻击且发光10秒");
         REGISTRATE.addRawLang("se.srelic.kafka_strings.desc_9", "§8冷却时间：§720秒");
 
-        REGISTRATE.addRawLang("se.srelic.jingyuan_thunder", "§6神策·天霆断空");
-        REGISTRATE.addRawLang("se.srelic.jingyuan_thunder.desc", "§6【神君威仪】");
+        REGISTRATE.addRawLang("se.srelic.jingyuan_thunder", "神策·天霆断空");
+        REGISTRATE.addRawLang("se.srelic.jingyuan_thunder.desc", "【神君威仪】");
         REGISTRATE.addRawLang("se.srelic.jingyuan_thunder.desc_1", "§e• 每次攻击积累神君层数（最大40层）");
         REGISTRATE.addRawLang("se.srelic.jingyuan_thunder.desc_2", "§e• 每层提升20%伤害，5秒未攻击重置");
-        REGISTRATE.addRawLang("se.srelic.jingyuan_thunder.desc_3", "§6【雷殛领域】");
+        REGISTRATE.addRawLang("se.srelic.jingyuan_thunder.desc_3", "【雷殛领域】");
         REGISTRATE.addRawLang("se.srelic.jingyuan_thunder.desc_4", "§e• 5格范围内持续电击敌人");
         REGISTRATE.addRawLang("se.srelic.jingyuan_thunder.desc_5", "§e• 伤害基于当前层数");
-        REGISTRATE.addRawLang("se.srelic.jingyuan_thunder.desc_6", "§6【天霆断空斩】");
+        REGISTRATE.addRawLang("se.srelic.jingyuan_thunder.desc_6", "【天霆断空斩】");
         REGISTRATE.addRawLang("se.srelic.jingyuan_thunder.desc_7", "§e• 消耗10层发动扇形范围斩击");
         REGISTRATE.addRawLang("se.srelic.jingyuan_thunder.desc_8", "§e• 对主目标触发3次闪电连锁");
         REGISTRATE.addRawLang("se.srelic.jingyuan_thunder.desc_9", "§c冷却时间：§710秒");
@@ -514,14 +527,14 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.crimson_moon.desc_5", "§d• 暗影状态下攻击附加血月斩击");
         REGISTRATE.addRawLang("se.srelic.crimson_moon.desc_6", "§d• 吸血效果提升150%并附加范围真实伤害");
 
-        REGISTRATE.addRawLang("se.srelic.inferno_blaze", "§6炎狱劫火·天烬");
+        REGISTRATE.addRawLang("se.srelic.inferno_blaze", "炎狱劫火·天烬");
         REGISTRATE.addRawLang("se.srelic.inferno_blaze.desc", "§c【熔火核心】");
-        REGISTRATE.addRawLang("se.srelic.inferno_blaze.desc_1", "§6• 每次攻击积累热能，每层提升20%火焰伤害");
+        REGISTRATE.addRawLang("se.srelic.inferno_blaze.desc_1", "• 每次攻击积累热能，每层提升20%火焰伤害");
         REGISTRATE.addRawLang("se.srelic.inferno_blaze.desc_2", "§c【赤炎之径】");
-        REGISTRATE.addRawLang("se.srelic.inferno_blaze.desc_3", "§6• 移动时留下燃烧路径，持续点燃敌人");
+        REGISTRATE.addRawLang("se.srelic.inferno_blaze.desc_3", "• 移动时留下燃烧路径，持续点燃敌人");
         REGISTRATE.addRawLang("se.srelic.inferno_blaze.desc_4", "§c【天烬爆发】");
-        REGISTRATE.addRawLang("se.srelic.inferno_blaze.desc_5", "§6• 达到8层时释放熔核冲击，重置热能计数");
-        REGISTRATE.addRawLang("se.srelic.inferno_blaze.desc_6", "§6• 生成半径5格的烈焰风暴持续15秒");
+        REGISTRATE.addRawLang("se.srelic.inferno_blaze.desc_5", "• 达到8层时释放熔核冲击，重置热能计数");
+        REGISTRATE.addRawLang("se.srelic.inferno_blaze.desc_6", "• 生成半径5格的烈焰风暴持续15秒");
 
 
         REGISTRATE.addRawLang("se.srelic.wolf_soul", "§4北境狼魂·咆哮");
@@ -537,18 +550,12 @@ public class LangRegistry {
 
 
         REGISTRATE.addRawLang("se.srelic.dice_effect", "§d命运骰子");
-        REGISTRATE.addRawLang("se.srelic.dice_effect.desc", "§5【随机法则】");
-        REGISTRATE.addRawLang("se.srelic.dice_effect.desc_1", "§d• 20%概率造成50%伤害");
-        REGISTRATE.addRawLang("se.srelic.dice_effect.desc_2", "§d• 40%概率正常伤害");
-        REGISTRATE.addRawLang("se.srelic.dice_effect.desc_3", "§d• 39%概率治疗目标600%伤害值");
-        REGISTRATE.addRawLang("se.srelic.dice_effect.desc_4", "§d• 1%概率造成1000%暴击伤害");
-        REGISTRATE.addRawLang("se.srelic.dice_effect.text1", "无穷面的骰子，它是运气的提现，渊面判命，天劫戏谑，万千结局坍缩于一掷之间。");
-        REGISTRATE.addRawLang("se.srelic.dice_effect.text2", "无穷可能性在骰落时焚灭成唯一。欧非一念，天堂地狱。");
-        REGISTRATE.addRawLang("se.srelic.dice_effect.text3", "当听见骰子在虚空中咯咯轻笑时——  记住，不是你在掷骰，而是骰在掷你。");
+        REGISTRATE.addRawLang("se.srelic.dice_effect.desc", "§5【随机法则】 • 20%概率造成50%伤害 • 40%概率正常伤害 • 39%概率治疗目标600%伤害值 • 1%概率造成1000%暴击伤害");
+        REGISTRATE.addRawLang("se.srelic.dice_effect.text", "无穷面的骰子，它是运气的提现，渊面判命，天劫戏谑，万千结局坍缩于一掷之间。无穷可能性在骰落时焚灭成唯一。欧非一念，天堂地狱。当听见骰子在虚空中咯咯轻笑时——  记住，不是你在掷骰，而是骰在掷你。");
         REGISTRATE.addRawLang("se.srelic.dice_effect.easter-egg", "狂赌回合开启！执骰互斫——下一刀，天诛还是天赐？毕竟赌狗最爱的不是赢，而是开骰前心跳停拍的刹那。");
 
 
-        REGISTRATE.addRawLang("se.srelic.truth_realm", "§6终焉律·星之归");
+        REGISTRATE.addRawLang("se.srelic.truth_realm", "终焉律·星之归");
         REGISTRATE.addRawLang("se.srelic.truth_realm.desc", "§e【时空奇点】");
         REGISTRATE.addRawLang("se.srelic.truth_realm.desc_1", "§b• 攻击积累「时之熵」层数（最大36层）");
         REGISTRATE.addRawLang("se.srelic.truth_realm.desc_2", "§b• 每层提升5%攻速与3%攻击力");
@@ -564,11 +571,11 @@ public class LangRegistry {
 
 
         REGISTRATE.addRawLang("se.srelic.perfect_sanctuary", "§b真我·无瑕护佑");
-        REGISTRATE.addRawLang("se.srelic.perfect_sanctuary.desc", "§6【无瑕穹顶】");
+        REGISTRATE.addRawLang("se.srelic.perfect_sanctuary.desc", "【无瑕穹顶】");
         REGISTRATE.addRawLang("se.srelic.perfect_sanctuary.desc_1", "§b生命值低于50%时自动生成护盾（吸收量=已损失生命×200%）");
-        REGISTRATE.addRawLang("se.srelic.perfect_sanctuary.desc_2", "§6【凋零领域】");
+        REGISTRATE.addRawLang("se.srelic.perfect_sanctuary.desc_2", "【凋零领域】");
         REGISTRATE.addRawLang("se.srelic.perfect_sanctuary.desc_3", "§b护盾期间每秒施加凋零III（8格范围）");
-        REGISTRATE.addRawLang("se.srelic.perfect_sanctuary.desc_4", "§6【水晶爆破】");
+        REGISTRATE.addRawLang("se.srelic.perfect_sanctuary.desc_4", "【水晶爆破】");
         REGISTRATE.addRawLang("se.srelic.perfect_sanctuary.desc_5", "§b护盾结束时造成剩余护盾值80%的范围伤害");
         REGISTRATE.addRawLang("se.srelic.perfect_sanctuary.desc_6", "§b并为友方恢复10%最大生命值");
         REGISTRATE.addRawLang("se.srelic.perfect_sanctuary.desc_7", "§8冷却时间：§730秒");
@@ -592,32 +599,35 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.ghost_thunder.desc_5", "§d领域内持续造成伤害并获得减伤");
 
         REGISTRATE.addRawLang("se.srelic.star_thunder", "§e星轨雷殛·天罚");
-        REGISTRATE.addRawLang("se.srelic.star_thunder.desc", "§6【星霆印记】");
+        REGISTRATE.addRawLang("se.srelic.star_thunder.desc", "【星霆印记】");
         REGISTRATE.addRawLang("se.srelic.star_thunder.desc_1", "§e普攻25%概率附加印记（上限3层）");
-        REGISTRATE.addRawLang("se.srelic.star_thunder.desc_2", "§6【星轨雷殛】");
+        REGISTRATE.addRawLang("se.srelic.star_thunder.desc_2", "【星轨雷殛】");
         REGISTRATE.addRawLang("se.srelic.star_thunder.desc_3", "§e长按右键蓄力触发范围雷暴");
-        REGISTRATE.addRawLang("se.srelic.star_thunder.desc_4", "§6【雷霆增幅】");
+        REGISTRATE.addRawLang("se.srelic.star_thunder.desc_4", "【雷霆增幅】");
         REGISTRATE.addRawLang("se.srelic.star_thunder.desc_5", "§e每层增伤120%，2层追加魔法伤害");
-        REGISTRATE.addRawLang("se.srelic.star_thunder.desc_6", "§6【天罚领域】");
+        REGISTRATE.addRawLang("se.srelic.star_thunder.desc_6", "【天罚领域】");
         REGISTRATE.addRawLang("se.srelic.star_thunder.desc_7", "§e3层时额外造成范围减防效果");
         REGISTRATE.addRawLang("se.srelic.star_thunder.desc_8", "§8连击机制：连续触发提升伤害系数");
 
-        REGISTRATE.addRawLang("se.srelic.flame_erosion", "§6炎鳞蚀骨·焚烬");
+        REGISTRATE.addRawLang("se.srelic.flame_erosion", "炎鳞蚀骨·焚烬");
         REGISTRATE.addRawLang("se.srelic.flame_erosion.desc", "§4【蚀骨炎鳞】");
-        REGISTRATE.addRawLang("se.srelic.flame_erosion.desc_1", "§6火伤20%概率叠加灼烧层数");
+        REGISTRATE.addRawLang("se.srelic.flame_erosion.desc_1", "火伤20%概率叠加灼烧层数");
         REGISTRATE.addRawLang("se.srelic.flame_erosion.desc_2", "§4【鳞爆】");
-        REGISTRATE.addRawLang("se.srelic.flame_erosion.desc_3", "§63层时触发范围爆炸和易伤效果");
+        REGISTRATE.addRawLang("se.srelic.flame_erosion.desc_3", "3层时触发范围爆炸和易伤效果");
         REGISTRATE.addRawLang("se.srelic.flame_erosion.desc_4", "§4【焚烬】");
-        REGISTRATE.addRawLang("se.srelic.flame_erosion.desc_5", "§6真实伤害基于目标已损生命值");
+        REGISTRATE.addRawLang("se.srelic.flame_erosion.desc_5", "真实伤害基于目标已损生命值");
         REGISTRATE.addRawLang("se.srelic.flame_erosion.desc_6", "§4【连锁反应】");
-        REGISTRATE.addRawLang("se.srelic.flame_erosion.desc_7", "§6击杀触发连锁爆炸（伤害衰减）");
+        REGISTRATE.addRawLang("se.srelic.flame_erosion.desc_7", "击杀触发连锁爆炸（伤害衰减）");
 
-        REGISTRATE.addRawLang("se.srelic.crimson_annihilation", "§4始终之外");
-        REGISTRATE.addRawLang("se.srelic.crimson_annihilation.desc", "§c每次普攻命中叠加一层「红椿·蕊」");
-        REGISTRATE.addRawLang("se.srelic.crimson_annihilation.desc_1", "§4每层红椿·蕊增加1.5%造成的伤害");
-        REGISTRATE.addRawLang("se.srelic.crimson_annihilation.desc_2", "§c满层后清空红椿·蕊的所有层数并获得一层含苞印记");
-        REGISTRATE.addRawLang("se.srelic.crimson_annihilation.desc_3", "§c含苞存在期间不会叠加红椿·蕊");
-        REGISTRATE.addRawLang("se.srelic.crimson_annihilation.desc_4", "§c含苞存在10秒,含苞持续期间你造成的伤害增加180%");
+        REGISTRATE.addRawLang("se.srelic.crimson_annihilation", "§4红椿蚀骨·湮烬");
+        REGISTRATE.addRawLang("se.srelic.crimson_annihilation.desc", "§c【湮烬之痕】");
+        REGISTRATE.addRawLang("se.srelic.crimson_annihilation.desc_1", "§4普攻25%概率叠加魔法易伤层数");
+        REGISTRATE.addRawLang("se.srelic.crimson_annihilation.desc_2", "§c【湮灭爆发】");
+        REGISTRATE.addRawLang("se.srelic.crimson_annihilation.desc_3", "§43层时造成300%魔法伤害+已损生命15%");
+        REGISTRATE.addRawLang("se.srelic.crimson_annihilation.desc_4", "§c【烬火蔓延】");
+        REGISTRATE.addRawLang("se.srelic.crimson_annihilation.desc_5", "§4爆炸后转化50%伤害为治疗值");
+        REGISTRATE.addRawLang("se.srelic.crimson_annihilation.desc_6", "§c【终末红椿】");
+        REGISTRATE.addRawLang("se.srelic.crimson_annihilation.desc_7", "§4连续触发提升爆炸范围");
 
         REGISTRATE.addRawLang("se.srelic.sakura_bloom", "§d樱华·刹那芳华");
         REGISTRATE.addRawLang("se.srelic.sakura_bloom.desc", "§5每次攻击积累樱花层数（最大7层）");
@@ -669,7 +679,7 @@ public class LangRegistry {
         // 炽炎勇魄
         REGISTRATE.addRawLang("se.srelic.blazing_valor", "§c炽炎勇魄");
         REGISTRATE.addRawLang("se.srelic.blazing_valor.desc", "§4【勇炎】");
-        REGISTRATE.addRawLang("se.srelic.blazing_valor.desc_1", "§c• 攻击伤害+45% §7| §c获得§6抗火效果");
+        REGISTRATE.addRawLang("se.srelic.blazing_valor.desc_1", "§c• 攻击伤害+45% §7| §c获得抗火效果");
         REGISTRATE.addRawLang("se.srelic.blazing_valor.desc_2", "§4【烈炎】");
         REGISTRATE.addRawLang("se.srelic.blazing_valor.desc_3", "§c攻击燃烧目标时§4无视防御§c（护甲/韧性）");
         REGISTRATE.addRawLang("se.srelic.blazing_valor.desc_4", "§4【红莲战歌】");
@@ -677,13 +687,13 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.blazing_valor.desc_6", "§8最大层数：§715 §7| §8持续：§730秒");
 
         // 特殊效果
-        REGISTRATE.addRawLang("se.srelic.pure_elegy", "§6纯美赞歌");
-        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc", "§6【升格】");
-        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_1", "§6每次攻击叠加升格（上限300层）");
-        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_2", "§6【骑士之护】");
-        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_3", "§6每75层获得抗性提升");
-        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_4", "§6【赞颂】");
-        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_5", "§6100层时潜行右键可冲刺");
+        REGISTRATE.addRawLang("se.srelic.pure_elegy", "纯美赞歌");
+        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc", "【升格】");
+        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_1", "每次攻击叠加升格（上限300层）");
+        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_2", "【骑士之护】");
+        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_3", "每75层获得抗性提升");
+        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_4", "【赞颂】");
+        REGISTRATE.addRawLang("se.srelic.pure_elegy.desc_5", "100层时潜行右键可冲刺");
 
 
         // 特殊效果
@@ -759,14 +769,14 @@ public class LangRegistry {
         REGISTRATE.addRawLang("se.srelic.mugen_ice.desc_14", "§8※耀魂值不足时无法叠加层数");
 
         // 誓约矩阵
-        REGISTRATE.addRawLang("se.srelic.pledge_matrix", "§6誓约矩阵");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix", "誓约矩阵");
         REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc", "§e【光耀节点】");
-        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_1", "§625%攻击概率生成持续脉冲节点");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_1", "25%攻击概率生成持续脉冲节点");
         REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_2", "§e【荣光领域】");
-        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_3", "§6形成三角区域时：");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_3", "形成三角区域时：");
         REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_4", "§b- 友军伤害+40% §7| §c- 敌人每秒灼烧伤害");
         REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_5", "§e【脉冲网络】");
-        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_6", "§6节点间自动连接形成能量光束");
+        REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_6", "节点间自动连接形成能量光束");
         REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_7", "§c【赤焰共鸣】");
         REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_8", "§e友军攻击燃烧目标时：");
         REGISTRATE.addRawLang("se.srelic.pledge_matrix.desc_9", "§b- 每层+2%伤害 §7(§d上限50层§7)");
@@ -933,56 +943,11 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER, 2), "根据移速加成提升你造成的伤害");
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER, 3), "每次攻击叠加毒素层数");
         REGISTRATE.addRawLang(CreateSeLangDescsCounts(SRSpecialEffectsRegistry.HUNTER, 4), "每0.5秒造成毒素伤害（伤害值为玩家基础攻击力的20%×层数）");
-        REGISTRATE.addRawLang(SRStacksReg.RED_SCAR.getDescriptionKey(), "§c「赤痕」");
-        REGISTRATE.addRawLang(SRStacksReg.FROST_FLAME_STACKS.getDescriptionKey(), "§b「落霜」");
-        REGISTRATE.addRawLang(SRStacksReg.MING_MANG_STACKS.getDescriptionKey(), "§5「冥芒」");
-        REGISTRATE.addRawLang(SRStacksReg.BUTTERFLY_STACKS.getDescriptionKey(), "§5「冥芒」");
-        REGISTRATE.addRawLang(SRStacksReg.BLOOD_PLUM_STACKS.getDescriptionKey(), "§4「血梅」");
-        REGISTRATE.addRawLang(SRStacksReg.BLAZING_VALOR_STACKS.getDescriptionKey(), "§6「红莲」");
-        REGISTRATE.addRawLang(SRStacksReg.PureElegy.getDescriptionKey(), "§e「升格」");
-        REGISTRATE.addRawLang(SRStacksReg.WATER_SYMPHONY_STACKS.getDescriptionKey(), "§3「波律颂」");
-        REGISTRATE.addRawLang(SRStacksReg.LIANG_DIE_STACKS.getDescriptionKey(), "§d「量蝶」");
-        REGISTRATE.addRawLang(SRStacksReg.LIANG_FENG_STACKS.getDescriptionKey(), "§d「量锋」");
-        REGISTRATE.addRawLang(SRStacksReg.CUBE_MATRIX_STACKS.getDescriptionKey(), "§5「魔方立场」");
-        REGISTRATE.addRawLang(SRStacksReg.CRIMSON_SCAR_STACKS.getDescriptionKey(), "§7「WIP」");
-        REGISTRATE.addRawLang(SRStacksReg.NIGHTMARE_LAYER_STACKS.getDescriptionKey(), "§7「WIP」");
-        REGISTRATE.addRawLang(SRStacksReg.RHYTHM_VALUE.getDescriptionKey(), "§e「变奏值」");
-        REGISTRATE.addRawLang(SRStacksReg.ICE_LAYER_STACK.getDescriptionKey(), "§b「极冰值」");
-        REGISTRATE.addRawLang(SRStacksReg.FLAME_RESONANCE_STACKS.getDescriptionKey(), "§6「光耀节点」");
-        REGISTRATE.addRawLang(SRStacksReg.WHITE_ROSE_STACKS.getDescriptionKey(), "§d「蔷薇」");
-        REGISTRATE.addRawLang(SRStacksReg.FLY_YELLOW_STACKS.getDescriptionKey(), "§e「飞黄」");
-        REGISTRATE.addRawLang(SRStacksReg.ICE_RHYTHM_STACKS.getDescriptionKey(), "§b「冰华」");
-        REGISTRATE.addRawLang(SRStacksReg.OVERHEAT_VALUE_STACKS.getDescriptionKey(), "§c「过热值」");
-        REGISTRATE.addRawLang(SRStacksReg.SECONDARY_COMBUSTION_STACKS.getDescriptionKey(), "§c「次级燃烧」");
-        REGISTRATE.addRawLang(SRStacksReg.SKY_SWORD.getDescriptionKey(), "§f「空刃」");
-        REGISTRATE.addRawLang(SRStacksReg.CELESTIAL_STRIKE.getDescriptionKey(), "§6「解放值」");
-        REGISTRATE.addRawLang(SRStacksReg.ICE_BLOOM_STACKS.getDescriptionKey(), "§b「朔望」");
-        REGISTRATE.addRawLang(SRStacksReg.ICE_SOUL_FROST_SKY_STACKS.getDescriptionKey(), "§b「冰蚀」");
-        REGISTRATE.addRawLang(SRStacksReg.BITTER_COLD_HELL_STACKS.getDescriptionKey(), "§b「苦寒地狱」");
-        REGISTRATE.addRawLang(SRStacksReg.BITTER_COLD_HELL_EX_STACKS.getDescriptionKey(), "§b「极·苦寒地狱」");
-        REGISTRATE.addRawLang(SRStacksReg.HUNTER_TOXIN_STACKS.getDescriptionKey(), "§a「毒素附着」");
-        REGISTRATE.addRawLang(SRStacksReg.SAM_OVERDRIVE_STACKS.getDescriptionKey(), "§c「过载」");
-        REGISTRATE.addRawLang(SRStacksReg.CHAOS_BREAKER_STACKS.getDescriptionKey(), "§6「天极充能」");
-        REGISTRATE.addRawLang(SRStacksReg.SHRIN_FISH_STACKS.getDescriptionKey(), "§b「河豚上岸哈气进度」");
-        REGISTRATE.addRawLang(SRStacksReg.SANCTUARY_SHIELD.getDescriptionKey(), "§b「无瑕护盾」");
-        REGISTRATE.addRawLang(SRStacksReg.PETAL_STACKS.getDescriptionKey(), "§l§4「红椿·蕊」");
+
+
         REGISTRATE.addRawLang("srelic.sword_type.other_world_on", "幻");
         REGISTRATE.addRawLang("srelic.sword_type.other_world", "解");
         REGISTRATE.addRawLang("srelic.sword_type.other_world_off", "封");
-
-        REGISTRATE.addRawLang("item.srelic.max_armor.desc", "穿戴全套时：");
-        REGISTRATE.addRawLang("item.srelic.max_armor.desc_1", "你的无敌帧延长至3秒");
-        REGISTRATE.addRawLang("item.srelic.max_armor.desc_2", "你受到的魔法伤害减免80%");
-        REGISTRATE.addRawLang("item.srelic.max_armor.desc_3", "你免疫火焰、寒冰伤害类型的伤害");
-        REGISTRATE.addRawLang("item.srelic.max_armor.desc_4", "你穿戴的装备无法破坏");
-        REGISTRATE.addRawLang("item.srelic.max_armor.desc_5", "你造成的火焰、魔法、寒冰伤害增加30%");
-
-        REGISTRATE.addRawLang("item.srelic.ocean_armor.desc", "穿戴全套且在水下时：");
-        REGISTRATE.addRawLang("item.srelic.ocean_armor.desc_1", "你受到的伤害减少30%");
-        REGISTRATE.addRawLang("item.srelic.ocean_armor.desc_2", "你造成的伤害增加30%");
-
-        REGISTRATE.addRawLang("item.srelic.sky_armor.desc", "穿戴全套时：");
-        REGISTRATE.addRawLang("item.srelic.sky_armor.desc_1", "创造飞行");
 
 
         REGISTRATE.addRawLang("message.srelic.grammer_alloy_obtained", "你获得了格拉默合金！");
@@ -990,10 +955,10 @@ public class LangRegistry {
         REGISTRATE.addRawLang("tooltip.srelic.grammer_progress", "蠹虫击杀进度: %d/%d");
 
 
-        REGISTRATE.addRawLang("item_group." + MODID + "." + MODID + "_slashblade", "§6游戏扩增·异界之刃");
-        REGISTRATE.addRawLang("item_group." + MODID + "." + MODID + "_se", "§6游戏扩增·命途轨迹");
-        REGISTRATE.addRawLang("item_group." + MODID + "." + MODID + "_se2", "§6游戏扩增·测试用SE遍历");
-        REGISTRATE.addRawLang("item_group." + MODID + "." + MODID + "_item", "§6游戏扩增·利刃素材");
+        REGISTRATE.addRawLang("item_group." + MODID + "." + MODID + "_slashblade", "游戏扩增·异界之刃");
+        REGISTRATE.addRawLang("item_group." + MODID + "." + MODID + "_se", "游戏扩增·命途轨迹");
+        REGISTRATE.addRawLang("item_group." + MODID + "." + MODID + "_se2", "游戏扩增·测试用SE遍历");
+        REGISTRATE.addRawLang("item_group." + MODID + "." + MODID + "_item", "游戏扩增·利刃素材");
     }
 
 

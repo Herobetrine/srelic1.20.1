@@ -6,12 +6,14 @@
   "pages": [
     {
       "type": "spotlight",
-      "item": "srelic:ignis_cube"
+      "item": "srelic:ignis_cube",
+      "text": "patchouli.srelic.book.entries.arrow.ignis_cube.pages.0.text"
     },
     {
       "type": "crafting",
       "title": "painting.srelic.huoqu.title",
-      "recipe": "srelic:ignis_cube"
+      "recipe": "srelic:ignis_cube",
+      "text": "patchouli.srelic.book.entries.arrow.ignis_cube.easter-egg1"
     }
   ]
 }

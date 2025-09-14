@@ -12,7 +12,7 @@
     {
       "type" : "crafting",
       "title" : "item.srelic.spirit_butterfly",
-      "text" : "item.srelic.spirit_butterfly",
+      "text" : "patchouli.srelic.book.entries.arrow.spirit_butterfly.easter-egg1",
       "recipe" : "srelic:spirit_butterfly"
     }
   ]

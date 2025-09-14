@@ -6,12 +6,17 @@
   "pages": [
     {
       "type": "spotlight",
-      "item": "srelic:surgeheart_vortex"
+      "item": "srelic:surgeheart_vortex",
+      "text": "patchouli.srelic.book.entries.arrow.surgeheart_vortex.pages.0.text"
     },
     {
       "type": "crafting",
       "title": "painting.srelic.huoqu.title",
       "recipe": "srelic:surgeheart_vortex"
+    },
+    {
+      "type": "text",
+      "text": "patchouli.srelic.book.entries.arrow.surgeheart_vortex.easter-egg1"
     }
 
   ]

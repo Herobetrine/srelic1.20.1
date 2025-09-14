@@ -12,7 +12,7 @@
     {
       "type": "crafting",
       "title": "painting.srelic.huoqu.title",
-      "text": "item.srelic.nightmare_core_ingot",
+      "text": "patchouli.srelic.book.entries.arrow.nightmare_core_ingot.easter-egg",
       "recipe": "srelic:nightmare_core_ingot"
     }
   ]
