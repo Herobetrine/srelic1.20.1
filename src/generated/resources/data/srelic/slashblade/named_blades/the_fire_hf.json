@@ -1,0 +1,35 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl": 3
+    },
+    {
+      "id": "minecraft:fire_aspect"
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 3
+    }
+  ],
+  "item": "energyblade:forge_energy_blade",
+  "name": "srelic:the_fire_hf",
+  "properties": {
+    "attack_base": 23.0,
+    "max_damage": 200,
+    "slash_art": "slashblade:wave_edge",
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:flamerosion"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "carry_type": "ninja",
+    "model": "srelic:model/honkai/the_fire.obj",
+    "summon_sword_color": 16760832,
+    "texture": "srelic:model/honkai/the_fire.jpg"
+  }
+}

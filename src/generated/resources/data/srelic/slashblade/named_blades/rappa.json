@@ -15,7 +15,7 @@
   "item": "srelic:srelic_slashblade",
   "name": "srelic:rappa",
   "properties": {
-    "attack_base": 26.0,
+    "attack_base": 23.0,
     "max_damage": 200,
     "slash_art": "srelic:rappa",
     "special_effects": [

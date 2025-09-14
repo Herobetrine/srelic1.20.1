@@ -28,7 +28,7 @@
   "item": "srelic:srelic_slashblade",
   "name": "srelic:dawn_flame_feather",
   "properties": {
-    "attack_base": 21.0,
+    "attack_base": 34.0,
     "max_damage": 616,
     "slash_art": "srelic:closingsong",
     "special_effects": [

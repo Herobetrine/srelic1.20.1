@@ -19,7 +19,9 @@
     "attack_base": 70.0,
     "max_damage": 300,
     "special_effects": [
-      "srelic:white_maker"
+      "srelic:white_maker",
+      "srelic:truth_realm",
+      "srelic:perfect_sanctuary"
     ],
     "sword_type": [
       "bewitched"

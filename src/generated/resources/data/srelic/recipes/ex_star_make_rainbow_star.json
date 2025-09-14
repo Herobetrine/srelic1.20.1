@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "srelic:rainbow_star"
+    },
+    "B": {
+      "item": "srelic:ex_star"
+    }
+  },
+  "pattern": [
+    " A ",
+    "ABA",
+    " A "
+  ],
+  "result": {
+    "item": "minecraft:nether_star"
+  },
+  "show_notification": true
+}

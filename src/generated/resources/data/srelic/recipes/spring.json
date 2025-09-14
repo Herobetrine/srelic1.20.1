@@ -4,33 +4,30 @@
   "category": "equipment",
   "key": {
     "A": {
-      "item": "minecraft:netherite_ingot"
-    },
-    "B": {
       "item": "minecraft:tnt"
     },
+    "B": {
+      "item": "minecraft:weeping_vines"
+    },
     "C": {
-      "item": "srelic:diamond_star"
+      "item": "minecraft:nether_star"
     },
     "D": {
+      "item": "srelic:sakura_steel_ingot"
+    },
+    "E": {
       "type": "slashblade:blade",
       "item": "srelic:srelic_slashblade",
       "request": {
         "name": "srelic:blade",
         "proud_soul": 3000
       }
-    },
-    "E": {
-      "item": "minecraft:rose_bush"
-    },
-    "F": {
-      "item": "srelic:fel_metal"
     }
   },
   "pattern": [
-    " FB",
-    "CDA",
-    "EA "
+    "  A",
+    "BCD",
+    "ED "
   ],
   "result": {
     "item": "srelic:srelic_slashblade"

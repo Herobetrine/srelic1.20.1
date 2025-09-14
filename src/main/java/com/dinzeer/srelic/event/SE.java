@@ -82,7 +82,10 @@ public class SE {
     }
 
     private static void handleItemTests(ItemStack mainHand, ISlashBladeState bladeState, SlashBladeEvent.BladeStandAttackEvent event) {
-        if (hasAnyPathSE(bladeState)) return;
+        if (hasAnyPathSE(bladeState)) {
+            SRSpecialEffectsRegistry.PATH_SE_POOL.stream()
+                    .anyMatch(se -> bladeState.removeSpecialEffect(se.getId()));
+        }
 
         // 仅处理universal_test物品
         if (mainHand.getItem() != SRItemRegsitry.universal_test.get()) return;
@@ -129,6 +132,10 @@ public class SE {
                                           Player player,
                                           ItemStack mainHand,
                                           ISlashBladeState bladeState) {
+        if (hasAnyPathSE(bladeState)) {
+            SRSpecialEffectsRegistry.PATH_SE_POOL.stream()
+                    .anyMatch(se -> bladeState.removeSpecialEffect(se.getId()));
+        }
         if (mainHand.getItem() == SRItemRegsitry.rainbow_star.get() && !hasAnyPathSE(bladeState)) {
             if (!SRSpecialEffectsRegistry.PATH_SE_POOL.isEmpty()) {
                 int index = new Random().nextInt(SRSpecialEffectsRegistry.PATH_SE_POOL.size());

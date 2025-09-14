@@ -1,0 +1,36 @@
+{
+  "enchantments": [
+    {
+      "id": "minecraft:power",
+      "lvl": 5
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "lvl": 7
+    },
+    {
+      "id": "minecraft:sharpness",
+      "lvl": 3
+    }
+  ],
+  "item": "energyblade:forge_energy_blade",
+  "name": "srelic:samu_hf",
+  "properties": {
+    "attack_base": 25.0,
+    "max_damage": 200,
+    "special_effects": [
+      "srelic:white_maker",
+      "srelic:path_of_finality",
+      "srelic:fire_fly"
+    ],
+    "sword_type": [
+      "bewitched"
+    ]
+  },
+  "render": {
+    "carry_type": "katana",
+    "model": "srelic:model/stairail/samu.obj",
+    "summon_sword_color": 65500,
+    "texture": "srelic:model/stairail/samu.png"
+  }
+}

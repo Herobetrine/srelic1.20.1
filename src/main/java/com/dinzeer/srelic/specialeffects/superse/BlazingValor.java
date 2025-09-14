@@ -67,6 +67,9 @@ public class BlazingValor extends SpecialEffect {
             float toughnessReduction = target.getArmorCoverPercentage() * 0.1f;
             float totalReduction = 1 - Math.max(0, armorReduction + toughnessReduction);
             System.out.println("[烈炎] 攻击伤害减少: " + totalReduction);
+            if (totalReduction < 0){
+                totalReduction=0.1f;
+            }
             // 无视防御计算
             event.setAmount((event.getAmount() / totalReduction)*getDamageMultiplier(player));
             if (event.getAmount()>10000){

@@ -9,9 +9,11 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.Tags;
@@ -49,6 +51,11 @@ public class RainBowStarDrop {
             if (player != null) {
                 Vec3 pos = entity.position();
                 ItemStack stack = new ItemStack(SRItemRegsitry.rainbow_star.get());
+                entity.spawnAtLocation(stack);
+            }
+            if (entity instanceof EnderDragon){
+                Vec3 pos = entity.position();
+                ItemStack stack = new ItemStack(Items.DRAGON_EGG);
                 entity.spawnAtLocation(stack);
             }
         }

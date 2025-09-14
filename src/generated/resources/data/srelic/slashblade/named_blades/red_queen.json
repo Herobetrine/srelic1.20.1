@@ -20,7 +20,7 @@
   "item": "srelic:srelic_slashblade",
   "name": "srelic:red_queen",
   "properties": {
-    "attack_base": 27.0,
+    "attack_base": 23.0,
     "max_damage": 200,
     "slash_art": "srelic:xdrive",
     "special_effects": [

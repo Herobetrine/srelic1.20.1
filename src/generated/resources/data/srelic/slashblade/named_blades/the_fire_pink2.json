@@ -16,7 +16,7 @@
   "item": "srelic:srelic_slashblade",
   "name": "srelic:the_fire_pink2",
   "properties": {
-    "attack_base": 35.0,
+    "attack_base": 20.0,
     "max_damage": 200,
     "special_effects": [
       "srelic:white_maker",

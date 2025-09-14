@@ -119,9 +119,7 @@ public class SRSpecialEffectsRegistry {
     public static final RegistryObject<SpecialEffect> BITTER_COLD_HELL_EX;
     public static final RegistryObject<SpecialEffect> AFFLORDITE;
     public static final RegistryObject<SpecialEffect> FROST_FLAME;
-    // 新增冰魄·寒月霜天特效
     public static final RegistryObject<SpecialEffect> ICE_SOUL_FROST_SKY;
-    // 新增追猎者特效
     public static final RegistryObject<SpecialEffect> HUNTER;
 
     public SRSpecialEffectsRegistry() {

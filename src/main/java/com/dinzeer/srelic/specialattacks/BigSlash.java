@@ -1,5 +1,6 @@
 package com.dinzeer.srelic.specialattacks;
 
+import com.dinzeer.srelic.entity.drive.HunterDrive;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.capability.concentrationrank.ConcentrationRankCapabilityProvider;
 import mods.flammpfeil.slashblade.entity.EntityDrive;
@@ -83,7 +84,7 @@ public class BigSlash {
                 pos = pos.add(VectorHelper.getVectorForRotation(-90.0F, playerIn.getViewYRot(0)).scale(centerOffset.y))
                         .add(VectorHelper.getVectorForRotation(0, playerIn.getViewYRot(0) + 90).scale(centerOffset.z))
                         .add(playerIn.getLookAngle().scale(centerOffset.z));
-            EntityDrive drive = new EntityDrive(SlashBlade.RegistryEvents.Drive, playerIn.level());
+            HunterDrive drive = new HunterDrive(SlashBlade.RegistryEvents.Drive, playerIn.level());
 
             playerIn.level().addFreshEntity(drive);
 

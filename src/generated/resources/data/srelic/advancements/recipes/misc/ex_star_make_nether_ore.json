@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blood_plum_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "srelic:blood_plum_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "srelic:ex_star_make_nether_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_blood_plum_planks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "srelic:ex_star_make_nether_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

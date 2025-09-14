@@ -1,20 +1,28 @@
 package com.dinzeer.srelic.blade;
 
 import com.dinzeer.srelic.Utils.SlashBladeUtil;
+import mods.flammpfeil.slashblade.SlashBladeConfig;
+import mods.flammpfeil.slashblade.capability.concentrationrank.ConcentrationRankCapabilityProvider;
+import mods.flammpfeil.slashblade.capability.concentrationrank.IConcentrationRank;
 import mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.item.SwordType;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
+import mods.flammpfeil.slashblade.util.AttackManager;
+import mods.flammpfeil.slashblade.util.PlayerAttackHelper;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -22,6 +30,7 @@ import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.awt.*;
 import java.util.EnumSet;
 import java.util.List;
 
@@ -46,6 +55,30 @@ public class ISrelicblade extends ItemSlashBlade {
             tooltip.add(Component.translatable("srelic.sword_type.other_world_off").withStyle(style -> style.withColor(dynamicColor)));
         }
     }
+
+
+
+
+
+
+
+
+
+
+    public static float getRankBonus(Player attacker,float ranks,ISlashBladeState state) {
+
+        float rankDamageBonus = ranks / 2.0F;
+        if (IConcentrationRank.ConcentrationRanks.S.level <= ranks) {
+            int refine = state.getRefine();
+            int level = attacker.experienceLevel;
+            rankDamageBonus = (float)Math.max((double)rankDamageBonus, (double)Math.min(level, refine) * (Double)SlashBladeConfig.REFINE_DAMAGE_MULTIPLIER.get());
+        }
+
+        return rankDamageBonus;
+    }
+
+
+
     @Override
     public void appendSpecialEffects(List<Component> tooltip, @NotNull ISlashBladeState state) {
         int colorCode = state.getColorCode();

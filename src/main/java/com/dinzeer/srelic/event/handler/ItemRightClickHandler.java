@@ -32,8 +32,7 @@ public class ItemRightClickHandler {
         ItemStack stack = player.getMainHandItem();
         // 防御性检查：物品堆栈有效
         if (stack == null || stack.isEmpty()) return;
-        
-        // 新增：冷却时间检查
+
         Long lastTriggerTime = COOLDOWN_MAP.get(player);
         long currentTime = player.level().getGameTime();
         if (lastTriggerTime != null && currentTime - lastTriggerTime < COOLDOWN_TICKS) {
@@ -74,6 +73,11 @@ public class ItemRightClickHandler {
                 && state.getBlock() == Blocks.BLUE_ICE
                 && player.isInWaterRainOrBubble()) { // 需要水中/雨中环境
             processConversion(player, stack, SRItemRegsitry.frozen_netherite_alloy.get());
+        }
+        if (stack.getItem() == SRItemRegsitry.rainbow_star.asItem()
+                && state.getBlock() == Blocks.ANCIENT_DEBRIS
+              ) {
+            processConversion(player, stack, Items.NETHERITE_SCRAP);
         }
 
         // 雷霆合金仪式
