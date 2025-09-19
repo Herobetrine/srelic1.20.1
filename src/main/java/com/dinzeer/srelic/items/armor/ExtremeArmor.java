@@ -25,7 +25,7 @@ import static com.dinzeer.srelic.Srelic.MODID;
 
 public class ExtremeArmor extends ArmorItem {
     private static final int[] DURABILITY_PER_SLOT = new int[]{0, 0, 0, 0};
-    private static final int[] PROTECTION_PER_SLOT = new int[]{6, 18, 16, 9};
+    private static final int[] PROTECTION_PER_SLOT = new int[]{9, 18, 16, 9};
     private static final UUID[] ATTACK_DAMAGE_UUIDS = {
             UUID.nameUUIDFromBytes("ExtremeArmorA".getBytes()),
             UUID.nameUUIDFromBytes("ExtremeArmorB".getBytes()),

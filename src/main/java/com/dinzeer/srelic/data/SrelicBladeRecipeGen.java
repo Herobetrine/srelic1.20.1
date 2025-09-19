@@ -6,20 +6,25 @@ import com.dinzeer.srelic.registry.SRItemRegsitry;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.DataIngredient;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.recipes.*;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.crafting.SmithingRecipe;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.registries.ForgeRegistries;
 import vazkii.patchouli.common.item.PatchouliItems;
 
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
+
+import static com.dinzeer.srelic.Srelic.MODID;
 
 public class SrelicBladeRecipeGen {
     public static void onRecipeGen(RegistrateRecipeProvider pvd) {
@@ -320,7 +325,7 @@ public class SrelicBladeRecipeGen {
         ).unlockedBy(
             "has_rough_crimson_shadow_ore", 
             RegistrateRecipeProvider.has(SRItemRegsitry.rough_crimson_shadow_ore.get())
-        ).save(pvd, new ResourceLocation(Srelic.MODID, "crimson_shadow_ingot_smelting"));
+        ).save(pvd, new ResourceLocation(MODID, "crimson_shadow_ingot_smelting"));
 
 
         unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SRItemRegsitry.crimson_shadow_particle.get(), 9)::unlockedBy, Items.IRON_INGOT)
@@ -384,21 +389,175 @@ public class SrelicBladeRecipeGen {
                 .define('E', Blocks.DRAGON_EGG)
                 .save(pvd);
 
+        unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC,
+                SRItemRegsitry.max_smithing_template.get(), 1)::unlockedBy, Items.NETHERITE_INGOT)
+                .pattern("ABA")
+                .pattern("BCB")
+                .pattern("ADA")
+                .define('A', SRItemRegsitry.max_ingot.get())
+                .define('B', SRItemRegsitry.demon_ingot.get())
+                .define('C', SRItemRegsitry.fire_smithing_template.get())
+                .define('D', SRItemRegsitry.ignis_cube)
+
+                .save(pvd);
+
+
+
+
+        unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC,
+                SRItemRegsitry.max_smithing_template.get(), 2)::unlockedBy, Items.NETHERITE_INGOT)
+                .pattern("ACA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', SRItemRegsitry.max_ingot.get())
+                .define('B', SRItemRegsitry.fel_metal.get())
+                .define('C', SRItemRegsitry.max_smithing_template.get())
+                .save(pvd,"srelic:max_smithing_template_copy");
+        unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC,
+                SRItemRegsitry.fire_smithing_template.get(), 2)::unlockedBy, Items.NETHERITE_INGOT)
+                .pattern("ACA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', SRItemRegsitry.flame_netherite_alloy.get())
+                .define('B', SRItemRegsitry.fel_metal.get())
+                .define('C', SRItemRegsitry.fire_smithing_template.get())
+                .save(pvd,"srelic:fire_smithing_template_copy");
 
 
 
 
 
 
+        smithing(pvd,
+                Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE,
+                SRItemRegsitry.flame_netherite_alloy.get(),
+                SRItemRegsitry.fire_smithing_template.get(),
+                Items.MAGMA_BLOCK);
+
+        smithing(pvd,
+                Items.NETHERITE_SWORD,
+                SRItemRegsitry.flame_netherite_alloy.get(),
+                SRItemRegsitry.fire_netherite_sword.get(),
+                SRItemRegsitry.fire_smithing_template.get());
+        smithing(pvd,
+                Items.NETHERITE_PICKAXE,
+                SRItemRegsitry.flame_netherite_alloy.get(),
+                SRItemRegsitry.fire_netherite_pickaxe.get(),
+                SRItemRegsitry.fire_smithing_template.get());
+
+
+
+        smithing(pvd,
+                SRItemRegsitry.fire_netherite_sword.get(),
+                SRItemRegsitry.max_ingot.get(),
+                SRItemRegsitry.max_sword.get(),
+                SRItemRegsitry.max_smithing_template.get());
+        smithing(pvd,
+                SRItemRegsitry.fire_netherite_pickaxe.get(),
+                SRItemRegsitry.max_ingot.get(),
+                SRItemRegsitry.max_pickaxe.get(),
+                SRItemRegsitry.max_smithing_template.get());
 
 
 
 
 
+        smithing(pvd,
+                Items.NETHERITE_HELMET,
+                SRItemRegsitry.max_ingot.get(),
+                SRItemRegsitry.max_helmet.get(),
+                SRItemRegsitry.max_smithing_template.get());
+        smithing(pvd,
+                Items.NETHERITE_CHESTPLATE,
+                SRItemRegsitry.max_ingot.get(),
+                SRItemRegsitry.max_chestplate.get(),
+                SRItemRegsitry.max_smithing_template.get());
+        smithing(pvd,
+                Items.NETHERITE_LEGGINGS,
+                SRItemRegsitry.max_ingot.get(),
+                SRItemRegsitry.max_leggings.get(),
+                SRItemRegsitry.max_smithing_template.get());
+        smithing(pvd,
+                Items.NETHERITE_BOOTS,
+                SRItemRegsitry.max_ingot.get(),
+                SRItemRegsitry.max_boots.get(),
+                SRItemRegsitry.max_smithing_template.get());
 
+        smithing(pvd,
+                SRItemRegsitry.diamond_block_helmet.get(),
+                SRItemRegsitry.windy_core_ingot.get(),
+                SRItemRegsitry.sky_helmet.get(),
+                Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE);
+        smithing(pvd,
+                SRItemRegsitry.diamond_block_chestplate.get(),
+                SRItemRegsitry.windy_core_ingot.get(),
+                SRItemRegsitry.sky_chestplate.get(),
+                Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE);
+        smithing(pvd,
+                SRItemRegsitry.diamond_block_leggings.get(),
+                SRItemRegsitry.windy_core_ingot.get(),
+                SRItemRegsitry.sky_leggings.get(),
+                Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE);
+        smithing(pvd,
+                SRItemRegsitry.diamond_block_boots.get(),
+                SRItemRegsitry.windy_core_ingot.get(),
+                SRItemRegsitry.sky_boots.get(),
+                Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE);
+
+        smithing(pvd,
+                SRItemRegsitry.diamond_block_helmet.get(),
+                SRItemRegsitry.oceanic_netherite_alloy.get(),
+                SRItemRegsitry.ocean_helmet.get(),
+                Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE);
+        smithing(pvd,
+                SRItemRegsitry.diamond_block_chestplate.get(),
+                SRItemRegsitry.oceanic_netherite_alloy.get(),
+                SRItemRegsitry.ocean_chestplate.get(),
+                Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE);
+        smithing(pvd,
+                SRItemRegsitry.diamond_block_leggings.get(),
+                SRItemRegsitry.oceanic_netherite_alloy.get(),
+                SRItemRegsitry.ocean_leggings.get(),
+                Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE);
+        smithing(pvd,
+                SRItemRegsitry.diamond_block_boots.get(),
+                SRItemRegsitry.oceanic_netherite_alloy.get(),
+                SRItemRegsitry.ocean_boots.get(),
+                Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE);
+
+        smithing(pvd,
+                Items.DIAMOND_HELMET,
+                SRItemRegsitry.diamond_star.get(),
+                SRItemRegsitry.diamond_block_helmet.get(),
+                Items.DIAMOND_BLOCK);
+        smithing(pvd,
+                Items.DIAMOND_CHESTPLATE,
+                SRItemRegsitry.diamond_star.get(),
+                SRItemRegsitry.diamond_block_chestplate.get(),
+                Items.DIAMOND_BLOCK);
+        smithing(pvd,
+                Items.DIAMOND_LEGGINGS,
+                SRItemRegsitry.diamond_star.get(),
+                SRItemRegsitry.diamond_block_leggings.get(),
+                Items.DIAMOND_BLOCK);
+        smithing(pvd,
+                Items.DIAMOND_BOOTS,
+                SRItemRegsitry.diamond_star.get(),
+                SRItemRegsitry.diamond_block_boots.get(),
+                Items.DIAMOND_BLOCK);
 
     }
     public static <T> T unlock(RegistrateRecipeProvider pvd, BiFunction<String, InventoryChangeTrigger.TriggerInstance, T> func, Item item) {
         return func.apply("has_" + pvd.safeName(item), DataIngredient.items(item).getCritereon(pvd));
+    }
+    public static void smithing(RegistrateRecipeProvider pvd, Item in, Item mat, Item out, Item template) {
+        smithing(pvd, in, mat, out, pvd,template);
+    }
+
+    public static void smithing(RegistrateRecipeProvider pvd, Item in, Item mat, Item out, Consumer<FinishedRecipe> cons, Item template) {
+        unlock(pvd, SmithingTransformRecipeBuilder.smithing(Ingredient.of(template), Ingredient.of(in), Ingredient.of(mat), RecipeCategory.MISC, out)::unlocks, mat).save(cons, getID(out));
+    }
+    private static ResourceLocation getID(Item item) {
+        return new ResourceLocation(MODID,  ForgeRegistries.ITEMS.getKey(item).getPath());
     }
 }

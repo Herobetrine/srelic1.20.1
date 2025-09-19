@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "srelic:flame_netherite_alloy"
+  },
+  "base": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  },
+  "result": {
+    "item": "srelic:fire_smithing_template"
+  },
+  "template": {
+    "item": "minecraft:magma_block"
+  }
+}

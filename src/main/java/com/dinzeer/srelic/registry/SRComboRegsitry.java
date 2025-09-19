@@ -360,7 +360,19 @@ public class SRComboRegsitry {
                     .next(ComboState.TimeoutNext.buildFromFrame(15, entity -> SlashBlade.prefix("none")))
                     .nextOfTimeout(entity -> Srelic.prefix("all_reuse"))
                     .addTickAction(ComboState.TimeLineTickAction.getBuilder()
-                            .put(3, (entityIn) -> TenDrive.doSlash(entityIn, 90F, 20, Vec3.ZERO, false, 3, 2f, 1f, 2))
+
+
+
+
+
+
+
+                            .put(3, (entityIn) -> {
+                                AttackManager.doSlash(entityIn, 0.0f, Vec3.ZERO, false, false, 2F);
+                                AttackManager.doSlash(entityIn, -90F, Vec3.ZERO, false, false, 2F);
+                                Drive.doSlash(entityIn,90F,20,0xFF3333FF, Vec3.ZERO,false,3,null,3f);
+                                Drive.doSlash(entityIn,0,20,0xFF3333FF, Vec3.ZERO,false,3,null,3f);
+                            })
                             .put(6, CelestialStrike::DoSlash )
                             .build())
                     .addHitEffect(StunManager::setStun)

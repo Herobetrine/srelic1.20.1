@@ -1,5 +1,6 @@
 package com.dinzeer.srelic.specialeffects.superse;
 
+import com.dinzeer.legendreliclib.lib.compat.slashblade.SlashEffect;
 import com.dinzeer.srelic.registry.SRSpecialEffectsRegistry;
 import com.dinzeer.srelic.specialeffects.SeEX;
 import mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState;
@@ -62,7 +63,7 @@ public class AquaticSanctuary extends SpecialEffect {
 
                 if (SeEX.hasSpecialEffect(player.getOffhandItem(), "aquatic_sanctuary", player.experienceLevel)){
 
-                    SakuraEnd.doSlash(player, event.getRoll()+10, Vec3.ZERO,
+                   SlashEffect.SakuraEnd.doSlash(player, event.getRoll()+10, Vec3.ZERO,
                             false, false, 0.1F, KnockBacks.cancel);
 
                 }

@@ -28,7 +28,7 @@ import static com.dinzeer.srelic.Srelic.MODID;
 
 public class SkyArmor extends ArmorItem {
     private static final int[] DURABILITY_PER_SLOT = new int[]{2000, 3600, 3200, 1600};
-    private static final int[] PROTECTION_PER_SLOT = new int[]{4, 8, 6,3};
+    private static final int[] PROTECTION_PER_SLOT = new int[]{9, 15, 13,8};
     private static final UUID[] ATTACK_DAMAGE_UUIDS = {
             UUID.nameUUIDFromBytes("SkyArmorA".getBytes()),
             UUID.nameUUIDFromBytes("SkyArmorB".getBytes()),

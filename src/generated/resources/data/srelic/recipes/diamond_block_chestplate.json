@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "srelic:diamond_star"
+  },
+  "base": {
+    "item": "minecraft:diamond_chestplate"
+  },
+  "result": {
+    "item": "srelic:diamond_block_chestplate"
+  },
+  "template": {
+    "item": "minecraft:diamond_block"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "srelic:max_ingot"
+    },
+    "B": {
+      "item": "srelic:fel_metal"
+    },
+    "C": {
+      "item": "srelic:max_smithing_template"
+    }
+  },
+  "pattern": [
+    "ACA",
+    "ABA",
+    "AAA"
+  ],
+  "result": {
+    "count": 2,
+    "item": "srelic:max_smithing_template"
+  },
+  "show_notification": true
+}

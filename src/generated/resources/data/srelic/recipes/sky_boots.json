@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "srelic:windy_core_ingot"
+  },
+  "base": {
+    "item": "srelic:diamond_block_boots"
+  },
+  "result": {
+    "item": "srelic:sky_boots"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  }
+}

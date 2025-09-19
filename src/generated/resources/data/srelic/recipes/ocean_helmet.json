@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "srelic:oceanic_netherite_alloy"
+  },
+  "base": {
+    "item": "srelic:diamond_block_helmet"
+  },
+  "result": {
+    "item": "srelic:ocean_helmet"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  }
+}
