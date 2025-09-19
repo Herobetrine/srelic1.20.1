@@ -8,14 +8,6 @@
       "type": "spotlight",
       "item": "srelic:rainbow_star",
       "text": "se.srelic.path_of_the_gluttony.desc"
-    },
-    {
-      "type": "text",
-      "text": "se.srelic.path_of_the_gluttony.text"
-    },
-    {
-      "type": "text",
-      "text": "se.srelic.path_of_the_gluttony.easter-egg"
     }
   ]
 }

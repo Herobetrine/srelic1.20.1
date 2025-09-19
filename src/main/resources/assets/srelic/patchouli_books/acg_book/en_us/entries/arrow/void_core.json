@@ -12,7 +12,7 @@
     {
       "type": "crafting",
       "title": "painting.srelic.huoqu.title",
-      "recipe": "srelic:void_core_recipe"
+      "recipe": "srelic:void_core"
     }
   ]
 }

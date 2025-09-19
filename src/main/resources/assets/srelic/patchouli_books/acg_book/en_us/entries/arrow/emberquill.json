@@ -14,6 +14,10 @@
       "title": "painting.srelic.huoqu.title",
       "recipe": "srelic:emberquill",
       "text": "patchouli.srelic.book.seele.arrow.emberquill.pages.0.text"
+    },
+    {
+      "type": "text",
+      "text": "patchouli.srelic.book.seele.arrow.emberquill.pages.1.text"
     }
   ]
 }
