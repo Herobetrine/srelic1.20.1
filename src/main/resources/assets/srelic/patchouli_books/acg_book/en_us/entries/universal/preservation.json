@@ -7,15 +7,11 @@
     {
       "type": "spotlight",
       "item": "srelic:rainbow_star",
-      "text": "se.srelic.dice_effect.desc"
+      "text": "se.srelic.path_of_preservation.desc"
     },
     {
       "type": "text",
-      "text": "se.srelic.preservation.text"
-    },
-    {
-      "type": "text",
-      "text": "se.srelic.dice_effect.easter-egg"
+      "text": "se.srelic.path_of_preservation.text"
     }
   ]
 }

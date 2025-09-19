@@ -12,10 +12,6 @@
     {
       "type": "text",
       "text": "se.srelic.dice_effect.text"
-    },
-    {
-      "type": "text",
-      "text": "se.srelic.dice_effect.easter-egg"
     }
   ]
 }

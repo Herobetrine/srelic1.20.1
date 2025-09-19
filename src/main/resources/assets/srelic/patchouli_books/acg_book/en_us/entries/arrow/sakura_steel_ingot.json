@@ -23,10 +23,6 @@
         "symmetrical": true
       },
       "text": "tips.sakura_steel_ingot.name_tip"
-    },
-    {
-      "type" : "text",
-      "text" : "patchouli.srelic.book.entries.arrow.sakura_steel_ingot.pages.0.text"
     }
   ]
 }

@@ -11,7 +11,7 @@
     },
     {
       "type": "crafting",
-      "title": "patchouli.srelic.aotuo.title",
+      "title": "painting.srelic.huoqu.title",
       "text": "item.srelic.demon_ingot",
       "recipe": "srelic:demon_ingot"
     }
