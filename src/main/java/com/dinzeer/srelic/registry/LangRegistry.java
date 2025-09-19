@@ -108,7 +108,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang("tips.fel_metal.name_tip", "手持下界合金碎片对准中心炼药锅激活");
         REGISTRATE.addRawLang("tips.ex_star.name_tip", "在末地手持下界之星右键激活仪式");
         REGISTRATE.addRawLang("tips.frozen_netherite_alloy.name_tip", "在水中手持下界合金右击蓝冰获得");
-        REGISTRATE.addRawLang("tips.oceanic_netherite_alloy.name_tip", "在下界手持下界合金右击海晶石块获得");
+        REGISTRATE.addRawLang("tips.oceanic_netherite_alloy.name_tip", "在水中手持下界合金右击海晶石获得");
         REGISTRATE.addRawLang("tips.sakura_steel_ingot.name_tip", "将樱花树叶和樱花原木相邻放置，然后手持铁锭右键樱花原木获得");
         REGISTRATE.addRawLang("tips.crimson_paper.name_tip", "与流浪商人交易获得");
         REGISTRATE.addRawLang("tips.plum.name_tip", "使用剪刀破坏血魂树叶概率掉落");
@@ -133,7 +133,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.demon_ingot.pages.0.text", "在下界之星的介入下，四种下界合金融合而产生的不应存在之物，世界为它赋予无与伦比的力量。$(br2)ps:$(o)（什么电王顶点形态啊）");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.sakura_steel_ingot.pages.0.text", "铁锭与樱花相结合的材料，有着钢铁的硬度和樱花的香气，表面的樱纹使其更具美感。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.ex_star.pages.0.text", "极致的实体化，可以淬炼武器，激发其蕴含的力量，获取新的能力，帮助武器超越极限。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.windy_core.pages.0.text", "大地深处的紫晶，唯有挣脱三百米的束缚，方能拥抱穹顶奔流的自由之风。在那高天之上，地脉的灵性与不羁的天风交融，铸就这轻盈而狂放的晶核。$(rb)—— 三百米，是紫水晶与风相遇的距离。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.windy_core.pages.0.text", "大地深处的紫晶，唯有挣脱三百米的束缚，方能拥抱穹顶奔流的自由之风。在那高天之上，地脉的灵性与不羁的天风交融，铸就这轻盈而狂放的晶核。$(br)—— 三百米，是紫水晶与风相遇的距离。");
         REGISTRATE.addRawLang("tips.windy_core.name_tip", "紫水晶在300格以上右键转换");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.windy_core_ingot.easter-egg1", "在末地尽头的风眼里，西风骑士们曾试图用下界之烬锻造一双能回到地面的翅膀。$(br)他们熔铸了下界合金的坚韧，却忘了西风结晶里藏着高空的孤独——$(br)于是，天空合金诞生了：$(br)一种黯蓝到发灰的金属，像黎明前最后一道被云吞没的星光。$(br)它轻得几乎违背重力，却能把摔落的伤害反向“馈赠”给空气；");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.windy_core_ingot.easter-egg2", "它冷得让盔甲表面永远凝着一层薄雾，雾中偶尔映出你第一次坠空的残影。$(br)穿上它，你不再属于大地，也不再属于天空——$(br)你只是风暴与岩浆共同签署的流浪者，$(br)在每一次跳跃里，听见西风与下界同时发出的、低低的叹息。");
@@ -257,29 +257,23 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.WhiteMaker), "构造即此刻");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.WhiteMaker) + ".desc", "每次攻击概率投射一道幻影刃");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_DESTRUCTION), "命途·毁灭");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_DESTRUCTION) + ".desc", "生命低于30%时获得150%攻击加成和持续恢复受击有25%概率触发伤害反弹");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_DESTRUCTION) + ".text", "星神崩星碎辰，耀变临渊，万物归尘，人魂于毁灭中淬炼，文明在耀变中新生。");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_DESTRUCTION) + ".easter-egg", "当你点燃第一颗恒星时——记住，那火光是你献给终焉的婚烛");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_DESTRUCTION) + ".desc", "生命低于30%%时获得150%%攻击加成和持续恢复受击有25%%概率触发伤害反弹");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_DESTRUCTION) + ".text", "星神崩星碎辰，耀变临渊，万物归尘，$(br)人魂于毁灭中淬炼，文明在耀变中新生。$(br2)$(br2)当你点燃第一颗恒星时$(br)——记住，那火光是你献给终焉的婚烛");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_HUNT), "命途·巡猎");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_HUNT) + ".desc", "每次攻击积累「星矢」层数，7层后释放高额伤害");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_HUNT) + ".text", "审判罪恶，万殛狩渊，星矢破空，渊狩无归，于至暗中迸发复仇烈光，以毁灭创造新生。");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_HUNT) + ".easter-egg", "当第一支箭离弦时——听，弓弦震响是万千湮灭文明的遗恨共鸣 ");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_HUNT) + ".text", "审判罪恶，万殛狩渊，星矢破空，渊狩无归，于至暗中迸发复仇烈光，以毁灭创造新生。$(br2)$(br2)当第一支箭离弦时$(br)——听，弓弦震响是万千湮灭文明的遗恨共鸣 ");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_PRESERVATION), "命途·存护");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_PRESERVATION) + ".desc", "获得伤害吸收");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_PRESERVATION) + ".text", "琥珀坚固，铸就城墙，铁誓护疆，晶泪封誓，永屹晨碑，千星共御。");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY) + "easter-egg", "当琥珀巨墙拔地而起时——看，墙痕是文明的伤疤，墙顶是未熄的星火  ");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_PRESERVATION) + ".text", "琥珀坚固，铸就城墙，铁誓护疆，晶泪封誓，永屹晨碑，千星共御。$(br2)$(br2)当琥珀巨墙拔地而起时$(br)——看，墙痕是文明的伤疤，墙顶是未熄的星火  ");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY), "命途·贪饕");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY) + ".desc", "攻击时吸血10%%伤害值每次攻击叠加伤害层数最高十层");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY) + ".text", "饕星嚼辰，永饥永蚀，将一切化为养料，修复自身，直至吞噬一切。");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + "easter-egg", "贪饕的震撼在于其荒诞悲剧内核——当他吞下最后一粒星辰时，将发现自己啃噬的竟是镜中倒影");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY) + ".text", "饕星嚼辰，永饥永蚀，将一切化为养料，修复自身，直至吞噬一切。$(br2)$(br2)贪饕的震撼在于其荒诞悲剧内核$(br)——当他吞下最后一粒星辰时，将发现自己啃噬的竟是镜中倒影");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING), "命途·不朽");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + ".desc", "濒死时触发免死并恢复50%%生命获得十秒无敌，冷却十分钟");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + ".text", "肉身亘古、精魂永续、龙裔承志，天脊承鳞，残鳞继道，渊眠蜕神。当最后一片龙鳞沉入星渊时——看，锈骨中正蠕动新生的初卵");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + ".easter-egg", "不朽的震撼正在于其破碎性——龙祖陨落昭示：真正的永恒，需以千万次死亡为祭品。 ");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + ".text", "肉身亘古、精魂永续、龙裔承志，天脊承鳞，残鳞继道，渊眠蜕神。当最后一片龙鳞沉入星渊时——看，锈骨中正蠕动新生的初卵$(br2)$(br2)不朽的震撼正在于其破碎性$(br)——龙祖陨落昭示:$(o)$(l)真正的永恒，需以千万次死亡为祭品。");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_ABUNDANCE), "命途·丰饶");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_ABUNDANCE) + ".desc", "每5秒治疗8格内队友群体抗性提升效果");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_ABUNDANCE) + ".text", "星神不忍见世间之苦，故降下赐福，赐福成界，护佑众生，一法界心。");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_ABUNDANCE) + ".easter-egg", "当第一滴玉露愈合伤口时——听见了吗？你的骨骼正发出新芽的裂响");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_ABUNDANCE) + ".text", "星神不忍见世间之苦，故降下赐福，赐福成界，护佑众生，一法界心。$(br2)$(br2)当第一滴玉露愈合伤口时——听见了吗？你的骨骼正发出新芽的裂响");
 
         // 修正重复键问题
         REGISTRATE.addRawLang("se.srelic.shift_nodown", "按下Shift查看SE详细信息");
@@ -287,55 +281,43 @@ public class LangRegistry {
         // 修正重复键问题
         REGISTRATE.addRawLang("se.srelic.path_of_remembrance", "命途·记忆");
         REGISTRATE.addRawLang("se.srelic.path_of_remembrance.desc", "攻击有50%%的概率冻结目标");
-        REGISTRATE.addRawLang("se.srelic.path_of_remembrance.text", "记忆承载岁月，光锥封存永恒，残响筑城，焚忆燃夜，永眠钟塔，冰封万物。当最后一盏记忆灯熄灭时——看，浮黎神躯正绽放亿万湮灭宇宙的余晖。");
-        REGISTRATE.addRawLang("se.srelic.path_of_remembrance.easter-egg", "记忆介入轮回，让消散的星光成为刺穿终末黑暗的利刃，以岁月斩破轮回。");
+        REGISTRATE.addRawLang("se.srelic.path_of_remembrance.text", "记忆承载岁月，光锥封存永恒，残响筑城，焚忆燃夜，永眠钟塔，冰封万物。$(br)当最后一盏记忆灯熄灭时$(br)——看，浮黎神躯正绽放亿万湮灭宇宙的余晖。$(br2)$(br2)记忆介入轮回，让消散的星光成为刺穿终末黑暗的利刃，以岁月斩破轮回。");
         REGISTRATE.addRawLang("se.srelic.path_of_harmony", "命途·同谐");
-        REGISTRATE.addRawLang("se.srelic.path_of_harmony.text", "万人齐颂，千心同律，交织和谐之网，万灵交响，千灵同辉，回荡圣咏共鸣。群星依序，齐誓永谐。");
+        REGISTRATE.addRawLang("se.srelic.path_of_harmony.text", "万人齐颂，千心同律，交织和谐之网，万灵交响，千灵同辉，回荡圣咏共鸣。群星依序，齐誓永谐。$(br2)$(br2)当孤星试图闪耀时，宇宙沉默;$(br)当群星同频时，黑洞亦为之歌咏 ");
         REGISTRATE.addRawLang("se.srelic.path_of_harmony.desc", "群体获得力量效果");
-        REGISTRATE.addRawLang("se.srelic.path_of_harmony.easter-egg", "当孤星试图闪耀时，宇宙沉默；当群星同频时，黑洞亦为之歌咏 ");
         REGISTRATE.addRawLang("se.srelic.path_of_nihility", "命途·虚无");
-        REGISTRATE.addRawLang("se.srelic.path_of_nihility.text", "无念无想，万色褪皁，醒寐同棺，万物归寂，空渊吞噬，永燃余烬。");
-        REGISTRATE.addRawLang("se.srelic.path_of_nihility.easter-egg", "当你为胜利欢呼时——请听，余烬中传来所有湮灭宇宙的哄笑");
+        REGISTRATE.addRawLang("se.srelic.path_of_nihility.text", "无念无想，万色褪皁，醒寐同棺，万物归寂，空渊吞噬，永燃余烬。$(br2)$(br2)当你为胜利欢呼时$(br)——请听，余烬中传来所有湮灭宇宙的哄笑");
         REGISTRATE.addRawLang("se.srelic.path_of_nihility.desc", "攻击成功后给敌方虚弱和挖掘疲劳3");
         REGISTRATE.addRawLang("se.srelic.path_of_propagation", "命途·繁育");
-        REGISTRATE.addRawLang("se.srelic.path_of_propagation.text", "虫群倾巢，万卵噬星，慈胎孽种，无穷无尽，肉绽天穹，虫灾天劫，寰宇蝗灾。");
-        REGISTRATE.addRawLang("se.srelic.path_of_propagation.easter-egg", "当第一枚虫卵嵌入地核时——听，星辰的心跳正渐变成孵化的胎音 ");
+        REGISTRATE.addRawLang("se.srelic.path_of_propagation.text", "虫群倾巢，万卵噬星，慈胎孽种，无穷无尽，肉绽天穹，虫灾天劫，寰宇蝗灾。$(br2)$(br2)当第一枚虫卵嵌入地核时$(br)——听，星辰的心跳正渐变成孵化的胎音 ");
         REGISTRATE.addRawLang("se.srelic.path_of_propagation.desc", "每次攻击敌人都会生成一只蠹虫（无限增值，但是周围最多40只蠹虫）");
         REGISTRATE.addRawLang("se.srelic.path_of_erudition", "命途·智识");
-        REGISTRATE.addRawLang("se.srelic.path_of_erudition.text", "焚典开天，万理织宙，冻光穹脑，熵锁归一，知识就是力量，附魔转化为增幅，");
-        REGISTRATE.addRawLang("se.srelic.path_of_erudition.easter-egg", "当你解出万物公式时——请记住，被删除的“灵魂变量”正在废墟里冷笑 ");
-        REGISTRATE.addRawLang("se.srelic.path_of_erudition.desc", "根据武器附魔等级获得额外效果：$(br)锋利→伤害提升（每级+10%%）$(br)火焰附加→点燃时间翻倍$(br)抢夺→额外掉落概率");
+        REGISTRATE.addRawLang("se.srelic.path_of_erudition.text", "焚典开天，万理织宙，冻光穹脑，熵锁归一，知识就是力量，附魔转化为增幅，$(br2)$(br2)当你解出万物公式时$(br)——请记住，被删除的“灵魂变量”正在废墟里冷笑 ");
+        REGISTRATE.addRawLang("se.srelic.path_of_erudition.desc", "根据武器附魔等级获得额外效果：$(br2)锋利→伤害提升（每级+10%%）$(br2)火焰附加→点燃时间翻倍$(br2)抢夺→额外掉落概率");
         REGISTRATE.addRawLang("se.srelic.path_of_elation", "命途·欢愉");
-        REGISTRATE.addRawLang("se.srelic.path_of_elation.text", "愚者千面，游戏寰尘，戏谑众生，颠倒是非。若有人在现实中对你说 “法典该擦擦了” ，记得立刻把手边的书倒过来——或许真有一颗糖等着你。");
-        REGISTRATE.addRawLang("se.srelic.path_of_elation.easter-egg", "第〇条：所有规则，皆可被阿哈的喷嚏推翻！终极真理：蛋糕比哲学重要——尤其当它砸在你脸上时。");
+        REGISTRATE.addRawLang("se.srelic.path_of_elation.text", "愚者千面，游戏寰尘，戏谑众生，颠倒是非。若有人在现实中对你说 “法典该擦擦了” ，记得立刻把手边的书倒过来$(br)——或许真有一颗糖等着你。$(br2)$(br2)第〇条：所有规则，皆可被阿哈的喷嚏推翻！$(br)终极真理：蛋糕比哲学重要$(br)——尤其当它砸在你脸上时。");
         REGISTRATE.addRawLang("se.srelic.path_of_elation.desc", "将50%%治疗量转化为群体恢复为受影响目标附加5秒发光效果每触发一次群体治疗提升10%%移动速度（可叠加3层）");
         REGISTRATE.addRawLang("se.srelic.path_of_equilibrium", "命途·均衡");
-        REGISTRATE.addRawLang("se.srelic.path_of_equilibrium.text", "均衡维持世间的平衡，万竞息争，赏罚同契，理爆维稳，阴阳相合。 ");
-        REGISTRATE.addRawLang("se.srelic.path_of_equilibrium.easter-egg", "当文明为胜利欢呼时——看，仲裁官已在新生的墓碑上刻下倒计时");
-        REGISTRATE.addRawLang("se.srelic.path_of_equilibrium.desc", "切换武器时转换攻防姿态攻击姿态:+150%%伤害防御姿态:+40伤害抵抗");
+        REGISTRATE.addRawLang("se.srelic.path_of_equilibrium.text", "均衡维持世间的平衡，万竞息争，赏罚同契，理爆维稳，阴阳相合。$(br2)$(br2)当文明为胜利欢呼时$(br)——看，仲裁官已在新生的墓碑上刻下倒计时");
+        REGISTRATE.addRawLang("se.srelic.path_of_equilibrium.desc", "切换武器时转换攻防姿态攻击姿态:+150%%伤害防御姿态:+40%%伤害抵抗");
         REGISTRATE.addRawLang("se.srelic.path_of_finality", "命途·终末");
-        REGISTRATE.addRawLang("se.srelic.path_of_finality.text", "终焉回响，命轮永固，终末降临，恒纪无回，永劫无笑，诸神无泪。");
-        REGISTRATE.addRawLang("se.srelic.path_of_finality.easter-egg", "“欢愉”在戏弄中诞生闹剧，而“终末”在沉寂中书写句点——永劫无笑，诸神无泪。");
+        REGISTRATE.addRawLang("se.srelic.path_of_finality.text", "终焉回响，命轮永固，终末降临，恒纪无回，永劫无笑，诸神无泪。$(br2)$(br2)“欢愉”在戏弄中诞生闹剧，而“终末”在沉寂中书写句点$(br)——永劫无笑，诸神无泪。");
         REGISTRATE.addRawLang("se.srelic.path_of_finality.desc", "每3次连续击杀触发范围爆炸受伤时重置连杀计数");
         REGISTRATE.addRawLang("se.srelic.path_of_trailblaze", "命途·开拓");
-        REGISTRATE.addRawLang("se.srelic.path_of_trailblaze.text", "凿宙寻迹的列车，穿行在未知之间，无径筑虹，残舵指辰，虚海留辙，绝地创生，留下无名客的故事，创造无名客的辉煌。当列车撞向宇宙障壁时——听，裂痕中传来万千未诞世界的啼哭与欢呼。");
-        REGISTRATE.addRawLang("se.srelic.path_of_trailblaze.easter-egg", "毁灭中孕育新生的开拓，以自我湮灭为代价唤醒沉睡文明，化不可能为可能。真正的航道，要用神骸铺就，最辽阔的边疆，永远以第一个倒下者的名字命名。");
+        REGISTRATE.addRawLang("se.srelic.path_of_trailblaze.text", "凿宙寻迹的列车，穿行在未知之间，无径筑虹，残舵指辰，虚海留辙，绝地创生，留下无名客的故事，创造无名客的辉煌。当列车撞向宇宙障壁时$(br)——听，裂痕中传来万千未诞世界的啼哭与欢呼。$(br2)$(br2)毁灭中孕育新生的开拓，以自我湮灭为代价唤醒沉睡文明，化不可能为可能。$(br)真正的航道，要用神骸铺就，最辽阔的边疆，永远以第一个倒下者的名字命名。");
         REGISTRATE.addRawLang("se.srelic.path_of_trailblaze.desc", "获得速度3、力量3、村庄英雄1");
         REGISTRATE.addRawLang("se.srelic.path_of_mystery", "命途·神秘");
         REGISTRATE.addRawLang("se.srelic.path_of_mystery.text", "歪曲是非，悖论织理，万相遮目，虚构史书，渊识蚀智，痴愚贤者，诡计虚妄，信者为真。");
         REGISTRATE.addRawLang("se.srelic.path_of_mystery.easter-egg", "当你读懂星空时，星空已坍缩成你眼底的灰烬——所谓真相，不过是认知牢狱的新砖");
         REGISTRATE.addRawLang("se.srelic.path_of_mystery.desc", "攻击时随机触发以下效果之一：时间扭曲/空间裂隙/能量反噬/命运庇护/混沌爆发");
         REGISTRATE.addRawLang("se.srelic.path_of_order", "命途·秩序");
-        REGISTRATE.addRawLang("se.srelic.path_of_order.text", "秩序维持稳定，稳定给予力量，万像归模，永锢颂碑，戒律锁星，圣裁雕刀。");
-        REGISTRATE.addRawLang("se.srelic.path_of_order.easter-egg", "当你为永恒法典欢呼时——听，齿轮咬合的声响正碾碎你最后一缕呼吸  ");
+        REGISTRATE.addRawLang("se.srelic.path_of_order.text", "秩序维持稳定，稳定给予力量，万像归模，永锢颂碑，戒律锁星，圣裁雕刀。$(br2)$(br2)当你为永恒法典欢呼时$(br)——听，齿轮咬合的声响正碾碎你最后一缕呼吸  ");
         REGISTRATE.addRawLang("se.srelic.path_of_order.desc", "未受负面效果时获得攻防加成攻击清除敌方所有增益效果");
         REGISTRATE.addRawLang("se.srelic.path_of_purity", "命途·纯美");
-        REGISTRATE.addRawLang("se.srelic.path_of_purity.text", "碎镜星冕，泪塑圣境，追求之人，虹脱囚牢，万诗成刃，千眸凝辉。当最后一滴泪结晶时——看，裂痕中的星冕比完整宇宙更接近天国");
-        REGISTRATE.addRawLang("se.srelic.path_of_purity.easter-egg", "银白色的骑士追求世间之美，用手中长枪扫清黑暗，用毕生追寻镜中碎光。");
+        REGISTRATE.addRawLang("se.srelic.path_of_purity.text", "碎镜星冕，泪塑圣境，追求之人，虹脱囚牢，万诗成刃，千眸凝辉。当最后一滴泪结晶时$(br)——看，裂痕中的星冕比完整宇宙更接近天国$(br2)$(br2)银白色的骑士追求世间之美，用手中长枪扫清黑暗，用毕生追寻镜中碎光。");
         REGISTRATE.addRawLang("se.srelic.path_of_purity.desc", "获得抗性提升3");
         REGISTRATE.addRawLang("se.srelic.path_of_healing", "丰饶·慈悲");
         REGISTRATE.addRawLang("se.srelic.path_of_healing.text", "千眸慈视，不忍见众生之苦，降下赐福，愿促世间万物和谐，但事与愿违，慈肉噬骨。");
-        REGISTRATE.addRawLang("se.srelic.path_of_healing.easter-egg", "当魔力被释放时——听，星辰的明暗中传来所有虚无的noise");
         REGISTRATE.addRawLang("se.srelic.path_of_healing.desc", "你的攻击将会治疗受击者");
 
 
@@ -557,9 +539,8 @@ public class LangRegistry {
 
 
         REGISTRATE.addRawLang("se.srelic.dice_effect", "§d命运骰子");
-        REGISTRATE.addRawLang("se.srelic.dice_effect.desc", "$(5)【随机法则】 $(br)• 20%%概率造成50%%伤害 $(br)• 40%%概率正常伤害 $(br)• 39%%概率治疗目标600%%伤害值 $(br)• 1%%概率造成1000%%暴击伤害");
-        REGISTRATE.addRawLang("se.srelic.dice_effect.text", "无穷面的骰子，它是运气的提现，渊面判命，天劫戏谑，万千结局坍缩于一掷之间。无穷可能性在骰落时焚灭成唯一。欧非一念，天堂地狱。当听见骰子在虚空中咯咯轻笑时——  记住，不是你在掷骰，而是骰在掷你。");
-        REGISTRATE.addRawLang("se.srelic.dice_effect.easter-egg", "狂赌回合开启！执骰互斫——下一刀，天诛还是天赐？毕竟赌狗最爱的不是赢，而是开骰前心跳停拍的刹那。");
+        REGISTRATE.addRawLang("se.srelic.dice_effect.desc", "$(5)【随机法则】 $(br)• 20%%概率造成50%%伤害 $(br)• 40%%概率正常伤害 $(br)• 39%%概率治疗目标600%%伤害值$(br)• 1%%概率造成1000%%暴击伤害");
+        REGISTRATE.addRawLang("se.srelic.dice_effect.text", "无穷面的骰子，它是运气的提现，渊面判命，天劫戏谑，万千结局坍缩于一掷之间。$(br)无穷可能性在骰落时焚灭成唯一。$(br)欧非一念，天堂地狱。当听见骰子在虚空中咯咯轻笑时$(br2)——记住，不是你在掷骰，而是骰在掷你。$(br2)$(br2)狂赌回合开启！执骰互斫$(br2)——$(o)下一刀，天诛还是天赐？$(l)毕竟赌狗最爱的不是赢，而是开骰前心跳停拍的刹那。");
 
 
         REGISTRATE.addRawLang("se.srelic.truth_realm", "终焉律·星之归");
