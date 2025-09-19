@@ -114,8 +114,8 @@ public class LangRegistry {
         REGISTRATE.addRawLang("tips.plum.name_tip", "使用剪刀破坏血魂树叶概率掉落");
         REGISTRATE.addRawLang("tips.thunder_netherite_alloy.name_tip", "在雷暴天气手持下界合金右击避雷针获得");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.soul_metal.pages.0.text", "纳米机器人组成的金属块，用于隔断崩坏能。当金属块被崩坏能侵蚀时，纳米机器人可以自动修复。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.soul_metal.pages.1.text", "我愚弄了友人，愚弄了至亲，愚弄了世界和它之上的规则……只为了给予那唯一真实的你，以第二次生命。我回来了，卡莲。");
-        REGISTRATE.addRawLang("painting.srelic.aotuo.title", "§a奥§r托·阿波卡利斯");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.soul_metal.pages.1.text", "我愚弄了友人，愚弄了至亲，愚弄了世界和它之上的规则……$(br2)只为了给予那唯一真实的你，以第二次生命。我回来了，卡莲。");
+        REGISTRATE.addRawLang("painting.srelic.aotuo.title", "$(l)$(e)奥托·阿波卡利斯");
         REGISTRATE.addRawLang("painting.srelic.huoqu.title", "获取方式");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.spirit_butterfly.pages.0.text", "万花丛中，蝴蝶乱舞，于凋零之中绽放，于往生中留香，灵芳环绕三生，蝴蝶留有血梅香。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.spirit_butterfly.easter-egg1", "传说它们只停驻在血梅盛开之地，翅上花粉落处，枯骨生花、旧忆留香。$(br2)$(o)「万花丛中，蝴蝶乱舞；凋零绽放，往生留香……」");
@@ -130,10 +130,10 @@ public class LangRegistry {
         REGISTRATE.addRawLang("tips.abyssal_luminance_ingot.name_tip", "将海洋之心、海洋合金锭与极寒合金锭扔到海晶灯上后点击海晶灯获得(会消耗这四个)");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.oceanic_netherite_alloy.pages.0.text", "温柔且坚韧的海洋将力量赋予下界合金，使其拥有潮水的力量与波纹的和谐。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.thunder_netherite_alloy.pages.0.text", "经历神的怒火，下界合金更加完善，上面环绕的雷电展现其蕴含的强大·力量。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.demon_ingot.pages.0.text", "在下界之星的介入下，四种下界合金融合而产生的不应存在之物，世界为它赋予无与伦比的力量。（什么电王顶点形态啊）");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.demon_ingot.pages.0.text", "在下界之星的介入下，四种下界合金融合而产生的不应存在之物，世界为它赋予无与伦比的力量。$(br2)ps:$(o)（什么电王顶点形态啊）");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.sakura_steel_ingot.pages.0.text", "铁锭与樱花相结合的材料，有着钢铁的硬度和樱花的香气，表面的樱纹使其更具美感。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.ex_star.pages.0.text", "极致的实体化，可以淬炼武器，激发其蕴含的力量，获取新的能力，帮助武器超越极限。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.windy_core.pages.0.text", "大地深处的紫晶，唯有挣脱三百米的束缚，方能拥抱穹顶奔流的自由之风。在那高天之上，地脉的灵性与不羁的天风交融，铸就这轻盈而狂放的晶核。—— 三百米，是紫水晶与风相遇的距离。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.windy_core.pages.0.text", "大地深处的紫晶，唯有挣脱三百米的束缚，方能拥抱穹顶奔流的自由之风。在那高天之上，地脉的灵性与不羁的天风交融，铸就这轻盈而狂放的晶核。$(rb)—— 三百米，是紫水晶与风相遇的距离。");
         REGISTRATE.addRawLang("tips.windy_core.name_tip", "紫水晶在300格以上右键转换");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.windy_core_ingot.easter-egg1", "在末地尽头的风眼里，西风骑士们曾试图用下界之烬锻造一双能回到地面的翅膀。$(br)他们熔铸了下界合金的坚韧，却忘了西风结晶里藏着高空的孤独——$(br)于是，天空合金诞生了：$(br)一种黯蓝到发灰的金属，像黎明前最后一道被云吞没的星光。$(br)它轻得几乎违背重力，却能把摔落的伤害反向“馈赠”给空气；");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.windy_core_ingot.easter-egg2", "它冷得让盔甲表面永远凝着一层薄雾，雾中偶尔映出你第一次坠空的残影。$(br)穿上它，你不再属于大地，也不再属于天空——$(br)你只是风暴与岩浆共同签署的流浪者，$(br)在每一次跳跃里，听见西风与下界同时发出的、低低的叹息。");
@@ -160,8 +160,8 @@ public class LangRegistry {
         REGISTRATE.addRawLang("patchouli.srelic.blood_plum_sampling_ex.name", "附魔血梅树苗");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.blood_plum.pages.0.text", "某个女孩培育出的特殊梅花树。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.blood_plum.easter-egg", "§o 往生堂曾收殓少年尸身，其怀揣一袋干枯梅籽。胡桃将梅籽与少年合葬，孰料坟头竟生白骨状梅树。七日后，树枝结出酷似少年面容的果实，未摘即腐。堂主大笑：“原来执念才是最烈的肥料！”遂以朱砂水浇灌，树皮剥落处渗出鲜血……");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.pule_apple.pages.0.text", "血梅树吸收执念而结出的异果，滋味介于未熟的杏与铁锈之间。可能对刀有特殊的效果。(§4§l不要食用！！！！！！！！！§r)");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.pule_apple.easter-egg", "§o “那疯丫头造的结业果，吃一颗能见亡魂走马灯！就是有个副作用——往后每到毕业季，你吐出的气息会凝成血梅花瓣。(附注：胡桃堂主说这叫‘浪漫肺结核’，她管售后吗？)”");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.pule_apple.pages.0.text", "血梅树吸收执念而结出的异果，滋味介于未熟的杏与铁锈之间。可能对刀有特殊的效果。($(4)$(l)不要食用!!!!!!!!)");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.pule_apple.easter-egg", "§o “那疯丫头造的结业果，吃一颗能见亡魂走马灯！就是有个副作用——$(rb)往后每到毕业季，你吐出的气息会凝成血梅花瓣。(附注：$(o)胡桃堂主说这叫‘浪漫肺结核’，她管售后吗？)”");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.blood_plum_sampling_ex.pages.1.text", "此树苗仅可自然生长，不可使用骨粉催熟");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.blood_plum_leaves.pages.1.text", "$(4)$(l) 空手破坏无掉落！！！$()使用剪刀破坏后有概率掉落血梅树苗、结业果、三生梅、耀魂碎片");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.maxim.pages.0.text", "§b 当第一缕光切开地平线，鸢尾便举起紫蓝色的剑——为世界签收又一个晴天的快递。");
@@ -173,30 +173,32 @@ public class LangRegistry {
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_shadow_ore.pages.0.text", "我们以拯救为名折叠世界，最终把自己折进矿石最深的血纹里，帕弥什病毒与人类绝望共振的结晶—— $(c)它吞吃阴影，却吐出绯红的谎言。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_shadow_ore.easter-egg", "人类用‘绯影矿’铸造救世兵器——却不知每块矿石里，都封存着一个拒绝往生的灵魂。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.crimson_shadow.pages.0.text", "使用绯红折纸右键任意的非基岩和绯影原矿的方块获得");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.shirin_fish.pages.0.text", "穿越时空而来的可爱又傲娇的生物，轻轻一碰就会膨胀，轻轻一戳就会漏气，对泡面有特殊的情感(?)——$(o)膨胀是本能，破防是宿命，但美味值得玩命!$()$(u)$(l)#本河豚已通过虚数认证##膨胀值超标但可爱豁免死刑#");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.shirin_fish.pages.0.text", "穿越时空而来的可爱又傲娇的生物，轻轻一碰就会膨胀，轻轻一戳就会漏气，对泡面有特殊的情感(?)——$(o)膨胀是本能，破防是宿命，但美味值得玩命!$()$(#9A5CC6)$(l)#本河豚已通过虚数认证##膨胀值超标但可爱豁免死刑#");
         REGISTRATE.addRawLang("tips.shirin_fish.name_tip", "钓鱼有概率获取");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.shirin_fish.easter-egg1", "别被她膨胀的刺吓退，别因她漏气的泪窃笑，最珍贵的毒药，$(l)是巴比伦塔里那个从未被拥抱过的孩子。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.void_ingot.easter-egg1", "西琳律者核心的残响，撕裂现实之钢。$(l)「此物应封印于童话与噩梦的夹层」「但总有人为改写结局而握紧它」$()$(#FF5555)$(o)它既是囚笼也是钥匙——巴比伦塔的孩子们在钢中哭喊，而新生的律者用泪滴将其锻成翅膀。$(l)所谓弑神兵器，不过是上帝递给受害者的匕首。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.void_core.easter-egg1", "西琳泪滴坠落的回响，终成撕裂维度之钻“他们说这是毁灭的种子，却忘了每道涡旋都是未寄出的信——那个总在实验室角落写生日愿望的女孩，把‘想要星星’的稚语，哭成了贯穿多元宇宙的$(l)$(o)伤痕级浪漫。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.abyssal_luminance_ingot.pages.0.text", "唯有将海洋的精华倾注于晶灯之上，方能唤醒渊底的永恒辉芒。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.abyssal_luminance_ingot.easter-egg1", "海晶灯在暗流中呼吸。你握紧三枚造物：海洋之心搏动着潮汐的律动，海洋合金锭覆满珊瑚的刻痕，极寒合金锭渗出冰川的叹息。当它们坠向晶灯——光，吞没了坠落之物。灯芯如巨鲸开口，合金在熔光中坍缩又重塑，寒与海的脉络在炽蓝中交缠攀升……直至一枚流淌星海的金属锭，从深渊的子宫诞生。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.abyssal_luminance_ingot.easter-egg1", "海晶灯在暗流中呼吸。你握紧三枚造物：海洋之心搏动着潮汐的律动，海洋合金锭覆满珊瑚的刻痕，极寒合金锭渗出冰川的叹息。$(br)当它们坠向晶灯——光，吞没了坠落之物。灯芯如巨鲸开口，合金在熔光中坍缩又重塑，寒与海的脉络在炽蓝中交缠攀升……直至一枚流淌星海的金属锭，从深渊的子宫诞生。");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.nereid_s_secret_brew.pages.0.text", "$(l)$(o)$(b)饮下此杯者，非溺毙于深海，即登临水神御座——");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.nereid_s_secret_brew.easter-egg1", "万众的欢呼归于沉寂，华丽的歌剧落下帷幕。此刻，不再是神明扮演者的她，于私人的小憩时光中，为你奉上这杯融汇了‘$(#A8A8A8)神性$()’与‘$(b)人性$()’的独秘之饮。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.surgeheart_vortex.pages.0.text", "你以§b渊海流辉锭§r为刃，剖开海洋之心的那一刻—— §l涌出的不是神血，是上一个纪元的文明之悔。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.surgeheart_vortex.easter-egg1", "潮涌核心迸发出星脉裂痕，九天雷暴在伤痕中浇铸出 转动的虹膜，于是渊瞳圣涡诞生了：这枚核心是活的 §l§b它正凝视着你，以潮汐为睫毛，以星海为瞳孔底色。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.ignis_cube.pages.0.text", "§l§o此立方非火种，是固化的太阳之怒。此立方非火种，是固化的太阳之怒。此立方非火种，是固化的太阳之怒。");
-        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.ignis_cube.easter-egg1", "巨剑劈落的轨迹上，日珥奔涌如神血，而你的发梢正化作飞灰，你的眼角膜烙上星爆纹路。你知道，此战若不胜，这枚立方将成为你的 墓碑方碑，镇在文明焦尸的胸口，警示下一个拾火者：“§r§o超限非进阶，乃优雅的自焚。”");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.surgeheart_vortex.pages.0.text", "你以$(b)渊海流辉锭$()为刃，剖开海洋之心的那一刻—— $(l)涌出的不是神血，是上一个纪元的文明之悔。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.surgeheart_vortex.easter-egg1", "潮涌核心迸发出星脉裂痕，九天雷暴在伤痕中浇铸出 转动的虹膜，于是渊瞳圣涡诞生了：这枚核心是活的 $(l)$(b)它正凝视着你，以潮汐为睫毛，以星海为瞳孔底色。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.ignis_cube.pages.0.text", "$(l)$(o)$(4)此立方非火种，是固化的太阳之怒。此立方非火种，是固化的太阳之怒。此立方非火种，是固化的太阳之怒。");
+        REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.ignis_cube.easter-egg1", "巨剑劈落的轨迹上，日珥奔涌如神血，而你的发梢正化作飞灰，你的眼角膜烙上星爆纹路。你知道，此战若不胜，这枚立方将成为你的 墓碑方碑，镇在文明焦尸的胸口，警示下一个拾火者：“$(#A8A8A8)$(o)超限非进阶，乃优雅的自焚。$()”");
         REGISTRATE.addRawLang("patchouli.srelic.book.entries.arrow.nightterror_bloodwing.pages.0.text", "于花海中起舞的蝴蝶，为了保护，染上血腥的颜色，在它的身后，起舞着蓝色的蝴蝶。$(br2)$(#E70000)$(o)为了那片湛蓝的蝶翼能永远描绘幻梦，我自愿浸入永夜，以血色为妆。$(br)$()————夜魇低语");
         REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.butterfly.pages.0.text", "蓝色的蝴蝶构筑出美好的梦境，扇动的翅膀绘出幻想的痕迹，于暗影中孕育希望。$(br2)$(1)$(o)它的每一次振翅，都承载着我未曾说出口的月光$(br)$()。————梦蝶残响");
         REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.butterfly.easter-egg", "一枚散发着温润蓝光的水晶蝶蛹，内部却有一抹如凝固血液般的深红丝线缠绕。触碰时，耳边仿佛响起翅膀的微颤与无声的叹息。它是守护者染血的誓言，也是被守护者永不褪色的梦境。");
-        REGISTRATE.addRawLang("patchouli.srelic.pledge_flame_vermilion_strand.name", "以炽焰编织的丝线");
-        REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.pledge_flame_vermilion_strand.pages.0.text", "从炽热的烈焰中，你收集到了一缕仍在燃烧的丝线，其核心跃动着熟悉的能量频率$(br)「你明白这并非此世的造物，指尖能感受到其上传来的微弱脉冲，温暖而坚定，仿佛链接了某个遥远的意识，这是独属于你和她之间的连接」");
+        REGISTRATE.addRawLang("patchouli.srelic.pledge_flame_vermilion_strand.name", "$(#E70000)以炽焰编织的丝线");
+        REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.pledge_flame_vermilion_strand.pages.0.text", "从炽热的烈焰中，你收集到了一缕仍在燃烧的丝线，其核心跃动着熟悉的能量频率$(br2)「$(o)你明白这并非此世的造物，指尖能感受到其上传来的微弱脉冲，温暖而坚定，仿佛链接了某个遥远的意识，这是独属于你和她之间的连接$()」");
         REGISTRATE.addRawLang("patchouli.srelic.scarletflame_ingot.name", "以地狱烈焰淬炼的誓约之金，锋芒未出，炽息已灼尽黑暗");
         REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.scarletflame_ingot.pages.0.text", "「一块散发着温暖炽光的特殊金属锭，内部似乎有粉色的流火与金色的星点永不熄灭地流淌，轻触时能感受到一股熟悉的、炽热但并不灼人的温度，以及一声清晰并坚定的声音：$(br)$(o)“灰鸦小队队长，露西亚，请多指教。出发吧，指挥官，我们还有很多事要一起去完成”」");
         REGISTRATE.addRawLang("patchouli.srelic.emberquill.name", "炎翎划破黑暗，炽焰为誓$(br2)「这不是一件武器或材料，而是一份具象化的誓言」");
-        REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.emberquill.pages.0.text", "「它源自一位构造体最为炽热的“心”——当守护的意志冲破维度的枷锁，化作焚尽一切阻碍的红莲，其核心是冰冷的机械，却燃烧的比任何火焰都更彻底」$(br)$(o)「手握它时，你能感受到一种有温度的共鸣，仿佛与一个遥远的意志建立了连接。它并非在向你索取力量，而是在轻声低语：$(br)“$(l)我想和你处于相同的时间，看向相同的世界，无论发生了什么，灰鸦都会再次聚到一起——这也是我对你的誓言。$()”」");
+        REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.emberquill.pages.0.text", "「它源自一位构造体最为炽热的“心”——当守护的意志冲破维度的枷锁，化作焚尽一切阻碍的红莲，其核心是冰冷的机械，却燃烧的比任何火焰都更彻底」");
+        REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.emberquill.pages.1.text", "「手握它时，你能感受到一种有温度的共鸣，仿佛与一个遥远的意志建立了连接。它并非在向你索取力量，而是在轻声低语：“$(o)我想和你处于相同的时间，看向相同的世界，无论发生了什么，灰鸦都会再次聚到一起——这也是我对你的誓言。$()”」");
         REGISTRATE.addRawLang("patchouli.srelic.pledgeflame_heartforge.name", "「燃烧的意志永不熄灭」");
-        REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.pledgeflame_heartforge.pages.0.text", "一阵细微的电流声般的杂音过后，一个清晰而坚定的声音直接在你的意识中响起，如同在寂静的夜空下点燃的第一缕火焰，驱散了所有的混沌。）$(br)“能听到吗，指挥官？”$(br)$(o)（声音带着一丝不易察觉的急切，随即化为找到目标后的安心与确信。）$()$(br)“终于…成功锚定您的坐标了。”$(br)“即便跨越了世界的屏障，我们之间的‘连接’也从未断绝。这份共鸣，正是引导我前来的信标。”$(br)“请您无需犹豫，挥舞这由我的核心与誓言驱动的剑刃吧。”$(br)$(o)（声音变得无比温暖而坚定，充满了无需言说的信任与力量。）$()$(br)“因为，从此刻起—— $(br)$(l)我们将再次‘并肩’而战。”");
+        REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.pledgeflame_heartforge.pages.0.text", "一阵细微的电流声般的杂音过后，一个清晰而坚定的声音直接在你的意识中响起，如同在寂静的夜空下点燃的第一缕火焰，驱散了所有的混沌。）$(br)“能听到吗，指挥官？”$(br)$(o)(声音带着一丝不易察觉的急切，随即化为找到目标后的安心与确信。)");
+        REGISTRATE.addRawLang("patchouli.srelic.book.seele.arrow.pledgeflame_heartforge.pages.1.text", "“终于…成功锚定您的坐标了。”$(br)“即便跨越了世界的屏障，我们之间的‘连接’也从未断绝。这份共鸣，正是引导我前来的信标。”$(br)“请您无需犹豫，挥舞这由我的核心与誓言驱动的剑刃吧。”$(br)$(o)（声音变得无比温暖而坚定，充满了无需言说的信任与力量。）$()$(br)“因为，从此刻起—— $(br)$(l)我们,将再次$(4)‘并肩’而战。”$()");
 
 
         REGISTRATE.addRawLang("se.slashblade.wither_edge.desc", "攻击成功施加凋零效果");
@@ -262,7 +264,7 @@ public class LangRegistry {
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_PRESERVATION) + ".text", "琥珀坚固，铸就城墙，铁誓护疆，晶泪封誓，永屹晨碑，千星共御。");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY) + "easter-egg", "当琥珀巨墙拔地而起时——看，墙痕是文明的伤疤，墙顶是未熄的星火  ");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY), "命途·贪饕");
-        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY) + ".desc", "攻击时吸血10%伤害值每次攻击叠加伤害层数最高十层");
+        REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY) + ".desc", "攻击时吸血10%%伤害值每次攻击叠加伤害层数最高十层");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_GLUTTONY) + ".text", "饕星嚼辰，永饥永蚀，将一切化为养料，修复自身，直至吞噬一切。");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING) + "easter-egg", "贪饕的震撼在于其荒诞悲剧内核——当他吞下最后一粒星辰时，将发现自己啃噬的竟是镜中倒影");
         REGISTRATE.addRawLang(CreateSeLang(SRSpecialEffectsRegistry.PATH_OF_THE_UNDYING), "命途·不朽");
@@ -550,7 +552,7 @@ public class LangRegistry {
 
 
         REGISTRATE.addRawLang("se.srelic.dice_effect", "§d命运骰子");
-        REGISTRATE.addRawLang("se.srelic.dice_effect.desc", "§5【随机法则】 • 20%概率造成50%伤害 • 40%概率正常伤害 • 39%概率治疗目标600%伤害值 • 1%概率造成1000%暴击伤害");
+        REGISTRATE.addRawLang("se.srelic.dice_effect.desc", "$(5)【随机法则】 $(br)• 20%%概率造成50%%伤害 $(br)• 40%%概率正常伤害 $(br)• 39%%概率治疗目标600%%伤害值 $(br)• 1%%概率造成1000%%暴击伤害");
         REGISTRATE.addRawLang("se.srelic.dice_effect.text", "无穷面的骰子，它是运气的提现，渊面判命，天劫戏谑，万千结局坍缩于一掷之间。无穷可能性在骰落时焚灭成唯一。欧非一念，天堂地狱。当听见骰子在虚空中咯咯轻笑时——  记住，不是你在掷骰，而是骰在掷你。");
         REGISTRATE.addRawLang("se.srelic.dice_effect.easter-egg", "狂赌回合开启！执骰互斫——下一刀，天诛还是天赐？毕竟赌狗最爱的不是赢，而是开骰前心跳停拍的刹那。");
 

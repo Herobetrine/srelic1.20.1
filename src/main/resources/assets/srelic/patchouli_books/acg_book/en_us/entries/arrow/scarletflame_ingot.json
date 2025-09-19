@@ -12,7 +12,10 @@
     {
       "type": "crafting",
       "title": "painting.srelic.huoqu.title",
-      "recipe": "srelic:scarletflame_ingot",
+      "recipe": "srelic:scarletflame_ingot"
+    },
+    {
+      "type": "text",
       "text": "patchouli.srelic.book.seele.arrow.scarletflame_ingot.pages.0.text"
     }
   ]
