@@ -40,6 +40,7 @@ public class SrelicClient {
             ItemBlockRenderTypes.setRenderLayer(SRBlockRegsitry.blood_plum_log.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(SRBlockRegsitry.blood_plum_sampling.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(SRBlockRegsitry.blood_plum_sampling_ex.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(SRBlockRegsitry.blood_plum_sampling_ex_max.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(SRBlockRegsitry.plum_leaves.get(), RenderType.translucent());
         });
     }

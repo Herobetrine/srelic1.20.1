@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "srelic:block/blood_plum_sampling_ex_max"
+  }
+}

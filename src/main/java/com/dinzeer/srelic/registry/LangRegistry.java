@@ -206,6 +206,11 @@ public class LangRegistry {
         REGISTRATE.addRawLang("slashblade.tooltip.srelic.santa_caterina_1", "「带着仇人的名单」");
 
 
+        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry", "「I hate people」");
+        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry_1", "「My patience has ended」");
+        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry_2", "「Hi,you are die」");
+        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry_3", "「For the Lich King!!!!」");
+        REGISTRATE.addRawLang("slashblade.tooltip.srelic.ice_cry_4", "「Frostmourne」");
         // 拔刀技
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.XDRIVE), "X幻影刃");
         REGISTRATE.addRawLang(CreateSaLang(SRslashArtRegsitry.WitherBreaker), "幻影衰落矢·哀");
@@ -950,6 +955,20 @@ public class LangRegistry {
         REGISTRATE.addRawLang("srelic.sword_type.other_world_on", "幻");
         REGISTRATE.addRawLang("srelic.sword_type.other_world", "解");
         REGISTRATE.addRawLang("srelic.sword_type.other_world_off", "封");
+
+        REGISTRATE.addRawLang("item.srelic.max_armor.desc", "穿戴全套时：");
+        REGISTRATE.addRawLang("item.srelic.max_armor.desc_1", "你的无敌帧延长至3秒");
+        REGISTRATE.addRawLang("item.srelic.max_armor.desc_2", "你受到的魔法伤害减免80%");
+        REGISTRATE.addRawLang("item.srelic.max_armor.desc_3", "你免疫火焰、寒冰伤害类型的伤害");
+        REGISTRATE.addRawLang("item.srelic.max_armor.desc_4", "你穿戴的装备无法破坏");
+        REGISTRATE.addRawLang("item.srelic.max_armor.desc_5", "你造成的火焰、魔法、寒冰伤害增加30%");
+
+        REGISTRATE.addRawLang("item.srelic.ocean_armor.desc", "穿戴全套且在水下时：");
+        REGISTRATE.addRawLang("item.srelic.ocean_armor.desc_1", "你受到的伤害减少30%");
+        REGISTRATE.addRawLang("item.srelic.ocean_armor.desc_2", "你造成的伤害增加30%");
+
+        REGISTRATE.addRawLang("item.srelic.sky_armor.desc", "穿戴全套时：");
+        REGISTRATE.addRawLang("item.srelic.sky_armor.desc_1", "创造飞行");
 
 
         REGISTRATE.addRawLang("message.srelic.grammer_alloy_obtained", "你获得了格拉默合金！");

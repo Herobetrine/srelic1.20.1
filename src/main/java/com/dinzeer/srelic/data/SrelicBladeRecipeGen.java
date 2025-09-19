@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import vazkii.patchouli.common.item.PatchouliItems;
 
 import java.util.function.BiFunction;
 
@@ -382,6 +383,20 @@ public class SrelicBladeRecipeGen {
                 .define('D', Items.ENDER_EYE)
                 .define('E', Blocks.DRAGON_EGG)
                 .save(pvd);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
     public static <T> T unlock(RegistrateRecipeProvider pvd, BiFunction<String, InventoryChangeTrigger.TriggerInstance, T> func, Item item) {
         return func.apply("has_" + pvd.safeName(item), DataIngredient.items(item).getCritereon(pvd));

@@ -1,6 +1,7 @@
 {
   "values": [
     "srelic:blood_plum_sampling",
-    "srelic:blood_plum_sampling_ex"
+    "srelic:blood_plum_sampling_ex",
+    "srelic:blood_plum_sampling_ex_max"
   ]
 }
