@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-19T23:12:20.3191944	Registrate Provider for srelic [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+// 1.20.1	2025-09-19T23:22:58.4003917	Registrate Provider for srelic [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
 48889742b54db57ffae2b718dd6bcc401ebbd5c2 assets/srelic/blockstates/blood_plum_leaves.json
 1ff5402f3983d42f0e4a4003ec50f9cca475d89c assets/srelic/blockstates/blood_plum_log.json
 4fcdc38f92f4b8f9c736850c9e0314eb87a1a496 assets/srelic/blockstates/blood_plum_planks.json
@@ -7,8 +7,8 @@
 012eac826b119e31660ef707c752f43519e82b37 assets/srelic/blockstates/blood_plum_sampling_ex_max.json
 d2b806ae783c66e4254e9948ae00ce67dc7731f0 assets/srelic/blockstates/crimson_shadow_ore.json
 265f259bf6677e8806ee2213a88e8629c77cca3e assets/srelic/blockstates/stripped_blood_plum_log.json
-640afaeab1fc692429310282b93f36c8046cd001 assets/srelic/lang/en_ud.json
-1fd18ab9a96c0363ee37f92e675ecb0c8c3e1644 assets/srelic/lang/en_us.json
+9b4cef9f3837a5c5f781b5ff411b7764df3b014a assets/srelic/lang/en_ud.json
+309aa690c9d354019bca17e8c88de63ab08f432c assets/srelic/lang/en_us.json
 fcf65b3c846336e9dc758350662e29690533908c assets/srelic/models/block/blood_plum_leaves.json
 d76fcf95733fb191b7ba737f92e4b85d427ddc6b assets/srelic/models/block/blood_plum_log.json
 19116c5cf80e913e9486407d86e7168d05ede2a3 assets/srelic/models/block/blood_plum_log_horizontal.json
