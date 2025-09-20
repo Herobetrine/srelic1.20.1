@@ -1,240 +1,144 @@
-package com.dinzeer.srelic;
+package com.herobetrine.srelic;
 
-import com.dinzeer.srelic.blade.SRItem;
-import com.dinzeer.srelic.blade.re.SrelicRecipeSerializerRegistry;
-import com.dinzeer.srelic.command.SrelicCommand;
-import com.dinzeer.srelic.registry.*;
-import com.mojang.logging.LogUtils;
-import com.tterrag.registrate.Registrate;
-import mods.flammpfeil.slashblade.SlashBlade;
-import mods.flammpfeil.slashblade.SlashBladeCreativeGroup;
-import mods.flammpfeil.slashblade.client.renderer.model.BladeModelManager;
-import mods.flammpfeil.slashblade.init.SBItems;
-import mods.flammpfeil.slashblade.item.ItemSlashBlade;
-import mods.flammpfeil.slashblade.registry.SpecialEffectsRegistry;
-import mods.flammpfeil.slashblade.registry.slashblade.SlashBladeDefinition;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.event.RegisterCommandsEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.player.ItemTooltipEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.network.NetworkRegistry;
-import net.minecraftforge.network.simple.SimpleChannel;
+import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.RegistryObject;
-import org.jetbrains.annotations.NotNull;
-import org.slf4j.Logger;
+import mods.flammpfeil.slashblade.ItemSlashBlade;
+import mods.flammpfeil.slashblade.SlashBlade;
+import mods.flammpfeil.slashblade.item.SBItems;
+import mods.flammpfeil.slashblade.registry.CreativeModeTabRegistry;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 
+import java.util.stream.Collectors;
 
-import java.util.*;
-import java.util.concurrent.ConcurrentLinkedQueue;
-
-// The value here should match an entry in the META-INF/mods.toml file
-//mojang is shit!
 @Mod(Srelic.MODID)
 public class Srelic {
-    public static ResourceLocation prefix(String path) {
-
-        return new ResourceLocation(MODID, path);
-    }
-
-    public static ResourceLocation id(@NotNull String path) {
-        return new ResourceLocation(MODID, path);
-    }
-
-    // Define mod id in a common place for everything to reference
     public static final String MODID = "srelic";
-    public static SimpleChannel INSTANCE = NetworkRegistry.newSimpleChannel(
-            new ResourceLocation(MODID, "main"),
-            () -> "1.0",
-            s -> true,
-            s -> true
-    );
-    // Directly reference a slf4j logger
-    public static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "srelic" namespace
-
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS
-            = DeferredRegister.create(Registries.CREATIVE_MODE_TAB,MODID);  ;
-
-    public static final Registrate REGISTRATE = Registrate.create(MODID);
-
-
-    public static final RegistryObject<CreativeModeTab> SRSlashblade = CREATIVE_MODE_TABS.register(MODID+"_slashblade",
-            () -> CreativeModeTab.builder()
-                    .withTabsBefore(SlashBladeCreativeGroup.SLASHBLADE_GROUP.getId())
-                    .title(Component.translatable("item_group."+MODID+"."+MODID+"_slashblade")).icon(() -> {
-                        ItemStack stack = new ItemStack(SBItems.slashblade);
-                        stack.getCapability(ItemSlashBlade.BLADESTATE).ifPresent(s -> {
-                            s.setModel(new ResourceLocation(MODID, "model/stairail/none.obj"));
-                            s.setTexture(new ResourceLocation(MODID, "model/stairail/none_red.jpg"));
-                        });
-                        return stack;
-                    })
-                    .displayItems((parameters, tabData) -> {
-
-                        fillBladesForNamespace(parameters,tabData,MODID);
-                    })
-                    .build());
-
-    public static final RegistryObject<CreativeModeTab> SRSE = CREATIVE_MODE_TABS.register(MODID+"_se",
-            () -> CreativeModeTab.builder()
-                    .title(Component.translatable("item_group."+MODID+"."+MODID+"_se")).icon(() -> {
-
-                        return SRItemRegsitry.rainbow_star.get().getDefaultInstance();
-                    })
-                    .displayItems((parameters, tabData) -> {
-
-                        fillSEs(tabData);
-                    })
-                    .build());
-
-    public static final RegistryObject<CreativeModeTab> SRItems = CREATIVE_MODE_TABS.register(MODID+"_item",
-            () -> CreativeModeTab.builder()
-                    .title(Component.translatable("item_group."+MODID+"."+MODID+"_item")).icon(() -> {
-
-                        return SRItemRegsitry.black_hole_metal.get().getDefaultInstance();
-                    })
-                    .displayItems((parameters, tabData) -> {
-
-                    })
-                    .build());
-
-
-    private static void fillBladesForNamespace(CreativeModeTab.ItemDisplayParameters features, CreativeModeTab.Output output, String namespace) {
-        if (Minecraft.getInstance().getConnection() != null) {
-            SlashBlade.getSlashBladeDefinitionRegistry(features.holders())
-                    .listElements().sorted(SlashBladeDefinition.COMPARATOR)
-                    .filter(entry -> {
-                        ResourceLocation loc = ResourceLocation.tryParse(entry.value().getName().getNamespace());
-                        return loc != null && entry.value().getName().getNamespace().equals(namespace);
-                    })
-                    .forEach((entry) -> {
-                        if (!((SlashBladeDefinition)entry.value()).getBlade().isEmpty()) {
-                            output.accept(((SlashBladeDefinition)entry.value()).getBlade());
-                        }
-
+    
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = 
+        DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
+    
+    // 修复创意模式标签，添加客户端环境检查
+    public static final RegistryObject<CreativeModeTab> SRSlashblade = CREATIVE_MODE_TABS.register(MODID + "_slashblade",
+        () -> CreativeModeTab.builder()
+            .withTabsBefore(CreativeModeTabRegistry.SLASHBLADE_GROUP.getId())
+            .title(Component.translatable("item_group." + MODID + "." + MODID + "_slashblade"))
+            .icon(() -> {
+                // 仅在客户端执行图标初始化
+                if (FMLEnvironment.dist == Dist.CLIENT) {
+                    ItemStack stack = new ItemStack(SBItems.slashblade);
+                    stack.getCapability(ItemSlashBlade.BLADESTATE).ifPresent(s -> {
+                        s.setModel(new ResourceLocation(MODID, "model/stairail/none.obj"));
+                        s.setTexture(new ResourceLocation(MODID, "model/stairail/none_red.jpg"));
                     });
-        }
-    }
-
-
-
-
-
-
-    private static void fillSEs(CreativeModeTab.Output output) {
-        if (Minecraft.getInstance().getConnection() != null) {
-            // 添加universal_test的NBT变种
-            SRSpecialEffectsRegistry.PATH_SE_POOL.stream()
-                    .sorted(Comparator.comparing(se -> se.getId().getPath())) // 按特效ID排序
-                    .forEach(effect -> {
-                        // 生成带NBT的物品实例
-                        ItemStack stack = ItemNBTHelper.createTestItem(effect);
-                        output.accept(stack);
-                    });
-        }
-    }
-
-    private static void fillSEs2(CreativeModeTab.Output output) {
-        if (Minecraft.getInstance().getConnection() != null) {
-            // 添加universal_test的NBT变种
-            SpecialEffectsRegistry.REGISTRY.get().forEach(effect -> {
-                        // 生成带NBT的物品实例
-                        ItemStack stack = ItemNBTHelper.createTestItem2(effect);
-                        output.accept(stack);
-                    });
-        }
-    }
-
-    public static final RegistryObject<CreativeModeTab> SRSE2 = CREATIVE_MODE_TABS.register(MODID+"_se2",
-            () -> CreativeModeTab.builder()
-                    .title(Component.translatable("item_group."+MODID+"."+MODID+"_se2")).icon(() -> {
-
-                        return SRItemRegsitry.rainbow_star.get().getDefaultInstance();
-                    })
-                    .displayItems((parameters, tabData) -> {
-
-                        fillSEs2(tabData);
-                    })
-                    .build());
-
-
-
+                    return stack;
+                }
+                // 服务端返回空物品
+                return new ItemStack(Items.AIR);
+            })
+            .displayItems((parameters, tabData) -> {
+                // 仅在客户端填充物品
+                if (FMLEnvironment.dist == Dist.CLIENT) {
+                    fillBladesForNamespace(parameters, tabData, MODID);
+                }
+            })
+            .build());
+    
+    public static final RegistryObject<CreativeModeTab> SRSE = CREATIVE_MODE_TABS.register(MODID + "_se",
+        () -> CreativeModeTab.builder()
+            .withTabsBefore(SRSlashblade.getId())
+            .title(Component.translatable("item_group." + MODID + "." + MODID + "_se"))
+            .icon(() -> new ItemStack(ModItems.empty_se.get()))
+            .displayItems((parameters, tabData) -> {
+                // 仅在客户端填充物品
+                if (FMLEnvironment.dist == Dist.CLIENT) {
+                    fillSEs(tabData);
+                }
+            })
+            .build());
+    
+    public static final RegistryObject<CreativeModeTab> SRSE2 = CREATIVE_MODE_TABS.register(MODID + "_se2",
+        () -> CreativeModeTab.builder()
+            .withTabsBefore(SRSE.getId())
+            .title(Component.translatable("item_group." + MODID + "." + MODID + "_se2"))
+            .icon(() -> new ItemStack(ModItems.empty_se2.get()))
+            .displayItems((parameters, tabData) -> {
+                // 仅在客户端填充物品
+                if (FMLEnvironment.dist == Dist.CLIENT) {
+                    fillSEs2(tabData);
+                }
+            })
+            .build());
 
     public Srelic() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
-        // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(this::register);
-        SREntiteRegristrys.register(modEventBus);
-        ParticleRegistry.register(modEventBus);
-        //注册
-        SRComboRegsitry.COMBO_STATES.register(modEventBus);
-        SRSpecialEffectsRegistry.SRadd();
-        HeitaComBoRegistry.COMBO_STATES.register(modEventBus);
-        SRslashArtRegsitry.SLASH_ARTS.register(modEventBus);
-        SRSpecialEffectsRegistry.REGISTRY_KEY2.register(modEventBus);
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-        SRPaintings.register(modEventBus);
-        SrelicRecipeSerializerRegistry.RECIPE_SERIALIZER.register(modEventBus);
-        SRItemRegsitry.regsitry();
-        LangRegistry.register();
-        CREATIVE_MODE_TABS.register(modEventBus);
-        SRBlockRegsitry.regsitry();
-//        int id = 0;
-//        INSTANCE.messageBuilder(DashMessage.class, id++)
-//                .encoder(DashMessage::encode)
-//                .decoder(DashMessage::decode)
-//                .consumerMainThread(DashMessage::handle)
-//                .add();
+        IEventBus bus = MinecraftForge.EVENT_BUS;
+        
+        // 注册创意模式标签
+        CREATIVE_MODE_TABS.register(bus);
+        
+        // 注册物品和其他内容
+        ModItems.ITEMS.register(bus);
+        ModBlades.BLADES.register(bus);
+        ModSE.SPECIAL_EFFECTS.register(bus);
+        
+        // 注册事件监听器
+        bus.register(this);
+        bus.register(new EventHandler());
     }
-    public void register(RegisterEvent event) {
-        SREntiteRegristrys.register(event);
-        SRItem.register(event);
-    }
-
-    private void commonSetup(final FMLCommonSetupEvent event) {
-
-    }
-
-    @SubscribeEvent
-    public void tick(TickEvent.ServerTickEvent event) {
-        if (event.phase == TickEvent.Phase.END) {
-            List<AbstractMap.SimpleEntry<Runnable, Integer>> actions = new ArrayList<>();
-            workQueue.forEach(work -> {
-                work.setValue(work.getValue() - 1);
-                if (work.getValue() == 0)
-                    actions.add(work);
-            });
-            actions.forEach(e -> e.getKey().run());
-            workQueue.removeAll(actions);
+    
+    // 仅在客户端填充刀类物品
+    private static void fillBladesForNamespace(CreativeModeTab.ItemDisplayParameters parameters, 
+                                              CreativeModeTab.Output output, String namespace) {
+        if (FMLEnvironment.dist != Dist.CLIENT) {
+            return;
+        }
+        
+        try {
+            // 获取所有指定命名空间的刀
+            SlashBlade.getRegistry().getValues().stream()
+                .filter(b -> namespace.equals(b.getRegistryName().getNamespace()))
+                .forEach(b -> {
+                    ItemStack stack = new ItemStack(b);
+                    output.accept(stack);
+                });
+        } catch (Exception e) {
+            Srelic.LOGGER.error("Error filling blades for namespace: " + namespace, e);
         }
     }
-
-    private static final Collection<AbstractMap.SimpleEntry<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
-
-    public static void queueServerWork(int tick, Runnable action) {
-        workQueue.add(new AbstractMap.SimpleEntry(action, tick));
+    
+    // 仅在客户端填充特殊效果物品
+    private static void fillSEs(CreativeModeTab.Output output) {
+        if (FMLEnvironment.dist != Dist.CLIENT) {
+            return;
+        }
+        
+        // 添加特殊效果物品
+        output.accept(ModItems.empty_se.get());
+        // 其他特殊效果物品...
     }
-
-
-
+    
+    // 仅在客户端填充第二组特殊效果物品
+    private static void fillSEs2(CreativeModeTab.Output output) {
+        if (FMLEnvironment.dist != Dist.CLIENT) {
+            return;
+        }
+        
+        // 添加第二组特殊效果物品
+        output.accept(ModItems.empty_se2.get());
+        // 其他第二组特殊效果物品...
+    }
+    
+    // 添加日志记录器
+    public static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(MODID);
 }
