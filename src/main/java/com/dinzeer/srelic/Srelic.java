@@ -1,4 +1,4 @@
-package com.herobetrine.srelic;
+package com.dinzeer.srelic;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
